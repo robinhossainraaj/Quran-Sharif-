@@ -176,6 +176,10 @@ class ReaderViewModel(
         playbackController.seekToAyah(ayahNo)
     }
 
+    fun seekInAyah(positionMs: Long) {
+        playbackController.seekInAyah(positionMs)
+    }
+
     fun setPlaybackSpeed(speed: Float) {
         playbackController.setSpeed(speed)
     }

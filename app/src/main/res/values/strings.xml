@@ -193,6 +193,10 @@
     <string name="now_playing">Now Playing</string>
     <string name="play_from_here">Play from here</string>
     <string name="follow_audio_chip">Follow</string>
+    <string name="following_audio_chip">Following</string>
+    <string name="player_surah_title_format">Surah %1$s</string>
+    <string name="player_ayah_of_format">Ayah %1$s / %2$s</string>
+    <string name="player_change_reciter">Change</string>
     <string name="audio_repeat_off">Repeat: Off</string>
     <string name="audio_repeat_ayah">Repeat: Ayah</string>
     <string name="audio_repeat_surah">Repeat: Surah</string>

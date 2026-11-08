@@ -193,6 +193,10 @@
     <string name="now_playing">এখন বাজছে</string>
     <string name="play_from_here">এখান থেকে বাজান</string>
     <string name="follow_audio_chip">ফলো</string>
+    <string name="following_audio_chip">ফলো চলছে</string>
+    <string name="player_surah_title_format">সূরা %1$s</string>
+    <string name="player_ayah_of_format">আয়াত %1$s / %2$s</string>
+    <string name="player_change_reciter">বদলান</string>
     <string name="audio_repeat_off">রিপিট: বন্ধ</string>
     <string name="audio_repeat_ayah">রিপিট: আয়াত</string>
     <string name="audio_repeat_surah">রিপিট: সূরা</string>

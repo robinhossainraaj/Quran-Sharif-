@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.annotation.OptIn
 import androidx.core.content.ContextCompat
+import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.PlaybackException
@@ -23,6 +24,7 @@ import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.MoreExecutors
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -51,6 +53,12 @@ class PlaybackController(
 
         override fun onIsPlayingChanged(isPlaying: Boolean) {
             _state.value = _state.value.copy(isPlaying = isPlaying)
+            if (isPlaying) {
+                startPositionTicker()
+            } else {
+                stopPositionTicker()
+                syncPosition()
+            }
         }
 
         override fun onPlaybackStateChanged(playbackState: Int) {
@@ -60,6 +68,7 @@ class PlaybackController(
                 }
                 Player.STATE_READY -> {
                     _state.value = _state.value.copy(isBuffering = false)
+                    syncPosition()
                 }
                 Player.STATE_ENDED -> {
                     handlePlaybackEnded()
@@ -246,6 +255,49 @@ class PlaybackController(
         return@withContext true
     }
 
+    // --- Time line of the CURRENT ayah (each ayah is a separate audio file) ---
+
+    private var positionTickerJob: Job? = null
+
+    private fun currentDurationMs(): Long {
+        val d = controller?.duration ?: C.TIME_UNSET
+        return if (d == C.TIME_UNSET || d < 0L) 0L else d
+    }
+
+    private fun syncPosition() {
+        val mc = controller ?: return
+        val pos = mc.currentPosition.coerceAtLeast(0L)
+        val dur = currentDurationMs()
+        val s = _state.value
+        if (s.positionMs != pos || s.durationMs != dur) {
+            _state.value = s.copy(positionMs = pos, durationMs = dur)
+        }
+    }
+
+    private fun startPositionTicker() {
+        if (positionTickerJob?.isActive == true) return
+        positionTickerJob = scope.launch(Dispatchers.Main) {
+            while (true) {
+                syncPosition()
+                delay(200)
+            }
+        }
+    }
+
+    private fun stopPositionTicker() {
+        positionTickerJob?.cancel()
+        positionTickerJob = null
+    }
+
+    /** Move inside the ayah that is playing now (the bar only covers this one ayah). */
+    fun seekInAyah(positionMs: Long) {
+        val mc = controller ?: return
+        val dur = currentDurationMs()
+        val target = if (dur > 0L) positionMs.coerceIn(0L, dur) else positionMs.coerceAtLeast(0L)
+        mc.seekTo(target)
+        _state.value = _state.value.copy(positionMs = target)
+    }
+
     fun playOrPause() {
         val mc = controller ?: return
         if (mc.isPlaying) {
@@ -261,6 +313,7 @@ class PlaybackController(
 
     fun stop() {
         val mc = controller ?: return
+        stopPositionTicker()
         mc.stop()
         mc.clearMediaItems()
         _state.value = PlaybackUiState()
@@ -358,7 +411,10 @@ class PlaybackController(
             currentAyahId = if (ayahId > 0) ayahId else null,
             currentAyahNo = if (ayahNo > 0) ayahNo else 1,
             isBismillahItem = isBismillah,
-            isPlaying = controller?.isPlaying ?: true
+            isPlaying = controller?.isPlaying ?: true,
+            // A new ayah file started: the time line starts again from zero.
+            positionMs = 0L,
+            durationMs = currentDurationMs()
         )
     }
 

@@ -9,6 +9,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.DragInteraction
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -66,6 +67,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
@@ -130,8 +132,10 @@ fun ReaderScreen(
     val catalog = remember { ReciterCatalogLoader.load(context) }
     val currentReciter = catalog.findById(state.userSettings.audioReciterId) ?: catalog.defaultReciter()
 
-    // Follow audio state
+    // Follow audio state: false = following (auto scroll + highlight), true = user turned it off
     var userPausedFollow by rememberSaveable { mutableStateOf(false) }
+    // Floating player: big player or small bar
+    var playerExpanded by rememberSaveable { mutableStateOf(true) }
 
     BackHandler {
         onNavigateBack()
@@ -176,16 +180,29 @@ fun ReaderScreen(
             }
     }
 
-    // Detect user manual dragging to pause "Follow audio"
-    LaunchedEffect(listState.isScrollInProgress) {
-        if (listState.isScrollInProgress && playbackState.isActive && playbackState.surahId == viewModel.surahId) {
-            userPausedFollow = true
+    // Detect a REAL finger drag to turn "Follow" off.
+    // Old code used listState.isScrollInProgress, but that is also true while the app
+    // scrolls by itself to the playing ayah. So the app switched Follow off on its own,
+    // and auto-scroll stopped after the first ayah. A drag interaction only comes from the finger.
+    val thisSurahAudioActive by rememberUpdatedState(
+        playbackState.isActive && playbackState.surahId == viewModel.surahId
+    )
+    LaunchedEffect(listState) {
+        listState.interactionSource.interactions.collect { interaction ->
+            if (interaction is DragInteraction.Start && thisSurahAudioActive) {
+                userPausedFollow = true
+            }
         }
     }
 
-    // Follow audio automatic scroll
+    // Follow audio automatic scroll (runs again when the user turns Follow back on)
     val followAudioEnabled = state.userSettings.audioFollow
-    LaunchedEffect(playbackState.currentAyahNo, playbackState.isBismillahItem, playbackState.isPlaying) {
+    LaunchedEffect(
+        playbackState.currentAyahNo,
+        playbackState.isBismillahItem,
+        playbackState.isPlaying,
+        userPausedFollow
+    ) {
         if (followAudioEnabled && !userPausedFollow && playbackState.isActive && playbackState.surahId == viewModel.surahId) {
             if (playbackState.isBismillahItem) {
                 listState.animateScrollToItem(index = 0)
@@ -339,7 +356,11 @@ fun ReaderScreen(
                         .fillMaxSize()
                         .widthIn(max = 720.dp),
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(
-                        bottom = if (isCurrentSurahPlaying) 80.dp else 24.dp
+                        bottom = if (isCurrentSurahPlaying) {
+                            if (playerExpanded) 310.dp else 100.dp
+                        } else {
+                            24.dp
+                        }
                     )
                 ) {
                     // Header card (index 0)
@@ -428,37 +449,40 @@ fun ReaderScreen(
                     }
                 }
 
-                // Follow Chip (shows when user scrolled away manually while audio is active)
+                // Follow switch, shown while this surah's audio is active.
+                //   "Following" (filled): the list scrolls and highlights with the audio.
+                //   "Follow" (outlined): auto scroll is off, audio keeps playing. Tap to follow again.
+                // Dragging the list with a finger switches Follow off by itself.
                 AnimatedVisibility(
-                    visible = isCurrentSurahPlaying && userPausedFollow && followAudioEnabled,
+                    visible = isCurrentSurahPlaying && followAudioEnabled,
                     enter = fadeIn() + slideInVertically { -it },
                     exit = fadeOut() + slideOutVertically { -it },
                     modifier = Modifier
                         .align(Alignment.TopCenter)
                         .padding(top = 12.dp)
                 ) {
+                    val following = !userPausedFollow
                     AssistChip(
-                        onClick = {
-                            userPausedFollow = false
-                            scope.launch {
-                                val target = playbackState.currentAyahNo
-                                if (target in 1..state.ayahs.size) {
-                                    listState.animateScrollToItem(target)
-                                }
-                            }
+                        onClick = { userPausedFollow = following },
+                        label = {
+                            Text(
+                                stringResource(
+                                    if (following) R.string.following_audio_chip else R.string.follow_audio_chip
+                                ),
+                                fontWeight = FontWeight.Bold
+                            )
                         },
-                        label = { Text(stringResource(R.string.follow_audio_chip), fontWeight = FontWeight.Bold) },
                         leadingIcon = {
                             Icon(
                                 imageVector = Icons.Default.NearMe,
                                 contentDescription = null,
                                 modifier = Modifier.size(16.dp),
-                                tint = MaterialTheme.colorScheme.primary
+                                tint = if (following) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.primary
                             )
                         },
                         colors = AssistChipDefaults.assistChipColors(
-                            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-                            labelColor = MaterialTheme.colorScheme.primary
+                            containerColor = if (following) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
+                            labelColor = if (following) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.primary
                         ),
                         border = AssistChipDefaults.assistChipBorder(true),
                         modifier = Modifier.testTag("follow_audio_chip")
@@ -472,6 +496,8 @@ fun ReaderScreen(
                         totalAyahs = surah.ayahCount,
                         useBanglaDigits = state.userSettings.banglaDigits,
                         onScrollToAyah = { targetAyah ->
+                            // Using the side handle is the user moving by hand: stop following
+                            if (isCurrentSurahPlaying) userPausedFollow = true
                             scope.launch {
                                 listState.scrollToItem(targetAyah)
                             }
@@ -493,11 +519,19 @@ fun ReaderScreen(
                     MiniPlayerBar(
                         state = playbackState,
                         useBanglaDigits = state.userSettings.banglaDigits,
+                        expanded = playerExpanded,
+                        onExpandedChange = { playerExpanded = it },
                         onPlayPause = { viewModel.playOrPause() },
                         onPrevious = { viewModel.skipToPrevious() },
                         onNext = { viewModel.skipToNext() },
                         onRepeatToggle = { viewModel.setRepeatMode(playbackState.repeatMode.next()) },
                         onSpeedSelected = { viewModel.setPlaybackSpeed(it) },
+                        onSeek = { viewModel.seekInAyah(it) },
+                        onChangeReciter = {
+                            // Stop the recitation while the person listens to reciter previews
+                            viewModel.pauseAudio()
+                            showReciterPicker = true
+                        },
                         onClose = { viewModel.stopAudio() }
                     )
                 }
@@ -554,6 +588,18 @@ fun ReaderScreen(
             onSelectReciter = { newReciter ->
                 viewModel.setAudioReciterId(newReciter.id)
                 showReciterPicker = false
+                if (isCurrentSurahPlaying) {
+                    // Keep listening from the same ayah with the new reciter.
+                    // If this reciter's audio is not downloaded yet, open the download sheet.
+                    scope.launch {
+                        userPausedFollow = false
+                        val ok = viewModel.playSurah(
+                            startAyahNo = playbackState.currentAyahNo.coerceAtLeast(1),
+                            reciterId = newReciter.id
+                        )
+                        if (!ok) showAudioSheet = true
+                    }
+                }
             },
             onDismiss = { showReciterPicker = false }
         )

@@ -27,6 +27,10 @@ data class PlaybackUiState(
     val isBuffering: Boolean = false,
     val speed: Float = 1.0f,
     val repeatMode: AudioRepeatMode = AudioRepeatMode.OFF,
+    // Position and length of the CURRENT ayah audio only. Every ayah is its own file,
+    // so these reset to 0 each time the next ayah starts.
+    val positionMs: Long = 0L,
+    val durationMs: Long = 0L,
     val error: String? = null
 ) {
     val isActive: Boolean
