@@ -142,13 +142,7 @@ fun SettingsScreen(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             AppTopBar(
-                title = {
-                    Text(
-                        text = stringResource(R.string.settings_title),
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                }
+                title = { AppTitle(stringResource(R.string.settings_title)) }
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },
