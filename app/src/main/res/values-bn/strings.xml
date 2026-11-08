@@ -213,4 +213,10 @@
     <string name="ayah_copied">আয়াত কপি করা হয়েছে</string>
     <string name="shared_via_app">কুরআন শরীফ অ্যাপের মাধ্যমে শেয়ারকৃত</string>
     <string name="enter_ayah_number">আয়াত নম্বর লিখুন</string>
+    <string name="nav_sub_appearance">থিম</string>
+    <string name="nav_sub_language">অ্যাপের ভাষা</string>
+    <string name="nav_sub_reading">অনুবাদ, লেখার আকার, অডিও, স্ক্রল</string>
+    <string name="nav_sub_widget">লেখার আকার, রিফ্রেশ, প্রিভিউ</string>
+    <string name="nav_sub_data">অগ্রগতি রিসেট, বুকমার্ক</string>
+    <string name="nav_sub_audio">ক্বারী, ডাউনলোড</string>
 </resources>

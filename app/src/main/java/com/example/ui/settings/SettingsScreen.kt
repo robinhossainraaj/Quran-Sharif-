@@ -85,6 +85,20 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
+import androidx.activity.compose.BackHandler
+import androidx.compose.material3.IconButton
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.foundation.border
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Headphones
+import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.Storage
+import androidx.compose.material.icons.filled.TextFields
+import androidx.compose.material.icons.filled.Widgets
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.graphics.vector.ImageVector
 import com.example.ui.components.SectionTitle
 import com.example.ui.components.appSwitchColors
 import com.example.ui.components.AppTitle
@@ -116,6 +130,9 @@ fun SettingsScreen(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     val scrollState = rememberScrollState()
+    var page by rememberSaveable { mutableStateOf<String?>(null) }
+    BackHandler(enabled = page != null) { page = null }
+    LaunchedEffect(page) { scrollState.scrollTo(0) }
 
     var showTranslationDialog by remember { mutableStateOf(false) }
     var showResetProgressDialog by remember { mutableStateOf(false) }
@@ -142,7 +159,35 @@ fun SettingsScreen(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             AppTopBar(
-                title = { AppTitle(stringResource(R.string.settings_title)) }
+                title = {
+                    AppTitle(
+                        stringResource(
+                            when (page) {
+                                "appearance" -> R.string.section_appearance
+                                "language" -> R.string.language_label
+                                "reading" -> R.string.section_reading
+                                "widget" -> R.string.section_widget
+                                "data" -> R.string.section_data
+                                "audio" -> R.string.section_audio
+                                else -> R.string.settings_title
+                            }
+                        )
+                    )
+                },
+                navigationIcon = {
+                    if (page != null) {
+                        IconButton(
+                            onClick = { page = null },
+                            modifier = Modifier.testTag("settings_back_button")
+                        ) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                contentDescription = stringResource(R.string.cancel),
+                                tint = MaterialTheme.colorScheme.onSurface
+                            )
+                        }
+                    }
+                }
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -162,9 +207,17 @@ fun SettingsScreen(
                     .padding(start = 16.dp, end = 16.dp, top = 4.dp, bottom = 16.dp),
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
-                // Section 1: Appearance
-                SettingsSectionHeader(title = stringResource(R.string.section_appearance))
+                if (page == null) {
+                    SettingsNavRow(Icons.Default.Palette, stringResource(R.string.section_appearance), stringResource(R.string.nav_sub_appearance), "settings_appearance_row") { page = "appearance" }
+                    SettingsNavRow(Icons.Default.Language, stringResource(R.string.language_label), stringResource(R.string.nav_sub_language), "settings_language_row") { page = "language" }
+                    SettingsNavRow(Icons.Default.TextFields, stringResource(R.string.section_reading), stringResource(R.string.nav_sub_reading), "settings_reading_row") { page = "reading" }
+                    SettingsNavRow(Icons.Default.Widgets, stringResource(R.string.section_widget), stringResource(R.string.nav_sub_widget), "settings_widget_row") { page = "widget" }
+                    SettingsNavRow(Icons.Default.Storage, stringResource(R.string.section_data), stringResource(R.string.nav_sub_data), "settings_data_row") { page = "data" }
+                    SettingsNavRow(Icons.Default.Headphones, stringResource(R.string.section_audio), stringResource(R.string.nav_sub_audio), "settings_audio_row") { page = "audio" }
+                    SettingsNavRow(Icons.Default.Info, stringResource(R.string.about_app), stringResource(R.string.offline_badge), "about_app_card") { onNavigateToAbout() }
+                }
 
+                if (page == "appearance") {
                 // Theme Mode Chips
                 Column {
                     Text(
@@ -211,6 +264,9 @@ fun SettingsScreen(
                     }
                 }
 
+                }
+
+                if (page == "language") {
                 // App Language Chips
                 Column {
                     Text(
@@ -257,11 +313,9 @@ fun SettingsScreen(
                     }
                 }
 
-                HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
+                }
 
-                // Section 2: Reading Preferences
-                SettingsSectionHeader(title = stringResource(R.string.section_reading))
-
+                if (page == "reading") {
                 // Bangla Translation Selector Card
                 Card(
                     modifier = Modifier
@@ -453,11 +507,9 @@ fun SettingsScreen(
                     testTag = "keep_screen_on_switch"
                 )
 
-                HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
+                }
 
-                // Section 3: Home-Screen Widget
-                SettingsSectionHeader(title = stringResource(R.string.section_widget))
-
+                if (page == "widget") {
                 // Widget Arabic Text Size Slider (70% - 150%)
                 Column {
                     val arScale = state.userSettings.widgetArabicScalePct
@@ -751,11 +803,9 @@ fun SettingsScreen(
                     Text(stringResource(R.string.refresh_widget_now), fontWeight = FontWeight.Bold)
                 }
 
-                HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
+                }
 
-                // Section 4: Data Resets
-                SettingsSectionHeader(title = stringResource(R.string.section_data))
-
+                if (page == "data") {
                 OutlinedButton(
                     onClick = { showResetProgressDialog = true },
                     modifier = Modifier
@@ -777,11 +827,9 @@ fun SettingsScreen(
                     Text(stringResource(R.string.delete_all_bookmarks))
                 }
 
-                HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
+                }
 
-                // Section 5: Audio Recitation
-                SettingsSectionHeader(title = stringResource(R.string.section_audio))
-
+                if (page == "audio") {
                 // Default Reciter Row
                 val currentReciter = catalog.findById(state.userSettings.audioReciterId) ?: catalog.defaultReciter()
 
@@ -886,52 +934,6 @@ fun SettingsScreen(
                     }
                 }
 
-                HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
-
-                // Section 6: About Navigation Card
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onNavigateToAbout() }
-                        .testTag("about_app_card"),
-                    shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.surface
-                    ),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Info,
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.primary
-                        )
-                        Spacer(modifier = Modifier.width(12.dp))
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = stringResource(R.string.about_app),
-                                style = MaterialTheme.typography.titleMedium,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onSurface
-                            )
-                            Text(
-                                text = stringResource(R.string.offline_badge),
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.size(16.dp)
-                        )
-                    }
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -1174,5 +1176,64 @@ private fun SettingSwitchRow(
             onCheckedChange = onCheckedChange,
             modifier = Modifier.testTag(testTag)
         )
+    }
+}
+
+@Composable
+private fun SettingsNavRow(
+    icon: ImageVector,
+    title: String,
+    subtitle: String,
+    testTag: String,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .testTag(testTag),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(14.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(44.dp)
+                    .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), RoundedCornerShape(12.dp))
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(MaterialTheme.colorScheme.surfaceVariant),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
+            Spacer(modifier = Modifier.width(14.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Text(
+                    text = subtitle,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
     }
 }

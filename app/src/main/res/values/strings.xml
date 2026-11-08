@@ -214,4 +214,10 @@
     <string name="ayah_copied">Ayah copied to clipboard</string>
     <string name="shared_via_app">Shared via Quran Sharif app</string>
     <string name="enter_ayah_number">Enter Ayah number</string>
+    <string name="nav_sub_appearance">Theme</string>
+    <string name="nav_sub_language">App language</string>
+    <string name="nav_sub_reading">Translation, text size, audio, scroll</string>
+    <string name="nav_sub_widget">Text size, refresh, preview</string>
+    <string name="nav_sub_data">Reset progress, bookmarks</string>
+    <string name="nav_sub_audio">Reciter, downloads</string>
 </resources>
