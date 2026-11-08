@@ -70,6 +70,17 @@ fun AppNavHost(
         }
     }
 
+    // One shared way to switch bottom-bar tabs, so every tab behaves the same.
+    val navigateToTab: (String) -> Unit = { route ->
+        navController.navigate(route) {
+            popUpTo(navController.graph.findStartDestination().id) {
+                saveState = true
+            }
+            launchSingleTop = true
+            restoreState = true
+        }
+    }
+
     // Hide bottom bar on reader, search, and about screens
     val showBottomBar = currentRoute in listOf(
         Routes.HOME,
@@ -90,15 +101,7 @@ fun AppNavHost(
                     // Home
                     NavigationBarItem(
                         selected = currentRoute == Routes.HOME,
-                        onClick = {
-                            navController.navigate(Routes.HOME) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
-                                }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
-                        },
+                        onClick = { navigateToTab(Routes.HOME) },
                         icon = { Icon(Icons.Default.Home, contentDescription = stringResource(R.string.nav_home)) },
                         label = { Text(stringResource(R.string.nav_home)) },
                         colors = NavigationBarItemDefaults.colors(
@@ -112,15 +115,7 @@ fun AppNavHost(
                     // Quran
                     NavigationBarItem(
                         selected = currentRoute == Routes.QURAN || currentRoute?.startsWith(Routes.QURAN) == true,
-                        onClick = {
-                            navController.navigate(Routes.QURAN) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
-                                }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
-                        },
+                        onClick = { navigateToTab(Routes.QURAN) },
                         icon = { Icon(Icons.AutoMirrored.Filled.MenuBook, contentDescription = stringResource(R.string.nav_quran)) },
                         label = { Text(stringResource(R.string.nav_quran)) },
                         colors = NavigationBarItemDefaults.colors(
@@ -134,15 +129,7 @@ fun AppNavHost(
                     // Bookmarks
                     NavigationBarItem(
                         selected = currentRoute == Routes.BOOKMARKS,
-                        onClick = {
-                            navController.navigate(Routes.BOOKMARKS) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
-                                }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
-                        },
+                        onClick = { navigateToTab(Routes.BOOKMARKS) },
                         icon = { Icon(Icons.Default.Bookmark, contentDescription = stringResource(R.string.nav_bookmarks)) },
                         label = { Text(stringResource(R.string.nav_bookmarks)) },
                         colors = NavigationBarItemDefaults.colors(
@@ -156,15 +143,7 @@ fun AppNavHost(
                     // Settings
                     NavigationBarItem(
                         selected = currentRoute == Routes.SETTINGS,
-                        onClick = {
-                            navController.navigate(Routes.SETTINGS) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
-                                }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
-                        },
+                        onClick = { navigateToTab(Routes.SETTINGS) },
                         icon = { Icon(Icons.Default.Settings, contentDescription = stringResource(R.string.nav_settings)) },
                         label = { Text(stringResource(R.string.nav_settings)) },
                         colors = NavigationBarItemDefaults.colors(
@@ -198,7 +177,12 @@ fun AppNavHost(
                     viewModel = homeViewModel,
                     onNavigateToSearch = { navController.navigate(Routes.SEARCH) },
                     onNavigateToReader = { sId, aNo -> navController.navigate(Routes.reader(sId, aNo)) },
-                    onNavigateToQuranTab = { tab -> navController.navigate("${Routes.QURAN}?tab=$tab") }
+                    onNavigateToQuranTab = { tab ->
+                        navController.navigate(Routes.quranWithTab(tab)) {
+                            popUpTo(Routes.HOME)
+                            launchSingleTop = true
+                        }
+                    }
                 )
             }
 
