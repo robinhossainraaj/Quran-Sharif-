@@ -123,6 +123,7 @@
     <string name="import_title">কুরআন শরীফ</string>
     <string name="import_subtitle">কুরআনের উপাত্ত প্রস্তুত করা হচ্ছে… %1$d/১১৪</string>
     <string name="import_failed">কুরআনের উপাত্ত প্রস্তুতিতে ব্যর্থ হয়েছে।</string>
+    <string name="import_tagline">পড়ুন  •  শুনুন  •  শিখুন</string>
     <string name="retry">পুনরায় চেষ্টা করুন</string>
     <string name="checking_data">কুরআনের উপাত্ত যাচাই করা হচ্ছে…</string>
 

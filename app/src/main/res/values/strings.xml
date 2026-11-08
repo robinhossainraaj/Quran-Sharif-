@@ -123,6 +123,7 @@
     <string name="import_title">Quran Sharif</string>
     <string name="import_subtitle">Preparing Quran data… %1$d/114</string>
     <string name="import_failed">Failed to prepare Quran data.</string>
+    <string name="import_tagline">Read  •  Listen  •  Learn</string>
     <string name="retry">Retry</string>
     <string name="checking_data">Checking Quran data…</string>
 
