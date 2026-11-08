@@ -1,6 +1,19 @@
 package com.example.ui.components
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import com.example.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
@@ -45,60 +58,90 @@ import com.example.ui.theme.CormorantFontFamily
 import com.example.ui.theme.NotoSansBengaliFontFamily
 import com.example.ui.theme.extraColors
 
-/** Top bar with the gold arch under it. Same slots as the normal TopAppBar. */
-@OptIn(ExperimentalMaterial3Api::class)
+/** Actions for the two tap areas on the header picture. Set once in AppNavHost. */
+class HeaderActions(
+    val onLanguage: () -> Unit = {},
+    val onSearch: () -> Unit = {}
+)
+
+val LocalHeaderActions = staticCompositionLocalOf { HeaderActions() }
+
+/**
+ * Top bar = the exact header picture (language pill on the left, search circle on the right).
+ * Under it, an optional thin strip with the back arrow, the screen name and the screen buttons.
+ */
 @Composable
 fun AppTopBar(
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     navigationIcon: @Composable () -> Unit = {},
-    actions: @Composable RowScope.() -> Unit = {}
+    actions: @Composable RowScope.() -> Unit = {},
+    showStrip: Boolean = true
 ) {
-    val header = MaterialTheme.extraColors.headerBg
-    Column(modifier = modifier) {
-        TopAppBar(
-            title = title,
-            navigationIcon = navigationIcon,
-            actions = actions,
-            colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = header,
-                scrolledContainerColor = header
-            )
-        )
-        HeaderArch()
+    val extra = MaterialTheme.extraColors
+    val header = extra.headerBg
+    Column(modifier = modifier.fillMaxWidth()) {
+        HeaderPicture()
+        if (showStrip) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(header)
+                    .heightIn(min = 44.dp)
+                    .padding(horizontal = 4.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                navigationIcon()
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(horizontal = 8.dp)
+                ) { title() }
+                actions()
+            }
+            HorizontalDivider(color = extra.headerLine.copy(alpha = 0.55f), thickness = 0.8.dp)
+        }
     }
 }
 
 @Composable
-private fun HeaderArch() {
-    val header = MaterialTheme.extraColors.headerBg
-    val line = MaterialTheme.extraColors.headerLine
-    Canvas(
+private fun HeaderPicture() {
+    val actions = LocalHeaderActions.current
+    val languageDesc = stringResource(R.string.language_label)
+    val searchDesc = stringResource(R.string.search_title)
+    Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(18.dp)
+            .background(Color(0xFF0C481F))
+            .windowInsetsPadding(WindowInsets.statusBars)
     ) {
-        val sw = 1.2.dp.toPx()
-        val w = size.width
-        val h = size.height - sw
-        val mid = w / 2f
-
-        val above = Path().apply {
-            moveTo(0f, 0f)
-            lineTo(w, 0f)
-            lineTo(w, h)
-            cubicTo(w * 0.70f, h, w * 0.56f, h * 0.80f, mid, 0f)
-            cubicTo(w * 0.44f, h * 0.80f, w * 0.30f, h, 0f, h)
-            close()
+        Image(
+            painter = painterResource(R.drawable.header_bar),
+            contentDescription = null,
+            contentScale = ContentScale.FillWidth,
+            modifier = Modifier.fillMaxWidth()
+        )
+        // Invisible tap areas over the language pill and the search circle of the picture.
+        BoxWithConstraints(modifier = Modifier.matchParentSize()) {
+            val w = maxWidth
+            val h = maxHeight
+            Box(
+                modifier = Modifier
+                    .offset(x = w * 0.010f, y = h * 0.36f)
+                    .size(width = w * 0.205f, height = h * 0.50f)
+                    .clip(RoundedCornerShape(16.dp))
+                    .clickable(role = Role.Button, onClickLabel = languageDesc) { actions.onLanguage() }
+                    .testTag("header_language_button")
+            )
+            Box(
+                modifier = Modifier
+                    .offset(x = w * 0.835f, y = h * 0.36f)
+                    .size(width = w * 0.155f, height = h * 0.50f)
+                    .clip(RoundedCornerShape(16.dp))
+                    .clickable(role = Role.Button, onClickLabel = searchDesc) { actions.onSearch() }
+                    .testTag("header_search_button")
+            )
         }
-        drawPath(path = above, color = header)
-
-        val curve = Path().apply {
-            moveTo(0f, h)
-            cubicTo(w * 0.30f, h, w * 0.44f, h * 0.80f, mid, 0f)
-            cubicTo(w * 0.56f, h * 0.80f, w * 0.70f, h, w, h)
-        }
-        drawPath(path = curve, color = line, style = Stroke(width = sw))
     }
 }
 
@@ -111,7 +154,7 @@ fun AppTitle(text: String) {
         color = MaterialTheme.extraColors.headerText,
         fontFamily = if (bengali) NotoSansBengaliFontFamily else CormorantFontFamily,
         fontWeight = if (bengali) FontWeight.Medium else FontWeight.Bold,
-        fontSize = if (bengali) 22.sp else 30.sp,
+        fontSize = if (bengali) 19.sp else 24.sp,
         maxLines = 1,
         overflow = TextOverflow.Ellipsis
     )

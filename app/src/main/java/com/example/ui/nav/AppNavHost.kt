@@ -10,6 +10,9 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import com.example.ui.components.AppBottomBar
+import com.example.ui.components.HeaderActions
+import com.example.ui.components.LocalHeaderActions
+import androidx.compose.runtime.CompositionLocalProvider
 import com.example.ui.components.BottomBarItem
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
@@ -91,6 +94,14 @@ fun AppNavHost(
         Routes.SETTINGS
     )
 
+    val headerActions = HeaderActions(
+        onLanguage = { navigateToTab(Routes.SETTINGS) },
+        onSearch = {
+            navController.navigate(Routes.SEARCH) { launchSingleTop = true }
+        }
+    )
+
+    CompositionLocalProvider(LocalHeaderActions provides headerActions) {
     Scaffold(
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
         bottomBar = {
@@ -284,5 +295,6 @@ fun AppNavHost(
                 )
             }
         }
+    }
     }
 }

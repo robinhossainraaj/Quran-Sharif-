@@ -159,6 +159,7 @@ fun SettingsScreen(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             AppTopBar(
+                showStrip = page != null,
                 title = {
                     AppTitle(
                         stringResource(

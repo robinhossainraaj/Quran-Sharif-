@@ -85,18 +85,7 @@ fun QuranScreen(
         topBar = {
             AppTopBar(
                 title = { AppTitle(stringResource(R.string.nav_quran)) },
-                actions = {
-                    IconButton(
-                        onClick = onNavigateToSearch,
-                        modifier = Modifier.testTag("quran_search_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Search,
-                            contentDescription = stringResource(R.string.search_hint),
-                            tint = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
-                }
+                showStrip = false
             )
         },
         containerColor = MaterialTheme.colorScheme.background

@@ -79,18 +79,7 @@ fun HomeScreen(
         topBar = {
             AppTopBar(
                 title = { AppTitle(stringResource(R.string.app_name)) },
-                actions = {
-                    IconButton(
-                        onClick = onNavigateToSearch,
-                        modifier = Modifier.testTag("home_search_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Search,
-                            contentDescription = stringResource(R.string.search_hint),
-                            tint = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
-                }
+                showStrip = false
             )
         },
         containerColor = MaterialTheme.colorScheme.background
