@@ -8,6 +8,8 @@ object Routes {
     const val ABOUT = "about"
     const val DOWNLOADS = "downloads"
     const val SEARCH = "search"
+    const val TRANSLATIONS = "translations"
+    const val CREDITS = "credits"
     const val READER = "reader/{surahId}?ayah={ayahNo}"
 
     fun reader(surahId: Int, ayahNo: Int = -1): String {

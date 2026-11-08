@@ -219,4 +219,39 @@
     <string name="nav_sub_widget">লেখার আকার, রিফ্রেশ, প্রিভিউ</string>
     <string name="nav_sub_data">অগ্রগতি রিসেট, বুকমার্ক</string>
     <string name="nav_sub_audio">ক্বারী, ডাউনলোড</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">অ্যাপের ভাষা</string>
+    <string name="menu_translation_language">অনুবাদের ভাষা</string>
+    <string name="tr_close">বন্ধ করুন</string>
+    <string name="tr_title">অনুবাদের ভাষা</string>
+    <string name="tr_installed_section">এই ফোনে আছে</string>
+    <string name="tr_languages_section">উপলব্ধ ভাষা</string>
+    <string name="tr_count_format">%1$dটি অনুবাদ</string>
+    <string name="tr_loading">অনুবাদের তালিকা লোড হচ্ছে…</string>
+    <string name="tr_load_failed">তালিকা লোড করা যায়নি। ইন্টারনেট দেখে আবার চেষ্টা করুন।</string>
+    <string name="tr_retry">আবার চেষ্টা করুন</string>
+    <string name="tr_download">ডাউনলোড</string>
+    <string name="tr_use">ব্যবহার করুন</string>
+    <string name="tr_in_use">ব্যবহৃত হচ্ছে</string>
+    <string name="tr_downloading_format">ডাউনলোড হচ্ছে… %1$d%%</string>
+    <string name="tr_failed_format">ডাউনলোড ব্যর্থ: %1$s</string>
+    <string name="tr_version_format">সংস্করণ %1$s</string>
+    <string name="tr_source_line">সূত্র: QuranEnc.com</string>
+    <string name="tr_restart_title">প্রয়োগ করতে রিস্টার্ট দিন</string>
+    <string name="tr_restart_message">%1$s প্রয়োগ করতে অ্যাপ রিস্টার্ট করতে হবে। অ্যাপ বন্ধ হয়ে এই অনুবাদসহ আবার খুলবে।</string>
+    <string name="tr_restart">রিস্টার্ট</string>
+    <string name="tr_later">পরে</string>
+    <string name="settings_credits">কৃতজ্ঞতা</string>
+    <string name="settings_credits_sub">অনুবাদক, প্রকাশক ও সূত্র</string>
+    <string name="credits_page_title">কৃতজ্ঞতা</string>
+    <string name="credits_section_sources">সূত্র</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">আপনি যে অনুবাদ ডাউনলোড করেন তা QuranEnc.com (কুরআন এনসাইক্লোপিডিয়া) থেকে আসে। প্রতিটি অনুবাদ তার অনুবাদক ও প্রকাশকের।</string>
+    <string name="credits_tanzil_title">তানজিল প্রজেক্ট</string>
+    <string name="credits_tanzil_body">আরবি কুরআনের লেখা এবং অ্যাপে থাকা বাংলা অনুবাদ (মুহিউদ্দীন খান ও জহুরুল হক) tanzil.net থেকে নেওয়া, অবাণিজ্যিক ব্যবহারের জন্য।</string>
+    <string name="credits_audio_title">তিলাওয়াতের অডিও</string>
+    <string name="credits_audio_body">আয়াত ধরে ধরে তিলাওয়াতের অডিও cdn.islamic.network (ইসলামিক নেটওয়ার্ক) থেকে আসে।</string>
+    <string name="credits_section_downloaded">ডাউনলোড করা অনুবাদ</string>
+    <string name="credits_none_downloaded">এখনো কোনো অনুবাদ ডাউনলোড করা হয়নি।</string>
 </resources>

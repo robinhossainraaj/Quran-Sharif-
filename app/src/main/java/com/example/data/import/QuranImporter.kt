@@ -280,7 +280,8 @@ class QuranImporter(
 
         // If current selection is invalid, reset to default
         val currentTransId = settings.translationId
-        if (validInfos.isNotEmpty() && validInfos.none { it.id == currentTransId }) {
+        if (validInfos.isNotEmpty() && validInfos.none { it.id == currentTransId } &&
+            quranDao.translationInfo(currentTransId) == null) {
             val fallback = validInfos.firstOrNull { it.isDefault }?.id ?: validInfos.first().id
             settingsRepository.setTranslationId(fallback)
         }

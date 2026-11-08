@@ -137,6 +137,9 @@ interface QuranDao {
     @Query("SELECT * FROM juz ORDER BY `index` ASC")
     fun juzList(): Flow<List<JuzEntity>>
 
+    @Query("SELECT id, surahId, ayahNo FROM ayah")
+    suspend fun ayahKeys(): List<AyahKey>
+
     @Query("SELECT COUNT(*) FROM ayah")
     suspend fun ayahCount(): Int
 

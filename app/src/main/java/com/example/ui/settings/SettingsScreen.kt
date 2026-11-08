@@ -90,6 +90,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.foundation.border
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Headphones
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Palette
@@ -123,7 +124,8 @@ import kotlinx.coroutines.launch
 fun SettingsScreen(
     viewModel: SettingsViewModel,
     onNavigateToAbout: () -> Unit,
-    onNavigateToDownloads: () -> Unit
+    onNavigateToDownloads: () -> Unit,
+    onNavigateToCredits: () -> Unit = {}
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     val context = LocalContext.current
@@ -216,6 +218,7 @@ fun SettingsScreen(
                     SettingsNavRow(Icons.Default.Storage, stringResource(R.string.section_data), stringResource(R.string.nav_sub_data), "settings_data_row") { page = "data" }
                     SettingsNavRow(Icons.Default.Headphones, stringResource(R.string.section_audio), stringResource(R.string.nav_sub_audio), "settings_audio_row") { page = "audio" }
                     SettingsNavRow(Icons.Default.Info, stringResource(R.string.about_app), stringResource(R.string.offline_badge), "about_app_card") { onNavigateToAbout() }
+                    SettingsNavRow(Icons.Default.Favorite, stringResource(R.string.settings_credits), stringResource(R.string.settings_credits_sub), "settings_credits_row") { onNavigateToCredits() }
                 }
 
                 if (page == "appearance") {

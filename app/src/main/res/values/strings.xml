@@ -220,4 +220,39 @@
     <string name="nav_sub_widget">Text size, refresh, preview</string>
     <string name="nav_sub_data">Reset progress, bookmarks</string>
     <string name="nav_sub_audio">Reciter, downloads</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">App language</string>
+    <string name="menu_translation_language">Translation language</string>
+    <string name="tr_close">Close</string>
+    <string name="tr_title">Translation language</string>
+    <string name="tr_installed_section">On this phone</string>
+    <string name="tr_languages_section">Available languages</string>
+    <string name="tr_count_format">%1$d translations</string>
+    <string name="tr_loading">Loading translations…</string>
+    <string name="tr_load_failed">The list could not be loaded. Check your internet and try again.</string>
+    <string name="tr_retry">Try again</string>
+    <string name="tr_download">Download</string>
+    <string name="tr_use">Use</string>
+    <string name="tr_in_use">In use</string>
+    <string name="tr_downloading_format">Downloading… %1$d%%</string>
+    <string name="tr_failed_format">Download failed: %1$s</string>
+    <string name="tr_version_format">Version %1$s</string>
+    <string name="tr_source_line">Source: QuranEnc.com</string>
+    <string name="tr_restart_title">Restart to apply</string>
+    <string name="tr_restart_message">Applying %1$s needs the app to restart. The app will close and open again with this translation.</string>
+    <string name="tr_restart">Restart</string>
+    <string name="tr_later">Later</string>
+    <string name="settings_credits">Credits</string>
+    <string name="settings_credits_sub">Translators, publishers and sources</string>
+    <string name="credits_page_title">Credits</string>
+    <string name="credits_section_sources">Sources</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Translations you download come from QuranEnc.com (Quran Encyclopedia). Each translation belongs to its translator and publisher.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">The Arabic Quran text and the built-in Bengali translations (Muhiuddin Khan and Zohurul Hoque) come from tanzil.net, for non-commercial use.</string>
+    <string name="credits_audio_title">Recitation audio</string>
+    <string name="credits_audio_body">Verse-by-verse recitation audio is provided by cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Downloaded translations</string>
+    <string name="credits_none_downloaded">No translation has been downloaded yet.</string>
 </resources>

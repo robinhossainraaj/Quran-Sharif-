@@ -2,6 +2,15 @@ package com.example.ui.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.Translate
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.WindowInsets
@@ -60,7 +69,8 @@ import com.example.ui.theme.extraColors
 
 /** Actions for the two tap areas on the header picture. Set once in AppNavHost. */
 class HeaderActions(
-    val onLanguage: () -> Unit = {},
+    val onAppLanguage: () -> Unit = {},
+    val onTranslationLanguage: () -> Unit = {},
     val onSearch: () -> Unit = {}
 )
 
@@ -109,6 +119,7 @@ private fun HeaderPicture() {
     val actions = LocalHeaderActions.current
     val languageDesc = stringResource(R.string.language_label)
     val searchDesc = stringResource(R.string.search_title)
+    var menuOpen by remember { mutableStateOf(false) }
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -129,10 +140,38 @@ private fun HeaderPicture() {
                 modifier = Modifier
                     .offset(x = w * 0.010f, y = h * 0.36f)
                     .size(width = w * 0.205f, height = h * 0.50f)
-                    .clip(RoundedCornerShape(16.dp))
-                    .clickable(role = Role.Button, onClickLabel = languageDesc) { actions.onLanguage() }
-                    .testTag("header_language_button")
-            )
+            ) {
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .clip(RoundedCornerShape(16.dp))
+                        .clickable(role = Role.Button, onClickLabel = languageDesc) { menuOpen = true }
+                        .testTag("header_language_button")
+                )
+                DropdownMenu(
+                    expanded = menuOpen,
+                    onDismissRequest = { menuOpen = false }
+                ) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.menu_app_language)) },
+                        leadingIcon = { Icon(Icons.Default.Language, contentDescription = null) },
+                        onClick = {
+                            menuOpen = false
+                            actions.onAppLanguage()
+                        },
+                        modifier = Modifier.testTag("menu_app_language")
+                    )
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.menu_translation_language)) },
+                        leadingIcon = { Icon(Icons.Default.Translate, contentDescription = null) },
+                        onClick = {
+                            menuOpen = false
+                            actions.onTranslationLanguage()
+                        },
+                        modifier = Modifier.testTag("menu_translation_language")
+                    )
+                }
+            }
             Box(
                 modifier = Modifier
                     .offset(x = w * 0.835f, y = h * 0.36f)

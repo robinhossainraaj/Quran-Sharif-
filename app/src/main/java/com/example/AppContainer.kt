@@ -10,6 +10,7 @@ import com.example.data.QuranRepository
 import com.example.data.db.QuranDatabase
 import com.example.data.import.QuranImporter
 import com.example.data.prefs.SettingsRepository
+import com.example.data.translations.TranslationDownloadManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -32,6 +33,10 @@ class AppContainer(val context: Context) {
 
     val quranImporter: QuranImporter by lazy {
         QuranImporter(context, database, settingsRepository)
+    }
+
+    val translationManager: TranslationDownloadManager by lazy {
+        TranslationDownloadManager(database, applicationScope)
     }
 
     val audioStorage: AudioStorage by lazy {
