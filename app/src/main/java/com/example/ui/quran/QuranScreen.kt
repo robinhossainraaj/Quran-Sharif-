@@ -1,7 +1,9 @@
 package com.example.ui.quran
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -55,6 +57,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
+import com.example.ui.components.AppTitle
+import com.example.ui.components.AppTopBar
 import com.example.data.db.SurahEntity
 import com.example.ui.theme.extraColors
 import com.example.ui.theme.getArabicTextStyle
@@ -79,14 +83,8 @@ fun QuranScreen(
     Scaffold(
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(R.string.nav_quran),
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                },
+            AppTopBar(
+                title = { AppTitle(stringResource(R.string.nav_quran)) },
                 actions = {
                     IconButton(
                         onClick = onNavigateToSearch,
@@ -98,10 +96,7 @@ fun QuranScreen(
                             tint = MaterialTheme.colorScheme.onSurface
                         )
                     }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.background
-                )
+                }
             )
         },
         containerColor = MaterialTheme.colorScheme.background
@@ -116,11 +111,11 @@ fun QuranScreen(
             TabRow(
                 selectedTabIndex = state.selectedTab,
                 containerColor = MaterialTheme.colorScheme.background,
-                contentColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.extraColors.accentGold,
                 indicator = { tabPositions ->
                     TabRowDefaults.SecondaryIndicator(
                         Modifier.tabIndicatorOffset(tabPositions[state.selectedTab]),
-                        color = MaterialTheme.colorScheme.primary
+                        color = MaterialTheme.extraColors.accentGold
                     )
                 },
                 modifier = Modifier
@@ -130,6 +125,8 @@ fun QuranScreen(
                 Tab(
                     selected = state.selectedTab == 0,
                     onClick = { viewModel.selectTab(0) },
+                    selectedContentColor = MaterialTheme.extraColors.accentGold,
+                    unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
                     text = {
                         Text(
                             text = stringResource(R.string.tab_surah),
@@ -142,6 +139,8 @@ fun QuranScreen(
                 Tab(
                     selected = state.selectedTab == 1,
                     onClick = { viewModel.selectTab(1) },
+                    selectedContentColor = MaterialTheme.extraColors.accentGold,
+                    unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
                     text = {
                         Text(
                             text = stringResource(R.string.tab_juz),
@@ -245,6 +244,7 @@ private fun SurahRowItem(
         Box(
             modifier = Modifier
                 .size(42.dp)
+                .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), RoundedCornerShape(12.dp))
                 .clip(RoundedCornerShape(12.dp))
                 .background(MaterialTheme.colorScheme.surfaceVariant),
             contentAlignment = Alignment.Center
@@ -332,6 +332,7 @@ private fun JuzList(
                 Box(
                     modifier = Modifier
                         .size(42.dp)
+                        .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), RoundedCornerShape(12.dp))
                         .clip(RoundedCornerShape(12.dp))
                         .background(MaterialTheme.colorScheme.surfaceVariant),
                     contentAlignment = Alignment.Center
@@ -365,6 +366,12 @@ private fun JuzList(
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
+
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
 
             HorizontalDivider(

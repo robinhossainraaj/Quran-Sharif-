@@ -3,6 +3,7 @@ package com.example.ui.reader
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -36,6 +37,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.R
+import com.example.ui.components.AyahDivider
 import com.example.data.db.AyahWithText
 import com.example.ui.theme.extraColors
 import com.example.ui.theme.getArabicTextStyle
@@ -90,6 +92,7 @@ fun AyahItem(
             Box(
                 modifier = Modifier
                     .size(36.dp)
+                    .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), RoundedCornerShape(10.dp))
                     .clip(RoundedCornerShape(10.dp))
                     .background(badgeBg),
                 contentAlignment = Alignment.Center
@@ -186,10 +189,6 @@ fun AyahItem(
 
         Spacer(modifier = Modifier.height(14.dp))
 
-        // Thin divider
-        HorizontalDivider(
-            color = MaterialTheme.colorScheme.outline.copy(alpha = 0.35f),
-            thickness = 0.8.dp
-        )
+        AyahDivider()
     }
 }

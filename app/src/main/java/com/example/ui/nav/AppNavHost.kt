@@ -9,7 +9,8 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
+import com.example.ui.components.AppBottomBar
+import com.example.ui.components.BottomBarItem
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
@@ -94,66 +95,38 @@ fun AppNavHost(
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
         bottomBar = {
             if (showBottomBar) {
-                NavigationBar(
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    contentColor = MaterialTheme.colorScheme.primary
-                ) {
-                    // Home
-                    NavigationBarItem(
-                        selected = currentRoute == Routes.HOME,
-                        onClick = { navigateToTab(Routes.HOME) },
-                        icon = { Icon(Icons.Default.Home, contentDescription = stringResource(R.string.nav_home)) },
-                        label = { Text(stringResource(R.string.nav_home)) },
-                        colors = NavigationBarItemDefaults.colors(
-                            selectedIconColor = MaterialTheme.colorScheme.primary,
-                            selectedTextColor = MaterialTheme.colorScheme.primary,
-                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                AppBottomBar(
+                    items = listOf(
+                        BottomBarItem(
+                            selected = currentRoute == Routes.HOME,
+                            onClick = { navigateToTab(Routes.HOME) },
+                            icon = Icons.Default.Home,
+                            label = stringResource(R.string.nav_home),
+                            testTag = "nav_home_item"
                         ),
-                        modifier = Modifier.testTag("nav_home_item")
-                    )
-
-                    // Quran
-                    NavigationBarItem(
-                        selected = currentRoute == Routes.QURAN || currentRoute?.startsWith(Routes.QURAN) == true,
-                        onClick = { navigateToTab(Routes.QURAN) },
-                        icon = { Icon(Icons.AutoMirrored.Filled.MenuBook, contentDescription = stringResource(R.string.nav_quran)) },
-                        label = { Text(stringResource(R.string.nav_quran)) },
-                        colors = NavigationBarItemDefaults.colors(
-                            selectedIconColor = MaterialTheme.colorScheme.primary,
-                            selectedTextColor = MaterialTheme.colorScheme.primary,
-                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                        BottomBarItem(
+                            selected = currentRoute == Routes.QURAN || currentRoute?.startsWith(Routes.QURAN) == true,
+                            onClick = { navigateToTab(Routes.QURAN) },
+                            icon = Icons.AutoMirrored.Filled.MenuBook,
+                            label = stringResource(R.string.nav_quran),
+                            testTag = "nav_quran_item"
                         ),
-                        modifier = Modifier.testTag("nav_quran_item")
-                    )
-
-                    // Bookmarks
-                    NavigationBarItem(
-                        selected = currentRoute == Routes.BOOKMARKS,
-                        onClick = { navigateToTab(Routes.BOOKMARKS) },
-                        icon = { Icon(Icons.Default.Bookmark, contentDescription = stringResource(R.string.nav_bookmarks)) },
-                        label = { Text(stringResource(R.string.nav_bookmarks)) },
-                        colors = NavigationBarItemDefaults.colors(
-                            selectedIconColor = MaterialTheme.colorScheme.primary,
-                            selectedTextColor = MaterialTheme.colorScheme.primary,
-                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                        BottomBarItem(
+                            selected = currentRoute == Routes.BOOKMARKS,
+                            onClick = { navigateToTab(Routes.BOOKMARKS) },
+                            icon = Icons.Default.Bookmark,
+                            label = stringResource(R.string.nav_bookmarks),
+                            testTag = "nav_bookmarks_item"
                         ),
-                        modifier = Modifier.testTag("nav_bookmarks_item")
+                        BottomBarItem(
+                            selected = currentRoute == Routes.SETTINGS,
+                            onClick = { navigateToTab(Routes.SETTINGS) },
+                            icon = Icons.Default.Settings,
+                            label = stringResource(R.string.nav_settings),
+                            testTag = "nav_settings_item"
+                        )
                     )
-
-                    // Settings
-                    NavigationBarItem(
-                        selected = currentRoute == Routes.SETTINGS,
-                        onClick = { navigateToTab(Routes.SETTINGS) },
-                        icon = { Icon(Icons.Default.Settings, contentDescription = stringResource(R.string.nav_settings)) },
-                        label = { Text(stringResource(R.string.nav_settings)) },
-                        colors = NavigationBarItemDefaults.colors(
-                            selectedIconColor = MaterialTheme.colorScheme.primary,
-                            selectedTextColor = MaterialTheme.colorScheme.primary,
-                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
-                        ),
-                        modifier = Modifier.testTag("nav_settings_item")
-                    )
-                }
+                )
             }
         }
     ) { innerPadding ->

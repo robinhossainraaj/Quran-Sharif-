@@ -54,6 +54,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
+import com.example.ui.components.AppTitle
+import com.example.ui.components.AppTopBar
 import com.example.ui.theme.extraColors
 import com.example.ui.theme.getArabicTextStyle
 import com.example.ui.theme.getBanglaTextStyle
@@ -75,14 +77,8 @@ fun HomeScreen(
     Scaffold(
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(R.string.app_name),
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                },
+            AppTopBar(
+                title = { AppTitle(stringResource(R.string.app_name)) },
                 actions = {
                     IconButton(
                         onClick = onNavigateToSearch,
@@ -94,10 +90,7 @@ fun HomeScreen(
                             tint = MaterialTheme.colorScheme.onSurface
                         )
                     }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.background
-                )
+                }
             )
         },
         containerColor = MaterialTheme.colorScheme.background
@@ -214,7 +207,7 @@ fun HomeScreen(
                             containerColor = MaterialTheme.colorScheme.surface
                         ),
                         shape = RoundedCornerShape(28.dp),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                     ) {
                         Column(
                             modifier = Modifier
@@ -445,7 +438,7 @@ fun HomeScreen(
                             containerColor = MaterialTheme.colorScheme.surface
                         ),
                         shape = RoundedCornerShape(16.dp),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                     ) {
                         Column(
                             modifier = Modifier
@@ -483,7 +476,7 @@ fun HomeScreen(
                             containerColor = MaterialTheme.colorScheme.surface
                         ),
                         shape = RoundedCornerShape(16.dp),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                     ) {
                         Column(
                             modifier = Modifier

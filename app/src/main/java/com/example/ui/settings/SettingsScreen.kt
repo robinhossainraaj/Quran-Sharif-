@@ -85,6 +85,10 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
+import com.example.ui.components.SectionTitle
+import com.example.ui.components.appSwitchColors
+import com.example.ui.components.AppTitle
+import com.example.ui.components.AppTopBar
 import com.example.data.db.TranslationInfoEntity
 import com.example.service.ServiceController
 import com.example.ui.theme.extraColors
@@ -137,17 +141,14 @@ fun SettingsScreen(
     Scaffold(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
-            TopAppBar(
+            AppTopBar(
                 title = {
                     Text(
                         text = stringResource(R.string.settings_title),
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface
                     )
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.background
-                )
+                }
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -181,32 +182,35 @@ fun SettingsScreen(
                     Spacer(modifier = Modifier.height(8.dp))
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         FilterChip(
+                            shape = RoundedCornerShape(14.dp),
                             selected = state.userSettings.themeMode == "SYSTEM",
                             onClick = { viewModel.setThemeMode("SYSTEM") },
                             label = { Text(stringResource(R.string.theme_system)) },
                             colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
+                                selectedContainerColor = MaterialTheme.colorScheme.primary,
+                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                             ),
                             modifier = Modifier.testTag("theme_system_chip")
                         )
                         FilterChip(
+                            shape = RoundedCornerShape(14.dp),
                             selected = state.userSettings.themeMode == "LIGHT",
                             onClick = { viewModel.setThemeMode("LIGHT") },
                             label = { Text(stringResource(R.string.theme_light)) },
                             colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
+                                selectedContainerColor = MaterialTheme.colorScheme.primary,
+                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                             ),
                             modifier = Modifier.testTag("theme_light_chip")
                         )
                         FilterChip(
+                            shape = RoundedCornerShape(14.dp),
                             selected = state.userSettings.themeMode == "DARK",
                             onClick = { viewModel.setThemeMode("DARK") },
                             label = { Text(stringResource(R.string.theme_dark)) },
                             colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
+                                selectedContainerColor = MaterialTheme.colorScheme.primary,
+                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                             ),
                             modifier = Modifier.testTag("theme_dark_chip")
                         )
@@ -224,32 +228,35 @@ fun SettingsScreen(
                     Spacer(modifier = Modifier.height(8.dp))
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         FilterChip(
+                            shape = RoundedCornerShape(14.dp),
                             selected = state.userSettings.appLanguage.isEmpty(),
                             onClick = { viewModel.setAppLanguage("") },
                             label = { Text(stringResource(R.string.language_system)) },
                             colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
+                                selectedContainerColor = MaterialTheme.colorScheme.primary,
+                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                             ),
                             modifier = Modifier.testTag("lang_system_chip")
                         )
                         FilterChip(
+                            shape = RoundedCornerShape(14.dp),
                             selected = state.userSettings.appLanguage == "bn",
                             onClick = { viewModel.setAppLanguage("bn") },
                             label = { Text(stringResource(R.string.language_bn)) },
                             colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
+                                selectedContainerColor = MaterialTheme.colorScheme.primary,
+                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                             ),
                             modifier = Modifier.testTag("lang_bn_chip")
                         )
                         FilterChip(
+                            shape = RoundedCornerShape(14.dp),
                             selected = state.userSettings.appLanguage == "en",
                             onClick = { viewModel.setAppLanguage("en") },
                             label = { Text(stringResource(R.string.language_en)) },
                             colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer
+                                selectedContainerColor = MaterialTheme.colorScheme.primary,
+                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
                             ),
                             modifier = Modifier.testTag("lang_en_chip")
                         )
@@ -271,7 +278,7 @@ fun SettingsScreen(
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.surface
                     ),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                 ) {
                     Row(
                         modifier = Modifier
@@ -388,7 +395,7 @@ fun SettingsScreen(
                         colors = CardDefaults.cardColors(
                             containerColor = MaterialTheme.colorScheme.surface
                         ),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                     ) {
                         Column(modifier = Modifier.padding(16.dp)) {
                             Row(
@@ -574,7 +581,7 @@ fun SettingsScreen(
                             .testTag("widget_live_preview_card"),
                         shape = RoundedCornerShape(28.dp),
                         colors = CardDefaults.cardColors(containerColor = widgetBg),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                     ) {
                         Column(
                             modifier = Modifier
@@ -671,6 +678,7 @@ fun SettingsScreen(
                             modifier = Modifier.weight(1f)
                         )
                         Switch(
+            colors = appSwitchColors(),
                             checked = state.userSettings.widgetRefreshOnScreenOn,
                             onCheckedChange = { checked ->
                                 if (checked) {
@@ -790,7 +798,7 @@ fun SettingsScreen(
                         .testTag("setting_reciter_row"),
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                 ) {
                     Row(
                         modifier = Modifier
@@ -853,7 +861,7 @@ fun SettingsScreen(
                         .testTag("setting_manage_downloads_row"),
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                 ) {
                     Row(
                         modifier = Modifier
@@ -896,7 +904,7 @@ fun SettingsScreen(
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.surface
                     ),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                    elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                 ) {
                     Row(
                         modifier = Modifier
@@ -1145,12 +1153,7 @@ fun SettingsScreen(
 
 @Composable
 private fun SettingsSectionHeader(title: String) {
-    Text(
-        text = title,
-        style = MaterialTheme.typography.titleMedium,
-        fontWeight = FontWeight.Bold,
-        color = MaterialTheme.colorScheme.primary
-    )
+    SectionTitle(text = title)
 }
 
 @Composable
@@ -1172,6 +1175,7 @@ private fun SettingSwitchRow(
             modifier = Modifier.weight(1f)
         )
         Switch(
+            colors = appSwitchColors(),
             checked = checked,
             onCheckedChange = onCheckedChange,
             modifier = Modifier.testTag(testTag)

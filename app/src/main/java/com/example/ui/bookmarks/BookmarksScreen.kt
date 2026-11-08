@@ -52,6 +52,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
+import com.example.ui.components.AppTitle
+import com.example.ui.components.AppTopBar
 import com.example.ui.theme.extraColors
 import com.example.ui.theme.getArabicTextStyle
 import com.example.util.BanglaDigits
@@ -72,14 +74,8 @@ fun BookmarksScreen(
     Scaffold(
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(R.string.bookmarks_title),
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                },
+            AppTopBar(
+                title = { AppTitle(stringResource(R.string.bookmarks_title)) },
                 actions = {
                     if (state.bookmarks.isNotEmpty()) {
                         IconButton(
@@ -93,10 +89,7 @@ fun BookmarksScreen(
                             )
                         }
                     }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.background
-                )
+                }
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },

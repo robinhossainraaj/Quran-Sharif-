@@ -13,6 +13,8 @@ import androidx.compose.ui.graphics.Color
 val DarkColorScheme = darkColorScheme(
     primary = DarkPrimary,
     onPrimary = DarkOnPrimary,
+    primaryContainer = DarkPrimaryContainer,
+    onPrimaryContainer = DarkOnPrimaryContainer,
     background = DarkBackground,
     onBackground = DarkOnSurface,
     surface = DarkSurface,
@@ -27,6 +29,8 @@ val DarkColorScheme = darkColorScheme(
 val LightColorScheme = lightColorScheme(
     primary = LightPrimary,
     onPrimary = LightOnPrimary,
+    primaryContainer = LightPrimaryContainer,
+    onPrimaryContainer = LightOnPrimaryContainer,
     background = LightBackground,
     onBackground = LightOnSurface,
     surface = LightSurface,
@@ -40,7 +44,12 @@ val LightColorScheme = lightColorScheme(
 
 data class ExtraColors(
     val accentGold: Color,
-    val secondaryText: Color
+    val secondaryText: Color,
+    val headerBg: Color = DarkHeader,
+    val headerText: Color = DarkHeaderText,
+    val headerLine: Color = DarkHeaderLine,
+    val barBg: Color = DarkBar,
+    val barPill: Color = DarkBarPill
 )
 
 val LocalExtraColors = staticCompositionLocalOf {
@@ -66,7 +75,15 @@ fun QuranSharifTheme(
     val extraColors = if (isDark) {
         ExtraColors(accentGold = DarkAccentGold, secondaryText = DarkSecondaryText)
     } else {
-        ExtraColors(accentGold = LightAccentGold, secondaryText = LightSecondaryText)
+        ExtraColors(
+            accentGold = LightAccentGold,
+            secondaryText = LightSecondaryText,
+            headerBg = LightHeader,
+            headerText = LightHeaderText,
+            headerLine = LightHeaderLine,
+            barBg = LightBar,
+            barPill = LightBarPill
+        )
     }
 
     CompositionLocalProvider(LocalExtraColors provides extraColors) {

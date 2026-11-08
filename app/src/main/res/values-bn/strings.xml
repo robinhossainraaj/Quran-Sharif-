@@ -52,6 +52,8 @@
     <string name="search_initial_hint">বাংলা অনুবাদ, হরকতহীন আরবি পাঠ্য অথবা ২:২৫৫ বা 2:255 সূরার রেফারেন্স লিখে খুঁজুন।</string>
     <string name="search_no_results">কোনো আয়াত খুঁজে পাওয়া যায়নি।</string>
     <string name="search_go_to_reference">সূরা %1$s, আয়াত %2$s-এ যান</string>
+    <string name="search_title">খুঁজুন</string>
+    <string name="search_no_results_hint">অনুসন্ধান শব্দটি সঠিকভাবে লিখেছেন কিনা তা নিশ্চিত করুন।</string>
     <string name="searching">অনুসন্ধান চলছে…</string>
     <string name="search_results_count">%1$dটি আয়াত পাওয়া গেছে</string>
 

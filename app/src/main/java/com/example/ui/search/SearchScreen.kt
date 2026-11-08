@@ -60,6 +60,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
+import androidx.compose.ui.res.painterResource
+import com.example.ui.components.AppTitle
+import com.example.ui.components.AppTopBar
 import com.example.ui.theme.extraColors
 import com.example.ui.theme.getArabicTextStyle
 import com.example.util.BanglaDigits
@@ -85,38 +90,8 @@ fun SearchScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    TextField(
-                        value = state.query,
-                        onValueChange = { viewModel.onQueryChange(it) },
-                        placeholder = {
-                            Text(
-                                text = stringResource(R.string.search_hint),
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        },
-                        singleLine = true,
-                        colors = TextFieldDefaults.colors(
-                            focusedContainerColor = Color.Transparent,
-                            unfocusedContainerColor = Color.Transparent,
-                            disabledContainerColor = Color.Transparent,
-                            focusedIndicatorColor = Color.Transparent,
-                            unfocusedIndicatorColor = Color.Transparent
-                        ),
-                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                        keyboardActions = KeyboardActions(
-                            onSearch = { keyboardController?.hide() }
-                        ),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .focusRequester(focusRequester)
-                            .testTag("search_text_field")
-                    )
-                },
+            AppTopBar(
+                title = { AppTitle(stringResource(R.string.search_title)) },
                 navigationIcon = {
                     IconButton(
                         onClick = onNavigateBack,
@@ -128,24 +103,7 @@ fun SearchScreen(
                             tint = MaterialTheme.colorScheme.onSurface
                         )
                     }
-                },
-                actions = {
-                    if (state.query.isNotEmpty()) {
-                        IconButton(
-                            onClick = { viewModel.clearQuery() },
-                            modifier = Modifier.testTag("search_clear_button")
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Clear,
-                                contentDescription = stringResource(R.string.cancel),
-                                tint = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.background
-                )
+                }
             )
         },
         containerColor = MaterialTheme.colorScheme.background
@@ -161,6 +119,61 @@ fun SearchScreen(
                     .fillMaxSize()
                     .widthIn(max = 720.dp)
             ) {
+                // Search field
+                TextField(
+                    value = state.query,
+                    onValueChange = { viewModel.onQueryChange(it) },
+                    placeholder = {
+                        Text(
+                            text = stringResource(R.string.search_hint),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Default.Search,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurface
+                        )
+                    },
+                    trailingIcon = {
+                        if (state.query.isNotEmpty()) {
+                            IconButton(
+                                onClick = { viewModel.clearQuery() },
+                                modifier = Modifier.testTag("search_clear_button")
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Clear,
+                                    contentDescription = stringResource(R.string.cancel),
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        }
+                    },
+                    singleLine = true,
+                    shape = RoundedCornerShape(28.dp),
+                    colors = TextFieldDefaults.colors(
+                        focusedContainerColor = MaterialTheme.colorScheme.surface,
+                        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
+                        disabledContainerColor = MaterialTheme.colorScheme.surface,
+                        focusedIndicatorColor = Color.Transparent,
+                        unfocusedIndicatorColor = Color.Transparent
+                    ),
+                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                    keyboardActions = KeyboardActions(
+                        onSearch = { keyboardController?.hide() }
+                    ),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 14.dp)
+                        .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(28.dp))
+                        .focusRequester(focusRequester)
+                        .testTag("search_text_field")
+                )
+
                 // Direct reference card (e.g. 2:255)
                 if (state.directReference != null) {
                     val ref = state.directReference!!
@@ -229,11 +242,10 @@ fun SearchScreen(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             verticalArrangement = Arrangement.Center
                         ) {
-                            Icon(
-                                imageVector = Icons.Default.Search,
+                            Image(
+                                painter = painterResource(R.drawable.search_empty),
                                 contentDescription = null,
-                                tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
-                                modifier = Modifier.size(48.dp)
+                                modifier = Modifier.size(width = 190.dp, height = 145.dp)
                             )
                             Spacer(modifier = Modifier.height(16.dp))
                             Text(
@@ -252,12 +264,27 @@ fun SearchScreen(
                             .padding(32.dp),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(
-                            text = stringResource(R.string.search_no_results),
-                            style = MaterialTheme.typography.bodyLarge,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            textAlign = androidx.compose.ui.text.style.TextAlign.Center
-                        )
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            Image(
+                                painter = painterResource(R.drawable.search_empty),
+                                contentDescription = null,
+                                modifier = Modifier.size(width = 190.dp, height = 145.dp)
+                            )
+                            Spacer(modifier = Modifier.height(12.dp))
+                            Text(
+                                text = stringResource(R.string.search_no_results),
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.extraColors.accentGold,
+                                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                            )
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = stringResource(R.string.search_no_results_hint),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                            )
+                        }
                     }
                 } else if (state.results.isNotEmpty()) {
                     // Results count header
@@ -360,7 +387,7 @@ private fun buildHighlightedString(text: String, query: String): AnnotatedString
                 val endIndex = matchIndex + trimmedQuery.length
                 pushStyle(
                     SpanStyle(
-                        background = Color(0xFF1B4A3F),
+                        background = Color(0xFF1F6B49),
                         color = Color(0xFFF4E7BF),
                         fontWeight = FontWeight.Bold
                     )

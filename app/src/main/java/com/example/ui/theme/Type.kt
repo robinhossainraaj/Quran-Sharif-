@@ -15,6 +15,11 @@ val AmiriQuranFontFamily = FontFamily(
     Font(R.font.amiri_quran_regular, FontWeight.Normal)
 )
 
+val CormorantFontFamily = FontFamily(
+    Font(R.font.cormorant_garamond_semibold, FontWeight.SemiBold),
+    Font(R.font.cormorant_garamond_bold, FontWeight.Bold)
+)
+
 val NotoSansBengaliFontFamily = FontFamily(
     Font(R.font.noto_sans_bengali_regular, FontWeight.Normal),
     Font(R.font.noto_sans_bengali_medium, FontWeight.Medium)

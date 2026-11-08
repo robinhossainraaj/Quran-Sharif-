@@ -52,6 +52,8 @@
     <string name="search_initial_hint">Search by Bangla translation, Arabic text (without diacritics), or reference like 2:255 or ২:২৫৫.</string>
     <string name="search_no_results">No matching ayahs found.</string>
     <string name="search_go_to_reference">Go to Surah %1$s, Ayah %2$s</string>
+    <string name="search_title">Search</string>
+    <string name="search_no_results_hint">Check that you typed the word correctly.</string>
     <string name="searching">Searching…</string>
     <string name="search_results_count">Found %1$d ayahs</string>
 
