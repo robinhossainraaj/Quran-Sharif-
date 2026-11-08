@@ -1,0 +1,28 @@
+[
+  {
+    "id": "bn_muhiuddin",
+    "file": "translations/bn.bengali.txt",
+    "nameEn": "Muhiuddin Khan",
+    "nameBn": "মুহিউদ্দীন খান",
+    "translator": "Mawlana Muhiuddin Khan",
+    "source": "Tanzil Project (tanzil.net)",
+    "version": "1.0",
+    "licenseNote": "Non-commercial use. Translated by Mawlana Muhiuddin Khan.",
+    "licenseText": "Translation provided via Tanzil.net project under standard non-commercial educational distribution license.",
+    "ayahCount": 6236,
+    "default": true
+  },
+  {
+    "id": "bn_hoque",
+    "file": "translations/bn.hoque.txt",
+    "nameEn": "Zohurul Hoque",
+    "nameBn": "জহুরুল হক",
+    "translator": "Dr. Zohurul Hoque",
+    "source": "Tanzil Project (tanzil.net)",
+    "version": "1.0",
+    "licenseNote": "Non-commercial use. Translated by Dr. Zohurul Hoque.",
+    "licenseText": "Translation provided via Tanzil.net project under standard non-commercial educational distribution license.",
+    "ayahCount": 6236,
+    "default": false
+  }
+]

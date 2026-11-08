@@ -1,0 +1,331 @@
+package com.example.ui.nav
+
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.AppContainer
+import com.example.R
+import com.example.ui.bookmarks.BookmarksScreen
+import com.example.ui.bookmarks.BookmarksViewModel
+import com.example.ui.home.HomeScreen
+import com.example.ui.home.HomeViewModel
+import com.example.ui.quran.QuranScreen
+import com.example.ui.quran.QuranViewModel
+import com.example.ui.reader.ReaderScreen
+import com.example.ui.reader.ReaderViewModel
+import com.example.ui.search.SearchScreen
+import com.example.ui.search.SearchViewModel
+import com.example.ui.settings.AboutScreen
+import com.example.ui.settings.SettingsScreen
+import com.example.ui.settings.SettingsViewModel
+
+data class DeepLinkTarget(
+    val surahId: Int,
+    val ayahNo: Int
+)
+
+@Composable
+fun AppNavHost(
+    container: AppContainer,
+    deepLinkTarget: DeepLinkTarget?,
+    onDeepLinkConsumed: () -> Unit,
+    navController: NavHostController = rememberNavController()
+) {
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+
+    // Handle deep link from widget
+    LaunchedEffect(deepLinkTarget) {
+        if (deepLinkTarget != null && deepLinkTarget.surahId > 0) {
+            navController.navigate(Routes.reader(deepLinkTarget.surahId, deepLinkTarget.ayahNo)) {
+                popUpTo(Routes.HOME)
+            }
+            onDeepLinkConsumed()
+        }
+    }
+
+    // Hide bottom bar on reader, search, and about screens
+    val showBottomBar = currentRoute in listOf(
+        Routes.HOME,
+        Routes.QURAN,
+        "${Routes.QURAN}?tab={tab}",
+        Routes.BOOKMARKS,
+        Routes.SETTINGS
+    )
+
+    Scaffold(
+        contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
+        bottomBar = {
+            if (showBottomBar) {
+                NavigationBar(
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.primary
+                ) {
+                    // Home
+                    NavigationBarItem(
+                        selected = currentRoute == Routes.HOME,
+                        onClick = {
+                            navController.navigate(Routes.HOME) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
+                                }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        },
+                        icon = { Icon(Icons.Default.Home, contentDescription = stringResource(R.string.nav_home)) },
+                        label = { Text(stringResource(R.string.nav_home)) },
+                        colors = NavigationBarItemDefaults.colors(
+                            selectedIconColor = MaterialTheme.colorScheme.primary,
+                            selectedTextColor = MaterialTheme.colorScheme.primary,
+                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                        ),
+                        modifier = Modifier.testTag("nav_home_item")
+                    )
+
+                    // Quran
+                    NavigationBarItem(
+                        selected = currentRoute == Routes.QURAN || currentRoute?.startsWith(Routes.QURAN) == true,
+                        onClick = {
+                            navController.navigate(Routes.QURAN) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
+                                }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        },
+                        icon = { Icon(Icons.AutoMirrored.Filled.MenuBook, contentDescription = stringResource(R.string.nav_quran)) },
+                        label = { Text(stringResource(R.string.nav_quran)) },
+                        colors = NavigationBarItemDefaults.colors(
+                            selectedIconColor = MaterialTheme.colorScheme.primary,
+                            selectedTextColor = MaterialTheme.colorScheme.primary,
+                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                        ),
+                        modifier = Modifier.testTag("nav_quran_item")
+                    )
+
+                    // Bookmarks
+                    NavigationBarItem(
+                        selected = currentRoute == Routes.BOOKMARKS,
+                        onClick = {
+                            navController.navigate(Routes.BOOKMARKS) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
+                                }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        },
+                        icon = { Icon(Icons.Default.Bookmark, contentDescription = stringResource(R.string.nav_bookmarks)) },
+                        label = { Text(stringResource(R.string.nav_bookmarks)) },
+                        colors = NavigationBarItemDefaults.colors(
+                            selectedIconColor = MaterialTheme.colorScheme.primary,
+                            selectedTextColor = MaterialTheme.colorScheme.primary,
+                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                        ),
+                        modifier = Modifier.testTag("nav_bookmarks_item")
+                    )
+
+                    // Settings
+                    NavigationBarItem(
+                        selected = currentRoute == Routes.SETTINGS,
+                        onClick = {
+                            navController.navigate(Routes.SETTINGS) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
+                                }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        },
+                        icon = { Icon(Icons.Default.Settings, contentDescription = stringResource(R.string.nav_settings)) },
+                        label = { Text(stringResource(R.string.nav_settings)) },
+                        colors = NavigationBarItemDefaults.colors(
+                            selectedIconColor = MaterialTheme.colorScheme.primary,
+                            selectedTextColor = MaterialTheme.colorScheme.primary,
+                            indicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                        ),
+                        modifier = Modifier.testTag("nav_settings_item")
+                    )
+                }
+            }
+        }
+    ) { innerPadding ->
+        NavHost(
+            navController = navController,
+            startDestination = Routes.HOME,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(bottom = innerPadding.calculateBottomPadding())
+        ) {
+            // Home
+            composable(Routes.HOME) {
+                val homeViewModel: HomeViewModel = viewModel(
+                    factory = HomeViewModel.Factory(
+                        quranRepository = container.quranRepository,
+                        settingsRepository = container.settingsRepository,
+                        playbackController = container.playbackController
+                    )
+                )
+                HomeScreen(
+                    viewModel = homeViewModel,
+                    onNavigateToSearch = { navController.navigate(Routes.SEARCH) },
+                    onNavigateToReader = { sId, aNo -> navController.navigate(Routes.reader(sId, aNo)) },
+                    onNavigateToQuranTab = { tab -> navController.navigate("${Routes.QURAN}?tab=$tab") }
+                )
+            }
+
+            // Quran
+            composable(
+                route = "${Routes.QURAN}?tab={tab}",
+                arguments = listOf(
+                    navArgument("tab") {
+                        type = NavType.IntType
+                        defaultValue = 0
+                    }
+                )
+            ) { backStackEntry ->
+                val initialTab = backStackEntry.arguments?.getInt("tab") ?: 0
+                val quranViewModel: QuranViewModel = viewModel(
+                    factory = QuranViewModel.Factory(
+                        quranRepository = container.quranRepository,
+                        settingsRepository = container.settingsRepository
+                    )
+                )
+                QuranScreen(
+                    viewModel = quranViewModel,
+                    initialTab = initialTab,
+                    onNavigateToSearch = { navController.navigate(Routes.SEARCH) },
+                    onNavigateToReader = { sId, aNo -> navController.navigate(Routes.reader(sId, aNo)) }
+                )
+            }
+
+            // Bookmarks
+            composable(Routes.BOOKMARKS) {
+                val bookmarksViewModel: BookmarksViewModel = viewModel(
+                    factory = BookmarksViewModel.Factory(
+                        quranRepository = container.quranRepository,
+                        settingsRepository = container.settingsRepository
+                    )
+                )
+                BookmarksScreen(
+                    viewModel = bookmarksViewModel,
+                    onNavigateToReader = { sId, aNo -> navController.navigate(Routes.reader(sId, aNo)) }
+                )
+            }
+
+            // Settings
+            composable(Routes.SETTINGS) {
+                val settingsViewModel: SettingsViewModel = viewModel(
+                    factory = SettingsViewModel.Factory(
+                        context = container.context,
+                        quranRepository = container.quranRepository,
+                        settingsRepository = container.settingsRepository
+                    )
+                )
+                SettingsScreen(
+                    viewModel = settingsViewModel,
+                    onNavigateToAbout = { navController.navigate(Routes.ABOUT) },
+                    onNavigateToDownloads = { navController.navigate(Routes.DOWNLOADS) }
+                )
+            }
+
+            // Downloads Screen
+            composable(Routes.DOWNLOADS) {
+                com.example.ui.audio.DownloadsScreen(
+                    onNavigateBack = { navController.popBackStack() }
+                )
+            }
+
+            // About
+            composable(Routes.ABOUT) {
+                val settingsViewModel: SettingsViewModel = viewModel(
+                    factory = SettingsViewModel.Factory(
+                        context = container.context,
+                        quranRepository = container.quranRepository,
+                        settingsRepository = container.settingsRepository
+                    )
+                )
+                AboutScreen(
+                    viewModel = settingsViewModel,
+                    onNavigateBack = { navController.popBackStack() }
+                )
+            }
+
+            // Search
+            composable(Routes.SEARCH) {
+                val searchViewModel: SearchViewModel = viewModel(
+                    factory = SearchViewModel.Factory(
+                        quranRepository = container.quranRepository,
+                        settingsRepository = container.settingsRepository
+                    )
+                )
+                SearchScreen(
+                    viewModel = searchViewModel,
+                    onNavigateBack = { navController.popBackStack() },
+                    onNavigateToReader = { sId, aNo -> navController.navigate(Routes.reader(sId, aNo)) }
+                )
+            }
+
+            // Reader
+            composable(
+                route = Routes.READER,
+                arguments = listOf(
+                    navArgument("surahId") { type = NavType.IntType },
+                    navArgument("ayahNo") {
+                        type = NavType.IntType
+                        defaultValue = -1
+                    }
+                )
+            ) { backStackEntry ->
+                val surahId = backStackEntry.arguments?.getInt("surahId") ?: 1
+                val ayahNo = backStackEntry.arguments?.getInt("ayahNo") ?: -1
+
+                val readerViewModel: ReaderViewModel = viewModel(
+                    key = "reader_$surahId",
+                    factory = ReaderViewModel.Factory(
+                        surahId = surahId,
+                        quranRepository = container.quranRepository,
+                        settingsRepository = container.settingsRepository,
+                        audioStorage = container.audioStorage,
+                        audioDownloadManager = container.audioDownloadManager,
+                        playbackController = container.playbackController,
+                        audioPreviewController = container.audioPreviewController
+                    )
+                )
+                ReaderScreen(
+                    viewModel = readerViewModel,
+                    targetAyahNo = ayahNo,
+                    onNavigateBack = { navController.popBackStack() }
+                )
+            }
+        }
+    }
+}

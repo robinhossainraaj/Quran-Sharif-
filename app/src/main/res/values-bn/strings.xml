@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">কুরআন শরীফ</string>
+    <string name="app_name_full">কুরআন শরীফ</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">হোম</string>
+    <string name="nav_quran">কুরআন</string>
+    <string name="nav_bookmarks">বুকমার্ক</string>
+    <string name="nav_settings">সেটিংস</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">আজকের আয়াত</string>
+    <string name="continue_reading">পড়া চালিয়ে যান</string>
+    <string name="quick_links">দ্রুত প্রবেশ</string>
+    <string name="surah_list_card">সূরার তালিকা</string>
+    <string name="surah_list_desc">১১৪টি সূরার তালিকা দেখুন</string>
+    <string name="juz_list_card">পারা / জুয তালিকা</string>
+    <string name="juz_list_desc">৩০টি পারার তালিকা দেখুন</string>
+    <string name="read_surah">সূরা পড়ুন</string>
+    <string name="refresh_ayah">নতুন আয়াত</string>
+    <string name="last_read_reference">সূরা %1$s · আয়াত %2$s</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">সূরা</string>
+    <string name="tab_juz">পারা</string>
+    <string name="meccan">মক্কী</string>
+    <string name="medinan">মাদানী</string>
+    <string name="ayah_count_format">%1$s আয়াত</string>
+    <string name="juz_format">পারা %1$s</string>
+    <string name="juz_starts_at">শুরু: %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">নির্দিষ্ট আয়াতে যান…</string>
+    <string name="bookmark_surah_start">সূরার শুরু বুকমার্ক করুন</string>
+    <string name="go_to_ayah_dialog_title">নির্দিষ্ট আয়াতে যান</string>
+    <string name="ayah_number_hint">আয়াত নম্বর লিখুন (১–%1$d)</string>
+    <string name="go_button">যান</string>
+    <string name="cancel">বাতিল</string>
+    <string name="ayah_out_of_range">সঠিক আয়াত নম্বর প্রদান করুন</string>
+    <string name="share_ayah">আয়াত শেয়ার করুন</string>
+    <string name="copy_ayah">আয়াত কপি করুন</string>
+    <string name="copied_to_clipboard">আয়াত ক্লিপবোর্ডে কপি করা হয়েছে</string>
+    <string name="surah_bookmarked">সূরার শুরু বুকমার্ক করা হয়েছে</string>
+    <string name="bookmark_added">আয়াত বুকমার্কে সংরক্ষিত হয়েছে</string>
+    <string name="bookmark_removed">বুকমার্ক মুছে ফেলা হয়েছে</string>
+    <string name="undo">পূর্বাবস্থায় ফেরান</string>
+
+    <!-- Search -->
+    <string name="search_hint">বাংলা, আরবি বা ২:২৫৫ লিখে খুঁজুন</string>
+    <string name="search_initial_hint">বাংলা অনুবাদ, হরকতহীন আরবি পাঠ্য অথবা ২:২৫৫ বা 2:255 সূরার রেফারেন্স লিখে খুঁজুন।</string>
+    <string name="search_no_results">কোনো আয়াত খুঁজে পাওয়া যায়নি।</string>
+    <string name="search_go_to_reference">সূরা %1$s, আয়াত %2$s-এ যান</string>
+    <string name="searching">অনুসন্ধান চলছে…</string>
+    <string name="search_results_count">%1$dটি আয়াত পাওয়া গেছে</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">সংরক্ষিত আয়াত</string>
+    <string name="bookmarks_empty">কোনো আয়াত এখনও সংরক্ষিত হয়নি</string>
+    <string name="bookmarks_empty_desc">পড়ার সময় আয়াতের পাশের বুকমার্ক আইকনে চাপ দিলে এখানে দ্রুত পড়ার জন্য জমা থাকবে।</string>
+    <string name="delete_all_bookmarks">সকল বুকমার্ক মুছুন</string>
+    <string name="delete_all_confirm_title">সকল বুকমার্ক মুছে ফেলতে চান?</string>
+    <string name="delete_all_confirm_desc">এটি সংরক্ষিত সকল বুকমার্ক স্থায়ীভাবে মুছে ফেলবে।</string>
+    <string name="delete">মুছুন</string>
+    <string name="all_bookmarks_deleted">সকল বুকমার্ক মুছে ফেলা হয়েছে</string>
+
+    <!-- Settings -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="section_appearance">প্রদর্শন</string>
+    <string name="theme_label">থিম</string>
+    <string name="theme_system">সিস্টেম</string>
+    <string name="theme_light">হালকা</string>
+    <string name="theme_dark">গাঢ়</string>
+    <string name="language_label">ভাষা (Language)</string>
+    <string name="language_system">সিস্টেম ডিফল্ট</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">পঠন পছন্দ</string>
+    <string name="arabic_font_size">আরবি লেখার আকার</string>
+    <string name="bangla_font_size">বাংলা লেখার আকার</string>
+    <string name="show_bangla_translation">বাংলা অনুবাদ প্রদর্শন করুন</string>
+    <string name="use_bangla_digits">বাংলা সংখ্যা ব্যবহার করুন (১, ২, ৩)</string>
+    <string name="keep_screen_on">পড়ার সময় স্ক্রিন সচল রাখুন</string>
+    <string name="preview_label">লাইভ প্রিভিউ</string>
+
+    <string name="section_widget">হোম-স্ক্রিন উইজেট</string>
+    <string name="widget_refresh_on_screen_on">স্ক্রিন অন হলে উইজেটের আয়াত পরিবর্তন করুন</string>
+    <string name="widget_refresh_helper">অ্যান্ড্রয়েড যাতে ব্যাকগ্রাউন্ড সার্ভিসটি চালু রাখে, সেজন্য একটি নীরব নোটিফিকেশন ব্যবহৃত হয়।</string>
+    <string name="battery_optimization_settings">ব্যাটারি অপ্টিমাইজেশন সেটিংস</string>
+    <string name="battery_optimization_helper">কিছু ব্র্যান্ডের ফোনে ব্যাকগ্রাউন্ড সার্ভিস বন্ধ হতে পারে। উইজেট পরিবর্তন না হলে অ্যাপটির ব্যাটারি সেটিং \'Unrestricted / নো রেস্ট্রিকশন\' করুন।</string>
+    <string name="refresh_widget_now">এখনই উইজেট পরিবর্তন করুন</string>
+    <string name="widget_refreshed">উইজেটে নতুন আয়াত হালনাগাদ করা হয়েছে</string>
+    <string name="notification_permission_title">নোটিফিকেশন অনুমতি</string>
+    <string name="notification_permission_desc">স্ক্রিন অন হলে উইজেটের আয়াত স্বয়ংক্রিয় পরিবর্তনের জন্য অ্যান্ড্রয়েডের নোটিফিকেশন অনুমতি প্রয়োজন।</string>
+    <string name="grant_permission">অনুমতি দিন</string>
+
+    <string name="section_data">উপাত্ত</string>
+    <string name="reset_reading_progress">পড়ার অগ্রগতি রিসেট করুন</string>
+    <string name="reset_reading_confirm_title">পড়ার অগ্রগতি রিসেট করবেন?</string>
+    <string name="reset_reading_confirm_desc">এটি আপনার সর্বশেষ পঠিত সূরা ও আয়াতের তথ্য মুছে ফেলবে।</string>
+    <string name="reset">রিসেট</string>
+    <string name="progress_reset_done">পড়ার অগ্রগতি রিসেট করা হয়েছে</string>
+    <string name="about_app">কুরআন শরীফ পরিচিতি</string>
+
+    <!-- About -->
+    <string name="about_title">পরিচিতি</string>
+    <string name="offline_badge">১০০% অফলাইন • ইন্টারনেট প্রয়োজন নেই • গোপনীয়তা সংরক্ষিত</string>
+    <string name="offline_description">কুরআনের পাঠ্য ও অনুবাদ সম্পূর্ণ অফলাইনে কাজ করে। কেবল তেলাওয়াত প্রিভিউ ও ডাউনলোডের জন্য ইন্টারনেট ব্যবহৃত হয়। কোনো ব্যক্তিগত তথ্য সংগ্রহ করা হয় না।</string>
+    <string name="source_authenticity">পবিত্র কুরআনের মূল পাঠ্য কোনো পরিবর্তন ছাড়াই বিশ্বস্ত উৎস হতে হুবহু সংরক্ষিত ও প্রদর্শিত।</string>
+    <string name="credits_title">উৎস ও কৃতজ্ঞতা</string>
+    <string name="tanzil_credit">কুরআন পাঠ্য: তানজীল প্রজেক্ট (Tanzil Project)</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">লিংক কপি করুন</string>
+    <string name="tanzil_copied">লিংক ক্লিপবোর্ডে কপি করা হয়েছে</string>
+    <string name="translation_credit">বাংলা অনুবাদ: মাওলানা মুহিউদ্দীন খান (তানজীল প্রজেক্ট)</string>
+    <string name="font_amiri_credit">আরবি ফন্ট: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">বাংলা ফন্ট: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">সংস্করণ %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">কুরআন শরীফ</string>
+    <string name="import_subtitle">কুরআনের উপাত্ত প্রস্তুত করা হচ্ছে… %1$d/১১৪</string>
+    <string name="import_failed">কুরআনের উপাত্ত প্রস্তুতিতে ব্যর্থ হয়েছে।</string>
+    <string name="retry">পুনরায় চেষ্টা করুন</string>
+    <string name="checking_data">কুরআনের উপাত্ত যাচাই করা হচ্ছে…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">কুরআন শরীফ — এলোমেলো আয়াত</string>
+    <string name="widget_description">হোম স্ক্রিনে পবিত্র কুরআনের নির্বাচিত আয়াত আরবি ও বাংলা অনুবাদ সহ প্রদর্শন করে।</string>
+    <string name="widget_open_app_prompt">সেটআপ সম্পন্ন করতে কুরআন শরীফ অ্যাপটি খুলুন</string>
+    <string name="widget_brand_label">কুরআন শরীফ</string>
+    <string name="notification_channel_name">উইজেট রিফ্রেশ সার্ভিস</string>
+    <string name="notification_channel_desc">স্ক্রিন অন হলে উইজেটের আয়াত হালনাগাদ করার জন্য সার্ভিস চালু রাখে।</string>
+    <string name="notification_title">কুরআন শরীফ</string>
+    <string name="notification_text">কুরআন শরীফ উইজেট সক্রিয় আছে</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">বাংলা অনুবাদ</string>
+    <string name="select_translation_dialog_title">বাংলা অনুবাদ নির্বাচন করুন</string>
+    <string name="translation_sample_ayah">প্রিভিউ (১১২:১):</string>
+    <string name="translation_updated">অনুবাদ পরিবর্তন করা হয়েছে</string>
+    <string name="translation_by_format">অনুবাদক: %1$s</string>
+    <string name="widget_arabic_size">উইজেট আরবি লেখার আকার</string>
+    <string name="widget_translation_size">উইজেট বাংলা লেখার আকার</string>
+    <string name="widget_text_size_reset">উইজেটের লেখার আকার রিসেট করুন</string>
+    <string name="widget_preview_title">উইজেটের লাইভ প্রিভিউ</string>
+    <string name="widget_resize_hint">লেখা বড় করলে হোম স্ক্রিনে উইজেটটি বড় করুন যাতে সম্পূর্ণ লেখা দেখা যায়।</string>
+    <string name="available_translations_title">উপলব্ধ অনুবাদসমূহ</string>
+    <string name="tanzil_non_commercial_notice">তানজিল প্রকল্পের মাধ্যমে উপলব্ধ অনুবাদসমূহ অবাণিজ্যিক শিক্ষামূলক ব্যবহারের জন্য সংরক্ষিত।</string>
+
+    <!-- Audio Recitation & Fast Scroll (Bangla) -->
+    <string name="section_audio">তেলাওয়াত অডিও</string>
+    <string name="audio_reciter_label">ডিফল্ট ক্বারী</string>
+    <string name="audio_wifi_only">শুধুমাত্র ওয়াইফাই-তে ডাউনলোড</string>
+    <string name="audio_wifi_only_desc">মোবাইল ডেটায় বড় ফাইল ডাউনলোড এড়িয়ে চলুন</string>
+    <string name="audio_bismillah_prefix">সূরার পূর্বে বিসমিল্লাহ পাঠ</string>
+    <string name="audio_bismillah_prefix_desc">সূরা শুরুর আগে বিসমিল্লাহর অডিও বাজান (১ ও ৯ নম্বর সূরা ব্যতীত)</string>
+    <string name="audio_follow">অডিওর সাথে আয়াত ফলো করুন</string>
+    <string name="audio_follow_desc">অডিও বাজার সাথে সাথে স্বয়ংক্রিয়ভাবে আয়াতে স্ক্রল করবে</string>
+    <string name="audio_manage_downloads">ডাউনলোড ব্যবস্থাপনা</string>
+    <string name="audio_manage_downloads_desc">স্টোরেজ ব্যবহার দেখুন এবং ডাউনলোড মুছুন</string>
+    <string name="reciter_picker_title">ক্বারী নির্বাচন করুন</string>
+    <string name="play_sample">নমুনা শুনুন</string>
+    <string name="stop_sample">নমুনা বন্ধ করুন</string>
+    <string name="audio_sheet_title">তেলাওয়াত · %1$s</string>
+    <string name="audio_sheet_reciter">ক্বারী: %1$s</string>
+    <string name="audio_choose_reciter">অন্য ক্বারী নির্বাচন করুন</string>
+    <string name="audio_download">ডাউনলোড</string>
+    <string name="audio_downloading">ডাউনলোড হচ্ছে…</string>
+    <string name="audio_queued">অপেক্ষারত…</string>
+    <string name="audio_download_details">%1$d আয়াত · %2$d kbps</string>
+    <string name="audio_download_completed">ডাউনলোড সম্পন্ন</string>
+    <string name="audio_play_button">তেলাওয়াত শুনুন</string>
+    <string name="audio_delete_surah">অডিও মুছুন</string>
+    <string name="audio_delete_surah_confirm">এই সূরার ডাউনলোডকৃত তেলাওয়াত কি মুছে ফেলতে চান?</string>
+    <string name="audio_delete_all_reciter">এই ক্বারীর সব অডিও মুছুন</string>
+    <string name="audio_delete_all_reciter_confirm">%1$s-এর সব ডাউনলোডকৃত সূরা কি মুছে ফেলতে চান?</string>
+    <string name="audio_storage_used">অডিও স্টোরেজ ব্যবহার: %1$s</string>
+    <string name="audio_storage_note">ফাইলগুলো এই অ্যাপের নিজস্ব স্টোরেজে সংরক্ষিত থাকে এবং অ্যাপ আনইনস্টল করলে মুছে যায়।</string>
+    <string name="audio_downloads_empty">এখনও কোনো তেলাওয়াত ডাউনলোড করা হয়নি</string>
+    <string name="audio_downloads_empty_desc">অফলাইনে শুনতে যে কোনো সূরার তেলাওয়াত ডাউনলোড করুন।</string>
+    <string name="audio_error_not_enough_storage">পর্যাপ্ত স্টোরেজ নেই (কমপক্ষে ১৫০ মেগাবাইট প্রয়োজন)</string>
+    <string name="audio_error_download_failed">ডাউনলোড ব্যর্থ হয়েছে। ইন্টারনেট সংযোগ যাচাই করে আবার চেষ্টা করুন।</string>
+    <string name="audio_error_recitation_unavailable">এই তেলাওয়াতটি বর্তমানে উপলব্ধ নয়</string>
+    <string name="audio_mobile_data_warning_title">মোবাইল ডেটায় ডাউনলোড করবেন?</string>
+    <string name="audio_mobile_data_warning_desc">অডিও ফাইলের আকার বড় হতে পারে। আপনি কি মোবাইল ডেটা ব্যবহার করে ডাউনলোড করতে চান?</string>
+    <string name="audio_download_now">এখনই ডাউনলোড করুন</string>
+    <string name="audio_download_channel_name">অডিও ডাউনলোড</string>
+    <string name="audio_download_channel_desc">তেলাওয়াত অডিও ডাউনলোডের অগ্রগতি প্রদর্শন করে</string>
+    <string name="audio_downloading_format">ডাউনলোড হচ্ছে: %1$s</string>
+    <string name="now_playing">এখন বাজছে</string>
+    <string name="play_from_here">এখান থেকে বাজান</string>
+    <string name="follow_audio_chip">ফলো</string>
+    <string name="audio_repeat_off">রিপিট: বন্ধ</string>
+    <string name="audio_repeat_ayah">রিপিট: আয়াত</string>
+    <string name="audio_repeat_surah">রিপিট: সূরা</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">কিছু অডিও ফাইল পাওয়া যায়নি। পুনরায় ডাউনলোড করবেন?</string>
+    <string name="recitation_audio_attribution">অডিও সরবরাহ করেছে আল কুরআন ক্লাউড / ইসলামিক নেটওয়ার্ক সিডিএন (cdn.islamic.network)। সকল তেলাওয়াতের কপিরাইট সংশ্লিষ্ট ক্বারীর, যা অবাণিজ্যিক বিনামূল্যে পুনবণ্টনের জন্য লাইসেন্সপ্রাপ্ত। এটি একটি অলাভজনক অ্যাপ।</string>
+    <string name="fast_scroll_verse">আয়াত %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">তিলাওয়াত চলছে</string>
+    <string name="audio_title">কুরআন তিলাওয়াত</string>
+    <string name="ayah_copied">আয়াত কপি করা হয়েছে</string>
+    <string name="shared_via_app">কুরআন শরীফ অ্যাপের মাধ্যমে শেয়ারকৃত</string>
+    <string name="enter_ayah_number">আয়াত নম্বর লিখুন</string>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "Quran Sharif",
+  "description": "A fully offline native Android app featuring the Holy Quran with Uthmani Arabic script, Bangla translation, random ayah home-screen widget, reading tracker, and search.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

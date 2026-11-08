@@ -1,0 +1,59 @@
+{
+  "cdnBase": "https://cdn.islamic.network/quran/audio",
+  "reciters": [
+    {
+      "id": "alafasy",
+      "edition": "ar.alafasy",
+      "nameEn": "Mishary Rashid Alafasy",
+      "nameBn": "মিশারী রশিদ আল-আফাসী",
+      "style": "Murattal",
+      "bitrate": 128,
+      "default": true
+    },
+    {
+      "id": "husary",
+      "edition": "ar.husary",
+      "nameEn": "Mahmoud Khalil Al-Husary",
+      "nameBn": "মাহমুদ খলিল আল-হুসারী",
+      "style": "Murattal",
+      "bitrate": 128,
+      "default": false
+    },
+    {
+      "id": "minshawi",
+      "edition": "ar.minshawi",
+      "nameEn": "Mohamed Siddiq Al-Minshawi",
+      "nameBn": "মুহাম্মদ সিদ্দিক আল-মিনশাবী",
+      "style": "Murattal",
+      "bitrate": 128,
+      "default": false
+    },
+    {
+      "id": "sudais",
+      "edition": "ar.sudais",
+      "nameEn": "Abdul Rahman Al-Sudais",
+      "nameBn": "আব্দুর রহমান আস-সুদাইস",
+      "style": "Murattal",
+      "bitrate": 192,
+      "default": false
+    },
+    {
+      "id": "shuraim",
+      "edition": "ar.shuraim",
+      "nameEn": "Saud Al-Shuraim",
+      "nameBn": "সাউদ আশ-শুরাইম",
+      "style": "Murattal",
+      "bitrate": 128,
+      "default": false
+    },
+    {
+      "id": "abdulbasit",
+      "edition": "ar.abdulbasit",
+      "nameEn": "Abdul Basit Abdul Samad",
+      "nameBn": "আব্দুল বাসেত আব্দুস সামাদ",
+      "style": "Murattal",
+      "bitrate": 192,
+      "default": false
+    }
+  ]
+}
