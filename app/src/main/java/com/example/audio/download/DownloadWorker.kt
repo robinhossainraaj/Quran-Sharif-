@@ -212,6 +212,11 @@ class DownloadWorker(
             }
         }
 
+        // isSurahDownloaded() requires the "done" marker file to exist, so the marker must be
+        // created BEFORE the check. Checking first can never pass on a fresh download, which made
+        // every finished download show "Download failed" even though all files had arrived.
+        storage.markSurahDownloaded(reciter.id, surahId)
+
         // Verify all required files are present and valid
         val allValid = storage.isSurahDownloaded(
             reciterId = reciter.id,
@@ -221,12 +226,13 @@ class DownloadWorker(
         )
 
         if (allValid) {
-            storage.markSurahDownloaded(reciter.id, surahId)
             try {
                 notificationManager.cancel(NOTIFICATION_ID_BASE + surahId)
             } catch (_: Throwable) {}
             return@coroutineScope Result.success()
         } else {
+            // Some files are missing or empty: remove the marker so the surah is not shown as downloaded.
+            storage.getDoneMarkerFile(reciter.id, surahId).delete()
             return@coroutineScope Result.failure(
                 workDataOf(KEY_ERROR to context.getString(R.string.audio_error_download_failed))
             )
