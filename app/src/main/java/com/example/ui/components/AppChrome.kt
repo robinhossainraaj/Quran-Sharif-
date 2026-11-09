@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.layout.layout
 import kotlin.math.roundToInt
 import androidx.compose.material.icons.Icons
@@ -149,12 +150,16 @@ fun AppHeaderPicture(scrollBehavior: TopAppBarScrollBehavior? = null) {
     } else {
         Modifier
     }
-    Box(
-        modifier = collapse
+    // The status bar strip stays in place; only the picture below it slides away.
+    val collapsedFraction = scrollBehavior?.state?.collapsedFraction ?: 0f
+    val stripColor = lerp(Color(0xFF0C481F), MaterialTheme.extraColors.headerBg, collapsedFraction)
+    Column(
+        modifier = Modifier
             .fillMaxWidth()
-            .background(Color(0xFF0C481F))
+            .background(stripColor)
             .windowInsetsPadding(WindowInsets.statusBars)
     ) {
+    Box(modifier = collapse.fillMaxWidth()) {
         Image(
             painter = painterResource(R.drawable.header_bar),
             contentDescription = null,
@@ -210,6 +215,7 @@ fun AppHeaderPicture(scrollBehavior: TopAppBarScrollBehavior? = null) {
                     .testTag("header_search_button")
             )
         }
+    }
     }
 }
 
