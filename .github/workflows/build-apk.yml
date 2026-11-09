@@ -40,11 +40,11 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          # Fast optimized "tester" build first; if it fails, fall back to the plain debug build.
-          if gradle assembleTester --stacktrace 2>&1 | tee build.log; then
-            cp app/build/outputs/apk/tester/app-tester.apk QuranSharif.apk
+          # Fast optimized "fast" build first; if it fails, fall back to the plain debug build.
+          if gradle assembleFast --stacktrace 2>&1 | tee build.log; then
+            cp app/build/outputs/apk/fast/app-fast.apk QuranSharif.apk
           else
-            echo "::warning::Tester (optimized) build failed, using debug build instead"
+            echo "::warning::Fast (optimized) build failed, using debug build instead"
             grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Type mismatch|R8|Missing class" build.log | head -20 | while IFS= read -r line; do
               echo "::warning::${line:0:900}"
             done

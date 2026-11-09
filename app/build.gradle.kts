@@ -49,9 +49,9 @@ android {
       // AI Studio.
       signingConfig = signingConfigs.getByName("release")
     }
-    // "tester": optimized like a real release (R8 shrink, no debug overhead) but signed with the
+    // "fast": optimized like a real release (R8 shrink, no debug overhead) but signed with the
     // permanent debug key, so it installs and updates from GitHub Releases. Much faster than debug.
-    create("tester") {
+    create("fast") {
       initWith(getByName("release"))
       signingConfig = signingConfigs.getByName("debugConfig")
       isMinifyEnabled = true
