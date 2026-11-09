@@ -21,7 +21,7 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 
 data class UserSettings(
     val themeMode: String = "SYSTEM",             // "SYSTEM", "LIGHT", "DARK"
-    val appLanguage: String = "",                 // "", "en", "bn"
+    val appLanguage: String = "",                 // "" = system, or a language tag
     val arabicSizeSp: Int = 30,
     val banglaSizeSp: Int = 16,
     val showBangla: Boolean = true,

@@ -48,6 +48,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import com.example.ui.components.AppHeaderPicture
+import com.example.ui.components.AppLanguageList
 import com.example.ui.components.rememberHeaderScrollBehavior
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
@@ -285,41 +286,10 @@ fun SettingsScreen(
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        FilterChip(
-                            shape = RoundedCornerShape(14.dp),
-                            selected = state.userSettings.appLanguage.isEmpty(),
-                            onClick = { viewModel.setAppLanguage("") },
-                            label = { Text(stringResource(R.string.language_system)) },
-                            colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primary,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
-                            ),
-                            modifier = Modifier.testTag("lang_system_chip")
-                        )
-                        FilterChip(
-                            shape = RoundedCornerShape(14.dp),
-                            selected = state.userSettings.appLanguage == "bn",
-                            onClick = { viewModel.setAppLanguage("bn") },
-                            label = { Text(stringResource(R.string.language_bn)) },
-                            colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primary,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
-                            ),
-                            modifier = Modifier.testTag("lang_bn_chip")
-                        )
-                        FilterChip(
-                            shape = RoundedCornerShape(14.dp),
-                            selected = state.userSettings.appLanguage == "en",
-                            onClick = { viewModel.setAppLanguage("en") },
-                            label = { Text(stringResource(R.string.language_en)) },
-                            colors = FilterChipDefaults.filterChipColors(
-                                selectedContainerColor = MaterialTheme.colorScheme.primary,
-                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
-                            ),
-                            modifier = Modifier.testTag("lang_en_chip")
-                        )
-                    }
+                    AppLanguageList(
+                        current = state.userSettings.appLanguage,
+                        onSelect = { viewModel.setAppLanguage(it) }
+                    )
                 }
 
                 }

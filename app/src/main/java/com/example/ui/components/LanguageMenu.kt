@@ -1,10 +1,13 @@
 package com.example.ui.components
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
@@ -20,6 +23,62 @@ import androidx.compose.ui.unit.dp
 import com.example.R
 
 /**
+ * App languages. The order follows the size of the Muslim population
+ * that speaks each language (biggest first). Names are shown in their own language.
+ */
+private val appLanguageTags = listOf(
+    "id" to "Bahasa Indonesia",
+    "ur" to "اردو",
+    "bn" to "বাংলা",
+    "ar" to "العربية",
+    "fa" to "فارسی",
+    "tr" to "Türkçe",
+    "en" to "English",
+    "ha" to "Hausa",
+    "hi" to "हिन्दी",
+    "ms" to "Bahasa Melayu",
+    "sw" to "Kiswahili",
+    "ps" to "پښتو",
+    "uz" to "Oʻzbekcha",
+    "fr" to "Français",
+    "ru" to "Русский",
+    "so" to "Soomaali",
+    "ta" to "தமிழ்"
+)
+
+/** The list of choices: System Default first, then every language. */
+@Composable
+fun AppLanguageList(
+    current: String,
+    onSelect: (String) -> Unit
+) {
+    val options = listOf("" to stringResource(R.string.language_system)) + appLanguageTags
+    Column {
+        for ((tag, label) in options) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .selectable(
+                        selected = current == tag,
+                        role = Role.RadioButton,
+                        onClick = { onSelect(tag) }
+                    )
+                    .padding(vertical = 4.dp)
+                    .testTag("app_language_option_${tag.ifEmpty { "system" }}"),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                RadioButton(selected = current == tag, onClick = null)
+                Text(
+                    text = label,
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.padding(start = 12.dp)
+                )
+            }
+        }
+    }
+}
+
+/**
  * App language picker. The language changes at once (the screen redraws itself),
  * so no restart is needed for this one.
  */
@@ -29,37 +88,12 @@ fun AppLanguageDialog(
     onSelect: (String) -> Unit,
     onDismiss: () -> Unit
 ) {
-    val options = listOf(
-        "" to stringResource(R.string.language_system),
-        "bn" to stringResource(R.string.language_bn),
-        "en" to stringResource(R.string.language_en)
-    )
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.menu_app_language)) },
         text = {
-            androidx.compose.foundation.layout.Column {
-                for ((tag, label) in options) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .selectable(
-                                selected = current == tag,
-                                role = Role.RadioButton,
-                                onClick = { onSelect(tag) }
-                            )
-                            .padding(vertical = 4.dp)
-                            .testTag("app_language_option_${tag.ifEmpty { "system" }}"),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        RadioButton(selected = current == tag, onClick = null)
-                        Text(
-                            text = label,
-                            style = MaterialTheme.typography.bodyLarge,
-                            modifier = Modifier.padding(start = 12.dp)
-                        )
-                    }
-                }
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                AppLanguageList(current = current, onSelect = onSelect)
             }
         },
         confirmButton = {
