@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">Gida</string>
-    <string name="nav_quran">Alƙur\'ani</string>
+    <string name="nav_quran">Alƙurʼani</string>
     <string name="nav_bookmarks">Alamomi</string>
     <string name="nav_settings">Saituna</string>
+
+    <!-- Home -->
     <string name="ayah_of_the_moment">Aya ta Yanzu</string>
     <string name="continue_reading">Ci gaba da Karatu</string>
-    <string name="quick_links">Hanzarta</string>
-    <string name="surah_list_card">Jerin Surori</string>
-    <string name="surah_list_desc">Duba dukkan surori 114</string>
-    <string name="juz_list_card">Jerin Juzu\'i</string>
-    <string name="juz_list_desc">Duba bisa juzu\'i 30</string>
+    <string name="quick_links">Hanyoyi Masu Sauri</string>
+    <string name="surah_list_card">Jerin Sura</string>
+    <string name="surah_list_desc">Duba dukkan Sura 114</string>
+    <string name="juz_list_card">Jerin Juzuʼi</string>
+    <string name="juz_list_desc">Duba bisa Juzuʼi 30</string>
+    <string name="read_surah">Karanta Sura</string>
     <string name="refresh_ayah">Sabuwar Aya</string>
     <string name="last_read_reference">Sura %1$s · Aya %2$s</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">Sura</string>
-    <string name="tab_juz">Juzu\'i</string>
-    <string name="meccan">ta Makka</string>
-    <string name="medinan">ta Madina</string>
-    <string name="ayah_count_format">Ayoyi %1$s</string>
-    <string name="juz_format">Juzu\'i %1$s</string>
+    <string name="tab_juz">Juzuʼi</string>
+    <string name="meccan">Makka</string>
+    <string name="medinan">Madina</string>
+    <string name="ayah_count_format">Aya %1$s</string>
+    <string name="juz_format">Juzuʼi %1$s</string>
+    <string name="juz_starts_at">Ya fara daga %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
     <string name="go_to_ayah">Je zuwa aya…</string>
+    <string name="bookmark_surah_start">Saka alama a farkon sura</string>
     <string name="go_to_ayah_dialog_title">Je zuwa Aya</string>
-    <string name="go_button">Tafi</string>
+    <string name="ayah_number_hint">Shigar da lambar aya (1–%1$d)</string>
+    <string name="go_button">Je</string>
     <string name="cancel">Soke</string>
+    <string name="ayah_out_of_range">Da fatan a shigar da lambar aya madaidaiciya</string>
     <string name="share_ayah">Raba Aya</string>
     <string name="copy_ayah">Kwafi Aya</string>
-    <string name="copied_to_clipboard">An kwafi aya zuwa allo</string>
-    <string name="ayah_copied">An kwafi aya zuwa allo</string>
-    <string name="bookmark_added">An ajiye aya a alamomi</string>
+    <string name="copied_to_clipboard">An kwafi aya</string>
+    <string name="surah_bookmarked">An saka alama a farkon sura</string>
+    <string name="bookmark_added">An adana aya a cikin alamomi</string>
     <string name="bookmark_removed">An cire alama</string>
-    <string name="undo">Maida</string>
-    <string name="search_title">Bincike</string>
-    <string name="searching">Ana bincike…</string>
-    <string name="search_no_results">Ba a sami ayoyin da suka dace ba.</string>
+    <string name="undo">Warware</string>
+
+    <!-- Search -->
+    <string name="search_hint">Nemi Bangla, Larabci, ko misali 2:255</string>
+    <string name="search_initial_hint">Nemi ta fassarar Bangla, rubutun Larabci (ba tare da alamomin furuci ba), ko lamba kamar 2:255 ko ২:২৫৫.</string>
+    <string name="search_no_results">Ba a sami wata aya mai dacewa ba.</string>
+    <string name="search_go_to_reference">Je zuwa Sura %1$s, Aya %2$s</string>
+    <string name="search_title">Nema</string>
+    <string name="search_no_results_hint">Tabbatar cewa ka rubuta kalmar daidai.</string>
+    <string name="searching">Ana nema…</string>
+    <string name="search_results_count">An sami aya %1$d</string>
+
+    <!-- Bookmarks -->
     <string name="bookmarks_title">Alamomi</string>
-    <string name="bookmarks_empty">Babu alamar da aka ajiye tukuna</string>
+    <string name="bookmarks_empty">Ba a adana alama ba tukuna</string>
+    <string name="bookmarks_empty_desc">Taɓa alamar adanawa a kan kowace aya yayin karatu don adana ta a nan don samun ta da sauri.</string>
+    <string name="delete_all_bookmarks">Share dukkan alamomi</string>
+    <string name="delete_all_confirm_title">Share Dukkan Alamomi?</string>
+    <string name="delete_all_confirm_desc">Wannan zai cire dukkan alamomin da aka adana har abada.</string>
     <string name="delete">Share</string>
+    <string name="all_bookmarks_deleted">An share dukkan alamomi</string>
+
+    <!-- Settings -->
     <string name="settings_title">Saituna</string>
-    <string name="section_appearance">Bayyanar</string>
+    <string name="section_appearance">Kamanni</string>
     <string name="theme_label">Jigo</string>
-    <string name="theme_system">Tsarin Waya</string>
+    <string name="theme_system">Na na\'ura</string>
     <string name="theme_light">Haske</string>
     <string name="theme_dark">Duhu</string>
-    <string name="section_reading">Zaɓin Karatu</string>
+    <string name="language_label">Harshe (ভাষা)</string>
+    <string name="language_system">Tsohon Zaɓin Na\'ura</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">Zaɓuɓɓukan Karatu</string>
+    <string name="arabic_font_size">Girman Rubutun Larabci</string>
+    <string name="bangla_font_size">Girman Rubutun Bangla</string>
+    <string name="show_bangla_translation">Nuna fassarar Bangla</string>
+    <string name="use_bangla_digits">Yi amfani da lambobin Bangla (১, ২, ৩)</string>
+    <string name="keep_screen_on">Bar allo a kunne yayin karatu</string>
+    <string name="preview_label">Samfurin Kai-tsaye</string>
+
     <string name="section_widget">Widget na Allon Gida</string>
+    <string name="widget_refresh_on_screen_on">Canza ayar widget idan allo ya kunna</string>
+    <string name="widget_refresh_helper">Yana amfani da ƙaramar sanarwa maras sauti don Android ta ci gaba da gudanar da shi.</string>
+    <string name="battery_optimization_settings">Saitunan inganta batir</string>
+    <string name="battery_optimization_helper">Wasu wayoyi (Xiaomi, Oppo, Vivo, Huawei, Samsung) suna dakatar da ayyukan bango; saita manhajar zuwa \'Unrestricted/No restrictions\' idan widget bai canza ba.</string>
+    <string name="refresh_widget_now">Sabunta widget yanzu</string>
+    <string name="widget_refreshed">An sabunta widget da sabuwar aya</string>
+    <string name="notification_permission_title">Izinin Sanarwa</string>
+    <string name="notification_permission_desc">Android na buƙatar izinin sanarwa don aikin bango maras sauti ya iya sabunta widget idan allo ya kunna.</string>
+    <string name="grant_permission">Ba da izini</string>
+
     <string name="section_data">Bayanai</string>
-    <string name="section_audio">Sautin Karatu</string>
+    <string name="reset_reading_progress">Sake saita ci gaban karatu</string>
+    <string name="reset_reading_confirm_title">Sake Saita Ci Gaban Karatu?</string>
+    <string name="reset_reading_confirm_desc">Wannan zai mayar da alamar ci gaba da karatu zuwa farko.</string>
+    <string name="reset">Sake saita</string>
+    <string name="progress_reset_done">An sake saita ci gaban karatu</string>
+    <string name="about_app">Game da Quran Sharif</string>
+
+    <!-- About -->
     <string name="about_title">Game da</string>
-    <string name="menu_app_language">Harshen manhaja</string>
-    <string name="menu_translation_language">Harshen fassara</string>
-    <string name="tr_close">Rufe</string>
+    <string name="offline_badge">100% Ba Intanet • Babu Intanet • Sirri Farko</string>
+    <string name="offline_description">Rubutun Alƙurʼani da fassarori suna aiki gaba ɗaya ba tare da intanet ba. Ana amfani da intanet ne kawai don duba da zazzage sautin karatu. Ba a tattara wani bayani na sirri ba.</string>
+    <string name="source_authenticity">Ana nuna rubutun Alƙurʼani daidai yadda tushe ya bayar, ba tare da wani canji ba.</string>
+    <string name="credits_title">Yabo da Tushe</string>
+    <string name="tanzil_credit">Rubutun Alƙurʼani: Tanzil Project</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Kwafi Hanyar Haɗi</string>
+    <string name="tanzil_copied">An kwafi hanyar haɗi</string>
+    <string name="translation_credit">Fassarar Bangla: Muhiuddin Khan (ta hannun Tanzil Project)</string>
+    <string name="font_amiri_credit">Rubutun Larabci: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">Rubutun Bangla: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">Sigar %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Ana shirya bayanan Alƙurʼani… %1$d/114</string>
+    <string name="import_failed">An kasa shirya bayanan Alƙurʼani.</string>
+    <string name="import_tagline">Karanta  •  Saurara  •  Koyi</string>
     <string name="retry">Sake gwadawa</string>
-    <string name="audio_download">Zazzagewa</string>
-    <string name="audio_downloading">Ana zazzagewa…</string>
-    <string name="audio_play_button">Kunna karatu</string>
-    <string name="now_playing">Ana kunnawa yanzu</string>
+    <string name="checking_data">Ana duba bayanan Alƙurʼani…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Aya Bazuwar</string>
+    <string name="widget_description">Yana nuna aya bazuwar ta Alƙurʼani da Larabci da Bangla a allon gidanka.</string>
+    <string name="widget_open_app_prompt">Buɗe Quran Sharif don kammala saitin</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Sabis ɗin Sabunta Widget</string>
+    <string name="notification_channel_desc">Yana ci gaba da sabunta widget lokacin buɗe allo.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Widget na Quran Sharif yana aiki</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Fassarar Bangla</string>
+    <string name="select_translation_dialog_title">Zaɓi Fassarar Bangla</string>
+    <string name="translation_sample_ayah">Samfuri (112:1):</string>
+    <string name="translation_updated">An sabunta fassara</string>
+    <string name="translation_by_format">Wanda %1$s ya fassara</string>
+    <string name="widget_arabic_size">Girman Rubutun Larabci na Widget</string>
+    <string name="widget_translation_size">Girman Rubutun Bangla na Widget</string>
+    <string name="widget_text_size_reset">Sake saita girman rubutun widget</string>
+    <string name="widget_preview_title">Samfurin Kai-tsaye na Widget</string>
+    <string name="widget_resize_hint">Ƙara girman widget a allon gidanka idan babban rubutu bai shiga ba.</string>
+    <string name="available_translations_title">Fassarori da ke Akwai</string>
+    <string name="tanzil_non_commercial_notice">Ana rarraba fassarorin da aka samu ta Tanzil.net don koyarwa ba na kasuwanci ba.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Sautin Karatu</string>
+    <string name="audio_reciter_label">Mai Karatu na Asali</string>
+    <string name="audio_wifi_only">Zazzage ta Wi-Fi kawai</string>
+    <string name="audio_wifi_only_desc">Guji manyan zazzagewa ta bayanan wayar hannu</string>
+    <string name="audio_bismillah_prefix">Kunna Bismillah kafin sura</string>
+    <string name="audio_bismillah_prefix_desc">Kunna sautin Bismillah kafin sura (sai dai Sura ta 1 &amp; 9)</string>
+    <string name="audio_follow">Bi sauti kai tsaye</string>
+    <string name="audio_follow_desc">Mirgina aya zuwa gani yayin da sauti ke tafiya</string>
+    <string name="audio_manage_downloads">Sarrafa Abubuwan da aka Zazzage</string>
+    <string name="audio_manage_downloads_desc">Duba ma\'aji da sarrafa surori da aka zazzage</string>
     <string name="reciter_picker_title">Zaɓi Mai Karatu</string>
+    <string name="play_sample">Kunna samfuri</string>
+    <string name="stop_sample">Dakatar da samfuri</string>
+    <string name="audio_sheet_title">Sauti · %1$s</string>
+    <string name="audio_sheet_reciter">Mai karatu: %1$s</string>
+    <string name="audio_choose_reciter">Zaɓi wani mai karatu</string>
+    <string name="audio_download">Zazzage</string>
+    <string name="audio_downloading">Ana zazzagewa…</string>
+    <string name="audio_queued">Ana jira…</string>
+    <string name="audio_download_details">Aya %1$d · %2$d kbps</string>
+    <string name="audio_download_completed">An zazzage</string>
+    <string name="audio_play_button">Kunna karatu</string>
+    <string name="audio_delete_surah">Share sauti</string>
+    <string name="audio_delete_surah_confirm">Share karatun da aka zazzage na wannan sura?</string>
+    <string name="audio_delete_all_reciter">Share dukka na wannan mai karatu</string>
+    <string name="audio_delete_all_reciter_confirm">Share dukkan surori da aka zazzage na %1$s?</string>
+    <string name="audio_storage_used">Ma\'ajin Sauti da aka Yi Amfani: %1$s</string>
+    <string name="audio_storage_note">Ana adana fayiloli a ma\'ajin wannan manhaja kuma ana cire su idan ka goge manhajar.</string>
+    <string name="audio_downloads_empty">Ba a zazzage wani karatu ba tukuna</string>
+    <string name="audio_downloads_empty_desc">Zazzage karatun sura don saurare ba tare da intanet ba a kowane lokaci.</string>
+    <string name="audio_error_not_enough_storage">Ma\'aji bai isa ba (ana buƙatar aƙalla 150 MB)</string>
+    <string name="audio_error_download_failed">Zazzagewa ta gaza. Da fatan a duba haɗin intanet a sake gwadawa.</string>
+    <string name="audio_error_recitation_unavailable">Wannan karatu babu shi</string>
+    <string name="audio_mobile_data_warning_title">Zazzage ta bayanan wayar hannu?</string>
+    <string name="audio_mobile_data_warning_desc">Fayilolin sauti na iya zama manya. Kana son zazzagewa ta bayanan wayar hannu?</string>
+    <string name="audio_download_now">Zazzage Yanzu</string>
+    <string name="audio_download_channel_name">Zazzage Sauti</string>
+    <string name="audio_download_channel_desc">Yana nuna ci gaban zazzage sautin karatu</string>
+    <string name="audio_downloading_format">Ana zazzage %1$s</string>
+    <string name="now_playing">Ana Kunnawa Yanzu</string>
+    <string name="play_from_here">Kunna daga nan</string>
     <string name="follow_audio_chip">Bi</string>
     <string name="following_audio_chip">Ana bi</string>
     <string name="player_surah_title_format">Sura %1$s</string>
     <string name="player_ayah_of_format">Aya %1$s / %2$s</string>
-    <string name="language_system">Tsohuwar Tsarin Waya</string>
+    <string name="player_change_reciter">Canza</string>
+    <string name="audio_repeat_off">Maimaitawa: A kashe</string>
+    <string name="audio_repeat_ayah">Maimaitawa: Aya</string>
+    <string name="audio_repeat_surah">Maimaitawa: Sura</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Wasu fayilolin sauti sun ɓace. A sake zazzagewa?</string>
+    <string name="recitation_audio_attribution_title">Sautin Karatu</string>
+    <string name="recitation_audio_attribution">Al Quran Cloud / Islamic Network CDN (cdn.islamic.network) ne ke bayar da sautin. Haƙƙin mallakar kowane karatu na mai karatun ne, an ba da izinin rarrabawa kyauta ba na kasuwanci ba. Wannan manhaja ba ta riba ba ce. Idan mai karatu ko mai haƙƙi ya nemi a cire, za a cire karatun.</string>
+    <string name="fast_scroll_verse">Aya %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Ana Kunna Karatu</string>
+    <string name="audio_title">Sautin Karatu</string>
+    <string name="ayah_copied">An kwafi aya</string>
+    <string name="shared_via_app">An raba ta manhajar Quran Sharif</string>
+    <string name="enter_ayah_number">Shigar da lambar aya</string>
+    <string name="nav_sub_appearance">Jigo</string>
+    <string name="nav_sub_language">Harshen manhaja</string>
+    <string name="nav_sub_reading">Fassara, girman rubutu, sauti, mirgina</string>
+    <string name="nav_sub_widget">Girman rubutu, sabuntawa, samfuri</string>
+    <string name="nav_sub_data">Sake saita ci gaba, alamomi</string>
+    <string name="nav_sub_audio">Mai karatu, zazzagewa</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">Harshen manhaja</string>
+    <string name="menu_translation_language">Harshen fassara</string>
+    <string name="tr_close">Rufe</string>
+    <string name="tr_title">Harshen fassara</string>
+    <string name="tr_installed_section">A wannan waya</string>
+    <string name="tr_languages_section">Harsunan da ke akwai</string>
+    <string name="tr_count_format">Fassarori %1$d</string>
+    <string name="tr_loading">Ana loda fassarori…</string>
+    <string name="tr_load_failed">Ba a iya loda jerin ba. Duba intanet ɗinka ka sake gwadawa.</string>
+    <string name="tr_retry">Sake gwadawa</string>
+    <string name="tr_download">Zazzage</string>
+    <string name="tr_use">Yi amfani</string>
+    <string name="tr_in_use">Ana amfani</string>
+    <string name="tr_downloading_format">Ana zazzagewa… %1$d%%</string>
+    <string name="tr_failed_format">Zazzagewa ta gaza: %1$s</string>
+    <string name="tr_version_format">Sigar %1$s</string>
+    <string name="tr_source_line">Tushe: QuranEnc.com</string>
+    <string name="tr_restart_title">Sake buɗewa don aiwatarwa</string>
+    <string name="tr_restart_message">Aiwatar da %1$s na buƙatar manhajar ta sake buɗewa. Manhajar za ta rufe ta sake buɗewa da wannan fassara.</string>
+    <string name="tr_restart">Sake buɗewa</string>
+    <string name="tr_later">Daga baya</string>
+    <string name="settings_credits">Yabo</string>
+    <string name="settings_credits_sub">Masu fassara, masu wallafawa da tushe</string>
+    <string name="credits_page_title">Yabo</string>
+    <string name="credits_section_sources">Tushe</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Fassarorin da ka zazzage daga QuranEnc.com (Quran Encyclopedia) suke. Kowace fassara ta mai fassarar ce da mawallafinta.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Rubutun Alƙurʼani na Larabci da fassarorin Bengali da ke ciki (Muhiuddin Khan da Zohurul Hoque) daga tanzil.net suke, don amfani ba na kasuwanci ba.</string>
+    <string name="credits_audio_title">Sautin karatu</string>
+    <string name="credits_audio_body">cdn.islamic.network (Islamic Network) ne ke bayar da sautin karatu aya-aya.</string>
+    <string name="credits_section_downloaded">Fassarorin da aka zazzage</string>
+    <string name="credits_none_downloaded">Ba a zazzage wata fassara ba tukuna.</string>
 </resources>

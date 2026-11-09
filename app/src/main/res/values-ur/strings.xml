@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">ہوم</string>
     <string name="nav_quran">قرآن</string>
-    <string name="nav_bookmarks">بک مارکس</string>
-    <string name="nav_settings">ترتیبات</string>
-    <string name="ayah_of_the_moment">اس لمحے کی آیت</string>
+    <string name="nav_bookmarks">بُک مارکس</string>
+    <string name="nav_settings">سیٹنگز</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">آیتِ لمحہ</string>
     <string name="continue_reading">پڑھنا جاری رکھیں</string>
     <string name="quick_links">فوری رسائی</string>
     <string name="surah_list_card">سورتوں کی فہرست</string>
     <string name="surah_list_desc">تمام 114 سورتیں دیکھیں</string>
-    <string name="juz_list_card">پاروں کی فہرست</string>
+    <string name="juz_list_card">پارہ / جزء کی فہرست</string>
     <string name="juz_list_desc">30 پاروں کے مطابق دیکھیں</string>
+    <string name="read_surah">سورت پڑھیں</string>
     <string name="refresh_ayah">نئی آیت</string>
     <string name="last_read_reference">سورت %1$s · آیت %2$s</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">سورت</string>
     <string name="tab_juz">پارہ</string>
     <string name="meccan">مکی</string>
     <string name="medinan">مدنی</string>
     <string name="ayah_count_format">%1$s آیات</string>
     <string name="juz_format">پارہ %1$s</string>
+    <string name="juz_starts_at">%1$s %2$s:%3$s سے شروع</string>
+
+    <!-- Reader -->
     <string name="go_to_ayah">آیت پر جائیں…</string>
+    <string name="bookmark_surah_start">سورت کی ابتدا بُک مارک کریں</string>
     <string name="go_to_ayah_dialog_title">آیت پر جائیں</string>
+    <string name="ayah_number_hint">آیت نمبر درج کریں (1–%1$d)</string>
     <string name="go_button">جائیں</string>
-    <string name="cancel">منسوخ کریں</string>
+    <string name="cancel">منسوخ</string>
+    <string name="ayah_out_of_range">براہِ کرم درست آیت نمبر درج کریں</string>
     <string name="share_ayah">آیت شیئر کریں</string>
     <string name="copy_ayah">آیت کاپی کریں</string>
     <string name="copied_to_clipboard">آیت کلپ بورڈ میں کاپی ہو گئی</string>
-    <string name="ayah_copied">آیت کلپ بورڈ میں کاپی ہو گئی</string>
-    <string name="bookmark_added">آیت بک مارکس میں محفوظ ہو گئی</string>
-    <string name="bookmark_removed">بک مارک ہٹا دیا گیا</string>
+    <string name="surah_bookmarked">سورت کی ابتدا بُک مارک ہو گئی</string>
+    <string name="bookmark_added">آیت بُک مارکس میں محفوظ ہو گئی</string>
+    <string name="bookmark_removed">بُک مارک ہٹا دیا گیا</string>
     <string name="undo">واپس کریں</string>
+
+    <!-- Search -->
+    <string name="search_hint">بنگلہ، عربی یا مثلاً 2:255 تلاش کریں</string>
+    <string name="search_initial_hint">بنگلہ ترجمے، عربی متن (اعراب کے بغیر) یا حوالے مثلاً 2:255 یا ২:২৫৫ سے تلاش کریں۔</string>
+    <string name="search_no_results">کوئی مطابقت رکھنے والی آیت نہیں ملی۔</string>
+    <string name="search_go_to_reference">سورت %1$s، آیت %2$s پر جائیں</string>
     <string name="search_title">تلاش</string>
+    <string name="search_no_results_hint">دیکھ لیں کہ لفظ درست لکھا ہے۔</string>
     <string name="searching">تلاش جاری ہے…</string>
-    <string name="search_no_results">کوئی مطابق آیت نہیں ملی۔</string>
-    <string name="bookmarks_title">بک مارکس</string>
-    <string name="bookmarks_empty">ابھی تک کوئی بک مارک محفوظ نہیں</string>
+    <string name="search_results_count">%1$d آیات ملیں</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">بُک مارکس</string>
+    <string name="bookmarks_empty">ابھی کوئی بُک مارک محفوظ نہیں</string>
+    <string name="bookmarks_empty_desc">پڑھتے وقت کسی بھی آیت پر بُک مارک کا آئیکن دبائیں تاکہ وہ یہاں فوری رسائی کے لیے محفوظ ہو جائے۔</string>
+    <string name="delete_all_bookmarks">تمام بُک مارکس حذف کریں</string>
+    <string name="delete_all_confirm_title">تمام بُک مارکس حذف کریں؟</string>
+    <string name="delete_all_confirm_desc">اس سے تمام محفوظ بُک مارکس ہمیشہ کے لیے ہٹ جائیں گے۔</string>
     <string name="delete">حذف کریں</string>
-    <string name="settings_title">ترتیبات</string>
+    <string name="all_bookmarks_deleted">تمام بُک مارکس حذف ہو گئے</string>
+
+    <!-- Settings -->
+    <string name="settings_title">سیٹنگز</string>
     <string name="section_appearance">ظاہری شکل</string>
     <string name="theme_label">تھیم</string>
     <string name="theme_system">سسٹم</string>
-    <string name="theme_light">لائٹ</string>
-    <string name="theme_dark">ڈارک</string>
+    <string name="theme_light">روشن</string>
+    <string name="theme_dark">گہرا</string>
+    <string name="language_label">زبان (ভাষা)</string>
+    <string name="language_system">سسٹم کی ڈیفالٹ زبان</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
     <string name="section_reading">مطالعے کی ترجیحات</string>
+    <string name="arabic_font_size">عربی متن کا سائز</string>
+    <string name="bangla_font_size">بنگلہ متن کا سائز</string>
+    <string name="show_bangla_translation">بنگلہ ترجمہ دکھائیں</string>
+    <string name="use_bangla_digits">بنگلہ ہندسے استعمال کریں (১, ২, ৩)</string>
+    <string name="keep_screen_on">پڑھتے وقت اسکرین آن رکھیں</string>
+    <string name="preview_label">لائیو پیش منظر</string>
+
     <string name="section_widget">ہوم اسکرین ویجیٹ</string>
+    <string name="widget_refresh_on_screen_on">اسکرین آن ہونے پر ویجیٹ کی آیت بدلیں</string>
+    <string name="widget_refresh_helper">ایک چھوٹی خاموش نوٹیفکیشن استعمال ہوتی ہے تاکہ اینڈرائیڈ اسے چلتا رکھے۔</string>
+    <string name="battery_optimization_settings">بیٹری آپٹمائزیشن سیٹنگز</string>
+    <string name="battery_optimization_helper">کچھ فون برانڈز (Xiaomi، Oppo، Vivo، Huawei، Samsung) پس منظر کی سروسز بند کر دیتے ہیں؛ اگر ویجیٹ نہ بدلے تو ایپ کو «بلا پابندی» پر سیٹ کریں۔</string>
+    <string name="refresh_widget_now">ویجیٹ ابھی ریفریش کریں</string>
+    <string name="widget_refreshed">ویجیٹ نئی آیت کے ساتھ ریفریش ہو گیا</string>
+    <string name="notification_permission_title">نوٹیفکیشن کی اجازت</string>
+    <string name="notification_permission_desc">اینڈرائیڈ کو نوٹیفکیشن کی اجازت درکار ہے تاکہ خاموش بیک گراؤنڈ سروس اسکرین آن ہونے پر ویجیٹ ریفریش کر سکے۔</string>
+    <string name="grant_permission">اجازت دیں</string>
+
     <string name="section_data">ڈیٹا</string>
-    <string name="section_audio">تلاوت آڈیو</string>
-    <string name="about_title">ایپ کے بارے میں</string>
+    <string name="reset_reading_progress">مطالعے کی پیش رفت ری سیٹ کریں</string>
+    <string name="reset_reading_confirm_title">مطالعے کی پیش رفت ری سیٹ کریں؟</string>
+    <string name="reset_reading_confirm_desc">اس سے آپ کا «پڑھنا جاری رکھیں» کا بُک مارک شروع پر واپس چلا جائے گا۔</string>
+    <string name="reset">ری سیٹ</string>
+    <string name="progress_reset_done">مطالعے کی پیش رفت ری سیٹ ہو گئی</string>
+    <string name="about_app">Quran Sharif کے بارے میں</string>
+
+    <!-- About -->
+    <string name="about_title">تعارف</string>
+    <string name="offline_badge">100% آف لائن • انٹرنیٹ کے بغیر • پرائیویسی سب سے پہلے</string>
+    <string name="offline_description">قرآن کا متن اور تراجم مکمل طور پر آف لائن چلتے ہیں۔ انٹرنیٹ صرف تلاوت کی آڈیو کا پیش منظر دیکھنے اور ڈاؤن لوڈ کے لیے استعمال ہوتا ہے۔ کوئی ذاتی ڈیٹا جمع نہیں کیا جاتا۔</string>
+    <string name="source_authenticity">قرآن کا متن بالکل ویسے ہی دکھایا جاتا ہے جیسا ماخذ سے ملا، بغیر کسی تبدیلی کے۔</string>
+    <string name="credits_title">شکریہ اور ماخذ</string>
+    <string name="tanzil_credit">قرآنی متن: تنزیل پروجیکٹ</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">لنک کاپی کریں</string>
+    <string name="tanzil_copied">لنک کلپ بورڈ میں کاپی ہو گیا</string>
+    <string name="translation_credit">بنگلہ ترجمہ: Muhiuddin Khan (بذریعہ تنزیل پروجیکٹ)</string>
+    <string name="font_amiri_credit">عربی فونٹ: Amiri Quran (SIL اوپن فونٹ لائسنس)</string>
+    <string name="font_noto_credit">بنگلہ فونٹ: Noto Sans Bengali (SIL اوپن فونٹ لائسنس)</string>
+    <string name="version_format">ورژن %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">قرآن کا ڈیٹا تیار ہو رہا ہے… %1$d/114</string>
+    <string name="import_failed">قرآن کا ڈیٹا تیار نہیں ہو سکا۔</string>
+    <string name="import_tagline">پڑھیں  •  سنیں  •  سیکھیں</string>
+    <string name="retry">دوبارہ کوشش کریں</string>
+    <string name="checking_data">قرآن کا ڈیٹا جانچا جا رہا ہے…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — بے ترتیب آیت</string>
+    <string name="widget_description">آپ کی ہوم اسکرین پر عربی اور بنگلہ کے ساتھ قرآن کی ایک بے ترتیب آیت دکھاتا ہے۔</string>
+    <string name="widget_open_app_prompt">سیٹ اپ مکمل کرنے کے لیے Quran Sharif کھولیں</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">ویجیٹ ریفریش سروس</string>
+    <string name="notification_channel_desc">اسکرین کھلنے پر ویجیٹ کو اپ ڈیٹ رکھتی ہے۔</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Quran Sharif ویجیٹ فعال ہے</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">بنگلہ ترجمہ</string>
+    <string name="select_translation_dialog_title">بنگلہ ترجمہ منتخب کریں</string>
+    <string name="translation_sample_ayah">پیش منظر (112:1):</string>
+    <string name="translation_updated">ترجمہ اپ ڈیٹ ہو گیا</string>
+    <string name="translation_by_format">مترجم: %1$s</string>
+    <string name="widget_arabic_size">ویجیٹ میں عربی متن کا سائز</string>
+    <string name="widget_translation_size">ویجیٹ میں بنگلہ متن کا سائز</string>
+    <string name="widget_text_size_reset">ویجیٹ کے متن کا سائز ری سیٹ کریں</string>
+    <string name="widget_preview_title">ویجیٹ کا لائیو پیش منظر</string>
+    <string name="widget_resize_hint">اگر بڑا متن پورا نہ آئے تو ہوم اسکرین پر ویجیٹ کو بڑا کریں۔</string>
+    <string name="available_translations_title">دستیاب تراجم</string>
+    <string name="tanzil_non_commercial_notice">Tanzil.net کے ذریعے فراہم کردہ تراجم غیر تجارتی تعلیمی استعمال کے لیے تقسیم کیے جاتے ہیں۔</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">تلاوت کی آڈیو</string>
+    <string name="audio_reciter_label">ڈیفالٹ قاری</string>
+    <string name="audio_wifi_only">صرف Wi-Fi پر ڈاؤن لوڈ کریں</string>
+    <string name="audio_wifi_only_desc">موبائل ڈیٹا پر بڑے ڈاؤن لوڈ سے بچیں</string>
+    <string name="audio_bismillah_prefix">سورت سے پہلے بسم اللہ چلائیں</string>
+    <string name="audio_bismillah_prefix_desc">سورت سے پہلے بسم اللہ کی آڈیو چلائیں (سورت 1 اور 9 کے سوا)</string>
+    <string name="audio_follow">آڈیو کے ساتھ خودکار چلیں</string>
+    <string name="audio_follow_desc">آڈیو چلنے کے ساتھ آیت اسکرین پر لائیں</string>
+    <string name="audio_manage_downloads">ڈاؤن لوڈز کا انتظام</string>
+    <string name="audio_manage_downloads_desc">اسٹوریج دیکھیں اور ڈاؤن لوڈ کی گئی سورتوں کا انتظام کریں</string>
+    <string name="reciter_picker_title">قاری منتخب کریں</string>
+    <string name="play_sample">نمونہ چلائیں</string>
+    <string name="stop_sample">نمونہ روکیں</string>
+    <string name="audio_sheet_title">آڈیو · %1$s</string>
+    <string name="audio_sheet_reciter">قاری: %1$s</string>
+    <string name="audio_choose_reciter">دوسرا قاری منتخب کریں</string>
+    <string name="audio_download">ڈاؤن لوڈ</string>
+    <string name="audio_downloading">ڈاؤن لوڈ ہو رہا ہے…</string>
+    <string name="audio_queued">قطار میں ہے…</string>
+    <string name="audio_download_details">%1$d آیات · %2$d kbps</string>
+    <string name="audio_download_completed">ڈاؤن لوڈ ہو گیا</string>
+    <string name="audio_play_button">تلاوت چلائیں</string>
+    <string name="audio_delete_surah">آڈیو حذف کریں</string>
+    <string name="audio_delete_surah_confirm">اس سورت کی ڈاؤن لوڈ شدہ تلاوت حذف کریں؟</string>
+    <string name="audio_delete_all_reciter">اس قاری کی تمام تلاوتیں حذف کریں</string>
+    <string name="audio_delete_all_reciter_confirm">%1$s کی تمام ڈاؤن لوڈ شدہ سورتیں حذف کریں؟</string>
+    <string name="audio_storage_used">آڈیو کے لیے استعمال شدہ اسٹوریج: %1$s</string>
+    <string name="audio_storage_note">فائلیں ایپ کی اپنی اسٹوریج میں رکھی جاتی ہیں اور ایپ ان انسٹال کرنے پر ہٹ جاتی ہیں۔</string>
+    <string name="audio_downloads_empty">ابھی کوئی تلاوت ڈاؤن لوڈ نہیں ہوئی</string>
+    <string name="audio_downloads_empty_desc">سورتوں کی تلاوت ڈاؤن لوڈ کریں تاکہ کسی بھی وقت آف لائن سن سکیں۔</string>
+    <string name="audio_error_not_enough_storage">اسٹوریج کافی نہیں (کم از کم 150 MB درکار ہے)</string>
+    <string name="audio_error_download_failed">ڈاؤن لوڈ ناکام ہو گیا۔ براہِ کرم کنکشن چیک کر کے دوبارہ کوشش کریں۔</string>
+    <string name="audio_error_recitation_unavailable">یہ تلاوت دستیاب نہیں</string>
+    <string name="audio_mobile_data_warning_title">موبائل ڈیٹا پر ڈاؤن لوڈ کریں؟</string>
+    <string name="audio_mobile_data_warning_desc">آڈیو فائلیں بڑی ہو سکتی ہیں۔ کیا آپ موبائل ڈیٹا سے ڈاؤن لوڈ کرنا چاہتے ہیں؟</string>
+    <string name="audio_download_now">ابھی ڈاؤن لوڈ کریں</string>
+    <string name="audio_download_channel_name">آڈیو ڈاؤن لوڈز</string>
+    <string name="audio_download_channel_desc">تلاوت کی آڈیو ڈاؤن لوڈ ہونے کی پیش رفت دکھاتا ہے</string>
+    <string name="audio_downloading_format">%1$s ڈاؤن لوڈ ہو رہی ہے</string>
+    <string name="now_playing">اب چل رہا ہے</string>
+    <string name="play_from_here">یہاں سے چلائیں</string>
+    <string name="follow_audio_chip">ساتھ چلیں</string>
+    <string name="following_audio_chip">ساتھ چل رہا ہے</string>
+    <string name="player_surah_title_format">سورت %1$s</string>
+    <string name="player_ayah_of_format">آیت %1$s / %2$s</string>
+    <string name="player_change_reciter">تبدیل کریں</string>
+    <string name="audio_repeat_off">تکرار: بند</string>
+    <string name="audio_repeat_ayah">تکرار: آیت</string>
+    <string name="audio_repeat_surah">تکرار: سورت</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">کچھ آڈیو فائلیں غائب ہیں۔ دوبارہ ڈاؤن لوڈ کریں؟</string>
+    <string name="recitation_audio_attribution_title">تلاوت کی آڈیو</string>
+    <string name="recitation_audio_attribution">آڈیو Al Quran Cloud / Islamic Network CDN (cdn.islamic.network) فراہم کرتا ہے۔ ہر تلاوت کے حقوق قاری کے پاس ہیں، اور مفت غیر تجارتی تقسیم کے لیے لائسنس شدہ ہیں۔ یہ ایپ غیر منافع بخش ہے۔ اگر کوئی قاری یا حقوق کا مالک ہٹانے کا کہے تو وہ تلاوت ہٹا دی جائے گی۔</string>
+    <string name="fast_scroll_verse">آیت %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">تلاوت چل رہی ہے</string>
+    <string name="audio_title">تلاوت کی آڈیو</string>
+    <string name="ayah_copied">آیت کلپ بورڈ میں کاپی ہو گئی</string>
+    <string name="shared_via_app">Quran Sharif ایپ کے ذریعے شیئر کیا گیا</string>
+    <string name="enter_ayah_number">آیت نمبر درج کریں</string>
+    <string name="nav_sub_appearance">تھیم</string>
+    <string name="nav_sub_language">ایپ کی زبان</string>
+    <string name="nav_sub_reading">ترجمہ، متن کا سائز، آڈیو، اسکرول</string>
+    <string name="nav_sub_widget">متن کا سائز، ریفریش، پیش منظر</string>
+    <string name="nav_sub_data">پیش رفت ری سیٹ، بُک مارکس</string>
+    <string name="nav_sub_audio">قاری، ڈاؤن لوڈز</string>
+
+    <!-- Language menu, translations and credits -->
     <string name="menu_app_language">ایپ کی زبان</string>
     <string name="menu_translation_language">ترجمے کی زبان</string>
     <string name="tr_close">بند کریں</string>
-    <string name="retry">دوبارہ کوشش کریں</string>
-    <string name="audio_download">ڈاؤن لوڈ</string>
-    <string name="audio_downloading">ڈاؤن لوڈ ہو رہا ہے…</string>
-    <string name="audio_play_button">تلاوت چلائیں</string>
-    <string name="now_playing">اب چل رہا ہے</string>
-    <string name="reciter_picker_title">قاری منتخب کریں</string>
-    <string name="follow_audio_chip">فالو</string>
-    <string name="following_audio_chip">فالو ہو رہا ہے</string>
-    <string name="player_surah_title_format">سورت %1$s</string>
-    <string name="player_ayah_of_format">آیت %1$s / %2$s</string>
-    <string name="language_system">سسٹم ڈیفالٹ</string>
+    <string name="tr_title">ترجمے کی زبان</string>
+    <string name="tr_installed_section">اس فون میں</string>
+    <string name="tr_languages_section">دستیاب زبانیں</string>
+    <string name="tr_count_format">%1$d تراجم</string>
+    <string name="tr_loading">تراجم لوڈ ہو رہے ہیں…</string>
+    <string name="tr_load_failed">فہرست لوڈ نہیں ہو سکی۔ انٹرنیٹ چیک کر کے دوبارہ کوشش کریں۔</string>
+    <string name="tr_retry">دوبارہ کوشش کریں</string>
+    <string name="tr_download">ڈاؤن لوڈ</string>
+    <string name="tr_use">استعمال کریں</string>
+    <string name="tr_in_use">زیرِ استعمال</string>
+    <string name="tr_downloading_format">ڈاؤن لوڈ ہو رہا ہے… %1$d%%</string>
+    <string name="tr_failed_format">ڈاؤن لوڈ ناکام: %1$s</string>
+    <string name="tr_version_format">ورژن %1$s</string>
+    <string name="tr_source_line">ماخذ: QuranEnc.com</string>
+    <string name="tr_restart_title">لاگو کرنے کے لیے ری اسٹارٹ کریں</string>
+    <string name="tr_restart_message">%1$s کو لاگو کرنے کے لیے ایپ کا ری اسٹارٹ ہونا ضروری ہے۔ ایپ بند ہو کر اسی ترجمے کے ساتھ دوبارہ کھلے گی۔</string>
+    <string name="tr_restart">ری اسٹارٹ</string>
+    <string name="tr_later">بعد میں</string>
+    <string name="settings_credits">شکریہ</string>
+    <string name="settings_credits_sub">مترجمین، ناشرین اور ماخذ</string>
+    <string name="credits_page_title">شکریہ</string>
+    <string name="credits_section_sources">ماخذ</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">آپ کے ڈاؤن لوڈ کیے ہوئے تراجم QuranEnc.com (قرآن انسائیکلوپیڈیا) سے آتے ہیں۔ ہر ترجمہ اپنے مترجم اور ناشر کی ملکیت ہے۔</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">عربی قرآنی متن اور شامل شدہ بنگلہ تراجم (Muhiuddin Khan اور Zohurul Hoque) tanzil.net سے لیے گئے ہیں، غیر تجارتی استعمال کے لیے۔</string>
+    <string name="credits_audio_title">تلاوت کی آڈیو</string>
+    <string name="credits_audio_body">آیت بہ آیت تلاوت کی آڈیو cdn.islamic.network (Islamic Network) فراہم کرتا ہے۔</string>
+    <string name="credits_section_downloaded">ڈاؤن لوڈ شدہ تراجم</string>
+    <string name="credits_none_downloaded">ابھی کوئی ترجمہ ڈاؤن لوڈ نہیں ہوا۔</string>
 </resources>

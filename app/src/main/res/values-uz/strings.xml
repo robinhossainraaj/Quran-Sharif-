@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">Bosh sahifa</string>
-    <string name="nav_quran">Qur\'on</string>
-    <string name="nav_bookmarks">Xatcho\'plar</string>
+    <string name="nav_quran">Qurʻon</string>
+    <string name="nav_bookmarks">Xatcholar</string>
     <string name="nav_settings">Sozlamalar</string>
-    <string name="ayah_of_the_moment">Lahzaning oyati</string>
-    <string name="continue_reading">O\'qishni davom ettirish</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">Bugungi oyat</string>
+    <string name="continue_reading">Oʻqishni davom ettirish</string>
     <string name="quick_links">Tezkor kirish</string>
-    <string name="surah_list_card">Suralar ro\'yxati</string>
-    <string name="surah_list_desc">Barcha 114 surani ko\'rish</string>
-    <string name="juz_list_card">Juzlar ro\'yxati</string>
-    <string name="juz_list_desc">30 juz bo\'yicha ko\'rish</string>
+    <string name="surah_list_card">Suralar roʻyxati</string>
+    <string name="surah_list_desc">Barcha 114 suraga qarang</string>
+    <string name="juz_list_card">Juzlar roʻyxati</string>
+    <string name="juz_list_desc">30 juz boʻyicha qarang</string>
+    <string name="read_surah">Surani oʻqish</string>
     <string name="refresh_ayah">Yangi oyat</string>
-    <string name="last_read_reference">Sura %1$s · Oyat %2$s</string>
+    <string name="last_read_reference">%1$s-sura · %2$s-oyat</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">Sura</string>
     <string name="tab_juz">Juz</string>
     <string name="meccan">Makkiy</string>
     <string name="medinan">Madaniy</string>
     <string name="ayah_count_format">%1$s oyat</string>
-    <string name="juz_format">Juz %1$s</string>
-    <string name="go_to_ayah">Oyatga o\'tish…</string>
-    <string name="go_to_ayah_dialog_title">Oyatga o\'tish</string>
-    <string name="go_button">O\'tish</string>
+    <string name="juz_format">%1$s-juz</string>
+    <string name="juz_starts_at">Boshlanishi: %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">Oyatga oʻtish…</string>
+    <string name="bookmark_surah_start">Sura boshiga xatcho‘p qoʻyish</string>
+    <string name="go_to_ayah_dialog_title">Oyatga oʻtish</string>
+    <string name="ayah_number_hint">Oyat raqamini kiriting (1–%1$d)</string>
+    <string name="go_button">Oʻtish</string>
     <string name="cancel">Bekor qilish</string>
+    <string name="ayah_out_of_range">Iltimos, toʻgʻri oyat raqamini kiriting</string>
     <string name="share_ayah">Oyatni ulashish</string>
     <string name="copy_ayah">Oyatni nusxalash</string>
     <string name="copied_to_clipboard">Oyat buferga nusxalandi</string>
-    <string name="ayah_copied">Oyat buferga nusxalandi</string>
-    <string name="bookmark_added">Oyat xatcho\'plarga saqlandi</string>
-    <string name="bookmark_removed">Xatcho\'p o\'chirildi</string>
-    <string name="undo">Qaytarish</string>
-    <string name="search_title">Qidirish</string>
+    <string name="surah_bookmarked">Sura boshi xatcholarga qoʻshildi</string>
+    <string name="bookmark_added">Oyat xatcholarga saqlandi</string>
+    <string name="bookmark_removed">Xatcho‘p olib tashlandi</string>
+    <string name="undo">Bekor qilish</string>
+
+    <!-- Search -->
+    <string name="search_hint">Bengal, arab tilida yoki masalan 2:255 qidiring</string>
+    <string name="search_initial_hint">Bengal tarjimasi, arabcha matn (harakatlarsiz) yoki 2:255 yoki ২:২৫৫ kabi havola boʻyicha qidiring.</string>
+    <string name="search_no_results">Mos oyatlar topilmadi.</string>
+    <string name="search_go_to_reference">%1$s-sura, %2$s-oyatga oʻtish</string>
+    <string name="search_title">Qidiruv</string>
+    <string name="search_no_results_hint">Soʻzni toʻgʻri yozganingizni tekshiring.</string>
     <string name="searching">Qidirilmoqda…</string>
-    <string name="search_no_results">Mos oyat topilmadi.</string>
-    <string name="bookmarks_title">Xatcho\'plar</string>
-    <string name="bookmarks_empty">Hali xatcho\'p saqlanmagan</string>
-    <string name="delete">O\'chirish</string>
+    <string name="search_results_count">%1$d ta oyat topildi</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">Xatcholar</string>
+    <string name="bookmarks_empty">Hozircha saqlangan xatcholar yoʻq</string>
+    <string name="bookmarks_empty_desc">Oʻqish paytida istalgan oyatdagi xatcho‘p belgisini bosing, u tez kirish uchun shu yerda saqlanadi.</string>
+    <string name="delete_all_bookmarks">Barcha xatcholarni oʻchirish</string>
+    <string name="delete_all_confirm_title">Barcha xatcholar oʻchirilsinmi?</string>
+    <string name="delete_all_confirm_desc">Saqlangan barcha xatcholar butunlay oʻchiriladi.</string>
+    <string name="delete">Oʻchirish</string>
+    <string name="all_bookmarks_deleted">Barcha xatcholar oʻchirildi</string>
+
+    <!-- Settings -->
     <string name="settings_title">Sozlamalar</string>
-    <string name="section_appearance">Ko\'rinish</string>
+    <string name="section_appearance">Koʻrinish</string>
     <string name="theme_label">Mavzu</string>
     <string name="theme_system">Tizim</string>
-    <string name="theme_light">Yorug\'</string>
-    <string name="theme_dark">Qorong\'i</string>
-    <string name="section_reading">O\'qish sozlamalari</string>
+    <string name="theme_light">Yorugʻ</string>
+    <string name="theme_dark">Qorongʻi</string>
+    <string name="language_label">Til (ভাষা)</string>
+    <string name="language_system">Tizim tili</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">Oʻqish sozlamalari</string>
+    <string name="arabic_font_size">Arabcha matn oʻlchami</string>
+    <string name="bangla_font_size">Bengalcha matn oʻlchami</string>
+    <string name="show_bangla_translation">Bengalcha tarjimani koʻrsatish</string>
+    <string name="use_bangla_digits">Bengal raqamlaridan foydalanish (১, ২, ৩)</string>
+    <string name="keep_screen_on">Oʻqishda ekranni yoniq saqlash</string>
+    <string name="preview_label">Jonli koʻrinish</string>
+
     <string name="section_widget">Bosh ekran vidjeti</string>
-    <string name="section_data">Ma\'lumotlar</string>
-    <string name="section_audio">Qiroat audiosi</string>
+    <string name="widget_refresh_on_screen_on">Ekran yonganda vidjet oyatini almashtirish</string>
+    <string name="widget_refresh_helper">Android buni ishlatib turishi uchun kichik ovozsiz bildirishnomadan foydalanadi.</string>
+    <string name="battery_optimization_settings">Batareya optimallashtirish sozlamalari</string>
+    <string name="battery_optimization_helper">Ba’zi telefon brendlari (Xiaomi, Oppo, Vivo, Huawei, Samsung) fon xizmatlarini toʻxtatadi; vidjet almashmasa, ilovani \'Cheklovsiz\' holatga qoʻying.</string>
+    <string name="refresh_widget_now">Vidjetni hozir yangilash</string>
+    <string name="widget_refreshed">Vidjet yangi oyat bilan yangilandi</string>
+    <string name="notification_permission_title">Bildirishnoma ruxsati</string>
+    <string name="notification_permission_desc">Ovozsiz fon xizmati ekran yonganda vidjetni yangilashi uchun Android bildirishnoma ruxsatini talab qiladi.</string>
+    <string name="grant_permission">Ruxsat berish</string>
+
+    <string name="section_data">Ma’lumotlar</string>
+    <string name="reset_reading_progress">Oʻqish jarayonini tiklash</string>
+    <string name="reset_reading_confirm_title">Oʻqish jarayoni tiklansinmi?</string>
+    <string name="reset_reading_confirm_desc">Oʻqishni davom ettirish xatcho‘pi boshiga qaytariladi.</string>
+    <string name="reset">Tiklash</string>
+    <string name="progress_reset_done">Oʻqish jarayoni tiklandi</string>
+    <string name="about_app">Quran Sharif haqida</string>
+
+    <!-- About -->
     <string name="about_title">Ilova haqida</string>
+    <string name="offline_badge">100% oflayn • Internetsiz • Avvalo maxfiylik</string>
+    <string name="offline_description">Qurʻon matni va tarjimalar toʻliq oflayn ishlaydi. Internet faqat tilovat audiosini tinglash va yuklab olish uchun ishlatiladi. Hech qanday shaxsiy ma’lumot yigʻilmaydi.</string>
+    <string name="source_authenticity">Qurʻon matni manbadan qanday olingan boʻlsa, oʻzgartirishsiz shundayligicha koʻrsatiladi.</string>
+    <string name="credits_title">Minnatdorchilik va manbalar</string>
+    <string name="tanzil_credit">Qurʻon matni: Tanzil loyihasi</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Havolani nusxalash</string>
+    <string name="tanzil_copied">Havola buferga nusxalandi</string>
+    <string name="translation_credit">Bengal tarjimasi: Muhiuddin Khan (Tanzil loyihasi orqali)</string>
+    <string name="font_amiri_credit">Arab shrifti: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">Bengal shrifti: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">Versiya %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Qurʻon ma’lumotlari tayyorlanmoqda… %1$d/114</string>
+    <string name="import_failed">Qurʻon ma’lumotlarini tayyorlab boʻlmadi.</string>
+    <string name="import_tagline">Oʻqing  •  Tinglang  •  Oʻrganing</string>
+    <string name="retry">Qayta urinish</string>
+    <string name="checking_data">Qurʻon ma’lumotlari tekshirilmoqda…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Tasodifiy oyat</string>
+    <string name="widget_description">Bosh ekranda arabcha va bengalcha tasodifiy Qurʻon oyatini koʻrsatadi.</string>
+    <string name="widget_open_app_prompt">Sozlashni tugatish uchun Quran Sharif ilovasini oching</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Vidjetni yangilash xizmati</string>
+    <string name="notification_channel_desc">Ekran qulfi ochilganda vidjet yangilanishini ta’minlaydi.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Quran Sharif vidjeti faol</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Bengalcha tarjima</string>
+    <string name="select_translation_dialog_title">Bengalcha tarjimani tanlang</string>
+    <string name="translation_sample_ayah">Koʻrinish (112:1):</string>
+    <string name="translation_updated">Tarjima yangilandi</string>
+    <string name="translation_by_format">Tarjimon: %1$s</string>
+    <string name="widget_arabic_size">Vidjet arabcha matn oʻlchami</string>
+    <string name="widget_translation_size">Vidjet bengalcha matn oʻlchami</string>
+    <string name="widget_text_size_reset">Vidjet matn oʻlchamini tiklash</string>
+    <string name="widget_preview_title">Vidjetning jonli koʻrinishi</string>
+    <string name="widget_resize_hint">Katta matn sigʻmasa, vidjetni bosh ekranda kattalashtiring.</string>
+    <string name="available_translations_title">Mavjud tarjimalar</string>
+    <string name="tanzil_non_commercial_notice">Tanzil.net orqali taqdim etilgan tarjimalar notijorat ta’lim maqsadlarida tarqatiladi.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Tilovat audiosi</string>
+    <string name="audio_reciter_label">Standart qori</string>
+    <string name="audio_wifi_only">Faqat Wi-Fi orqali yuklash</string>
+    <string name="audio_wifi_only_desc">Mobil internetda katta yuklashlardan saqlaning</string>
+    <string name="audio_bismillah_prefix">Surada oldin Basmalani qoʻyish</string>
+    <string name="audio_bismillah_prefix_desc">Surada oldin Basmala audiosini qoʻyish (1 va 9-suradan tashqari)</string>
+    <string name="audio_follow">Audioga avtomatik ergashish</string>
+    <string name="audio_follow_desc">Audio ijro etilganda oyatni koʻrinishga suring</string>
+    <string name="audio_manage_downloads">Yuklashlarni boshqarish</string>
+    <string name="audio_manage_downloads_desc">Xotirani koʻring va yuklangan suralarni boshqaring</string>
+    <string name="reciter_picker_title">Qorini tanlang</string>
+    <string name="play_sample">Namunani ijro etish</string>
+    <string name="stop_sample">Namunani toʻxtatish</string>
+    <string name="audio_sheet_title">Audio · %1$s</string>
+    <string name="audio_sheet_reciter">Qori: %1$s</string>
+    <string name="audio_choose_reciter">Boshqa qorini tanlash</string>
+    <string name="audio_download">Yuklab olish</string>
+    <string name="audio_downloading">Yuklanmoqda…</string>
+    <string name="audio_queued">Navbatda…</string>
+    <string name="audio_download_details">%1$d oyat · %2$d kbps</string>
+    <string name="audio_download_completed">Yuklab olindi</string>
+    <string name="audio_play_button">Tilovatni ijro etish</string>
+    <string name="audio_delete_surah">Audioni oʻchirish</string>
+    <string name="audio_delete_surah_confirm">Bu sura uchun yuklangan tilovat oʻchirilsinmi?</string>
+    <string name="audio_delete_all_reciter">Shu qorining barchasini oʻchirish</string>
+    <string name="audio_delete_all_reciter_confirm">%1$s uchun yuklangan barcha suralar oʻchirilsinmi?</string>
+    <string name="audio_storage_used">Audio egallagan xotira: %1$s</string>
+    <string name="audio_storage_note">Fayllar ilovaning oʻz xotirasida saqlanadi va ilova oʻchirilsa, ular ham oʻchadi.</string>
+    <string name="audio_downloads_empty">Hozircha yuklangan tilovatlar yoʻq</string>
+    <string name="audio_downloads_empty_desc">Istalgan vaqtda oflayn tinglash uchun sura tilovatlarini yuklab oling.</string>
+    <string name="audio_error_not_enough_storage">Xotira yetarli emas (kamida 150 MB kerak)</string>
+    <string name="audio_error_download_failed">Yuklab olinmadi. Aloqani tekshirib, qayta urinib koʻring.</string>
+    <string name="audio_error_recitation_unavailable">Bu tilovat mavjud emas</string>
+    <string name="audio_mobile_data_warning_title">Mobil internet orqali yuklansinmi?</string>
+    <string name="audio_mobile_data_warning_desc">Audio fayllar katta boʻlishi mumkin. Mobil internet orqali yuklab olmoqchimisiz?</string>
+    <string name="audio_download_now">Hozir yuklash</string>
+    <string name="audio_download_channel_name">Audio yuklashlar</string>
+    <string name="audio_download_channel_desc">Tilovat audiosini yuklash jarayonini koʻrsatadi</string>
+    <string name="audio_downloading_format">%1$s yuklanmoqda</string>
+    <string name="now_playing">Hozir ijro etilmoqda</string>
+    <string name="play_from_here">Shu yerdan ijro etish</string>
+    <string name="follow_audio_chip">Ergashish</string>
+    <string name="following_audio_chip">Ergashilmoqda</string>
+    <string name="player_surah_title_format">%1$s-sura</string>
+    <string name="player_ayah_of_format">%1$s / %2$s-oyat</string>
+    <string name="player_change_reciter">Almashtirish</string>
+    <string name="audio_repeat_off">Takrorlash: oʻchiq</string>
+    <string name="audio_repeat_ayah">Takrorlash: oyat</string>
+    <string name="audio_repeat_surah">Takrorlash: sura</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Ba’zi audio fayllar yoʻq. Qayta yuklansinmi?</string>
+    <string name="recitation_audio_attribution_title">Tilovat audiosi</string>
+    <string name="recitation_audio_attribution">Audio Al Quran Cloud / Islamic Network CDN (cdn.islamic.network) tomonidan taqdim etiladi. Har bir tilovatning mualliflik huquqi qoriga tegishli boʻlib, notijorat maqsadda bepul tarqatish uchun litsenziyalangan. Bu ilova notijorat. Agar qori yoki huquq egasi olib tashlashni soʻrasa, tilovat olib tashlanadi.</string>
+    <string name="fast_scroll_verse">%1$s-oyat</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Tilovat ijro etilmoqda</string>
+    <string name="audio_title">Tilovat audiosi</string>
+    <string name="ayah_copied">Oyat buferga nusxalandi</string>
+    <string name="shared_via_app">Quran Sharif ilovasi orqali ulashildi</string>
+    <string name="enter_ayah_number">Oyat raqamini kiriting</string>
+    <string name="nav_sub_appearance">Mavzu</string>
+    <string name="nav_sub_language">Ilova tili</string>
+    <string name="nav_sub_reading">Tarjima, matn oʻlchami, audio, aylantirish</string>
+    <string name="nav_sub_widget">Matn oʻlchami, yangilash, koʻrinish</string>
+    <string name="nav_sub_data">Jarayonni tiklash, xatcholar</string>
+    <string name="nav_sub_audio">Qori, yuklashlar</string>
+
+    <!-- Language menu, translations and credits -->
     <string name="menu_app_language">Ilova tili</string>
     <string name="menu_translation_language">Tarjima tili</string>
     <string name="tr_close">Yopish</string>
-    <string name="retry">Qayta urinish</string>
-    <string name="audio_download">Yuklab olish</string>
-    <string name="audio_downloading">Yuklab olinmoqda…</string>
-    <string name="audio_play_button">Qiroatni ijro etish</string>
-    <string name="now_playing">Hozir ijro etilmoqda</string>
-    <string name="reciter_picker_title">Qorini tanlang</string>
-    <string name="follow_audio_chip">Kuzatish</string>
-    <string name="following_audio_chip">Kuzatilmoqda</string>
-    <string name="player_surah_title_format">Sura %1$s</string>
-    <string name="player_ayah_of_format">Oyat %1$s / %2$s</string>
-    <string name="language_system">Tizim standarti</string>
+    <string name="tr_title">Tarjima tili</string>
+    <string name="tr_installed_section">Shu telefonda</string>
+    <string name="tr_languages_section">Mavjud tillar</string>
+    <string name="tr_count_format">%1$d ta tarjima</string>
+    <string name="tr_loading">Tarjimalar yuklanmoqda…</string>
+    <string name="tr_load_failed">Roʻyxatni yuklab boʻlmadi. Internetni tekshirib, qayta urinib koʻring.</string>
+    <string name="tr_retry">Qayta urinish</string>
+    <string name="tr_download">Yuklab olish</string>
+    <string name="tr_use">Ishlatish</string>
+    <string name="tr_in_use">Ishlatilmoqda</string>
+    <string name="tr_downloading_format">Yuklanmoqda… %1$d%%</string>
+    <string name="tr_failed_format">Yuklab olinmadi: %1$s</string>
+    <string name="tr_version_format">Versiya %1$s</string>
+    <string name="tr_source_line">Manba: QuranEnc.com</string>
+    <string name="tr_restart_title">Qoʻllash uchun qayta ishga tushiring</string>
+    <string name="tr_restart_message">%1$s tarjimasini qoʻllash uchun ilovani qayta ishga tushirish kerak. Ilova yopilib, shu tarjima bilan qayta ochiladi.</string>
+    <string name="tr_restart">Qayta ishga tushirish</string>
+    <string name="tr_later">Keyinroq</string>
+    <string name="settings_credits">Minnatdorchilik</string>
+    <string name="settings_credits_sub">Tarjimonlar, nashriyotlar va manbalar</string>
+    <string name="credits_page_title">Minnatdorchilik</string>
+    <string name="credits_section_sources">Manbalar</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Siz yuklab olgan tarjimalar QuranEnc.com (Qurʻon ensiklopediyasi) saytidan olinadi. Har bir tarjima oʻz tarjimoni va nashriyotiga tegishli.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Arabcha Qurʻon matni va ilovaga oʻrnatilgan bengal tarjimalari (Muhiuddin Khan va Zohurul Hoque) notijorat foydalanish uchun tanzil.net saytidan olingan.</string>
+    <string name="credits_audio_title">Tilovat audiosi</string>
+    <string name="credits_audio_body">Oyatma-oyat tilovat audiosi cdn.islamic.network (Islamic Network) tomonidan taqdim etiladi.</string>
+    <string name="credits_section_downloaded">Yuklangan tarjimalar</string>
+    <string name="credits_none_downloaded">Hozircha birorta tarjima yuklab olinmagan.</string>
 </resources>

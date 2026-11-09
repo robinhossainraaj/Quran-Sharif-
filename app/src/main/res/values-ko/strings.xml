@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">홈</string>
+    <string name="nav_quran">꾸란</string>
+    <string name="nav_bookmarks">북마크</string>
+    <string name="nav_settings">설정</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">오늘의 아야</string>
+    <string name="continue_reading">이어 읽기</string>
+    <string name="quick_links">바로가기</string>
+    <string name="surah_list_card">수라 목록</string>
+    <string name="surah_list_desc">114개 수라 모두 보기</string>
+    <string name="juz_list_card">주즈 / 파라 목록</string>
+    <string name="juz_list_desc">30개 주즈로 보기</string>
+    <string name="read_surah">수라 읽기</string>
+    <string name="refresh_ayah">다른 아야</string>
+    <string name="last_read_reference">수라 %1$s · 아야 %2$s</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">수라</string>
+    <string name="tab_juz">주즈</string>
+    <string name="meccan">메카 계시</string>
+    <string name="medinan">메디나 계시</string>
+    <string name="ayah_count_format">아야 %1$s개</string>
+    <string name="juz_format">주즈 %1$s</string>
+    <string name="juz_starts_at">시작: %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">아야로 이동…</string>
+    <string name="bookmark_surah_start">수라 시작 부분 북마크</string>
+    <string name="go_to_ayah_dialog_title">아야로 이동</string>
+    <string name="ayah_number_hint">아야 번호 입력 (1–%1$d)</string>
+    <string name="go_button">이동</string>
+    <string name="cancel">취소</string>
+    <string name="ayah_out_of_range">올바른 아야 번호를 입력하세요</string>
+    <string name="share_ayah">아야 공유</string>
+    <string name="copy_ayah">아야 복사</string>
+    <string name="copied_to_clipboard">아야를 클립보드에 복사했습니다</string>
+    <string name="surah_bookmarked">수라 시작 부분을 북마크했습니다</string>
+    <string name="bookmark_added">아야를 북마크에 저장했습니다</string>
+    <string name="bookmark_removed">북마크를 삭제했습니다</string>
+    <string name="undo">실행 취소</string>
+
+    <!-- Search -->
+    <string name="search_hint">벵골어, 아랍어 또는 2:255 등으로 검색</string>
+    <string name="search_initial_hint">벵골어 번역, 아랍어 본문(부호 없이) 또는 2:255, ২:২৫৫ 같은 번호로 검색하세요.</string>
+    <string name="search_no_results">일치하는 아야를 찾을 수 없습니다.</string>
+    <string name="search_go_to_reference">수라 %1$s, 아야 %2$s(으)로 이동</string>
+    <string name="search_title">검색</string>
+    <string name="search_no_results_hint">단어를 올바르게 입력했는지 확인하세요.</string>
+    <string name="searching">검색 중…</string>
+    <string name="search_results_count">아야 %1$d개를 찾았습니다</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">북마크</string>
+    <string name="bookmarks_empty">저장된 북마크가 없습니다</string>
+    <string name="bookmarks_empty_desc">읽는 중에 아야의 북마크 아이콘을 누르면 이곳에 저장되어 빠르게 볼 수 있습니다.</string>
+    <string name="delete_all_bookmarks">모든 북마크 삭제</string>
+    <string name="delete_all_confirm_title">모든 북마크를 삭제할까요?</string>
+    <string name="delete_all_confirm_desc">저장된 모든 북마크가 영구적으로 삭제됩니다.</string>
+    <string name="delete">삭제</string>
+    <string name="all_bookmarks_deleted">모든 북마크를 삭제했습니다</string>
+
+    <!-- Settings -->
+    <string name="settings_title">설정</string>
+    <string name="section_appearance">화면 모양</string>
+    <string name="theme_label">테마</string>
+    <string name="theme_system">시스템</string>
+    <string name="theme_light">라이트</string>
+    <string name="theme_dark">다크</string>
+    <string name="language_label">언어 (ভাষা)</string>
+    <string name="language_system">시스템 기본값</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">읽기 설정</string>
+    <string name="arabic_font_size">아랍어 글자 크기</string>
+    <string name="bangla_font_size">벵골어 글자 크기</string>
+    <string name="show_bangla_translation">벵골어 번역 표시</string>
+    <string name="use_bangla_digits">벵골어 숫자 사용 (১, ২, ৩)</string>
+    <string name="keep_screen_on">읽는 동안 화면 켜 두기</string>
+    <string name="preview_label">실시간 미리보기</string>
+
+    <string name="section_widget">홈 화면 위젯</string>
+    <string name="widget_refresh_on_screen_on">화면이 켜질 때 위젯 아야 변경</string>
+    <string name="widget_refresh_helper">Android가 계속 실행하도록 소리 없는 작은 알림을 사용합니다.</string>
+    <string name="battery_optimization_settings">배터리 최적화 설정</string>
+    <string name="battery_optimization_helper">일부 휴대폰 제조사(샤오미, 오포, 비보, 화웨이, 삼성)는 백그라운드 서비스를 중지합니다. 위젯이 바뀌지 않으면 앱을 「제한 없음」으로 설정하세요.</string>
+    <string name="refresh_widget_now">지금 위젯 새로고침</string>
+    <string name="widget_refreshed">위젯을 새 아야로 새로고침했습니다</string>
+    <string name="notification_permission_title">알림 권한</string>
+    <string name="notification_permission_desc">화면이 켜질 때 소리 없는 백그라운드 서비스가 위젯을 새로고침하려면 Android 알림 권한이 필요합니다.</string>
+    <string name="grant_permission">허용</string>
+
+    <string name="section_data">데이터</string>
+    <string name="reset_reading_progress">읽기 진행 상황 초기화</string>
+    <string name="reset_reading_confirm_title">읽기 진행 상황을 초기화할까요?</string>
+    <string name="reset_reading_confirm_desc">이어 읽기 북마크가 처음으로 초기화됩니다.</string>
+    <string name="reset">초기화</string>
+    <string name="progress_reset_done">읽기 진행 상황을 초기화했습니다</string>
+    <string name="about_app">Quran Sharif 정보</string>
+
+    <!-- About -->
+    <string name="about_title">정보</string>
+    <string name="offline_badge">100% 오프라인 • 인터넷 불필요 • 개인정보 우선</string>
+    <string name="offline_description">꾸란 본문과 번역은 완전히 오프라인으로 작동합니다. 인터넷은 낭송 오디오 미리듣기와 다운로드에만 사용됩니다. 개인정보는 수집하지 않습니다.</string>
+    <string name="source_authenticity">꾸란 본문은 출처에서 제공한 그대로 수정 없이 표시됩니다.</string>
+    <string name="credits_title">크레딧 및 출처</string>
+    <string name="tanzil_credit">꾸란 본문: Tanzil Project</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">링크 복사</string>
+    <string name="tanzil_copied">링크를 클립보드에 복사했습니다</string>
+    <string name="translation_credit">벵골어 번역: Muhiuddin Khan (Tanzil Project 제공)</string>
+    <string name="font_amiri_credit">아랍어 글꼴: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">벵골어 글꼴: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">버전 %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">꾸란 데이터 준비 중… %1$d/114</string>
+    <string name="import_failed">꾸란 데이터를 준비하지 못했습니다.</string>
+    <string name="import_tagline">읽고  •  듣고  •  배우기</string>
+    <string name="retry">다시 시도</string>
+    <string name="checking_data">꾸란 데이터 확인 중…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — 랜덤 아야</string>
+    <string name="widget_description">홈 화면에 아랍어와 벵골어로 된 꾸란 아야를 무작위로 표시합니다.</string>
+    <string name="widget_open_app_prompt">Quran Sharif를 열어 설정을 완료하세요</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">위젯 새로고침 서비스</string>
+    <string name="notification_channel_desc">화면 잠금 해제 시 위젯 업데이트를 유지합니다.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Quran Sharif 위젯이 활성화되어 있습니다</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">벵골어 번역</string>
+    <string name="select_translation_dialog_title">벵골어 번역 선택</string>
+    <string name="translation_sample_ayah">미리보기 (112:1):</string>
+    <string name="translation_updated">번역이 업데이트되었습니다</string>
+    <string name="translation_by_format">번역: %1$s</string>
+    <string name="widget_arabic_size">위젯 아랍어 글자 크기</string>
+    <string name="widget_translation_size">위젯 벵골어 글자 크기</string>
+    <string name="widget_text_size_reset">위젯 글자 크기 초기화</string>
+    <string name="widget_preview_title">위젯 실시간 미리보기</string>
+    <string name="widget_resize_hint">큰 글자가 맞지 않으면 홈 화면에서 위젯을 더 크게 만드세요.</string>
+    <string name="available_translations_title">사용 가능한 번역</string>
+    <string name="tanzil_non_commercial_notice">Tanzil.net을 통해 제공되는 번역은 비상업적 교육 목적으로 배포됩니다.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">낭송 오디오</string>
+    <string name="audio_reciter_label">기본 낭송자</string>
+    <string name="audio_wifi_only">Wi-Fi에서만 다운로드</string>
+    <string name="audio_wifi_only_desc">모바일 데이터로 대용량 다운로드를 방지합니다</string>
+    <string name="audio_bismillah_prefix">수라 전에 비스밀라 재생</string>
+    <string name="audio_bismillah_prefix_desc">수라 전에 비스밀라 오디오 재생 (수라 1, 9 제외)</string>
+    <string name="audio_follow">오디오 자동 따라가기</string>
+    <string name="audio_follow_desc">오디오 재생에 맞춰 아야로 스크롤</string>
+    <string name="audio_manage_downloads">다운로드 관리</string>
+    <string name="audio_manage_downloads_desc">저장 공간 확인 및 다운로드한 수라 관리</string>
+    <string name="reciter_picker_title">낭송자 선택</string>
+    <string name="play_sample">샘플 재생</string>
+    <string name="stop_sample">샘플 중지</string>
+    <string name="audio_sheet_title">오디오 · %1$s</string>
+    <string name="audio_sheet_reciter">낭송자: %1$s</string>
+    <string name="audio_choose_reciter">다른 낭송자 선택</string>
+    <string name="audio_download">다운로드</string>
+    <string name="audio_downloading">다운로드 중…</string>
+    <string name="audio_queued">대기 중…</string>
+    <string name="audio_download_details">아야 %1$d개 · %2$d kbps</string>
+    <string name="audio_download_completed">다운로드 완료</string>
+    <string name="audio_play_button">낭송 재생</string>
+    <string name="audio_delete_surah">오디오 삭제</string>
+    <string name="audio_delete_surah_confirm">이 수라의 다운로드한 낭송을 삭제할까요?</string>
+    <string name="audio_delete_all_reciter">이 낭송자의 오디오 모두 삭제</string>
+    <string name="audio_delete_all_reciter_confirm">%1$s의 다운로드한 수라를 모두 삭제할까요?</string>
+    <string name="audio_storage_used">오디오 사용 용량: %1$s</string>
+    <string name="audio_storage_note">파일은 이 앱 전용 저장 공간에 보관되며 앱을 삭제하면 함께 지워집니다.</string>
+    <string name="audio_downloads_empty">다운로드한 낭송이 없습니다</string>
+    <string name="audio_downloads_empty_desc">수라 낭송을 다운로드하면 언제든 오프라인으로 들을 수 있습니다.</string>
+    <string name="audio_error_not_enough_storage">저장 공간이 부족합니다 (최소 150 MB 필요)</string>
+    <string name="audio_error_download_failed">다운로드에 실패했습니다. 연결을 확인하고 다시 시도하세요.</string>
+    <string name="audio_error_recitation_unavailable">이 낭송은 사용할 수 없습니다</string>
+    <string name="audio_mobile_data_warning_title">모바일 데이터로 다운로드할까요?</string>
+    <string name="audio_mobile_data_warning_desc">오디오 파일은 용량이 클 수 있습니다. 모바일 데이터로 다운로드하시겠습니까?</string>
+    <string name="audio_download_now">지금 다운로드</string>
+    <string name="audio_download_channel_name">오디오 다운로드</string>
+    <string name="audio_download_channel_desc">낭송 오디오 다운로드 진행 상황을 표시합니다</string>
+    <string name="audio_downloading_format">%1$s 다운로드 중</string>
+    <string name="now_playing">재생 중</string>
+    <string name="play_from_here">여기서부터 재생</string>
+    <string name="follow_audio_chip">따라가기</string>
+    <string name="following_audio_chip">따라가는 중</string>
+    <string name="player_surah_title_format">수라 %1$s</string>
+    <string name="player_ayah_of_format">아야 %1$s / %2$s</string>
+    <string name="player_change_reciter">변경</string>
+    <string name="audio_repeat_off">반복: 끔</string>
+    <string name="audio_repeat_ayah">반복: 아야</string>
+    <string name="audio_repeat_surah">반복: 수라</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">일부 오디오 파일이 없습니다. 다시 다운로드할까요?</string>
+    <string name="recitation_audio_attribution_title">낭송 오디오</string>
+    <string name="recitation_audio_attribution">오디오는 Al Quran Cloud / Islamic Network CDN(cdn.islamic.network)에서 제공합니다. 모든 낭송의 저작권은 낭송자에게 있으며, 비상업적 무료 재배포가 허용됩니다. 이 앱은 비영리입니다. 낭송자 또는 권리자가 삭제를 요청하면 해당 낭송은 삭제됩니다.</string>
+    <string name="fast_scroll_verse">아야 %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">낭송 재생 중</string>
+    <string name="audio_title">낭송 오디오</string>
+    <string name="ayah_copied">아야를 클립보드에 복사했습니다</string>
+    <string name="shared_via_app">Quran Sharif 앱에서 공유됨</string>
+    <string name="enter_ayah_number">아야 번호 입력</string>
+    <string name="nav_sub_appearance">테마</string>
+    <string name="nav_sub_language">앱 언어</string>
+    <string name="nav_sub_reading">번역, 글자 크기, 오디오, 스크롤</string>
+    <string name="nav_sub_widget">글자 크기, 새로고침, 미리보기</string>
+    <string name="nav_sub_data">진행 상황 초기화, 북마크</string>
+    <string name="nav_sub_audio">낭송자, 다운로드</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">앱 언어</string>
+    <string name="menu_translation_language">번역 언어</string>
+    <string name="tr_close">닫기</string>
+    <string name="tr_title">번역 언어</string>
+    <string name="tr_installed_section">이 휴대폰에 있음</string>
+    <string name="tr_languages_section">사용 가능한 언어</string>
+    <string name="tr_count_format">번역 %1$d개</string>
+    <string name="tr_loading">번역 불러오는 중…</string>
+    <string name="tr_load_failed">목록을 불러올 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.</string>
+    <string name="tr_retry">다시 시도</string>
+    <string name="tr_download">다운로드</string>
+    <string name="tr_use">사용</string>
+    <string name="tr_in_use">사용 중</string>
+    <string name="tr_downloading_format">다운로드 중… %1$d%%</string>
+    <string name="tr_failed_format">다운로드 실패: %1$s</string>
+    <string name="tr_version_format">버전 %1$s</string>
+    <string name="tr_source_line">출처: QuranEnc.com</string>
+    <string name="tr_restart_title">다시 시작하여 적용</string>
+    <string name="tr_restart_message">%1$s을(를) 적용하려면 앱을 다시 시작해야 합니다. 앱이 종료된 후 이 번역으로 다시 열립니다.</string>
+    <string name="tr_restart">다시 시작</string>
+    <string name="tr_later">나중에</string>
+    <string name="settings_credits">크레딧</string>
+    <string name="settings_credits_sub">번역자, 출판사 및 출처</string>
+    <string name="credits_page_title">크레딧</string>
+    <string name="credits_section_sources">출처</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">다운로드하는 번역은 QuranEnc.com(꾸란 백과사전)에서 제공됩니다. 각 번역의 권리는 번역자와 출판사에 있습니다.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">아랍어 꾸란 본문과 내장된 벵골어 번역(Muhiuddin Khan 및 Zohurul Hoque)은 비상업적 용도로 tanzil.net에서 제공됩니다.</string>
+    <string name="credits_audio_title">낭송 오디오</string>
+    <string name="credits_audio_body">구절별 낭송 오디오는 cdn.islamic.network(Islamic Network)에서 제공합니다.</string>
+    <string name="credits_section_downloaded">다운로드한 번역</string>
+    <string name="credits_none_downloaded">아직 다운로드한 번역이 없습니다.</string>
+</resources>

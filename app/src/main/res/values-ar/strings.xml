@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">الرئيسية</string>
     <string name="nav_quran">القرآن</string>
-    <string name="nav_bookmarks">العلامات</string>
+    <string name="nav_bookmarks">المحفوظات</string>
     <string name="nav_settings">الإعدادات</string>
+
+    <!-- Home -->
     <string name="ayah_of_the_moment">آية اللحظة</string>
     <string name="continue_reading">متابعة القراءة</string>
     <string name="quick_links">وصول سريع</string>
     <string name="surah_list_card">قائمة السور</string>
-    <string name="surah_list_desc">تصفح السور الـ114</string>
+    <string name="surah_list_desc">تصفح جميع السور الـ 114</string>
     <string name="juz_list_card">قائمة الأجزاء</string>
-    <string name="juz_list_desc">تصفح حسب الأجزاء الـ30</string>
+    <string name="juz_list_desc">التصفح حسب الأجزاء الثلاثين</string>
+    <string name="read_surah">قراءة السورة</string>
     <string name="refresh_ayah">آية جديدة</string>
     <string name="last_read_reference">سورة %1$s · آية %2$s</string>
-    <string name="tab_surah">سورة</string>
-    <string name="tab_juz">جزء</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">السور</string>
+    <string name="tab_juz">الأجزاء</string>
     <string name="meccan">مكية</string>
     <string name="medinan">مدنية</string>
     <string name="ayah_count_format">%1$s آية</string>
     <string name="juz_format">الجزء %1$s</string>
-    <string name="go_to_ayah">اذهب إلى آية…</string>
+    <string name="juz_starts_at">يبدأ من %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">الانتقال إلى آية…</string>
+    <string name="bookmark_surah_start">حفظ بداية السورة</string>
     <string name="go_to_ayah_dialog_title">الانتقال إلى آية</string>
+    <string name="ayah_number_hint">أدخل رقم الآية (1–%1$d)</string>
     <string name="go_button">انتقال</string>
     <string name="cancel">إلغاء</string>
+    <string name="ayah_out_of_range">يرجى إدخال رقم آية صحيح</string>
     <string name="share_ayah">مشاركة الآية</string>
     <string name="copy_ayah">نسخ الآية</string>
     <string name="copied_to_clipboard">تم نسخ الآية</string>
-    <string name="ayah_copied">تم نسخ الآية</string>
-    <string name="bookmark_added">تم حفظ الآية في العلامات</string>
+    <string name="surah_bookmarked">تم حفظ بداية السورة</string>
+    <string name="bookmark_added">تم حفظ الآية في المحفوظات</string>
     <string name="bookmark_removed">تمت إزالة العلامة</string>
     <string name="undo">تراجع</string>
-    <string name="search_title">بحث</string>
-    <string name="searching">جارٍ البحث…</string>
+
+    <!-- Search -->
+    <string name="search_hint">ابحث بالبنغالية أو العربية أو مثل 2:255</string>
+    <string name="search_initial_hint">ابحث بالترجمة البنغالية أو بالنص العربي (بدون تشكيل) أو بالمرجع مثل 2:255 أو ২:২৫৫.</string>
     <string name="search_no_results">لم يتم العثور على آيات مطابقة.</string>
-    <string name="bookmarks_title">العلامات</string>
-    <string name="bookmarks_empty">لا توجد علامات محفوظة بعد</string>
+    <string name="search_go_to_reference">الانتقال إلى سورة %1$s، آية %2$s</string>
+    <string name="search_title">بحث</string>
+    <string name="search_no_results_hint">تأكد من كتابة الكلمة بشكل صحيح.</string>
+    <string name="searching">جارٍ البحث…</string>
+    <string name="search_results_count">تم العثور على %1$d آية</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">المحفوظات</string>
+    <string name="bookmarks_empty">لا توجد محفوظات بعد</string>
+    <string name="bookmarks_empty_desc">اضغط على أيقونة الحفظ عند أي آية أثناء القراءة لحفظها هنا للوصول السريع.</string>
+    <string name="delete_all_bookmarks">حذف جميع المحفوظات</string>
+    <string name="delete_all_confirm_title">حذف جميع المحفوظات؟</string>
+    <string name="delete_all_confirm_desc">سيؤدي هذا إلى إزالة جميع المحفوظات نهائيًا.</string>
     <string name="delete">حذف</string>
+    <string name="all_bookmarks_deleted">تم حذف جميع المحفوظات</string>
+
+    <!-- Settings -->
     <string name="settings_title">الإعدادات</string>
     <string name="section_appearance">المظهر</string>
     <string name="theme_label">السمة</string>
     <string name="theme_system">النظام</string>
     <string name="theme_light">فاتح</string>
     <string name="theme_dark">داكن</string>
+    <string name="language_label">اللغة (ভাষা)</string>
+    <string name="language_system">لغة النظام</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
     <string name="section_reading">تفضيلات القراءة</string>
-    <string name="section_widget">ودجت الشاشة الرئيسية</string>
+    <string name="arabic_font_size">حجم النص العربي</string>
+    <string name="bangla_font_size">حجم النص البنغالي</string>
+    <string name="show_bangla_translation">إظهار الترجمة البنغالية</string>
+    <string name="use_bangla_digits">استخدام الأرقام البنغالية (১, ২, ৩)</string>
+    <string name="keep_screen_on">إبقاء الشاشة مضاءة أثناء القراءة</string>
+    <string name="preview_label">معاينة مباشرة</string>
+
+    <string name="section_widget">أداة الشاشة الرئيسية</string>
+    <string name="widget_refresh_on_screen_on">تغيير آية الأداة عند تشغيل الشاشة</string>
+    <string name="widget_refresh_helper">يستخدم إشعارًا صامتًا صغيرًا ليُبقي أندرويد هذه الخدمة تعمل.</string>
+    <string name="battery_optimization_settings">إعدادات تحسين البطارية</string>
+    <string name="battery_optimization_helper">تقوم بعض أنواع الهواتف (Xiaomi وOppo وVivo وHuawei وSamsung) بإيقاف الخدمات الخلفية؛ اضبط التطبيق على «غير مقيّد» إذا لم تتغير الأداة.</string>
+    <string name="refresh_widget_now">تحديث الأداة الآن</string>
+    <string name="widget_refreshed">تم تحديث الأداة بآية جديدة</string>
+    <string name="notification_permission_title">إذن الإشعارات</string>
+    <string name="notification_permission_desc">يتطلب أندرويد إذن الإشعارات حتى تتمكن الخدمة الصامتة في الخلفية من تحديث الأداة عند تشغيل الشاشة.</string>
+    <string name="grant_permission">سماح</string>
+
     <string name="section_data">البيانات</string>
-    <string name="section_audio">التلاوة الصوتية</string>
+    <string name="reset_reading_progress">إعادة ضبط تقدم القراءة</string>
+    <string name="reset_reading_confirm_title">إعادة ضبط تقدم القراءة؟</string>
+    <string name="reset_reading_confirm_desc">سيؤدي هذا إلى إعادة علامة متابعة القراءة إلى البداية.</string>
+    <string name="reset">إعادة ضبط</string>
+    <string name="progress_reset_done">تمت إعادة ضبط تقدم القراءة</string>
+    <string name="about_app">عن Quran Sharif</string>
+
+    <!-- About -->
     <string name="about_title">حول</string>
+    <string name="offline_badge">يعمل 100% دون إنترنت • الخصوصية أولًا</string>
+    <string name="offline_description">يعمل نص القرآن وترجماته دون اتصال بالكامل. يُستخدم الإنترنت فقط لمعاينة التلاوات الصوتية وتنزيلها. لا يتم جمع أي بيانات شخصية.</string>
+    <string name="source_authenticity">يُعرض نص القرآن تمامًا كما ورد من المصدر دون أي تعديل.</string>
+    <string name="credits_title">الشكر والمصادر</string>
+    <string name="tanzil_credit">نص القرآن: مشروع تنزيل</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">نسخ الرابط</string>
+    <string name="tanzil_copied">تم نسخ الرابط</string>
+    <string name="translation_credit">الترجمة البنغالية: Muhiuddin Khan (عبر مشروع تنزيل)</string>
+    <string name="font_amiri_credit">الخط العربي: Amiri Quran (رخصة SIL للخطوط المفتوحة)</string>
+    <string name="font_noto_credit">الخط البنغالي: Noto Sans Bengali (رخصة SIL للخطوط المفتوحة)</string>
+    <string name="version_format">الإصدار %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">جارٍ تجهيز بيانات القرآن… %1$d/114</string>
+    <string name="import_failed">تعذر تجهيز بيانات القرآن.</string>
+    <string name="import_tagline">اقرأ  •  استمع  •  تعلّم</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="checking_data">جارٍ فحص بيانات القرآن…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — آية عشوائية</string>
+    <string name="widget_description">تعرض آية عشوائية من القرآن بالعربية والبنغالية على شاشتك الرئيسية.</string>
+    <string name="widget_open_app_prompt">افتح Quran Sharif لإكمال الإعداد</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">خدمة تحديث الأداة</string>
+    <string name="notification_channel_desc">تحافظ على تحديثات الأداة عند فتح قفل الشاشة.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">أداة Quran Sharif نشطة</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">الترجمة البنغالية</string>
+    <string name="select_translation_dialog_title">اختر الترجمة البنغالية</string>
+    <string name="translation_sample_ayah">معاينة (112:1):</string>
+    <string name="translation_updated">تم تحديث الترجمة</string>
+    <string name="translation_by_format">ترجمة %1$s</string>
+    <string name="widget_arabic_size">حجم النص العربي في الأداة</string>
+    <string name="widget_translation_size">حجم النص البنغالي في الأداة</string>
+    <string name="widget_text_size_reset">إعادة ضبط حجم نص الأداة</string>
+    <string name="widget_preview_title">معاينة مباشرة للأداة</string>
+    <string name="widget_resize_hint">كبّر الأداة على شاشتك الرئيسية إذا لم يتسع النص الكبير.</string>
+    <string name="available_translations_title">الترجمات المتاحة</string>
+    <string name="tanzil_non_commercial_notice">الترجمات المقدمة عبر Tanzil.net موزعة للاستخدام التعليمي غير التجاري.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">التلاوة الصوتية</string>
+    <string name="audio_reciter_label">القارئ الافتراضي</string>
+    <string name="audio_wifi_only">التنزيل عبر Wi-Fi فقط</string>
+    <string name="audio_wifi_only_desc">تجنب التنزيلات الكبيرة عبر بيانات الجوال</string>
+    <string name="audio_bismillah_prefix">تشغيل البسملة قبل السورة</string>
+    <string name="audio_bismillah_prefix_desc">تشغيل صوت البسملة قبل السورة (عدا سورتي 1 و9)</string>
+    <string name="audio_follow">تتبع الصوت تلقائيًا</string>
+    <string name="audio_follow_desc">تمرير الآية إلى الشاشة أثناء تشغيل الصوت</string>
+    <string name="audio_manage_downloads">إدارة التنزيلات</string>
+    <string name="audio_manage_downloads_desc">عرض التخزين وإدارة السور المنزّلة</string>
+    <string name="reciter_picker_title">اختر القارئ</string>
+    <string name="play_sample">تشغيل عينة</string>
+    <string name="stop_sample">إيقاف العينة</string>
+    <string name="audio_sheet_title">الصوت · %1$s</string>
+    <string name="audio_sheet_reciter">القارئ: %1$s</string>
+    <string name="audio_choose_reciter">اختيار قارئ آخر</string>
+    <string name="audio_download">تنزيل</string>
+    <string name="audio_downloading">جارٍ التنزيل…</string>
+    <string name="audio_queued">في قائمة الانتظار…</string>
+    <string name="audio_download_details">%1$d آية · %2$d كيلوبت/ث</string>
+    <string name="audio_download_completed">تم التنزيل</string>
+    <string name="audio_play_button">تشغيل التلاوة</string>
+    <string name="audio_delete_surah">حذف الصوت</string>
+    <string name="audio_delete_surah_confirm">حذف التلاوة المنزّلة لهذه السورة؟</string>
+    <string name="audio_delete_all_reciter">حذف كل ما لهذا القارئ</string>
+    <string name="audio_delete_all_reciter_confirm">حذف جميع السور المنزّلة للقارئ %1$s؟</string>
+    <string name="audio_storage_used">مساحة التخزين المستخدمة للصوت: %1$s</string>
+    <string name="audio_storage_note">تُحفظ الملفات في مساحة تخزين التطبيق الخاصة وتُحذف عند إلغاء تثبيت التطبيق.</string>
+    <string name="audio_downloads_empty">لا توجد تلاوات منزّلة بعد</string>
+    <string name="audio_downloads_empty_desc">نزّل تلاوات السور للاستماع إليها دون اتصال في أي وقت.</string>
+    <string name="audio_error_not_enough_storage">مساحة التخزين غير كافية (يلزم 150 ميغابايت على الأقل)</string>
+    <string name="audio_error_download_failed">فشل التنزيل. يرجى التحقق من الاتصال والمحاولة مرة أخرى.</string>
+    <string name="audio_error_recitation_unavailable">هذه التلاوة غير متاحة</string>
+    <string name="audio_mobile_data_warning_title">التنزيل عبر بيانات الجوال؟</string>
+    <string name="audio_mobile_data_warning_desc">قد تكون الملفات الصوتية كبيرة. هل تريد التنزيل عبر بيانات الجوال؟</string>
+    <string name="audio_download_now">نزّل الآن</string>
+    <string name="audio_download_channel_name">تنزيلات الصوت</string>
+    <string name="audio_download_channel_desc">يعرض تقدم تنزيل التلاوات الصوتية</string>
+    <string name="audio_downloading_format">جارٍ تنزيل %1$s</string>
+    <string name="now_playing">قيد التشغيل</string>
+    <string name="play_from_here">التشغيل من هنا</string>
+    <string name="follow_audio_chip">تتبع</string>
+    <string name="following_audio_chip">يتتبع</string>
+    <string name="player_surah_title_format">سورة %1$s</string>
+    <string name="player_ayah_of_format">آية %1$s / %2$s</string>
+    <string name="player_change_reciter">تغيير</string>
+    <string name="audio_repeat_off">التكرار: متوقف</string>
+    <string name="audio_repeat_ayah">التكرار: آية</string>
+    <string name="audio_repeat_surah">التكرار: سورة</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">بعض الملفات الصوتية مفقودة. تنزيلها مرة أخرى؟</string>
+    <string name="recitation_audio_attribution_title">التلاوة الصوتية</string>
+    <string name="recitation_audio_attribution">الصوتيات مقدمة من Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). حقوق كل تلاوة تعود إلى القارئ، ومرخّصة لإعادة التوزيع المجاني غير التجاري. هذا التطبيق غير ربحي. وإذا طلب قارئ أو صاحب حقوق إزالة تلاوة فستتم إزالتها.</string>
+    <string name="fast_scroll_verse">آية %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">جارٍ تشغيل التلاوة</string>
+    <string name="audio_title">التلاوة الصوتية</string>
+    <string name="ayah_copied">تم نسخ الآية</string>
+    <string name="shared_via_app">تمت المشاركة عبر تطبيق Quran Sharif</string>
+    <string name="enter_ayah_number">أدخل رقم الآية</string>
+    <string name="nav_sub_appearance">السمة</string>
+    <string name="nav_sub_language">لغة التطبيق</string>
+    <string name="nav_sub_reading">الترجمة وحجم النص والصوت والتمرير</string>
+    <string name="nav_sub_widget">حجم النص والتحديث والمعاينة</string>
+    <string name="nav_sub_data">إعادة ضبط التقدم والمحفوظات</string>
+    <string name="nav_sub_audio">القارئ والتنزيلات</string>
+
+    <!-- Language menu, translations and credits -->
     <string name="menu_app_language">لغة التطبيق</string>
     <string name="menu_translation_language">لغة الترجمة</string>
     <string name="tr_close">إغلاق</string>
-    <string name="retry">إعادة المحاولة</string>
-    <string name="audio_download">تنزيل</string>
-    <string name="audio_downloading">جارٍ التنزيل…</string>
-    <string name="audio_play_button">تشغيل التلاوة</string>
-    <string name="now_playing">قيد التشغيل</string>
-    <string name="reciter_picker_title">اختر القارئ</string>
-    <string name="follow_audio_chip">تتبّع</string>
-    <string name="following_audio_chip">يتتبّع</string>
-    <string name="player_surah_title_format">سورة %1$s</string>
-    <string name="player_ayah_of_format">الآية %1$s / %2$s</string>
-    <string name="language_system">افتراضي النظام</string>
+    <string name="tr_title">لغة الترجمة</string>
+    <string name="tr_installed_section">على هذا الهاتف</string>
+    <string name="tr_languages_section">اللغات المتاحة</string>
+    <string name="tr_count_format">%1$d ترجمة</string>
+    <string name="tr_loading">جارٍ تحميل الترجمات…</string>
+    <string name="tr_load_failed">تعذر تحميل القائمة. تحقق من الإنترنت وحاول مرة أخرى.</string>
+    <string name="tr_retry">حاول مرة أخرى</string>
+    <string name="tr_download">تنزيل</string>
+    <string name="tr_use">استخدام</string>
+    <string name="tr_in_use">قيد الاستخدام</string>
+    <string name="tr_downloading_format">جارٍ التنزيل… %1$d%%</string>
+    <string name="tr_failed_format">فشل التنزيل: %1$s</string>
+    <string name="tr_version_format">الإصدار %1$s</string>
+    <string name="tr_source_line">المصدر: QuranEnc.com</string>
+    <string name="tr_restart_title">أعد التشغيل للتطبيق</string>
+    <string name="tr_restart_message">يتطلب تطبيق %1$s إعادة تشغيل التطبيق. سيُغلق التطبيق ثم يُفتح من جديد بهذه الترجمة.</string>
+    <string name="tr_restart">إعادة التشغيل</string>
+    <string name="tr_later">لاحقًا</string>
+    <string name="settings_credits">الشكر والتقدير</string>
+    <string name="settings_credits_sub">المترجمون والناشرون والمصادر</string>
+    <string name="credits_page_title">الشكر والتقدير</string>
+    <string name="credits_section_sources">المصادر</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">الترجمات التي تنزّلها مصدرها QuranEnc.com (موسوعة القرآن). وتعود كل ترجمة إلى مترجمها وناشرها.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">النص العربي للقرآن والترجمات البنغالية المدمجة (Muhiuddin Khan وZohurul Hoque) مصدرها tanzil.net، للاستخدام غير التجاري.</string>
+    <string name="credits_audio_title">التلاوة الصوتية</string>
+    <string name="credits_audio_body">التلاوات الصوتية آية بآية مقدمة من cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">الترجمات المنزّلة</string>
+    <string name="credits_none_downloaded">لم يتم تنزيل أي ترجمة بعد.</string>
 </resources>

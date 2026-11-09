@@ -43,7 +43,14 @@ private val appLanguageTags = listOf(
     "fr" to "Français",
     "ru" to "Русский",
     "so" to "Soomaali",
-    "ta" to "தமிழ்"
+    "ta" to "தமிழ்",
+    "zh-CN" to "中文（简体）",
+    "bs" to "Bosanski",
+    "de" to "Deutsch",
+    "es" to "Español",
+    "pt" to "Português",
+    "ja" to "日本語",
+    "ko" to "한국어"
 )
 
 /** The list of choices: System Default first, then every language. */

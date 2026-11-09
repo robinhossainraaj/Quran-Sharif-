@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Početna</string>
+    <string name="nav_quran">Kuran</string>
+    <string name="nav_bookmarks">Zabilješke</string>
+    <string name="nav_settings">Postavke</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">Ajet trenutka</string>
+    <string name="continue_reading">Nastavi čitanje</string>
+    <string name="quick_links">Brzi pristup</string>
+    <string name="surah_list_card">Popis sura</string>
+    <string name="surah_list_desc">Pregledaj svih 114 sura</string>
+    <string name="juz_list_card">Popis džuzova</string>
+    <string name="juz_list_desc">Pregledaj po 30 džuzova</string>
+    <string name="read_surah">Čitaj suru</string>
+    <string name="refresh_ayah">Novi ajet</string>
+    <string name="last_read_reference">Sura %1$s · Ajet %2$s</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">Sura</string>
+    <string name="tab_juz">Džuz</string>
+    <string name="meccan">Mekanska</string>
+    <string name="medinan">Medinska</string>
+    <string name="ayah_count_format">Ajeta: %1$s</string>
+    <string name="juz_format">Džuz %1$s</string>
+    <string name="juz_starts_at">Počinje od %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">Idi na ajet…</string>
+    <string name="bookmark_surah_start">Zabilježi početak sure</string>
+    <string name="go_to_ayah_dialog_title">Idi na ajet</string>
+    <string name="ayah_number_hint">Unesite broj ajeta (1–%1$d)</string>
+    <string name="go_button">Idi</string>
+    <string name="cancel">Otkaži</string>
+    <string name="ayah_out_of_range">Unesite ispravan broj ajeta</string>
+    <string name="share_ayah">Podijeli ajet</string>
+    <string name="copy_ayah">Kopiraj ajet</string>
+    <string name="copied_to_clipboard">Ajet je kopiran u međuspremnik</string>
+    <string name="surah_bookmarked">Početak sure je zabilježen</string>
+    <string name="bookmark_added">Ajet je spremljen u zabilješke</string>
+    <string name="bookmark_removed">Zabilješka je uklonjena</string>
+    <string name="undo">Poništi</string>
+
+    <!-- Search -->
+    <string name="search_hint">Traži na bengalskom, arapskom ili npr. 2:255</string>
+    <string name="search_initial_hint">Tražite po bengalskom prijevodu, arapskom tekstu (bez dijakritika) ili po referenci poput 2:255 ili ২:২৫৫.</string>
+    <string name="search_no_results">Nema pronađenih ajeta.</string>
+    <string name="search_go_to_reference">Idi na suru %1$s, ajet %2$s</string>
+    <string name="search_title">Pretraga</string>
+    <string name="search_no_results_hint">Provjerite jeste li ispravno napisali riječ.</string>
+    <string name="searching">Pretraga…</string>
+    <string name="search_results_count">Pronađeno ajeta: %1$d</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">Zabilješke</string>
+    <string name="bookmarks_empty">Još nema spremljenih zabilješki</string>
+    <string name="bookmarks_empty_desc">Dodirnite ikonu zabilješke na bilo kojem ajetu tokom čitanja da ga spremite ovdje za brz pristup.</string>
+    <string name="delete_all_bookmarks">Izbriši sve zabilješke</string>
+    <string name="delete_all_confirm_title">Izbrisati sve zabilješke?</string>
+    <string name="delete_all_confirm_desc">Ovo će trajno ukloniti sve spremljene zabilješke.</string>
+    <string name="delete">Izbriši</string>
+    <string name="all_bookmarks_deleted">Sve zabilješke su izbrisane</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Postavke</string>
+    <string name="section_appearance">Izgled</string>
+    <string name="theme_label">Tema</string>
+    <string name="theme_system">Sistemska</string>
+    <string name="theme_light">Svijetla</string>
+    <string name="theme_dark">Tamna</string>
+    <string name="language_label">Jezik (ভাষা)</string>
+    <string name="language_system">Zadano sistemom</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">Postavke čitanja</string>
+    <string name="arabic_font_size">Veličina arapskog teksta</string>
+    <string name="bangla_font_size">Veličina bengalskog teksta</string>
+    <string name="show_bangla_translation">Prikaži bengalski prijevod</string>
+    <string name="use_bangla_digits">Koristi bengalske cifre (১, ২, ৩)</string>
+    <string name="keep_screen_on">Ne gasi ekran tokom čitanja</string>
+    <string name="preview_label">Pregled uživo</string>
+
+    <string name="section_widget">Widget na početnom ekranu</string>
+    <string name="widget_refresh_on_screen_on">Promijeni ajet u widgetu kad se ekran upali</string>
+    <string name="widget_refresh_helper">Koristi malo tiho obavještenje kako bi Android ovo držao aktivnim.</string>
+    <string name="battery_optimization_settings">Postavke optimizacije baterije</string>
+    <string name="battery_optimization_helper">Neki proizvođači telefona (Xiaomi, Oppo, Vivo, Huawei, Samsung) zaustavljaju pozadinske usluge; ako se widget ne mijenja, postavite aplikaciju na \'Bez ograničenja\'.</string>
+    <string name="refresh_widget_now">Osvježi widget sada</string>
+    <string name="widget_refreshed">Widget je osvježen novim ajetom</string>
+    <string name="notification_permission_title">Dozvola za obavještenja</string>
+    <string name="notification_permission_desc">Android zahtijeva dozvolu za obavještenja kako bi tiha pozadinska usluga mogla osvježiti widget kad se ekran upali.</string>
+    <string name="grant_permission">Dozvoli</string>
+
+    <string name="section_data">Podaci</string>
+    <string name="reset_reading_progress">Poništi napredak čitanja</string>
+    <string name="reset_reading_confirm_title">Poništiti napredak čitanja?</string>
+    <string name="reset_reading_confirm_desc">Zabilješka za nastavak čitanja vratit će se na početak.</string>
+    <string name="reset">Poništi</string>
+    <string name="progress_reset_done">Napredak čitanja je poništen</string>
+    <string name="about_app">O aplikaciji Quran Sharif</string>
+
+    <!-- About -->
+    <string name="about_title">O aplikaciji</string>
+    <string name="offline_badge">100% offline • Bez interneta • Privatnost na prvom mjestu</string>
+    <string name="offline_description">Tekst Kurana i prijevodi rade potpuno offline. Internet se koristi samo za preslušavanje i preuzimanje audio recitacije. Lični podaci se ne prikupljaju.</string>
+    <string name="source_authenticity">Tekst Kurana prikazan je tačno onako kako ga daje izvor, bez izmjena.</string>
+    <string name="credits_title">Zasluge i izvori</string>
+    <string name="tanzil_credit">Tekst Kurana: projekat Tanzil</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Kopiraj link</string>
+    <string name="tanzil_copied">Link je kopiran u međuspremnik</string>
+    <string name="translation_credit">Bengalski prijevod: Muhiuddin Khan (preko projekta Tanzil)</string>
+    <string name="font_amiri_credit">Arapski font: Amiri Quran (SIL Open Font licenca)</string>
+    <string name="font_noto_credit">Bengalski font: Noto Sans Bengali (SIL Open Font licenca)</string>
+    <string name="version_format">Verzija %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Priprema podataka Kurana… %1$d/114</string>
+    <string name="import_failed">Priprema podataka Kurana nije uspjela.</string>
+    <string name="import_tagline">Čitaj  •  Slušaj  •  Uči</string>
+    <string name="retry">Pokušaj ponovo</string>
+    <string name="checking_data">Provjera podataka Kurana…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Nasumični ajet</string>
+    <string name="widget_description">Prikazuje nasumični ajet Kurana na arapskom i bengalskom na vašem početnom ekranu.</string>
+    <string name="widget_open_app_prompt">Otvorite Quran Sharif da završite postavljanje</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Usluga osvježavanja widgeta</string>
+    <string name="notification_channel_desc">Održava ažuriranje widgeta pri otključavanju ekrana.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Widget Quran Sharif je aktivan</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Bengalski prijevod</string>
+    <string name="select_translation_dialog_title">Odaberite bengalski prijevod</string>
+    <string name="translation_sample_ayah">Pregled (112:1):</string>
+    <string name="translation_updated">Prijevod je ažuriran</string>
+    <string name="translation_by_format">Preveo: %1$s</string>
+    <string name="widget_arabic_size">Veličina arapskog teksta u widgetu</string>
+    <string name="widget_translation_size">Veličina bengalskog teksta u widgetu</string>
+    <string name="widget_text_size_reset">Poništi veličinu teksta widgeta</string>
+    <string name="widget_preview_title">Pregled widgeta uživo</string>
+    <string name="widget_resize_hint">Povećajte widget na početnom ekranu ako se veliki tekst ne uklapa.</string>
+    <string name="available_translations_title">Dostupni prijevodi</string>
+    <string name="tanzil_non_commercial_notice">Prijevodi preko Tanzil.net distribuiraju se za nekomercijalnu obrazovnu upotrebu.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Audio recitacija</string>
+    <string name="audio_reciter_label">Zadani kari</string>
+    <string name="audio_wifi_only">Preuzimaj samo preko Wi-Fi-ja</string>
+    <string name="audio_wifi_only_desc">Izbjegavajte velika preuzimanja preko mobilnih podataka</string>
+    <string name="audio_bismillah_prefix">Pusti Bismillu prije sure</string>
+    <string name="audio_bismillah_prefix_desc">Pusti audio Bismille prije sure (osim sura 1 i 9)</string>
+    <string name="audio_follow">Automatski prati audio</string>
+    <string name="audio_follow_desc">Pomiče ajet u vidno polje dok audio svira</string>
+    <string name="audio_manage_downloads">Upravljanje preuzimanjima</string>
+    <string name="audio_manage_downloads_desc">Pogledaj prostor i upravljaj preuzetim surama</string>
+    <string name="reciter_picker_title">Odaberite kariju</string>
+    <string name="play_sample">Pusti uzorak</string>
+    <string name="stop_sample">Zaustavi uzorak</string>
+    <string name="audio_sheet_title">Audio · %1$s</string>
+    <string name="audio_sheet_reciter">Kari: %1$s</string>
+    <string name="audio_choose_reciter">Odaberi drugog karija</string>
+    <string name="audio_download">Preuzmi</string>
+    <string name="audio_downloading">Preuzimanje…</string>
+    <string name="audio_queued">U redu čekanja…</string>
+    <string name="audio_download_details">Ajeta: %1$d · %2$d kbps</string>
+    <string name="audio_download_completed">Preuzeto</string>
+    <string name="audio_play_button">Pusti recitaciju</string>
+    <string name="audio_delete_surah">Izbriši audio</string>
+    <string name="audio_delete_surah_confirm">Izbrisati preuzetu recitaciju ove sure?</string>
+    <string name="audio_delete_all_reciter">Izbriši sve za ovog karija</string>
+    <string name="audio_delete_all_reciter_confirm">Izbrisati sve preuzete sure za %1$s?</string>
+    <string name="audio_storage_used">Zauzeto za audio: %1$s</string>
+    <string name="audio_storage_note">Datoteke se čuvaju u vlastitoj pohrani aplikacije i uklanjaju se ako deinstalirate aplikaciju.</string>
+    <string name="audio_downloads_empty">Još nema preuzetih recitacija</string>
+    <string name="audio_downloads_empty_desc">Preuzmite recitacije sura da ih slušate offline u bilo koje vrijeme.</string>
+    <string name="audio_error_not_enough_storage">Nema dovoljno prostora (potrebno najmanje 150 MB)</string>
+    <string name="audio_error_download_failed">Preuzimanje nije uspjelo. Provjerite vezu i pokušajte ponovo.</string>
+    <string name="audio_error_recitation_unavailable">Ova recitacija nije dostupna</string>
+    <string name="audio_mobile_data_warning_title">Preuzeti preko mobilnih podataka?</string>
+    <string name="audio_mobile_data_warning_desc">Audio datoteke mogu biti velike. Želite li preuzeti preko mobilnih podataka?</string>
+    <string name="audio_download_now">Preuzmi sada</string>
+    <string name="audio_download_channel_name">Audio preuzimanja</string>
+    <string name="audio_download_channel_desc">Prikazuje napredak preuzimanja audio recitacije</string>
+    <string name="audio_downloading_format">Preuzimanje: %1$s</string>
+    <string name="now_playing">Trenutno svira</string>
+    <string name="play_from_here">Pusti odavde</string>
+    <string name="follow_audio_chip">Prati</string>
+    <string name="following_audio_chip">Prati se</string>
+    <string name="player_surah_title_format">Sura %1$s</string>
+    <string name="player_ayah_of_format">Ajet %1$s / %2$s</string>
+    <string name="player_change_reciter">Promijeni</string>
+    <string name="audio_repeat_off">Ponavljanje: isključeno</string>
+    <string name="audio_repeat_ayah">Ponavljanje: ajet</string>
+    <string name="audio_repeat_surah">Ponavljanje: sura</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Neke audio datoteke nedostaju. Preuzeti ponovo?</string>
+    <string name="recitation_audio_attribution_title">Audio recitacija</string>
+    <string name="recitation_audio_attribution">Audio daje Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). Autorska prava za svaku recitaciju pripadaju karији, licencirana za besplatnu nekomercijalnu redistribuciju. Ova aplikacija je neprofitna. Ako kari ili nositelj prava zatraži uklanjanje, recitacija će biti uklonjena.</string>
+    <string name="fast_scroll_verse">Ajet %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Svira recitacija</string>
+    <string name="audio_title">Audio recitacija</string>
+    <string name="ayah_copied">Ajet je kopiran u međuspremnik</string>
+    <string name="shared_via_app">Podijeljeno putem aplikacije Quran Sharif</string>
+    <string name="enter_ayah_number">Unesite broj ajeta</string>
+    <string name="nav_sub_appearance">Tema</string>
+    <string name="nav_sub_language">Jezik aplikacije</string>
+    <string name="nav_sub_reading">Prijevod, veličina teksta, audio, listanje</string>
+    <string name="nav_sub_widget">Veličina teksta, osvježavanje, pregled</string>
+    <string name="nav_sub_data">Poništavanje napretka, zabilješke</string>
+    <string name="nav_sub_audio">Kari, preuzimanja</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">Jezik aplikacije</string>
+    <string name="menu_translation_language">Jezik prijevoda</string>
+    <string name="tr_close">Zatvori</string>
+    <string name="tr_title">Jezik prijevoda</string>
+    <string name="tr_installed_section">Na ovom telefonu</string>
+    <string name="tr_languages_section">Dostupni jezici</string>
+    <string name="tr_count_format">Prijevoda: %1$d</string>
+    <string name="tr_loading">Učitavanje prijevoda…</string>
+    <string name="tr_load_failed">Popis nije mogao biti učitan. Provjerite internet i pokušajte ponovo.</string>
+    <string name="tr_retry">Pokušaj ponovo</string>
+    <string name="tr_download">Preuzmi</string>
+    <string name="tr_use">Koristi</string>
+    <string name="tr_in_use">U upotrebi</string>
+    <string name="tr_downloading_format">Preuzimanje… %1$d%%</string>
+    <string name="tr_failed_format">Preuzimanje nije uspjelo: %1$s</string>
+    <string name="tr_version_format">Verzija %1$s</string>
+    <string name="tr_source_line">Izvor: QuranEnc.com</string>
+    <string name="tr_restart_title">Ponovo pokrenite za primjenu</string>
+    <string name="tr_restart_message">Za primjenu prijevoda %1$s potrebno je ponovo pokrenuti aplikaciju. Aplikacija će se zatvoriti i ponovo otvoriti s ovim prijevodom.</string>
+    <string name="tr_restart">Ponovo pokreni</string>
+    <string name="tr_later">Kasnije</string>
+    <string name="settings_credits">Zasluge</string>
+    <string name="settings_credits_sub">Prevodioci, izdavači i izvori</string>
+    <string name="credits_page_title">Zasluge</string>
+    <string name="credits_section_sources">Izvori</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Prijevodi koje preuzmete dolaze s QuranEnc.com (Enciklopedija Kurana). Svaki prijevod pripada svom prevodiocu i izdavaču.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Arapski tekst Kurana i ugrađeni bengalski prijevodi (Muhiuddin Khan i Zohurul Hoque) dolaze s tanzil.net, za nekomercijalnu upotrebu.</string>
+    <string name="credits_audio_title">Audio recitacija</string>
+    <string name="credits_audio_body">Audio recitacija ajet po ajet dolazi s cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Preuzeti prijevodi</string>
+    <string name="credits_none_downloaded">Još nijedan prijevod nije preuzet.</string>
+</resources>

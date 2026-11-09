@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">Mwanzo</string>
-    <string name="nav_quran">Qur\'an</string>
+    <string name="nav_quran">Kurani</string>
     <string name="nav_bookmarks">Alamisho</string>
     <string name="nav_settings">Mipangilio</string>
+
+    <!-- Home -->
     <string name="ayah_of_the_moment">Aya ya Sasa</string>
     <string name="continue_reading">Endelea Kusoma</string>
-    <string name="quick_links">Ufikiaji wa Haraka</string>
+    <string name="quick_links">Njia za Mkato</string>
     <string name="surah_list_card">Orodha ya Sura</string>
-    <string name="surah_list_desc">Vinjari sura zote 114</string>
+    <string name="surah_list_desc">Vinjari Sura zote 114</string>
     <string name="juz_list_card">Orodha ya Juzuu</string>
-    <string name="juz_list_desc">Vinjari kwa juzuu 30</string>
+    <string name="juz_list_desc">Vinjari kwa Juzuu 30</string>
+    <string name="read_surah">Soma Sura</string>
     <string name="refresh_ayah">Aya Mpya</string>
     <string name="last_read_reference">Sura %1$s · Aya %2$s</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">Sura</string>
     <string name="tab_juz">Juzuu</string>
-    <string name="meccan">Makka</string>
-    <string name="medinan">Madina</string>
+    <string name="meccan">Makkiyya</string>
+    <string name="medinan">Madaniyya</string>
     <string name="ayah_count_format">Aya %1$s</string>
     <string name="juz_format">Juzuu %1$s</string>
-    <string name="go_to_ayah">Nenda kwenye aya…</string>
-    <string name="go_to_ayah_dialog_title">Nenda kwenye Aya</string>
+    <string name="juz_starts_at">Inaanza %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">Nenda kwa aya…</string>
+    <string name="bookmark_surah_start">Weka alamisho mwanzo wa sura</string>
+    <string name="go_to_ayah_dialog_title">Nenda kwa Aya</string>
+    <string name="ayah_number_hint">Weka namba ya aya (1–%1$d)</string>
     <string name="go_button">Nenda</string>
     <string name="cancel">Ghairi</string>
+    <string name="ayah_out_of_range">Tafadhali weka namba sahihi ya aya</string>
     <string name="share_ayah">Shiriki Aya</string>
     <string name="copy_ayah">Nakili Aya</string>
     <string name="copied_to_clipboard">Aya imenakiliwa</string>
-    <string name="ayah_copied">Aya imenakiliwa</string>
+    <string name="surah_bookmarked">Alamisho imewekwa mwanzo wa sura</string>
     <string name="bookmark_added">Aya imehifadhiwa kwenye alamisho</string>
     <string name="bookmark_removed">Alamisho imeondolewa</string>
     <string name="undo">Tendua</string>
+
+    <!-- Search -->
+    <string name="search_hint">Tafuta Kibangla, Kiarabu, au mf. 2:255</string>
+    <string name="search_initial_hint">Tafuta kwa tafsiri ya Kibangla, maandishi ya Kiarabu (bila alama za irabu), au rejea kama 2:255 au ২:২৫৫.</string>
+    <string name="search_no_results">Hakuna aya zilizopatikana.</string>
+    <string name="search_go_to_reference">Nenda kwa Sura %1$s, Aya %2$s</string>
     <string name="search_title">Tafuta</string>
+    <string name="search_no_results_hint">Hakikisha umeandika neno kwa usahihi.</string>
     <string name="searching">Inatafuta…</string>
-    <string name="search_no_results">Hakuna aya zinazolingana.</string>
+    <string name="search_results_count">Aya %1$d zimepatikana</string>
+
+    <!-- Bookmarks -->
     <string name="bookmarks_title">Alamisho</string>
     <string name="bookmarks_empty">Hakuna alamisho zilizohifadhiwa bado</string>
+    <string name="bookmarks_empty_desc">Gusa aikoni ya alamisho kwenye aya yoyote wakati wa kusoma ili kuihifadhi hapa na kuipata haraka.</string>
+    <string name="delete_all_bookmarks">Futa alamisho zote</string>
+    <string name="delete_all_confirm_title">Futa Alamisho Zote?</string>
+    <string name="delete_all_confirm_desc">Hii itaondoa alamisho zote zilizohifadhiwa kabisa.</string>
     <string name="delete">Futa</string>
+    <string name="all_bookmarks_deleted">Alamisho zote zimefutwa</string>
+
+    <!-- Settings -->
     <string name="settings_title">Mipangilio</string>
     <string name="section_appearance">Mwonekano</string>
     <string name="theme_label">Mandhari</string>
     <string name="theme_system">Mfumo</string>
-    <string name="theme_light">Nyepesi</string>
-    <string name="theme_dark">Nyeusi</string>
+    <string name="theme_light">Mwanga</string>
+    <string name="theme_dark">Giza</string>
+    <string name="language_label">Lugha (ভাষা)</string>
+    <string name="language_system">Chaguo-msingi la Mfumo</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
     <string name="section_reading">Mapendeleo ya Kusoma</string>
-    <string name="section_widget">Wijeti ya Skrini ya Kwanza</string>
+    <string name="arabic_font_size">Ukubwa wa Maandishi ya Kiarabu</string>
+    <string name="bangla_font_size">Ukubwa wa Maandishi ya Kibangla</string>
+    <string name="show_bangla_translation">Onyesha tafsiri ya Kibangla</string>
+    <string name="use_bangla_digits">Tumia tarakimu za Kibangla (১, ২, ৩)</string>
+    <string name="keep_screen_on">Weka skrini ikiwaka wakati wa kusoma</string>
+    <string name="preview_label">Onyesho la Moja kwa Moja</string>
+
+    <string name="section_widget">Wijeti ya Skrini ya Mwanzo</string>
+    <string name="widget_refresh_on_screen_on">Badilisha aya ya wijeti skrini inapowaka</string>
+    <string name="widget_refresh_helper">Hutumia arifa ndogo isiyo na sauti ili Android iendelee kuiendesha.</string>
+    <string name="battery_optimization_settings">Mipangilio ya kuboresha betri</string>
+    <string name="battery_optimization_helper">Baadhi ya simu (Xiaomi, Oppo, Vivo, Huawei, Samsung) husimamisha huduma za usuli; weka programu kuwa \'Unrestricted/No restrictions\' wijeti isipobadilika.</string>
+    <string name="refresh_widget_now">Onyesha upya wijeti sasa</string>
+    <string name="widget_refreshed">Wijeti imesasishwa kwa aya mpya</string>
+    <string name="notification_permission_title">Ruhusa ya Arifa</string>
+    <string name="notification_permission_desc">Android inahitaji ruhusa ya arifa ili huduma ya usuli isiyo na sauti iweze kusasisha wijeti skrini inapowaka.</string>
+    <string name="grant_permission">Ruhusu</string>
+
     <string name="section_data">Data</string>
-    <string name="section_audio">Sauti ya Qiraa</string>
+    <string name="reset_reading_progress">Weka upya maendeleo ya kusoma</string>
+    <string name="reset_reading_confirm_title">Weka Upya Maendeleo ya Kusoma?</string>
+    <string name="reset_reading_confirm_desc">Hii itarudisha alamisho ya kuendelea kusoma mwanzoni.</string>
+    <string name="reset">Weka upya</string>
+    <string name="progress_reset_done">Maendeleo ya kusoma yamewekwa upya</string>
+    <string name="about_app">Kuhusu Quran Sharif</string>
+
+    <!-- About -->
     <string name="about_title">Kuhusu</string>
-    <string name="menu_app_language">Lugha ya programu</string>
-    <string name="menu_translation_language">Lugha ya tafsiri</string>
-    <string name="tr_close">Funga</string>
+    <string name="offline_badge">100% Bila Mtandao • Hakuna Intaneti • Faragha Kwanza</string>
+    <string name="offline_description">Maandishi ya Kurani na tafsiri hufanya kazi kikamilifu bila mtandao. Intaneti hutumika tu kusikiliza na kupakua sauti ya qiraa. Hakuna data binafsi inayokusanywa.</string>
+    <string name="source_authenticity">Maandishi ya Kurani yanaonyeshwa kama yalivyotolewa na chanzo, bila mabadiliko yoyote.</string>
+    <string name="credits_title">Shukrani na Vyanzo</string>
+    <string name="tanzil_credit">Maandishi ya Kurani: Tanzil Project</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Nakili Kiungo</string>
+    <string name="tanzil_copied">Kiungo kimenakiliwa</string>
+    <string name="translation_credit">Tafsiri ya Kibangla: Muhiuddin Khan (kupitia Tanzil Project)</string>
+    <string name="font_amiri_credit">Fonti ya Kiarabu: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">Fonti ya Kibangla: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">Toleo %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Inaandaa data ya Kurani… %1$d/114</string>
+    <string name="import_failed">Imeshindwa kuandaa data ya Kurani.</string>
+    <string name="import_tagline">Soma  •  Sikiliza  •  Jifunze</string>
     <string name="retry">Jaribu tena</string>
+    <string name="checking_data">Inakagua data ya Kurani…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Aya Nasibu</string>
+    <string name="widget_description">Huonyesha aya ya Kurani nasibu kwa Kiarabu na Kibangla kwenye skrini yako ya mwanzo.</string>
+    <string name="widget_open_app_prompt">Fungua Quran Sharif kukamilisha usanidi</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Huduma ya Kusasisha Wijeti</string>
+    <string name="notification_channel_desc">Hudumisha masasisho ya wijeti skrini inapofunguliwa.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Wijeti ya Quran Sharif inafanya kazi</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Tafsiri ya Kibangla</string>
+    <string name="select_translation_dialog_title">Chagua Tafsiri ya Kibangla</string>
+    <string name="translation_sample_ayah">Onyesho (112:1):</string>
+    <string name="translation_updated">Tafsiri imesasishwa</string>
+    <string name="translation_by_format">Imetafsiriwa na %1$s</string>
+    <string name="widget_arabic_size">Ukubwa wa Maandishi ya Kiarabu ya Wijeti</string>
+    <string name="widget_translation_size">Ukubwa wa Maandishi ya Kibangla ya Wijeti</string>
+    <string name="widget_text_size_reset">Weka upya ukubwa wa maandishi ya wijeti</string>
+    <string name="widget_preview_title">Onyesho la Moja kwa Moja la Wijeti</string>
+    <string name="widget_resize_hint">Kuza wijeti kwenye skrini yako ya mwanzo ikiwa maandishi makubwa hayatoshi.</string>
+    <string name="available_translations_title">Tafsiri Zilizopo</string>
+    <string name="tanzil_non_commercial_notice">Tafsiri zinazotolewa kupitia Tanzil.net husambazwa kwa matumizi ya kielimu yasiyo ya kibiashara.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Sauti ya Qiraa</string>
+    <string name="audio_reciter_label">Qari Chaguo-msingi</string>
+    <string name="audio_wifi_only">Pakua kwa Wi-Fi pekee</string>
+    <string name="audio_wifi_only_desc">Epuka upakuaji mkubwa kwa data ya simu</string>
+    <string name="audio_bismillah_prefix">Cheza Bismillah kabla ya sura</string>
+    <string name="audio_bismillah_prefix_desc">Cheza sauti ya Bismillah kabla ya sura (isipokuwa Sura ya 1 &amp; 9)</string>
+    <string name="audio_follow">Fuata sauti kiotomatiki</string>
+    <string name="audio_follow_desc">Sogeza aya ionekane sauti inapochezwa</string>
+    <string name="audio_manage_downloads">Dhibiti Vipakuliwa</string>
+    <string name="audio_manage_downloads_desc">Angalia hifadhi na udhibiti sura zilizopakuliwa</string>
+    <string name="reciter_picker_title">Chagua Qari</string>
+    <string name="play_sample">Cheza sampuli</string>
+    <string name="stop_sample">Simamisha sampuli</string>
+    <string name="audio_sheet_title">Sauti · %1$s</string>
+    <string name="audio_sheet_reciter">Qari: %1$s</string>
+    <string name="audio_choose_reciter">Chagua qari mwingine</string>
     <string name="audio_download">Pakua</string>
     <string name="audio_downloading">Inapakua…</string>
+    <string name="audio_queued">Inasubiri…</string>
+    <string name="audio_download_details">Aya %1$d · %2$d kbps</string>
+    <string name="audio_download_completed">Imepakuliwa</string>
     <string name="audio_play_button">Cheza qiraa</string>
+    <string name="audio_delete_surah">Futa sauti</string>
+    <string name="audio_delete_surah_confirm">Futa qiraa iliyopakuliwa ya sura hii?</string>
+    <string name="audio_delete_all_reciter">Futa zote za qari huyu</string>
+    <string name="audio_delete_all_reciter_confirm">Futa sura zote zilizopakuliwa za %1$s?</string>
+    <string name="audio_storage_used">Hifadhi ya Sauti Iliyotumika: %1$s</string>
+    <string name="audio_storage_note">Faili huhifadhiwa kwenye hifadhi ya programu hii na huondolewa ukiifuta programu.</string>
+    <string name="audio_downloads_empty">Hakuna qiraa zilizopakuliwa bado</string>
+    <string name="audio_downloads_empty_desc">Pakua qiraa za sura ili usikilize bila mtandao wakati wowote.</string>
+    <string name="audio_error_not_enough_storage">Hifadhi haitoshi (angalau MB 150 zinahitajika)</string>
+    <string name="audio_error_download_failed">Upakuaji umeshindwa. Tafadhali angalia muunganisho na ujaribu tena.</string>
+    <string name="audio_error_recitation_unavailable">Qiraa hii haipatikani</string>
+    <string name="audio_mobile_data_warning_title">Pakua kwa data ya simu?</string>
+    <string name="audio_mobile_data_warning_desc">Faili za sauti zinaweza kuwa kubwa. Unataka kupakua kwa data ya simu?</string>
+    <string name="audio_download_now">Pakua Sasa</string>
+    <string name="audio_download_channel_name">Vipakuliwa vya Sauti</string>
+    <string name="audio_download_channel_desc">Huonyesha maendeleo ya kupakua sauti ya qiraa</string>
+    <string name="audio_downloading_format">Inapakua %1$s</string>
     <string name="now_playing">Inachezwa Sasa</string>
-    <string name="reciter_picker_title">Chagua Qari</string>
+    <string name="play_from_here">Cheza kuanzia hapa</string>
     <string name="follow_audio_chip">Fuata</string>
     <string name="following_audio_chip">Inafuata</string>
     <string name="player_surah_title_format">Sura %1$s</string>
     <string name="player_ayah_of_format">Aya %1$s / %2$s</string>
-    <string name="language_system">Chaguo-msingi la Mfumo</string>
+    <string name="player_change_reciter">Badili</string>
+    <string name="audio_repeat_off">Rudia: Zima</string>
+    <string name="audio_repeat_ayah">Rudia: Aya</string>
+    <string name="audio_repeat_surah">Rudia: Sura</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Baadhi ya faili za sauti hazipo. Pakua tena?</string>
+    <string name="recitation_audio_attribution_title">Sauti ya Qiraa</string>
+    <string name="recitation_audio_attribution">Sauti hutolewa na Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). Hakimiliki ya kila qiraa ni ya qari, imeruhusiwa kusambazwa bila malipo kwa matumizi yasiyo ya kibiashara. Programu hii haina faida. Qari au mmiliki wa haki akiomba kuondolewa, qiraa hiyo itaondolewa.</string>
+    <string name="fast_scroll_verse">Aya %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Qiraa Inachezwa</string>
+    <string name="audio_title">Sauti ya Qiraa</string>
+    <string name="ayah_copied">Aya imenakiliwa</string>
+    <string name="shared_via_app">Imeshirikiwa kupitia programu ya Quran Sharif</string>
+    <string name="enter_ayah_number">Weka namba ya aya</string>
+    <string name="nav_sub_appearance">Mandhari</string>
+    <string name="nav_sub_language">Lugha ya programu</string>
+    <string name="nav_sub_reading">Tafsiri, ukubwa wa maandishi, sauti, kusogeza</string>
+    <string name="nav_sub_widget">Ukubwa wa maandishi, kusasisha, onyesho</string>
+    <string name="nav_sub_data">Weka upya maendeleo, alamisho</string>
+    <string name="nav_sub_audio">Qari, vipakuliwa</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">Lugha ya programu</string>
+    <string name="menu_translation_language">Lugha ya tafsiri</string>
+    <string name="tr_close">Funga</string>
+    <string name="tr_title">Lugha ya tafsiri</string>
+    <string name="tr_installed_section">Kwenye simu hii</string>
+    <string name="tr_languages_section">Lugha zilizopo</string>
+    <string name="tr_count_format">Tafsiri %1$d</string>
+    <string name="tr_loading">Inapakia tafsiri…</string>
+    <string name="tr_load_failed">Orodha haikuweza kupakiwa. Angalia intaneti yako na ujaribu tena.</string>
+    <string name="tr_retry">Jaribu tena</string>
+    <string name="tr_download">Pakua</string>
+    <string name="tr_use">Tumia</string>
+    <string name="tr_in_use">Inatumika</string>
+    <string name="tr_downloading_format">Inapakua… %1$d%%</string>
+    <string name="tr_failed_format">Upakuaji umeshindwa: %1$s</string>
+    <string name="tr_version_format">Toleo %1$s</string>
+    <string name="tr_source_line">Chanzo: QuranEnc.com</string>
+    <string name="tr_restart_title">Anzisha upya ili kutekeleza</string>
+    <string name="tr_restart_message">Kutumia %1$s kunahitaji programu ianze upya. Programu itafungwa na kufunguka tena na tafsiri hii.</string>
+    <string name="tr_restart">Anzisha upya</string>
+    <string name="tr_later">Baadaye</string>
+    <string name="settings_credits">Shukrani</string>
+    <string name="settings_credits_sub">Watafsiri, wachapishaji na vyanzo</string>
+    <string name="credits_page_title">Shukrani</string>
+    <string name="credits_section_sources">Vyanzo</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Tafsiri unazopakua zinatoka QuranEnc.com (Quran Encyclopedia). Kila tafsiri ni mali ya mtafsiri na mchapishaji wake.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Maandishi ya Kurani ya Kiarabu na tafsiri za Kibengali zilizomo (Muhiuddin Khan na Zohurul Hoque) zinatoka tanzil.net, kwa matumizi yasiyo ya kibiashara.</string>
+    <string name="credits_audio_title">Sauti ya qiraa</string>
+    <string name="credits_audio_body">Sauti ya qiraa aya kwa aya hutolewa na cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Tafsiri zilizopakuliwa</string>
+    <string name="credits_none_downloaded">Hakuna tafsiri iliyopakuliwa bado.</string>
 </resources>

@@ -21,6 +21,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.absoluteOffset
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.windowInsetsPadding
@@ -172,7 +173,9 @@ fun AppHeaderPicture(scrollBehavior: TopAppBarScrollBehavior? = null) {
             val h = maxHeight
             Box(
                 modifier = Modifier
-                    .offset(x = w * 0.010f, y = h * 0.36f)
+                    // absoluteOffset: the header picture never flips in right-to-left languages,
+                    // so its tap areas must not flip either.
+                    .absoluteOffset(x = w * 0.010f, y = h * 0.36f)
                     .size(width = w * 0.205f, height = h * 0.50f)
             ) {
                 Box(
@@ -208,7 +211,7 @@ fun AppHeaderPicture(scrollBehavior: TopAppBarScrollBehavior? = null) {
             }
             Box(
                 modifier = Modifier
-                    .offset(x = w * 0.835f, y = h * 0.36f)
+                    .absoluteOffset(x = w * 0.835f, y = h * 0.36f)
                     .size(width = w * 0.155f, height = h * 0.50f)
                     .clip(RoundedCornerShape(16.dp))
                     .clickable(role = Role.Button, onClickLabel = searchDesc) { actions.onSearch() }

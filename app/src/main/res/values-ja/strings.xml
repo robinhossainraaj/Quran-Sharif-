@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">ホーム</string>
+    <string name="nav_quran">クルアーン</string>
+    <string name="nav_bookmarks">ブックマーク</string>
+    <string name="nav_settings">設定</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">今のアーヤ</string>
+    <string name="continue_reading">続きから読む</string>
+    <string name="quick_links">クイックアクセス</string>
+    <string name="surah_list_card">スーラ一覧</string>
+    <string name="surah_list_desc">全114スーラを見る</string>
+    <string name="juz_list_card">ジュズ / パーラ一覧</string>
+    <string name="juz_list_desc">30のジュズから探す</string>
+    <string name="read_surah">スーラを読む</string>
+    <string name="refresh_ayah">別のアーヤ</string>
+    <string name="last_read_reference">スーラ %1$s · アーヤ %2$s</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">スーラ</string>
+    <string name="tab_juz">ジュズ</string>
+    <string name="meccan">マッカ啓示</string>
+    <string name="medinan">マディーナ啓示</string>
+    <string name="ayah_count_format">%1$sアーヤ</string>
+    <string name="juz_format">ジュズ %1$s</string>
+    <string name="juz_starts_at">開始：%1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">アーヤへ移動…</string>
+    <string name="bookmark_surah_start">スーラの冒頭をブックマーク</string>
+    <string name="go_to_ayah_dialog_title">アーヤへ移動</string>
+    <string name="ayah_number_hint">アーヤ番号を入力（1–%1$d）</string>
+    <string name="go_button">移動</string>
+    <string name="cancel">キャンセル</string>
+    <string name="ayah_out_of_range">有効なアーヤ番号を入力してください</string>
+    <string name="share_ayah">アーヤを共有</string>
+    <string name="copy_ayah">アーヤをコピー</string>
+    <string name="copied_to_clipboard">アーヤをクリップボードにコピーしました</string>
+    <string name="surah_bookmarked">スーラの冒頭をブックマークしました</string>
+    <string name="bookmark_added">アーヤをブックマークに保存しました</string>
+    <string name="bookmark_removed">ブックマークを削除しました</string>
+    <string name="undo">元に戻す</string>
+
+    <!-- Search -->
+    <string name="search_hint">ベンガル語、アラビア語、または 2:255 などで検索</string>
+    <string name="search_initial_hint">ベンガル語訳、アラビア語本文（母音記号なし）、または 2:255 や ২:২৫৫ のような参照で検索できます。</string>
+    <string name="search_no_results">一致するアーヤが見つかりません。</string>
+    <string name="search_go_to_reference">スーラ %1$s、アーヤ %2$s へ移動</string>
+    <string name="search_title">検索</string>
+    <string name="search_no_results_hint">単語が正しく入力されているか確認してください。</string>
+    <string name="searching">検索中…</string>
+    <string name="search_results_count">%1$d件のアーヤが見つかりました</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">ブックマーク</string>
+    <string name="bookmarks_empty">保存したブックマークはまだありません</string>
+    <string name="bookmarks_empty_desc">読書中にアーヤのブックマークアイコンをタップすると、ここに保存してすぐ開けます。</string>
+    <string name="delete_all_bookmarks">すべてのブックマークを削除</string>
+    <string name="delete_all_confirm_title">すべてのブックマークを削除しますか？</string>
+    <string name="delete_all_confirm_desc">保存したすべてのブックマークが完全に削除されます。</string>
+    <string name="delete">削除</string>
+    <string name="all_bookmarks_deleted">すべてのブックマークを削除しました</string>
+
+    <!-- Settings -->
+    <string name="settings_title">設定</string>
+    <string name="section_appearance">外観</string>
+    <string name="theme_label">テーマ</string>
+    <string name="theme_system">システム</string>
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="language_label">言語 (ভাষা)</string>
+    <string name="language_system">システムのデフォルト</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">読書の設定</string>
+    <string name="arabic_font_size">アラビア語の文字サイズ</string>
+    <string name="bangla_font_size">ベンガル語の文字サイズ</string>
+    <string name="show_bangla_translation">ベンガル語訳を表示</string>
+    <string name="use_bangla_digits">ベンガル語の数字を使う（১, ২, ৩）</string>
+    <string name="keep_screen_on">読書中は画面をオンのままにする</string>
+    <string name="preview_label">ライブプレビュー</string>
+
+    <string name="section_widget">ホーム画面ウィジェット</string>
+    <string name="widget_refresh_on_screen_on">画面点灯時にウィジェットのアーヤを変更</string>
+    <string name="widget_refresh_helper">Android が動作を維持できるよう、小さな無音の通知を使用します。</string>
+    <string name="battery_optimization_settings">電池の最適化設定</string>
+    <string name="battery_optimization_helper">一部のメーカー（Xiaomi、Oppo、Vivo、Huawei、Samsung）の端末ではバックグラウンドサービスが停止されます。ウィジェットが変わらない場合は、アプリを「制限なし」に設定してください。</string>
+    <string name="refresh_widget_now">ウィジェットを今すぐ更新</string>
+    <string name="widget_refreshed">ウィジェットを新しいアーヤに更新しました</string>
+    <string name="notification_permission_title">通知の許可</string>
+    <string name="notification_permission_desc">画面点灯時に無音のバックグラウンドサービスがウィジェットを更新するには、Android の通知許可が必要です。</string>
+    <string name="grant_permission">許可</string>
+
+    <string name="section_data">データ</string>
+    <string name="reset_reading_progress">読書の進捗をリセット</string>
+    <string name="reset_reading_confirm_title">読書の進捗をリセットしますか？</string>
+    <string name="reset_reading_confirm_desc">「続きから読む」のブックマークが最初に戻ります。</string>
+    <string name="reset">リセット</string>
+    <string name="progress_reset_done">読書の進捗をリセットしました</string>
+    <string name="about_app">Quran Sharif について</string>
+
+    <!-- About -->
+    <string name="about_title">アプリ情報</string>
+    <string name="offline_badge">100% オフライン • ネット不要 • プライバシー重視</string>
+    <string name="offline_description">クルアーンの本文と翻訳は完全にオフラインで使えます。インターネットは朗誦音声のプレビューとダウンロードにのみ使用します。個人データは収集しません。</string>
+    <string name="source_authenticity">クルアーンの本文は、提供元のまま一切変更せずに表示されます。</string>
+    <string name="credits_title">クレジットと出典</string>
+    <string name="tanzil_credit">クルアーン本文：Tanzil Project</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">リンクをコピー</string>
+    <string name="tanzil_copied">リンクをクリップボードにコピーしました</string>
+    <string name="translation_credit">ベンガル語訳：Muhiuddin Khan（Tanzil Project 提供）</string>
+    <string name="font_amiri_credit">アラビア語フォント：Amiri Quran（SIL Open Font License）</string>
+    <string name="font_noto_credit">ベンガル語フォント：Noto Sans Bengali（SIL Open Font License）</string>
+    <string name="version_format">バージョン %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">クルアーンのデータを準備中… %1$d/114</string>
+    <string name="import_failed">クルアーンのデータの準備に失敗しました。</string>
+    <string name="import_tagline">読む  •  聴く  •  学ぶ</string>
+    <string name="retry">再試行</string>
+    <string name="checking_data">クルアーンのデータを確認中…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — ランダムなアーヤ</string>
+    <string name="widget_description">ホーム画面に、アラビア語とベンガル語でクルアーンのアーヤをランダムに表示します。</string>
+    <string name="widget_open_app_prompt">Quran Sharif を開いて設定を完了してください</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">ウィジェット更新サービス</string>
+    <string name="notification_channel_desc">画面ロック解除時のウィジェット更新を維持します。</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Quran Sharif ウィジェットは有効です</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">ベンガル語訳</string>
+    <string name="select_translation_dialog_title">ベンガル語訳を選択</string>
+    <string name="translation_sample_ayah">プレビュー（112:1）：</string>
+    <string name="translation_updated">翻訳を更新しました</string>
+    <string name="translation_by_format">翻訳：%1$s</string>
+    <string name="widget_arabic_size">ウィジェットのアラビア語文字サイズ</string>
+    <string name="widget_translation_size">ウィジェットのベンガル語文字サイズ</string>
+    <string name="widget_text_size_reset">ウィジェットの文字サイズをリセット</string>
+    <string name="widget_preview_title">ウィジェットのライブプレビュー</string>
+    <string name="widget_resize_hint">大きな文字が収まらない場合は、ホーム画面でウィジェットを大きくしてください。</string>
+    <string name="available_translations_title">利用可能な翻訳</string>
+    <string name="tanzil_non_commercial_notice">Tanzil.net 経由で提供される翻訳は、非営利の教育目的で配布されています。</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">朗誦音声</string>
+    <string name="audio_reciter_label">デフォルトの朗誦者</string>
+    <string name="audio_wifi_only">Wi-Fi 接続時のみダウンロード</string>
+    <string name="audio_wifi_only_desc">モバイルデータでの大容量ダウンロードを避けます</string>
+    <string name="audio_bismillah_prefix">スーラの前にビスミッラーを再生</string>
+    <string name="audio_bismillah_prefix_desc">スーラの前にビスミッラーの音声を再生（スーラ1と9を除く）</string>
+    <string name="audio_follow">音声に自動で追従</string>
+    <string name="audio_follow_desc">音声の再生に合わせてアーヤをスクロール</string>
+    <string name="audio_manage_downloads">ダウンロード管理</string>
+    <string name="audio_manage_downloads_desc">ストレージ容量とダウンロード済みスーラの管理</string>
+    <string name="reciter_picker_title">朗誦者を選択</string>
+    <string name="play_sample">サンプルを再生</string>
+    <string name="stop_sample">サンプルを停止</string>
+    <string name="audio_sheet_title">音声 · %1$s</string>
+    <string name="audio_sheet_reciter">朗誦者：%1$s</string>
+    <string name="audio_choose_reciter">別の朗誦者を選ぶ</string>
+    <string name="audio_download">ダウンロード</string>
+    <string name="audio_downloading">ダウンロード中…</string>
+    <string name="audio_queued">待機中…</string>
+    <string name="audio_download_details">%1$dアーヤ · %2$d kbps</string>
+    <string name="audio_download_completed">ダウンロード済み</string>
+    <string name="audio_play_button">朗誦を再生</string>
+    <string name="audio_delete_surah">音声を削除</string>
+    <string name="audio_delete_surah_confirm">このスーラのダウンロード済み朗誦を削除しますか？</string>
+    <string name="audio_delete_all_reciter">この朗誦者の音声をすべて削除</string>
+    <string name="audio_delete_all_reciter_confirm">%1$sのダウンロード済みスーラをすべて削除しますか？</string>
+    <string name="audio_storage_used">音声の使用容量：%1$s</string>
+    <string name="audio_storage_note">ファイルはこのアプリ専用のストレージに保存され、アプリをアンインストールすると削除されます。</string>
+    <string name="audio_downloads_empty">ダウンロード済みの朗誦はまだありません</string>
+    <string name="audio_downloads_empty_desc">スーラの朗誦をダウンロードすれば、いつでもオフラインで聴けます。</string>
+    <string name="audio_error_not_enough_storage">空き容量が足りません（150 MB 以上が必要）</string>
+    <string name="audio_error_download_failed">ダウンロードに失敗しました。接続を確認してもう一度お試しください。</string>
+    <string name="audio_error_recitation_unavailable">この朗誦は利用できません</string>
+    <string name="audio_mobile_data_warning_title">モバイルデータでダウンロードしますか？</string>
+    <string name="audio_mobile_data_warning_desc">音声ファイルは大きい場合があります。モバイルデータでダウンロードしますか？</string>
+    <string name="audio_download_now">今すぐダウンロード</string>
+    <string name="audio_download_channel_name">音声のダウンロード</string>
+    <string name="audio_download_channel_desc">朗誦音声のダウンロード進捗を表示します</string>
+    <string name="audio_downloading_format">%1$sをダウンロード中</string>
+    <string name="now_playing">再生中</string>
+    <string name="play_from_here">ここから再生</string>
+    <string name="follow_audio_chip">追従</string>
+    <string name="following_audio_chip">追従中</string>
+    <string name="player_surah_title_format">スーラ %1$s</string>
+    <string name="player_ayah_of_format">アーヤ %1$s / %2$s</string>
+    <string name="player_change_reciter">変更</string>
+    <string name="audio_repeat_off">リピート：オフ</string>
+    <string name="audio_repeat_ayah">リピート：アーヤ</string>
+    <string name="audio_repeat_surah">リピート：スーラ</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">一部の音声ファイルがありません。もう一度ダウンロードしますか？</string>
+    <string name="recitation_audio_attribution_title">朗誦音声</string>
+    <string name="recitation_audio_attribution">音声は Al Quran Cloud / Islamic Network CDN（cdn.islamic.network）より提供されています。各朗誦の著作権は朗誦者に帰属し、非営利での無償再配布が許諾されています。本アプリは非営利です。朗誦者または権利者から削除の要請があった場合、その朗誦は削除されます。</string>
+    <string name="fast_scroll_verse">アーヤ %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">朗誦を再生中</string>
+    <string name="audio_title">朗誦音声</string>
+    <string name="ayah_copied">アーヤをクリップボードにコピーしました</string>
+    <string name="shared_via_app">Quran Sharif アプリから共有</string>
+    <string name="enter_ayah_number">アーヤ番号を入力</string>
+    <string name="nav_sub_appearance">テーマ</string>
+    <string name="nav_sub_language">アプリの言語</string>
+    <string name="nav_sub_reading">翻訳、文字サイズ、音声、スクロール</string>
+    <string name="nav_sub_widget">文字サイズ、更新、プレビュー</string>
+    <string name="nav_sub_data">進捗のリセット、ブックマーク</string>
+    <string name="nav_sub_audio">朗誦者、ダウンロード</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">アプリの言語</string>
+    <string name="menu_translation_language">翻訳の言語</string>
+    <string name="tr_close">閉じる</string>
+    <string name="tr_title">翻訳の言語</string>
+    <string name="tr_installed_section">この端末内</string>
+    <string name="tr_languages_section">利用可能な言語</string>
+    <string name="tr_count_format">%1$d件の翻訳</string>
+    <string name="tr_loading">翻訳を読み込み中…</string>
+    <string name="tr_load_failed">リストを読み込めませんでした。インターネット接続を確認してもう一度お試しください。</string>
+    <string name="tr_retry">再試行</string>
+    <string name="tr_download">ダウンロード</string>
+    <string name="tr_use">使用</string>
+    <string name="tr_in_use">使用中</string>
+    <string name="tr_downloading_format">ダウンロード中… %1$d%%</string>
+    <string name="tr_failed_format">ダウンロードに失敗しました：%1$s</string>
+    <string name="tr_version_format">バージョン %1$s</string>
+    <string name="tr_source_line">出典：QuranEnc.com</string>
+    <string name="tr_restart_title">再起動して適用</string>
+    <string name="tr_restart_message">%1$sを適用するにはアプリの再起動が必要です。アプリが終了し、この翻訳で再び開きます。</string>
+    <string name="tr_restart">再起動</string>
+    <string name="tr_later">後で</string>
+    <string name="settings_credits">クレジット</string>
+    <string name="settings_credits_sub">翻訳者、出版社、出典</string>
+    <string name="credits_page_title">クレジット</string>
+    <string name="credits_section_sources">出典</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">ダウンロードする翻訳は QuranEnc.com（クルアーン百科事典）から提供されます。各翻訳の権利は翻訳者と出版社に帰属します。</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">アラビア語のクルアーン本文と内蔵のベンガル語訳（Muhiuddin Khan と Zohurul Hoque）は、非営利利用として tanzil.net から提供されています。</string>
+    <string name="credits_audio_title">朗誦音声</string>
+    <string name="credits_audio_body">アーヤごとの朗誦音声は cdn.islamic.network（Islamic Network）より提供されています。</string>
+    <string name="credits_section_downloaded">ダウンロード済みの翻訳</string>
+    <string name="credits_none_downloaded">ダウンロード済みの翻訳はまだありません。</string>
+</resources>

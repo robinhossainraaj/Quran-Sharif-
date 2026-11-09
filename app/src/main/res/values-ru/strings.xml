@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">Главная</string>
     <string name="nav_quran">Коран</string>
     <string name="nav_bookmarks">Закладки</string>
     <string name="nav_settings">Настройки</string>
+
+    <!-- Home -->
     <string name="ayah_of_the_moment">Аят момента</string>
     <string name="continue_reading">Продолжить чтение</string>
     <string name="quick_links">Быстрый доступ</string>
     <string name="surah_list_card">Список сур</string>
-    <string name="surah_list_desc">Просмотр всех 114 сур</string>
+    <string name="surah_list_desc">Все 114 сур</string>
     <string name="juz_list_card">Список джузов</string>
-    <string name="juz_list_desc">Просмотр по 30 джузам</string>
+    <string name="juz_list_desc">По 30 джузам</string>
+    <string name="read_surah">Читать суру</string>
     <string name="refresh_ayah">Новый аят</string>
     <string name="last_read_reference">Сура %1$s · Аят %2$s</string>
-    <string name="tab_surah">Сура</string>
-    <string name="tab_juz">Джуз</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">Суры</string>
+    <string name="tab_juz">Джузы</string>
     <string name="meccan">Мекканская</string>
     <string name="medinan">Мединская</string>
     <string name="ayah_count_format">Аятов: %1$s</string>
     <string name="juz_format">Джуз %1$s</string>
+    <string name="juz_starts_at">Начинается с %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
     <string name="go_to_ayah">Перейти к аяту…</string>
+    <string name="bookmark_surah_start">Закладка на начало суры</string>
     <string name="go_to_ayah_dialog_title">Перейти к аяту</string>
+    <string name="ayah_number_hint">Введите номер аята (1–%1$d)</string>
     <string name="go_button">Перейти</string>
     <string name="cancel">Отмена</string>
+    <string name="ayah_out_of_range">Введите корректный номер аята</string>
     <string name="share_ayah">Поделиться аятом</string>
     <string name="copy_ayah">Копировать аят</string>
     <string name="copied_to_clipboard">Аят скопирован в буфер обмена</string>
-    <string name="ayah_copied">Аят скопирован в буфер обмена</string>
+    <string name="surah_bookmarked">Закладка на начало суры добавлена</string>
     <string name="bookmark_added">Аят сохранён в закладках</string>
     <string name="bookmark_removed">Закладка удалена</string>
     <string name="undo">Отменить</string>
+
+    <!-- Search -->
+    <string name="search_hint">Поиск по-бенгальски, по-арабски или, например, 2:255</string>
+    <string name="search_initial_hint">Ищите по бенгальскому переводу, арабскому тексту (без огласовок) или по ссылке, например 2:255 или ২:২৫৫.</string>
+    <string name="search_no_results">Подходящие аяты не найдены.</string>
+    <string name="search_go_to_reference">Перейти к суре %1$s, аят %2$s</string>
     <string name="search_title">Поиск</string>
+    <string name="search_no_results_hint">Проверьте, правильно ли написано слово.</string>
     <string name="searching">Поиск…</string>
-    <string name="search_no_results">Подходящих аятов не найдено.</string>
+    <string name="search_results_count">Найдено аятов: %1$d</string>
+
+    <!-- Bookmarks -->
     <string name="bookmarks_title">Закладки</string>
     <string name="bookmarks_empty">Сохранённых закладок пока нет</string>
+    <string name="bookmarks_empty_desc">Нажмите на значок закладки у любого аята во время чтения, чтобы сохранить его здесь для быстрого доступа.</string>
+    <string name="delete_all_bookmarks">Удалить все закладки</string>
+    <string name="delete_all_confirm_title">Удалить все закладки?</string>
+    <string name="delete_all_confirm_desc">Все сохранённые закладки будут удалены без возможности восстановления.</string>
     <string name="delete">Удалить</string>
+    <string name="all_bookmarks_deleted">Все закладки удалены</string>
+
+    <!-- Settings -->
     <string name="settings_title">Настройки</string>
     <string name="section_appearance">Оформление</string>
     <string name="theme_label">Тема</string>
     <string name="theme_system">Системная</string>
     <string name="theme_light">Светлая</string>
     <string name="theme_dark">Тёмная</string>
-    <string name="section_reading">Параметры чтения</string>
-    <string name="section_widget">Виджет главного экрана</string>
+    <string name="language_label">Язык (ভাষা)</string>
+    <string name="language_system">Как в системе</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">Настройки чтения</string>
+    <string name="arabic_font_size">Размер арабского текста</string>
+    <string name="bangla_font_size">Размер бенгальского текста</string>
+    <string name="show_bangla_translation">Показывать бенгальский перевод</string>
+    <string name="use_bangla_digits">Бенгальские цифры (১, ২, ৩)</string>
+    <string name="keep_screen_on">Не гасить экран при чтении</string>
+    <string name="preview_label">Предпросмотр</string>
+
+    <string name="section_widget">Виджет на главном экране</string>
+    <string name="widget_refresh_on_screen_on">Менять аят в виджете при включении экрана</string>
+    <string name="widget_refresh_helper">Используется небольшое беззвучное уведомление, чтобы Android не останавливал эту функцию.</string>
+    <string name="battery_optimization_settings">Настройки оптимизации батареи</string>
+    <string name="battery_optimization_helper">Некоторые производители (Xiaomi, Oppo, Vivo, Huawei, Samsung) останавливают фоновые службы; если виджет не меняется, установите для приложения режим «Без ограничений».</string>
+    <string name="refresh_widget_now">Обновить виджет сейчас</string>
+    <string name="widget_refreshed">Виджет обновлён: новый аят</string>
+    <string name="notification_permission_title">Разрешение на уведомления</string>
+    <string name="notification_permission_desc">Android требует разрешение на уведомления, чтобы беззвучная фоновая служба могла обновлять виджет при включении экрана.</string>
+    <string name="grant_permission">Разрешить</string>
+
     <string name="section_data">Данные</string>
-    <string name="section_audio">Аудио чтения</string>
+    <string name="reset_reading_progress">Сбросить прогресс чтения</string>
+    <string name="reset_reading_confirm_title">Сбросить прогресс чтения?</string>
+    <string name="reset_reading_confirm_desc">Закладка «Продолжить чтение» вернётся к началу.</string>
+    <string name="reset">Сбросить</string>
+    <string name="progress_reset_done">Прогресс чтения сброшен</string>
+    <string name="about_app">О приложении Quran Sharif</string>
+
+    <!-- About -->
     <string name="about_title">О приложении</string>
+    <string name="offline_badge">100% офлайн • Без интернета • Конфиденциальность прежде всего</string>
+    <string name="offline_description">Текст Корана и переводы работают полностью офлайн. Интернет нужен только для прослушивания и загрузки аудио чтения. Личные данные не собираются.</string>
+    <string name="source_authenticity">Текст Корана показан точно так, как предоставлен источником, без изменений.</string>
+    <string name="credits_title">Авторы и источники</string>
+    <string name="tanzil_credit">Текст Корана: проект Tanzil</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Копировать ссылку</string>
+    <string name="tanzil_copied">Ссылка скопирована в буфер обмена</string>
+    <string name="translation_credit">Бенгальский перевод: Muhiuddin Khan (через проект Tanzil)</string>
+    <string name="font_amiri_credit">Арабский шрифт: Amiri Quran (лицензия SIL Open Font)</string>
+    <string name="font_noto_credit">Бенгальский шрифт: Noto Sans Bengali (лицензия SIL Open Font)</string>
+    <string name="version_format">Версия %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Подготовка данных Корана… %1$d/114</string>
+    <string name="import_failed">Не удалось подготовить данные Корана.</string>
+    <string name="import_tagline">Читай  •  Слушай  •  Изучай</string>
+    <string name="retry">Повторить</string>
+    <string name="checking_data">Проверка данных Корана…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Случайный аят</string>
+    <string name="widget_description">Показывает на главном экране случайный аят Корана на арабском и бенгальском.</string>
+    <string name="widget_open_app_prompt">Откройте Quran Sharif, чтобы завершить настройку</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Служба обновления виджета</string>
+    <string name="notification_channel_desc">Поддерживает обновление виджета при разблокировке экрана.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Виджет Quran Sharif активен</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Бенгальский перевод</string>
+    <string name="select_translation_dialog_title">Выбор бенгальского перевода</string>
+    <string name="translation_sample_ayah">Предпросмотр (112:1):</string>
+    <string name="translation_updated">Перевод обновлён</string>
+    <string name="translation_by_format">Перевод: %1$s</string>
+    <string name="widget_arabic_size">Размер арабского текста в виджете</string>
+    <string name="widget_translation_size">Размер бенгальского текста в виджете</string>
+    <string name="widget_text_size_reset">Сбросить размер текста виджета</string>
+    <string name="widget_preview_title">Предпросмотр виджета</string>
+    <string name="widget_resize_hint">Увеличьте виджет на главном экране, если крупный текст не помещается.</string>
+    <string name="available_translations_title">Доступные переводы</string>
+    <string name="tanzil_non_commercial_notice">Переводы, предоставленные через Tanzil.net, распространяются для некоммерческого образовательного использования.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Аудио чтения</string>
+    <string name="audio_reciter_label">Чтец по умолчанию</string>
+    <string name="audio_wifi_only">Загружать только по Wi-Fi</string>
+    <string name="audio_wifi_only_desc">Не загружать большие файлы по мобильной сети</string>
+    <string name="audio_bismillah_prefix">Воспроизводить Басмалу перед сурой</string>
+    <string name="audio_bismillah_prefix_desc">Воспроизводить аудио Басмалы перед сурой (кроме сур 1 и 9)</string>
+    <string name="audio_follow">Следовать за аудио автоматически</string>
+    <string name="audio_follow_desc">Прокручивать к текущему аяту во время воспроизведения</string>
+    <string name="audio_manage_downloads">Управление загрузками</string>
+    <string name="audio_manage_downloads_desc">Хранилище и загруженные суры</string>
+    <string name="reciter_picker_title">Выбор чтеца</string>
+    <string name="play_sample">Прослушать отрывок</string>
+    <string name="stop_sample">Остановить отрывок</string>
+    <string name="audio_sheet_title">Аудио · %1$s</string>
+    <string name="audio_sheet_reciter">Чтец: %1$s</string>
+    <string name="audio_choose_reciter">Выбрать другого чтеца</string>
+    <string name="audio_download">Загрузить</string>
+    <string name="audio_downloading">Загрузка…</string>
+    <string name="audio_queued">В очереди…</string>
+    <string name="audio_download_details">Аятов: %1$d · %2$d кбит/с</string>
+    <string name="audio_download_completed">Загружено</string>
+    <string name="audio_play_button">Слушать чтение</string>
+    <string name="audio_delete_surah">Удалить аудио</string>
+    <string name="audio_delete_surah_confirm">Удалить загруженное чтение этой суры?</string>
+    <string name="audio_delete_all_reciter">Удалить все для этого чтеца</string>
+    <string name="audio_delete_all_reciter_confirm">Удалить все загруженные суры для %1$s?</string>
+    <string name="audio_storage_used">Занято аудио: %1$s</string>
+    <string name="audio_storage_note">Файлы хранятся во внутреннем хранилище приложения и удаляются вместе с ним.</string>
+    <string name="audio_downloads_empty">Загруженных чтений пока нет</string>
+    <string name="audio_downloads_empty_desc">Загрузите чтение сур, чтобы слушать без интернета в любое время.</string>
+    <string name="audio_error_not_enough_storage">Недостаточно места (нужно не менее 150 МБ)</string>
+    <string name="audio_error_download_failed">Не удалось загрузить. Проверьте соединение и повторите попытку.</string>
+    <string name="audio_error_recitation_unavailable">Это чтение недоступно</string>
+    <string name="audio_mobile_data_warning_title">Загружать по мобильной сети?</string>
+    <string name="audio_mobile_data_warning_desc">Аудиофайлы могут быть большими. Загрузить по мобильной сети?</string>
+    <string name="audio_download_now">Загрузить сейчас</string>
+    <string name="audio_download_channel_name">Загрузки аудио</string>
+    <string name="audio_download_channel_desc">Показывает ход загрузки аудио чтения</string>
+    <string name="audio_downloading_format">Загрузка: %1$s</string>
+    <string name="now_playing">Сейчас играет</string>
+    <string name="play_from_here">Играть отсюда</string>
+    <string name="follow_audio_chip">Следовать</string>
+    <string name="following_audio_chip">Следую</string>
+    <string name="player_surah_title_format">Сура %1$s</string>
+    <string name="player_ayah_of_format">Аят %1$s / %2$s</string>
+    <string name="player_change_reciter">Сменить</string>
+    <string name="audio_repeat_off">Повтор: выкл.</string>
+    <string name="audio_repeat_ayah">Повтор: аят</string>
+    <string name="audio_repeat_surah">Повтор: сура</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Некоторые аудиофайлы отсутствуют. Загрузить снова?</string>
+    <string name="recitation_audio_attribution_title">Аудио чтения</string>
+    <string name="recitation_audio_attribution">Аудио предоставлено Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). Авторские права на каждое чтение принадлежат чтецу и лицензированы для бесплатного некоммерческого распространения. Приложение некоммерческое. Если чтец или правообладатель попросит удалить запись, чтение будет удалено.</string>
+    <string name="fast_scroll_verse">Аят %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Воспроизведение чтения</string>
+    <string name="audio_title">Аудио чтения</string>
+    <string name="ayah_copied">Аят скопирован в буфер обмена</string>
+    <string name="shared_via_app">Отправлено через приложение Quran Sharif</string>
+    <string name="enter_ayah_number">Введите номер аята</string>
+    <string name="nav_sub_appearance">Тема</string>
+    <string name="nav_sub_language">Язык приложения</string>
+    <string name="nav_sub_reading">Перевод, размер текста, аудио, прокрутка</string>
+    <string name="nav_sub_widget">Размер текста, обновление, предпросмотр</string>
+    <string name="nav_sub_data">Сброс прогресса, закладки</string>
+    <string name="nav_sub_audio">Чтец, загрузки</string>
+
+    <!-- Language menu, translations and credits -->
     <string name="menu_app_language">Язык приложения</string>
     <string name="menu_translation_language">Язык перевода</string>
     <string name="tr_close">Закрыть</string>
-    <string name="retry">Повторить</string>
-    <string name="audio_download">Скачать</string>
-    <string name="audio_downloading">Скачивание…</string>
-    <string name="audio_play_button">Воспроизвести чтение</string>
-    <string name="now_playing">Сейчас играет</string>
-    <string name="reciter_picker_title">Выбрать чтеца</string>
-    <string name="follow_audio_chip">Следовать</string>
-    <string name="following_audio_chip">Следование</string>
-    <string name="player_surah_title_format">Сура %1$s</string>
-    <string name="player_ayah_of_format">Аят %1$s / %2$s</string>
-    <string name="language_system">Как в системе</string>
+    <string name="tr_title">Язык перевода</string>
+    <string name="tr_installed_section">На этом телефоне</string>
+    <string name="tr_languages_section">Доступные языки</string>
+    <string name="tr_count_format">Переводов: %1$d</string>
+    <string name="tr_loading">Загрузка переводов…</string>
+    <string name="tr_load_failed">Не удалось загрузить список. Проверьте интернет и повторите попытку.</string>
+    <string name="tr_retry">Повторить</string>
+    <string name="tr_download">Загрузить</string>
+    <string name="tr_use">Выбрать</string>
+    <string name="tr_in_use">Используется</string>
+    <string name="tr_downloading_format">Загрузка… %1$d%%</string>
+    <string name="tr_failed_format">Ошибка загрузки: %1$s</string>
+    <string name="tr_version_format">Версия %1$s</string>
+    <string name="tr_source_line">Источник: QuranEnc.com</string>
+    <string name="tr_restart_title">Перезапуск для применения</string>
+    <string name="tr_restart_message">Для применения %1$s нужно перезапустить приложение. Оно закроется и снова откроется с этим переводом.</string>
+    <string name="tr_restart">Перезапустить</string>
+    <string name="tr_later">Позже</string>
+    <string name="settings_credits">Авторы</string>
+    <string name="settings_credits_sub">Переводчики, издатели и источники</string>
+    <string name="credits_page_title">Авторы</string>
+    <string name="credits_section_sources">Источники</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Переводы, которые вы загружаете, берутся с QuranEnc.com (Энциклопедия Корана). Каждый перевод принадлежит своему переводчику и издателю.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Арабский текст Корана и встроенные бенгальские переводы (Muhiuddin Khan и Zohurul Hoque) взяты с tanzil.net для некоммерческого использования.</string>
+    <string name="credits_audio_title">Аудио чтения</string>
+    <string name="credits_audio_body">Аудио чтения аят за аятом предоставлено cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Загруженные переводы</string>
+    <string name="credits_none_downloaded">Ни один перевод ещё не загружен.</string>
 </resources>

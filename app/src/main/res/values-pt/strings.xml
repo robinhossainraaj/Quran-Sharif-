@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Início</string>
+    <string name="nav_quran">Alcorão</string>
+    <string name="nav_bookmarks">Favoritos</string>
+    <string name="nav_settings">Definições</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">Aia do momento</string>
+    <string name="continue_reading">Continuar a ler</string>
+    <string name="quick_links">Acesso rápido</string>
+    <string name="surah_list_card">Lista de suras</string>
+    <string name="surah_list_desc">Explore as 114 suras</string>
+    <string name="juz_list_card">Lista de juz / para</string>
+    <string name="juz_list_desc">Explore pelos 30 juz</string>
+    <string name="read_surah">Ler sura</string>
+    <string name="refresh_ayah">Nova aia</string>
+    <string name="last_read_reference">Sura %1$s · Aia %2$s</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">Sura</string>
+    <string name="tab_juz">Juz</string>
+    <string name="meccan">Mequense</string>
+    <string name="medinan">Medinense</string>
+    <string name="ayah_count_format">%1$s aias</string>
+    <string name="juz_format">Juz %1$s</string>
+    <string name="juz_starts_at">Começa em %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">Ir para a aia…</string>
+    <string name="bookmark_surah_start">Marcar início da sura</string>
+    <string name="go_to_ayah_dialog_title">Ir para a aia</string>
+    <string name="ayah_number_hint">Digite o número da aia (1–%1$d)</string>
+    <string name="go_button">Ir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ayah_out_of_range">Digite um número de aia válido</string>
+    <string name="share_ayah">Partilhar aia</string>
+    <string name="copy_ayah">Copiar aia</string>
+    <string name="copied_to_clipboard">Aia copiada para a área de transferência</string>
+    <string name="surah_bookmarked">Início da sura marcado</string>
+    <string name="bookmark_added">Aia guardada nos favoritos</string>
+    <string name="bookmark_removed">Favorito removido</string>
+    <string name="undo">Desfazer</string>
+
+    <!-- Search -->
+    <string name="search_hint">Pesquise em bengali, árabe ou ex.: 2:255</string>
+    <string name="search_initial_hint">Pesquise pela tradução em bengali, texto árabe (sem diacríticos) ou referência como 2:255 ou ২:২৫৫.</string>
+    <string name="search_no_results">Nenhuma aia correspondente encontrada.</string>
+    <string name="search_go_to_reference">Ir para a sura %1$s, aia %2$s</string>
+    <string name="search_title">Pesquisar</string>
+    <string name="search_no_results_hint">Verifique se escreveu a palavra corretamente.</string>
+    <string name="searching">A pesquisar…</string>
+    <string name="search_results_count">%1$d aias encontradas</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">Favoritos</string>
+    <string name="bookmarks_empty">Ainda não há favoritos guardados</string>
+    <string name="bookmarks_empty_desc">Toque no ícone de favorito em qualquer aia durante a leitura para a guardar aqui e aceder rapidamente.</string>
+    <string name="delete_all_bookmarks">Eliminar todos os favoritos</string>
+    <string name="delete_all_confirm_title">Eliminar todos os favoritos?</string>
+    <string name="delete_all_confirm_desc">Isto irá remover permanentemente todos os favoritos guardados.</string>
+    <string name="delete">Eliminar</string>
+    <string name="all_bookmarks_deleted">Todos os favoritos eliminados</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Definições</string>
+    <string name="section_appearance">Aparência</string>
+    <string name="theme_label">Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="language_label">Idioma (ভাষা)</string>
+    <string name="language_system">Predefinição do sistema</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">Preferências de leitura</string>
+    <string name="arabic_font_size">Tamanho do texto árabe</string>
+    <string name="bangla_font_size">Tamanho do texto bengali</string>
+    <string name="show_bangla_translation">Mostrar tradução em bengali</string>
+    <string name="use_bangla_digits">Usar dígitos bengalis (১, ২, ৩)</string>
+    <string name="keep_screen_on">Manter o ecrã ligado durante a leitura</string>
+    <string name="preview_label">Pré-visualização</string>
+
+    <string name="section_widget">Widget do ecrã inicial</string>
+    <string name="widget_refresh_on_screen_on">Mudar a aia do widget quando o ecrã liga</string>
+    <string name="widget_refresh_helper">Usa uma pequena notificação silenciosa para que o Android mantenha isto ativo.</string>
+    <string name="battery_optimization_settings">Definições de otimização da bateria</string>
+    <string name="battery_optimization_helper">Algumas marcas de telemóveis (Xiaomi, Oppo, Vivo, Huawei, Samsung) param os serviços em segundo plano; defina a app como \'Sem restrições\' se o widget não mudar.</string>
+    <string name="refresh_widget_now">Atualizar widget agora</string>
+    <string name="widget_refreshed">Widget atualizado com uma nova aia</string>
+    <string name="notification_permission_title">Permissão de notificações</string>
+    <string name="notification_permission_desc">O Android exige a permissão de notificações para que o serviço silencioso em segundo plano possa atualizar o widget quando o ecrã liga.</string>
+    <string name="grant_permission">Permitir</string>
+
+    <string name="section_data">Dados</string>
+    <string name="reset_reading_progress">Repor progresso de leitura</string>
+    <string name="reset_reading_confirm_title">Repor o progresso de leitura?</string>
+    <string name="reset_reading_confirm_desc">O seu favorito de «Continuar a ler» voltará ao início.</string>
+    <string name="reset">Repor</string>
+    <string name="progress_reset_done">Progresso de leitura reposto</string>
+    <string name="about_app">Sobre o Quran Sharif</string>
+
+    <!-- About -->
+    <string name="about_title">Sobre</string>
+    <string name="offline_badge">100% offline • Sem internet • Privacidade em primeiro lugar</string>
+    <string name="offline_description">O texto do Alcorão e as traduções funcionam totalmente offline. A internet só é usada para pré-visualizar e transferir o áudio das recitações. Não são recolhidos dados pessoais.</string>
+    <string name="source_authenticity">O texto do Alcorão é apresentado exatamente como fornecido pela fonte, sem modificações.</string>
+    <string name="credits_title">Créditos e fontes</string>
+    <string name="tanzil_credit">Texto do Alcorão: Tanzil Project</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Copiar link</string>
+    <string name="tanzil_copied">Link copiado para a área de transferência</string>
+    <string name="translation_credit">Tradução em bengali: Muhiuddin Khan (via Tanzil Project)</string>
+    <string name="font_amiri_credit">Fonte árabe: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">Fonte bengali: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">Versão %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">A preparar os dados do Alcorão… %1$d/114</string>
+    <string name="import_failed">Falha ao preparar os dados do Alcorão.</string>
+    <string name="import_tagline">Ler  •  Ouvir  •  Aprender</string>
+    <string name="retry">Tentar novamente</string>
+    <string name="checking_data">A verificar os dados do Alcorão…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Aia aleatória</string>
+    <string name="widget_description">Mostra no ecrã inicial uma aia aleatória do Alcorão em árabe e bengali.</string>
+    <string name="widget_open_app_prompt">Abra o Quran Sharif para concluir a configuração</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Serviço de atualização do widget</string>
+    <string name="notification_channel_desc">Mantém o widget atualizado ao desbloquear o ecrã.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">O widget do Quran Sharif está ativo</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Tradução em bengali</string>
+    <string name="select_translation_dialog_title">Selecionar tradução em bengali</string>
+    <string name="translation_sample_ayah">Pré-visualização (112:1):</string>
+    <string name="translation_updated">Tradução atualizada</string>
+    <string name="translation_by_format">Traduzido por %1$s</string>
+    <string name="widget_arabic_size">Tamanho do texto árabe do widget</string>
+    <string name="widget_translation_size">Tamanho do texto bengali do widget</string>
+    <string name="widget_text_size_reset">Repor tamanho do texto do widget</string>
+    <string name="widget_preview_title">Pré-visualização do widget</string>
+    <string name="widget_resize_hint">Aumente o widget no ecrã inicial se o texto grande não couber.</string>
+    <string name="available_translations_title">Traduções disponíveis</string>
+    <string name="tanzil_non_commercial_notice">As traduções fornecidas através do Tanzil.net são distribuídas para uso educativo não comercial.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Áudio de recitação</string>
+    <string name="audio_reciter_label">Recitador predefinido</string>
+    <string name="audio_wifi_only">Transferir só por Wi-Fi</string>
+    <string name="audio_wifi_only_desc">Evita transferências grandes com dados móveis</string>
+    <string name="audio_bismillah_prefix">Reproduzir a Bismillah antes da sura</string>
+    <string name="audio_bismillah_prefix_desc">Reproduz o áudio da Bismillah antes da sura (exceto as suras 1 e 9)</string>
+    <string name="audio_follow">Acompanhar o áudio automaticamente</string>
+    <string name="audio_follow_desc">Desloca a aia para a vista enquanto o áudio toca</string>
+    <string name="audio_manage_downloads">Gerir transferências</string>
+    <string name="audio_manage_downloads_desc">Veja o armazenamento e gira as suras transferidas</string>
+    <string name="reciter_picker_title">Selecionar recitador</string>
+    <string name="play_sample">Ouvir amostra</string>
+    <string name="stop_sample">Parar amostra</string>
+    <string name="audio_sheet_title">Áudio · %1$s</string>
+    <string name="audio_sheet_reciter">Recitador: %1$s</string>
+    <string name="audio_choose_reciter">Escolher outro recitador</string>
+    <string name="audio_download">Transferir</string>
+    <string name="audio_downloading">A transferir…</string>
+    <string name="audio_queued">Em fila…</string>
+    <string name="audio_download_details">%1$d aias · %2$d kbps</string>
+    <string name="audio_download_completed">Transferido</string>
+    <string name="audio_play_button">Reproduzir recitação</string>
+    <string name="audio_delete_surah">Eliminar áudio</string>
+    <string name="audio_delete_surah_confirm">Eliminar a recitação transferida desta sura?</string>
+    <string name="audio_delete_all_reciter">Eliminar tudo deste recitador</string>
+    <string name="audio_delete_all_reciter_confirm">Eliminar todas as suras transferidas de %1$s?</string>
+    <string name="audio_storage_used">Armazenamento de áudio usado: %1$s</string>
+    <string name="audio_storage_note">Os ficheiros ficam no armazenamento próprio desta app e são removidos se a desinstalar.</string>
+    <string name="audio_downloads_empty">Ainda não há recitações transferidas</string>
+    <string name="audio_downloads_empty_desc">Transfira recitações de suras para ouvir offline a qualquer momento.</string>
+    <string name="audio_error_not_enough_storage">Armazenamento insuficiente (são necessários pelo menos 150 MB)</string>
+    <string name="audio_error_download_failed">Falha na transferência. Verifique a ligação e tente novamente.</string>
+    <string name="audio_error_recitation_unavailable">Esta recitação não está disponível</string>
+    <string name="audio_mobile_data_warning_title">Transferir com dados móveis?</string>
+    <string name="audio_mobile_data_warning_desc">Os ficheiros de áudio podem ser grandes. Quer transferir com dados móveis?</string>
+    <string name="audio_download_now">Transferir agora</string>
+    <string name="audio_download_channel_name">Transferências de áudio</string>
+    <string name="audio_download_channel_desc">Mostra o progresso da transferência do áudio de recitação</string>
+    <string name="audio_downloading_format">A transferir %1$s</string>
+    <string name="now_playing">A reproduzir</string>
+    <string name="play_from_here">Reproduzir a partir daqui</string>
+    <string name="follow_audio_chip">Acompanhar</string>
+    <string name="following_audio_chip">A acompanhar</string>
+    <string name="player_surah_title_format">Sura %1$s</string>
+    <string name="player_ayah_of_format">Aia %1$s / %2$s</string>
+    <string name="player_change_reciter">Alterar</string>
+    <string name="audio_repeat_off">Repetir: Desligado</string>
+    <string name="audio_repeat_ayah">Repetir: Aia</string>
+    <string name="audio_repeat_surah">Repetir: Sura</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Faltam alguns ficheiros de áudio. Transferir novamente?</string>
+    <string name="recitation_audio_attribution_title">Áudio de recitação</string>
+    <string name="recitation_audio_attribution">O áudio é fornecido pelo Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). Os direitos de autor de cada recitação pertencem ao recitador, licenciados para redistribuição gratuita e não comercial. Esta app não tem fins lucrativos. Se um recitador ou titular de direitos pedir a remoção, a recitação será removida.</string>
+    <string name="fast_scroll_verse">Aia %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">A reproduzir recitação</string>
+    <string name="audio_title">Áudio de recitação</string>
+    <string name="ayah_copied">Aia copiada para a área de transferência</string>
+    <string name="shared_via_app">Partilhado através da app Quran Sharif</string>
+    <string name="enter_ayah_number">Digite o número da aia</string>
+    <string name="nav_sub_appearance">Tema</string>
+    <string name="nav_sub_language">Idioma da app</string>
+    <string name="nav_sub_reading">Tradução, tamanho do texto, áudio, deslocamento</string>
+    <string name="nav_sub_widget">Tamanho do texto, atualização, pré-visualização</string>
+    <string name="nav_sub_data">Repor progresso, favoritos</string>
+    <string name="nav_sub_audio">Recitador, transferências</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">Idioma da app</string>
+    <string name="menu_translation_language">Idioma da tradução</string>
+    <string name="tr_close">Fechar</string>
+    <string name="tr_title">Idioma da tradução</string>
+    <string name="tr_installed_section">Neste telemóvel</string>
+    <string name="tr_languages_section">Idiomas disponíveis</string>
+    <string name="tr_count_format">%1$d traduções</string>
+    <string name="tr_loading">A carregar traduções…</string>
+    <string name="tr_load_failed">Não foi possível carregar a lista. Verifique a sua internet e tente novamente.</string>
+    <string name="tr_retry">Tentar novamente</string>
+    <string name="tr_download">Transferir</string>
+    <string name="tr_use">Usar</string>
+    <string name="tr_in_use">Em uso</string>
+    <string name="tr_downloading_format">A transferir… %1$d%%</string>
+    <string name="tr_failed_format">Falha na transferência: %1$s</string>
+    <string name="tr_version_format">Versão %1$s</string>
+    <string name="tr_source_line">Fonte: QuranEnc.com</string>
+    <string name="tr_restart_title">Reinicie para aplicar</string>
+    <string name="tr_restart_message">Para aplicar %1$s é preciso reiniciar a app. A app será fechada e aberta novamente com esta tradução.</string>
+    <string name="tr_restart">Reiniciar</string>
+    <string name="tr_later">Mais tarde</string>
+    <string name="settings_credits">Créditos</string>
+    <string name="settings_credits_sub">Tradutores, editoras e fontes</string>
+    <string name="credits_page_title">Créditos</string>
+    <string name="credits_section_sources">Fontes</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">As traduções que transfere vêm do QuranEnc.com (Quran Encyclopedia). Cada tradução pertence ao seu tradutor e editora.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">O texto árabe do Alcorão e as traduções em bengali incluídas (Muhiuddin Khan e Zohurul Hoque) vêm de tanzil.net, para uso não comercial.</string>
+    <string name="credits_audio_title">Áudio de recitação</string>
+    <string name="credits_audio_body">O áudio de recitação aia por aia é fornecido por cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Traduções transferidas</string>
+    <string name="credits_none_downloaded">Ainda não foi transferida nenhuma tradução.</string>
+</resources>

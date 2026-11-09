@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">首页</string>
+    <string name="nav_quran">古兰经</string>
+    <string name="nav_bookmarks">书签</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">此刻经文</string>
+    <string name="continue_reading">继续阅读</string>
+    <string name="quick_links">快速入口</string>
+    <string name="surah_list_card">章列表</string>
+    <string name="surah_list_desc">浏览全部114章</string>
+    <string name="juz_list_card">卷（Juz）列表</string>
+    <string name="juz_list_desc">按30卷浏览</string>
+    <string name="read_surah">阅读本章</string>
+    <string name="refresh_ayah">换一节</string>
+    <string name="last_read_reference">第%1$s章 · 第%2$s节</string>
+
+    <!-- Quran Screen -->
+    <string name="tab_surah">章</string>
+    <string name="tab_juz">卷</string>
+    <string name="meccan">麦加章</string>
+    <string name="medinan">麦地那章</string>
+    <string name="ayah_count_format">%1$s节</string>
+    <string name="juz_format">第%1$s卷</string>
+    <string name="juz_starts_at">始于%1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">跳转到节…</string>
+    <string name="bookmark_surah_start">为本章开头添加书签</string>
+    <string name="go_to_ayah_dialog_title">跳转到节</string>
+    <string name="ayah_number_hint">输入节号（1–%1$d）</string>
+    <string name="go_button">前往</string>
+    <string name="cancel">取消</string>
+    <string name="ayah_out_of_range">请输入有效的节号</string>
+    <string name="share_ayah">分享经文</string>
+    <string name="copy_ayah">复制经文</string>
+    <string name="copied_to_clipboard">经文已复制到剪贴板</string>
+    <string name="surah_bookmarked">已为本章开头添加书签</string>
+    <string name="bookmark_added">经文已保存到书签</string>
+    <string name="bookmark_removed">书签已移除</string>
+    <string name="undo">撤销</string>
+
+    <!-- Search -->
+    <string name="search_hint">搜索孟加拉语、阿拉伯语或如 2:255</string>
+    <string name="search_initial_hint">可按孟加拉语译文、阿拉伯语原文（无需标音符号）或章节编号（如 2:255 或 ২:২৫৫）搜索。</string>
+    <string name="search_no_results">未找到匹配的经文。</string>
+    <string name="search_go_to_reference">前往第%1$s章第%2$s节</string>
+    <string name="search_title">搜索</string>
+    <string name="search_no_results_hint">请检查输入的词是否正确。</string>
+    <string name="searching">搜索中…</string>
+    <string name="search_results_count">找到%1$d节经文</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">书签</string>
+    <string name="bookmarks_empty">还没有保存的书签</string>
+    <string name="bookmarks_empty_desc">阅读时点按任意经文上的书签图标，即可保存到这里，方便快速查看。</string>
+    <string name="delete_all_bookmarks">删除全部书签</string>
+    <string name="delete_all_confirm_title">删除全部书签？</string>
+    <string name="delete_all_confirm_desc">这将永久移除所有已保存的书签。</string>
+    <string name="delete">删除</string>
+    <string name="all_bookmarks_deleted">已删除全部书签</string>
+
+    <!-- Settings -->
+    <string name="settings_title">设置</string>
+    <string name="section_appearance">外观</string>
+    <string name="theme_label">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="language_label">语言 (ভাষা)</string>
+    <string name="language_system">系统默认</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">阅读偏好</string>
+    <string name="arabic_font_size">阿拉伯语字号</string>
+    <string name="bangla_font_size">孟加拉语字号</string>
+    <string name="show_bangla_translation">显示孟加拉语译文</string>
+    <string name="use_bangla_digits">使用孟加拉语数字（১, ২, ৩）</string>
+    <string name="keep_screen_on">阅读时保持屏幕常亮</string>
+    <string name="preview_label">实时预览</string>
+
+    <string name="section_widget">主屏幕小组件</string>
+    <string name="widget_refresh_on_screen_on">亮屏时更换小组件经文</string>
+    <string name="widget_refresh_helper">使用一条静音的小通知，让 Android 保持其运行。</string>
+    <string name="battery_optimization_settings">电池优化设置</string>
+    <string name="battery_optimization_helper">部分手机品牌（小米、OPPO、vivo、华为、三星）会停止后台服务；如果小组件没有变化，请将本应用设为「无限制」。</string>
+    <string name="refresh_widget_now">立即刷新小组件</string>
+    <string name="widget_refreshed">小组件已刷新为新的经文</string>
+    <string name="notification_permission_title">通知权限</string>
+    <string name="notification_permission_desc">Android 需要通知权限，静音后台服务才能在亮屏时刷新小组件。</string>
+    <string name="grant_permission">允许</string>
+
+    <string name="section_data">数据</string>
+    <string name="reset_reading_progress">重置阅读进度</string>
+    <string name="reset_reading_confirm_title">重置阅读进度？</string>
+    <string name="reset_reading_confirm_desc">这将把「继续阅读」书签重置到开头。</string>
+    <string name="reset">重置</string>
+    <string name="progress_reset_done">阅读进度已重置</string>
+    <string name="about_app">关于 Quran Sharif</string>
+
+    <!-- About -->
+    <string name="about_title">关于</string>
+    <string name="offline_badge">100% 离线 • 无需网络 • 隐私优先</string>
+    <string name="offline_description">古兰经经文和译文完全可离线使用。网络仅用于试听和下载诵读音频。不收集任何个人数据。</string>
+    <string name="source_authenticity">古兰经经文完全按来源提供的内容显示，未作任何修改。</string>
+    <string name="credits_title">鸣谢与来源</string>
+    <string name="tanzil_credit">古兰经文本：Tanzil Project</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">复制链接</string>
+    <string name="tanzil_copied">链接已复制到剪贴板</string>
+    <string name="translation_credit">孟加拉语译文：Muhiuddin Khan（来自 Tanzil Project）</string>
+    <string name="font_amiri_credit">阿拉伯语字体：Amiri Quran（SIL 开放字体许可）</string>
+    <string name="font_noto_credit">孟加拉语字体：Noto Sans Bengali（SIL 开放字体许可）</string>
+    <string name="version_format">版本 %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">正在准备古兰经数据… %1$d/114</string>
+    <string name="import_failed">准备古兰经数据失败。</string>
+    <string name="import_tagline">阅读  •  聆听  •  学习</string>
+    <string name="retry">重试</string>
+    <string name="checking_data">正在检查古兰经数据…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — 随机经文</string>
+    <string name="widget_description">在主屏幕上显示一节随机的古兰经经文，附阿拉伯语和孟加拉语。</string>
+    <string name="widget_open_app_prompt">打开 Quran Sharif 完成设置</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">小组件刷新服务</string>
+    <string name="notification_channel_desc">在解锁屏幕时保持小组件更新。</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Quran Sharif 小组件已启用</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">孟加拉语译文</string>
+    <string name="select_translation_dialog_title">选择孟加拉语译文</string>
+    <string name="translation_sample_ayah">预览（112:1）：</string>
+    <string name="translation_updated">译文已更新</string>
+    <string name="translation_by_format">译者：%1$s</string>
+    <string name="widget_arabic_size">小组件阿拉伯语字号</string>
+    <string name="widget_translation_size">小组件孟加拉语字号</string>
+    <string name="widget_text_size_reset">重置小组件字号</string>
+    <string name="widget_preview_title">小组件实时预览</string>
+    <string name="widget_resize_hint">如果大字号显示不下，请在主屏幕上将小组件放大。</string>
+    <string name="available_translations_title">可用译文</string>
+    <string name="tanzil_non_commercial_notice">通过 Tanzil.net 提供的译文仅限非商业教育用途。</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">诵读音频</string>
+    <string name="audio_reciter_label">默认诵读者</string>
+    <string name="audio_wifi_only">仅在 Wi-Fi 下下载</string>
+    <string name="audio_wifi_only_desc">避免使用移动数据下载大文件</string>
+    <string name="audio_bismillah_prefix">章前播放 Bismillah</string>
+    <string name="audio_bismillah_prefix_desc">在章前播放 Bismillah 音频（第1章和第9章除外）</string>
+    <string name="audio_follow">自动跟随音频</string>
+    <string name="audio_follow_desc">音频播放时自动滚动到当前节</string>
+    <string name="audio_manage_downloads">管理下载</string>
+    <string name="audio_manage_downloads_desc">查看存储空间并管理已下载的章</string>
+    <string name="reciter_picker_title">选择诵读者</string>
+    <string name="play_sample">播放试听</string>
+    <string name="stop_sample">停止试听</string>
+    <string name="audio_sheet_title">音频 · %1$s</string>
+    <string name="audio_sheet_reciter">诵读者：%1$s</string>
+    <string name="audio_choose_reciter">选择其他诵读者</string>
+    <string name="audio_download">下载</string>
+    <string name="audio_downloading">下载中…</string>
+    <string name="audio_queued">排队中…</string>
+    <string name="audio_download_details">%1$d节 · %2$d kbps</string>
+    <string name="audio_download_completed">已下载</string>
+    <string name="audio_play_button">播放诵读</string>
+    <string name="audio_delete_surah">删除音频</string>
+    <string name="audio_delete_surah_confirm">删除本章已下载的诵读？</string>
+    <string name="audio_delete_all_reciter">删除该诵读者的全部音频</string>
+    <string name="audio_delete_all_reciter_confirm">删除%1$s已下载的全部章？</string>
+    <string name="audio_storage_used">音频已用存储：%1$s</string>
+    <string name="audio_storage_note">文件保存在本应用自己的存储空间中，卸载应用后会被删除。</string>
+    <string name="audio_downloads_empty">还没有已下载的诵读</string>
+    <string name="audio_downloads_empty_desc">下载各章诵读，随时离线收听。</string>
+    <string name="audio_error_not_enough_storage">存储空间不足（至少需要 150 MB）</string>
+    <string name="audio_error_download_failed">下载失败。请检查网络后重试。</string>
+    <string name="audio_error_recitation_unavailable">此诵读暂不可用</string>
+    <string name="audio_mobile_data_warning_title">使用移动数据下载？</string>
+    <string name="audio_mobile_data_warning_desc">音频文件可能较大。要使用移动数据下载吗？</string>
+    <string name="audio_download_now">立即下载</string>
+    <string name="audio_download_channel_name">音频下载</string>
+    <string name="audio_download_channel_desc">显示诵读音频的下载进度</string>
+    <string name="audio_downloading_format">正在下载%1$s</string>
+    <string name="now_playing">正在播放</string>
+    <string name="play_from_here">从此处播放</string>
+    <string name="follow_audio_chip">跟随</string>
+    <string name="following_audio_chip">跟随中</string>
+    <string name="player_surah_title_format">第%1$s章</string>
+    <string name="player_ayah_of_format">第%1$s节 / %2$s</string>
+    <string name="player_change_reciter">更换</string>
+    <string name="audio_repeat_off">循环：关</string>
+    <string name="audio_repeat_ayah">循环：单节</string>
+    <string name="audio_repeat_surah">循环：整章</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">部分音频文件缺失。要重新下载吗？</string>
+    <string name="recitation_audio_attribution_title">诵读音频</string>
+    <string name="recitation_audio_attribution">音频由 Al Quran Cloud / Islamic Network CDN（cdn.islamic.network）提供。每段诵读的版权归诵读者所有，并授权免费非商业再分发。本应用为非营利性质。如诵读者或权利人要求移除，相应诵读将被删除。</string>
+    <string name="fast_scroll_verse">第%1$s节</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">正在播放诵读</string>
+    <string name="audio_title">诵读音频</string>
+    <string name="ayah_copied">经文已复制到剪贴板</string>
+    <string name="shared_via_app">来自 Quran Sharif 应用的分享</string>
+    <string name="enter_ayah_number">输入节号</string>
+    <string name="nav_sub_appearance">主题</string>
+    <string name="nav_sub_language">应用语言</string>
+    <string name="nav_sub_reading">译文、字号、音频、滚动</string>
+    <string name="nav_sub_widget">字号、刷新、预览</string>
+    <string name="nav_sub_data">重置进度、书签</string>
+    <string name="nav_sub_audio">诵读者、下载</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">应用语言</string>
+    <string name="menu_translation_language">译文语言</string>
+    <string name="tr_close">关闭</string>
+    <string name="tr_title">译文语言</string>
+    <string name="tr_installed_section">本机已有</string>
+    <string name="tr_languages_section">可用语言</string>
+    <string name="tr_count_format">%1$d种译文</string>
+    <string name="tr_loading">正在加载译文…</string>
+    <string name="tr_load_failed">无法加载列表。请检查网络后重试。</string>
+    <string name="tr_retry">重试</string>
+    <string name="tr_download">下载</string>
+    <string name="tr_use">使用</string>
+    <string name="tr_in_use">使用中</string>
+    <string name="tr_downloading_format">下载中… %1$d%%</string>
+    <string name="tr_failed_format">下载失败：%1$s</string>
+    <string name="tr_version_format">版本 %1$s</string>
+    <string name="tr_source_line">来源：QuranEnc.com</string>
+    <string name="tr_restart_title">重启以应用</string>
+    <string name="tr_restart_message">应用%1$s需要重启本应用。应用将关闭并以此译文重新打开。</string>
+    <string name="tr_restart">重启</string>
+    <string name="tr_later">稍后</string>
+    <string name="settings_credits">鸣谢</string>
+    <string name="settings_credits_sub">译者、出版方和来源</string>
+    <string name="credits_page_title">鸣谢</string>
+    <string name="credits_section_sources">来源</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">您下载的译文来自 QuranEnc.com（古兰经百科）。每种译文归其译者和出版方所有。</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">阿拉伯语古兰经文本及内置的孟加拉语译文（Muhiuddin Khan 和 Zohurul Hoque）来自 tanzil.net，仅限非商业用途。</string>
+    <string name="credits_audio_title">诵读音频</string>
+    <string name="credits_audio_body">逐节诵读音频由 cdn.islamic.network（Islamic Network）提供。</string>
+    <string name="credits_section_downloaded">已下载的译文</string>
+    <string name="credits_none_downloaded">尚未下载任何译文。</string>
+</resources>

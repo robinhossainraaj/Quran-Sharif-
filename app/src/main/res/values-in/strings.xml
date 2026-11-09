@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">Beranda</string>
     <string name="nav_quran">Al-Qur\'an</string>
     <string name="nav_bookmarks">Penanda</string>
     <string name="nav_settings">Pengaturan</string>
+
+    <!-- Home -->
     <string name="ayah_of_the_moment">Ayat Saat Ini</string>
-    <string name="continue_reading">Lanjut Membaca</string>
+    <string name="continue_reading">Lanjutkan Membaca</string>
     <string name="quick_links">Akses Cepat</string>
     <string name="surah_list_card">Daftar Surah</string>
-    <string name="surah_list_desc">Telusuri 114 surah</string>
+    <string name="surah_list_desc">Jelajahi semua 114 Surah</string>
     <string name="juz_list_card">Daftar Juz</string>
-    <string name="juz_list_desc">Telusuri 30 juz</string>
+    <string name="juz_list_desc">Jelajahi menurut 30 Juz</string>
+    <string name="read_surah">Baca Surah</string>
     <string name="refresh_ayah">Ayat Baru</string>
     <string name="last_read_reference">Surah %1$s · Ayat %2$s</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">Surah</string>
     <string name="tab_juz">Juz</string>
     <string name="meccan">Makkiyah</string>
     <string name="medinan">Madaniyah</string>
     <string name="ayah_count_format">%1$s ayat</string>
     <string name="juz_format">Juz %1$s</string>
+    <string name="juz_starts_at">Dimulai dari %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
     <string name="go_to_ayah">Ke ayat…</string>
+    <string name="bookmark_surah_start">Tandai awal surah</string>
     <string name="go_to_ayah_dialog_title">Ke Ayat</string>
+    <string name="ayah_number_hint">Masukkan nomor ayat (1–%1$d)</string>
     <string name="go_button">Pergi</string>
     <string name="cancel">Batal</string>
+    <string name="ayah_out_of_range">Masukkan nomor ayat yang valid</string>
     <string name="share_ayah">Bagikan Ayat</string>
     <string name="copy_ayah">Salin Ayat</string>
     <string name="copied_to_clipboard">Ayat disalin ke papan klip</string>
-    <string name="ayah_copied">Ayat disalin ke papan klip</string>
+    <string name="surah_bookmarked">Awal surah ditandai</string>
     <string name="bookmark_added">Ayat disimpan ke penanda</string>
     <string name="bookmark_removed">Penanda dihapus</string>
     <string name="undo">Urungkan</string>
-    <string name="search_title">Cari</string>
-    <string name="searching">Mencari…</string>
+
+    <!-- Search -->
+    <string name="search_hint">Cari Bangla, Arab, atau mis. 2:255</string>
+    <string name="search_initial_hint">Cari berdasarkan terjemahan Bangla, teks Arab (tanpa harakat), atau rujukan seperti 2:255 atau ২:২৫৫.</string>
     <string name="search_no_results">Tidak ada ayat yang cocok.</string>
+    <string name="search_go_to_reference">Ke Surah %1$s, Ayat %2$s</string>
+    <string name="search_title">Cari</string>
+    <string name="search_no_results_hint">Periksa apakah kata yang Anda ketik sudah benar.</string>
+    <string name="searching">Mencari…</string>
+    <string name="search_results_count">Ditemukan %1$d ayat</string>
+
+    <!-- Bookmarks -->
     <string name="bookmarks_title">Penanda</string>
     <string name="bookmarks_empty">Belum ada penanda tersimpan</string>
+    <string name="bookmarks_empty_desc">Ketuk ikon penanda pada ayat mana pun saat membaca untuk menyimpannya di sini agar mudah diakses.</string>
+    <string name="delete_all_bookmarks">Hapus semua penanda</string>
+    <string name="delete_all_confirm_title">Hapus Semua Penanda?</string>
+    <string name="delete_all_confirm_desc">Semua penanda yang tersimpan akan dihapus secara permanen.</string>
     <string name="delete">Hapus</string>
+    <string name="all_bookmarks_deleted">Semua penanda dihapus</string>
+
+    <!-- Settings -->
     <string name="settings_title">Pengaturan</string>
     <string name="section_appearance">Tampilan</string>
     <string name="theme_label">Tema</string>
     <string name="theme_system">Sistem</string>
     <string name="theme_light">Terang</string>
     <string name="theme_dark">Gelap</string>
+    <string name="language_label">Bahasa (ভাষা)</string>
+    <string name="language_system">Default Sistem</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
     <string name="section_reading">Preferensi Membaca</string>
+    <string name="arabic_font_size">Ukuran Teks Arab</string>
+    <string name="bangla_font_size">Ukuran Teks Bangla</string>
+    <string name="show_bangla_translation">Tampilkan terjemahan Bangla</string>
+    <string name="use_bangla_digits">Gunakan angka Bangla (১, ২, ৩)</string>
+    <string name="keep_screen_on">Biarkan layar menyala saat membaca</string>
+    <string name="preview_label">Pratinjau Langsung</string>
+
     <string name="section_widget">Widget Layar Utama</string>
+    <string name="widget_refresh_on_screen_on">Ganti ayat widget saat layar menyala</string>
+    <string name="widget_refresh_helper">Menggunakan notifikasi senyap kecil agar Android tetap menjalankannya.</string>
+    <string name="battery_optimization_settings">Pengaturan optimalisasi baterai</string>
+    <string name="battery_optimization_helper">Beberapa merek ponsel (Xiaomi, Oppo, Vivo, Huawei, Samsung) menghentikan layanan latar belakang; atur aplikasi ke \'Tanpa batasan\' jika widget tidak berganti.</string>
+    <string name="refresh_widget_now">Segarkan widget sekarang</string>
+    <string name="widget_refreshed">Widget disegarkan dengan ayat baru</string>
+    <string name="notification_permission_title">Izin Notifikasi</string>
+    <string name="notification_permission_desc">Android memerlukan izin notifikasi agar layanan latar belakang senyap dapat menyegarkan widget saat layar menyala.</string>
+    <string name="grant_permission">Izinkan</string>
+
     <string name="section_data">Data</string>
-    <string name="section_audio">Audio Bacaan</string>
+    <string name="reset_reading_progress">Atur ulang progres membaca</string>
+    <string name="reset_reading_confirm_title">Atur Ulang Progres Membaca?</string>
+    <string name="reset_reading_confirm_desc">Penanda lanjutkan membaca Anda akan dikembalikan ke awal.</string>
+    <string name="reset">Atur Ulang</string>
+    <string name="progress_reset_done">Progres membaca diatur ulang</string>
+    <string name="about_app">Tentang Quran Sharif</string>
+
+    <!-- About -->
     <string name="about_title">Tentang</string>
-    <string name="menu_app_language">Bahasa aplikasi</string>
-    <string name="menu_translation_language">Bahasa terjemahan</string>
-    <string name="tr_close">Tutup</string>
-    <string name="retry">Coba lagi</string>
+    <string name="offline_badge">100% Offline • Tanpa Internet • Privasi Utama</string>
+    <string name="offline_description">Teks Al-Qur\'an dan terjemahan berfungsi sepenuhnya offline. Internet hanya digunakan untuk pratinjau dan mengunduh audio bacaan. Tidak ada data pribadi yang dikumpulkan.</string>
+    <string name="source_authenticity">Teks Al-Qur\'an ditampilkan persis seperti dari sumbernya, tanpa perubahan.</string>
+    <string name="credits_title">Kredit dan Sumber</string>
+    <string name="tanzil_credit">Teks Al-Qur\'an: Proyek Tanzil</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Salin Tautan</string>
+    <string name="tanzil_copied">Tautan disalin ke papan klip</string>
+    <string name="translation_credit">Terjemahan Bengali: Muhiuddin Khan (melalui Proyek Tanzil)</string>
+    <string name="font_amiri_credit">Font Arab: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">Font Bengali: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">Versi %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Menyiapkan data Al-Qur\'an… %1$d/114</string>
+    <string name="import_failed">Gagal menyiapkan data Al-Qur\'an.</string>
+    <string name="import_tagline">Baca  •  Dengarkan  •  Pelajari</string>
+    <string name="retry">Coba Lagi</string>
+    <string name="checking_data">Memeriksa data Al-Qur\'an…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Ayat Acak</string>
+    <string name="widget_description">Menampilkan ayat Al-Qur\'an acak dengan teks Arab dan Bangla di layar utama Anda.</string>
+    <string name="widget_open_app_prompt">Buka Quran Sharif untuk menyelesaikan penyiapan</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Layanan Penyegaran Widget</string>
+    <string name="notification_channel_desc">Menjaga pembaruan widget saat layar dibuka.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Widget Quran Sharif aktif</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Terjemahan Bangla</string>
+    <string name="select_translation_dialog_title">Pilih Terjemahan Bangla</string>
+    <string name="translation_sample_ayah">Pratinjau (112:1):</string>
+    <string name="translation_updated">Terjemahan diperbarui</string>
+    <string name="translation_by_format">Diterjemahkan oleh %1$s</string>
+    <string name="widget_arabic_size">Ukuran Teks Arab Widget</string>
+    <string name="widget_translation_size">Ukuran Teks Bangla Widget</string>
+    <string name="widget_text_size_reset">Atur ulang ukuran teks widget</string>
+    <string name="widget_preview_title">Pratinjau Langsung Widget</string>
+    <string name="widget_resize_hint">Perbesar widget di layar utama jika teks besar tidak muat.</string>
+    <string name="available_translations_title">Terjemahan Tersedia</string>
+    <string name="tanzil_non_commercial_notice">Terjemahan yang disediakan melalui Tanzil.net didistribusikan untuk keperluan pendidikan nonkomersial.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Audio Bacaan</string>
+    <string name="audio_reciter_label">Qari Default</string>
+    <string name="audio_wifi_only">Unduh hanya lewat Wi-Fi</string>
+    <string name="audio_wifi_only_desc">Hindari unduhan besar lewat data seluler</string>
+    <string name="audio_bismillah_prefix">Putar Bismillah sebelum surah</string>
+    <string name="audio_bismillah_prefix_desc">Putar audio Bismillah sebelum surah (kecuali Surah 1 &amp; 9)</string>
+    <string name="audio_follow">Ikuti audio otomatis</string>
+    <string name="audio_follow_desc">Gulir ayat ke tampilan saat audio diputar</string>
+    <string name="audio_manage_downloads">Kelola Unduhan</string>
+    <string name="audio_manage_downloads_desc">Lihat penyimpanan dan kelola surah yang diunduh</string>
+    <string name="reciter_picker_title">Pilih Qari</string>
+    <string name="play_sample">Putar contoh</string>
+    <string name="stop_sample">Hentikan contoh</string>
+    <string name="audio_sheet_title">Audio · %1$s</string>
+    <string name="audio_sheet_reciter">Qari: %1$s</string>
+    <string name="audio_choose_reciter">Pilih qari lain</string>
     <string name="audio_download">Unduh</string>
     <string name="audio_downloading">Mengunduh…</string>
+    <string name="audio_queued">Mengantre…</string>
+    <string name="audio_download_details">%1$d ayat · %2$d kbps</string>
+    <string name="audio_download_completed">Terunduh</string>
     <string name="audio_play_button">Putar bacaan</string>
+    <string name="audio_delete_surah">Hapus audio</string>
+    <string name="audio_delete_surah_confirm">Hapus bacaan yang diunduh untuk surah ini?</string>
+    <string name="audio_delete_all_reciter">Hapus semua untuk qari ini</string>
+    <string name="audio_delete_all_reciter_confirm">Hapus semua surah yang diunduh untuk %1$s?</string>
+    <string name="audio_storage_used">Penyimpanan Audio Terpakai: %1$s</string>
+    <string name="audio_storage_note">File disimpan di penyimpanan internal aplikasi ini dan akan terhapus jika aplikasi dicopot.</string>
+    <string name="audio_downloads_empty">Belum ada bacaan yang diunduh</string>
+    <string name="audio_downloads_empty_desc">Unduh bacaan surah untuk didengarkan offline kapan saja.</string>
+    <string name="audio_error_not_enough_storage">Penyimpanan tidak cukup (minimal 150 MB)</string>
+    <string name="audio_error_download_failed">Unduhan gagal. Periksa koneksi dan coba lagi.</string>
+    <string name="audio_error_recitation_unavailable">Bacaan ini tidak tersedia</string>
+    <string name="audio_mobile_data_warning_title">Unduh lewat data seluler?</string>
+    <string name="audio_mobile_data_warning_desc">File audio bisa berukuran besar. Apakah Anda ingin mengunduh menggunakan data seluler?</string>
+    <string name="audio_download_now">Unduh Sekarang</string>
+    <string name="audio_download_channel_name">Unduhan Audio</string>
+    <string name="audio_download_channel_desc">Menampilkan progres pengunduhan audio bacaan</string>
+    <string name="audio_downloading_format">Mengunduh %1$s</string>
     <string name="now_playing">Sedang Diputar</string>
-    <string name="reciter_picker_title">Pilih Qari</string>
+    <string name="play_from_here">Putar dari sini</string>
     <string name="follow_audio_chip">Ikuti</string>
     <string name="following_audio_chip">Mengikuti</string>
     <string name="player_surah_title_format">Surah %1$s</string>
     <string name="player_ayah_of_format">Ayat %1$s / %2$s</string>
-    <string name="language_system">Bawaan Sistem</string>
+    <string name="player_change_reciter">Ganti</string>
+    <string name="audio_repeat_off">Ulangi: Mati</string>
+    <string name="audio_repeat_ayah">Ulangi: Ayat</string>
+    <string name="audio_repeat_surah">Ulangi: Surah</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Beberapa file audio hilang. Unduh lagi?</string>
+    <string name="recitation_audio_attribution_title">Audio Bacaan</string>
+    <string name="recitation_audio_attribution">Audio disediakan oleh Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). Hak cipta setiap bacaan dimiliki oleh qari, dengan lisensi redistribusi nonkomersial gratis. Aplikasi ini nirlaba. Jika qari atau pemegang hak meminta penghapusan, bacaan tersebut akan dihapus.</string>
+    <string name="fast_scroll_verse">Ayat %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Memutar Bacaan</string>
+    <string name="audio_title">Audio Bacaan</string>
+    <string name="ayah_copied">Ayat disalin ke papan klip</string>
+    <string name="shared_via_app">Dibagikan melalui aplikasi Quran Sharif</string>
+    <string name="enter_ayah_number">Masukkan nomor ayat</string>
+    <string name="nav_sub_appearance">Tema</string>
+    <string name="nav_sub_language">Bahasa aplikasi</string>
+    <string name="nav_sub_reading">Terjemahan, ukuran teks, audio, gulir</string>
+    <string name="nav_sub_widget">Ukuran teks, penyegaran, pratinjau</string>
+    <string name="nav_sub_data">Atur ulang progres, penanda</string>
+    <string name="nav_sub_audio">Qari, unduhan</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">Bahasa aplikasi</string>
+    <string name="menu_translation_language">Bahasa terjemahan</string>
+    <string name="tr_close">Tutup</string>
+    <string name="tr_title">Bahasa terjemahan</string>
+    <string name="tr_installed_section">Di ponsel ini</string>
+    <string name="tr_languages_section">Bahasa tersedia</string>
+    <string name="tr_count_format">%1$d terjemahan</string>
+    <string name="tr_loading">Memuat terjemahan…</string>
+    <string name="tr_load_failed">Daftar tidak dapat dimuat. Periksa internet Anda dan coba lagi.</string>
+    <string name="tr_retry">Coba lagi</string>
+    <string name="tr_download">Unduh</string>
+    <string name="tr_use">Gunakan</string>
+    <string name="tr_in_use">Digunakan</string>
+    <string name="tr_downloading_format">Mengunduh… %1$d%%</string>
+    <string name="tr_failed_format">Unduhan gagal: %1$s</string>
+    <string name="tr_version_format">Versi %1$s</string>
+    <string name="tr_source_line">Sumber: QuranEnc.com</string>
+    <string name="tr_restart_title">Mulai ulang untuk menerapkan</string>
+    <string name="tr_restart_message">Menerapkan %1$s memerlukan aplikasi dimulai ulang. Aplikasi akan menutup dan terbuka kembali dengan terjemahan ini.</string>
+    <string name="tr_restart">Mulai Ulang</string>
+    <string name="tr_later">Nanti</string>
+    <string name="settings_credits">Kredit</string>
+    <string name="settings_credits_sub">Penerjemah, penerbit, dan sumber</string>
+    <string name="credits_page_title">Kredit</string>
+    <string name="credits_section_sources">Sumber</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Terjemahan yang Anda unduh berasal dari QuranEnc.com (Ensiklopedia Al-Qur\'an). Setiap terjemahan dimiliki oleh penerjemah dan penerbitnya.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Teks Al-Qur\'an berbahasa Arab dan terjemahan Bengali bawaan (Muhiuddin Khan dan Zohurul Hoque) berasal dari tanzil.net, untuk penggunaan nonkomersial.</string>
+    <string name="credits_audio_title">Audio bacaan</string>
+    <string name="credits_audio_body">Audio bacaan ayat per ayat disediakan oleh cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Terjemahan yang diunduh</string>
+    <string name="credits_none_downloaded">Belum ada terjemahan yang diunduh.</string>
 </resources>

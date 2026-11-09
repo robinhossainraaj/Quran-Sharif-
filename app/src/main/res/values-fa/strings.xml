@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">خانه</string>
     <string name="nav_quran">قرآن</string>
-    <string name="nav_bookmarks">نشانه‌ها</string>
+    <string name="nav_bookmarks">نشان‌ها</string>
     <string name="nav_settings">تنظیمات</string>
-    <string name="ayah_of_the_moment">آیه لحظه</string>
-    <string name="continue_reading">ادامه مطالعه</string>
+
+    <!-- Home -->
+    <string name="ayah_of_the_moment">آیهٔ لحظه</string>
+    <string name="continue_reading">ادامهٔ مطالعه</string>
     <string name="quick_links">دسترسی سریع</string>
     <string name="surah_list_card">فهرست سوره‌ها</string>
     <string name="surah_list_desc">مرور هر ۱۱۴ سوره</string>
     <string name="juz_list_card">فهرست جزءها</string>
     <string name="juz_list_desc">مرور بر اساس ۳۰ جزء</string>
-    <string name="refresh_ayah">آیه جدید</string>
-    <string name="last_read_reference">سوره %1$s · آیه %2$s</string>
+    <string name="read_surah">خواندن سوره</string>
+    <string name="refresh_ayah">آیهٔ جدید</string>
+    <string name="last_read_reference">سورهٔ %1$s · آیهٔ %2$s</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">سوره</string>
     <string name="tab_juz">جزء</string>
     <string name="meccan">مکی</string>
     <string name="medinan">مدنی</string>
     <string name="ayah_count_format">%1$s آیه</string>
     <string name="juz_format">جزء %1$s</string>
+    <string name="juz_starts_at">شروع از %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
     <string name="go_to_ayah">رفتن به آیه…</string>
+    <string name="bookmark_surah_start">نشان‌گذاری آغاز سوره</string>
     <string name="go_to_ayah_dialog_title">رفتن به آیه</string>
+    <string name="ayah_number_hint">شمارهٔ آیه را وارد کنید (1–%1$d)</string>
     <string name="go_button">برو</string>
     <string name="cancel">لغو</string>
+    <string name="ayah_out_of_range">لطفاً شمارهٔ آیهٔ معتبر وارد کنید</string>
     <string name="share_ayah">اشتراک‌گذاری آیه</string>
     <string name="copy_ayah">کپی آیه</string>
     <string name="copied_to_clipboard">آیه در کلیپ‌بورد کپی شد</string>
-    <string name="ayah_copied">آیه در کلیپ‌بورد کپی شد</string>
-    <string name="bookmark_added">آیه در نشانه‌ها ذخیره شد</string>
-    <string name="bookmark_removed">نشانه حذف شد</string>
+    <string name="surah_bookmarked">آغاز سوره نشان‌گذاری شد</string>
+    <string name="bookmark_added">آیه در نشان‌ها ذخیره شد</string>
+    <string name="bookmark_removed">نشان حذف شد</string>
     <string name="undo">بازگردانی</string>
+
+    <!-- Search -->
+    <string name="search_hint">جستجو به بنگالی، عربی یا مثلاً 2:255</string>
+    <string name="search_initial_hint">با ترجمهٔ بنگالی، متن عربی (بدون اعراب) یا نشانی مانند 2:255 یا ২:২৫৫ جستجو کنید.</string>
+    <string name="search_no_results">آیهٔ مطابقی پیدا نشد.</string>
+    <string name="search_go_to_reference">رفتن به سورهٔ %1$s، آیهٔ %2$s</string>
     <string name="search_title">جستجو</string>
+    <string name="search_no_results_hint">بررسی کنید که کلمه را درست نوشته باشید.</string>
     <string name="searching">در حال جستجو…</string>
-    <string name="search_no_results">آیه‌ای مطابق یافت نشد.</string>
-    <string name="bookmarks_title">نشانه‌ها</string>
-    <string name="bookmarks_empty">هنوز نشانه‌ای ذخیره نشده</string>
+    <string name="search_results_count">%1$d آیه پیدا شد</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_title">نشان‌ها</string>
+    <string name="bookmarks_empty">هنوز نشانی ذخیره نشده است</string>
+    <string name="bookmarks_empty_desc">هنگام مطالعه روی نماد نشان در هر آیه بزنید تا برای دسترسی سریع اینجا ذخیره شود.</string>
+    <string name="delete_all_bookmarks">حذف همهٔ نشان‌ها</string>
+    <string name="delete_all_confirm_title">همهٔ نشان‌ها حذف شود؟</string>
+    <string name="delete_all_confirm_desc">این کار همهٔ نشان‌های ذخیره‌شده را برای همیشه حذف می‌کند.</string>
     <string name="delete">حذف</string>
+    <string name="all_bookmarks_deleted">همهٔ نشان‌ها حذف شد</string>
+
+    <!-- Settings -->
     <string name="settings_title">تنظیمات</string>
     <string name="section_appearance">ظاهر</string>
     <string name="theme_label">پوسته</string>
     <string name="theme_system">سیستم</string>
     <string name="theme_light">روشن</string>
     <string name="theme_dark">تیره</string>
+    <string name="language_label">زبان (ভাষা)</string>
+    <string name="language_system">پیش‌فرض سیستم</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
     <string name="section_reading">تنظیمات مطالعه</string>
-    <string name="section_widget">ابزارک صفحه اصلی</string>
+    <string name="arabic_font_size">اندازهٔ متن عربی</string>
+    <string name="bangla_font_size">اندازهٔ متن بنگالی</string>
+    <string name="show_bangla_translation">نمایش ترجمهٔ بنگالی</string>
+    <string name="use_bangla_digits">استفاده از ارقام بنگالی (১, ২, ৩)</string>
+    <string name="keep_screen_on">روشن ماندن صفحه هنگام مطالعه</string>
+    <string name="preview_label">پیش‌نمایش زنده</string>
+
+    <string name="section_widget">ویجت صفحهٔ اصلی</string>
+    <string name="widget_refresh_on_screen_on">تغییر آیهٔ ویجت هنگام روشن شدن صفحه</string>
+    <string name="widget_refresh_helper">از یک اعلان بی‌صدای کوچک استفاده می‌کند تا اندروید این سرویس را فعال نگه دارد.</string>
+    <string name="battery_optimization_settings">تنظیمات بهینه‌سازی باتری</string>
+    <string name="battery_optimization_helper">برخی برندهای گوشی (Xiaomi، Oppo، Vivo، Huawei، Samsung) سرویس‌های پس‌زمینه را متوقف می‌کنند؛ اگر ویجت تغییر نکرد، برنامه را روی «بدون محدودیت» بگذارید.</string>
+    <string name="refresh_widget_now">تازه‌سازی ویجت</string>
+    <string name="widget_refreshed">ویجت با آیهٔ جدید تازه شد</string>
+    <string name="notification_permission_title">مجوز اعلان</string>
+    <string name="notification_permission_desc">اندروید برای اینکه سرویس بی‌صدای پس‌زمینه بتواند هنگام روشن شدن صفحه ویجت را تازه کند، مجوز اعلان می‌خواهد.</string>
+    <string name="grant_permission">اجازه دادن</string>
+
     <string name="section_data">داده‌ها</string>
+    <string name="reset_reading_progress">بازنشانی پیشرفت مطالعه</string>
+    <string name="reset_reading_confirm_title">پیشرفت مطالعه بازنشانی شود؟</string>
+    <string name="reset_reading_confirm_desc">نشان «ادامهٔ مطالعه» شما به ابتدا برمی‌گردد.</string>
+    <string name="reset">بازنشانی</string>
+    <string name="progress_reset_done">پیشرفت مطالعه بازنشانی شد</string>
+    <string name="about_app">دربارهٔ Quran Sharif</string>
+
+    <!-- About -->
+    <string name="about_title">دربارهٔ برنامه</string>
+    <string name="offline_badge">۱۰۰٪ آفلاین • بدون اینترنت • حریم خصوصی در اولویت</string>
+    <string name="offline_description">متن قرآن و ترجمه‌ها کاملاً آفلاین کار می‌کنند. اینترنت فقط برای پیش‌نمایش و دانلود صوت تلاوت استفاده می‌شود. هیچ داده شخصی جمع‌آوری نمی‌شود.</string>
+    <string name="source_authenticity">متن قرآن دقیقاً همان‌گونه که از منبع دریافت شده و بدون هیچ تغییری نمایش داده می‌شود.</string>
+    <string name="credits_title">قدردانی و منابع</string>
+    <string name="tanzil_credit">متن قرآن: پروژهٔ تنزیل</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">کپی پیوند</string>
+    <string name="tanzil_copied">پیوند در کلیپ‌بورد کپی شد</string>
+    <string name="translation_credit">ترجمهٔ بنگالی: Muhiuddin Khan (از طریق پروژهٔ تنزیل)</string>
+    <string name="font_amiri_credit">قلم عربی: Amiri Quran (مجوز SIL Open Font)</string>
+    <string name="font_noto_credit">قلم بنگالی: Noto Sans Bengali (مجوز SIL Open Font)</string>
+    <string name="version_format">نسخهٔ %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">در حال آماده‌سازی داده‌های قرآن… %1$d/114</string>
+    <string name="import_failed">آماده‌سازی داده‌های قرآن ناموفق بود.</string>
+    <string name="import_tagline">بخوان  •  بشنو  •  بیاموز</string>
+    <string name="retry">تلاش دوباره</string>
+    <string name="checking_data">در حال بررسی داده‌های قرآن…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — آیهٔ تصادفی</string>
+    <string name="widget_description">یک آیهٔ تصادفی قرآن را به عربی و بنگالی روی صفحهٔ اصلی نشان می‌دهد.</string>
+    <string name="widget_open_app_prompt">برای تکمیل راه‌اندازی Quran Sharif را باز کنید</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">سرویس تازه‌سازی ویجت</string>
+    <string name="notification_channel_desc">به‌روزرسانی ویجت را هنگام باز شدن قفل صفحه حفظ می‌کند.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">ویجت Quran Sharif فعال است</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">ترجمهٔ بنگالی</string>
+    <string name="select_translation_dialog_title">انتخاب ترجمهٔ بنگالی</string>
+    <string name="translation_sample_ayah">پیش‌نمایش (112:1):</string>
+    <string name="translation_updated">ترجمه به‌روز شد</string>
+    <string name="translation_by_format">مترجم: %1$s</string>
+    <string name="widget_arabic_size">اندازهٔ متن عربی ویجت</string>
+    <string name="widget_translation_size">اندازهٔ متن بنگالی ویجت</string>
+    <string name="widget_text_size_reset">بازنشانی اندازهٔ متن ویجت</string>
+    <string name="widget_preview_title">پیش‌نمایش زندهٔ ویجت</string>
+    <string name="widget_resize_hint">اگر متن بزرگ جا نمی‌شود، ویجت را روی صفحهٔ اصلی بزرگ‌تر کنید.</string>
+    <string name="available_translations_title">ترجمه‌های موجود</string>
+    <string name="tanzil_non_commercial_notice">ترجمه‌هایی که از طریق Tanzil.net ارائه می‌شوند برای استفادهٔ آموزشی غیرتجاری منتشر شده‌اند.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
     <string name="section_audio">صوت تلاوت</string>
-    <string name="about_title">درباره</string>
+    <string name="audio_reciter_label">قاری پیش‌فرض</string>
+    <string name="audio_wifi_only">دانلود فقط با Wi-Fi</string>
+    <string name="audio_wifi_only_desc">پرهیز از دانلودهای حجیم با داده‌های همراه</string>
+    <string name="audio_bismillah_prefix">پخش بسم‌الله پیش از سوره</string>
+    <string name="audio_bismillah_prefix_desc">پخش صوت بسم‌الله پیش از سوره (به‌جز سوره‌های 1 و 9)</string>
+    <string name="audio_follow">دنبال‌کردن خودکار صوت</string>
+    <string name="audio_follow_desc">همراه با پخش صوت، آیه به نمایش می‌آید</string>
+    <string name="audio_manage_downloads">مدیریت دانلودها</string>
+    <string name="audio_manage_downloads_desc">مشاهدهٔ فضا و مدیریت سوره‌های دانلودشده</string>
+    <string name="reciter_picker_title">انتخاب قاری</string>
+    <string name="play_sample">پخش نمونه</string>
+    <string name="stop_sample">توقف نمونه</string>
+    <string name="audio_sheet_title">صوت · %1$s</string>
+    <string name="audio_sheet_reciter">قاری: %1$s</string>
+    <string name="audio_choose_reciter">انتخاب قاری دیگر</string>
+    <string name="audio_download">دانلود</string>
+    <string name="audio_downloading">در حال دانلود…</string>
+    <string name="audio_queued">در صف…</string>
+    <string name="audio_download_details">%1$d آیه · %2$d kbps</string>
+    <string name="audio_download_completed">دانلود شد</string>
+    <string name="audio_play_button">پخش تلاوت</string>
+    <string name="audio_delete_surah">حذف صوت</string>
+    <string name="audio_delete_surah_confirm">تلاوت دانلودشدهٔ این سوره حذف شود؟</string>
+    <string name="audio_delete_all_reciter">حذف همهٔ تلاوت‌های این قاری</string>
+    <string name="audio_delete_all_reciter_confirm">همهٔ سوره‌های دانلودشدهٔ %1$s حذف شوند؟</string>
+    <string name="audio_storage_used">فضای مصرفی صوت: %1$s</string>
+    <string name="audio_storage_note">فایل‌ها در فضای اختصاصی خود برنامه ذخیره می‌شوند و با حذف برنامه پاک می‌شوند.</string>
+    <string name="audio_downloads_empty">هنوز تلاوتی دانلود نشده است</string>
+    <string name="audio_downloads_empty_desc">تلاوت سوره‌ها را دانلود کنید تا هر زمان بدون اینترنت گوش دهید.</string>
+    <string name="audio_error_not_enough_storage">فضای ذخیره‌سازی کافی نیست (دست‌کم 150 MB لازم است)</string>
+    <string name="audio_error_download_failed">دانلود ناموفق بود. لطفاً اتصال را بررسی کنید و دوباره تلاش کنید.</string>
+    <string name="audio_error_recitation_unavailable">این تلاوت در دسترس نیست</string>
+    <string name="audio_mobile_data_warning_title">دانلود با داده‌های همراه؟</string>
+    <string name="audio_mobile_data_warning_desc">فایل‌های صوتی ممکن است حجیم باشند. می‌خواهید با داده‌های همراه دانلود کنید؟</string>
+    <string name="audio_download_now">اکنون دانلود کن</string>
+    <string name="audio_download_channel_name">دانلودهای صوتی</string>
+    <string name="audio_download_channel_desc">پیشرفت دانلود صوت تلاوت را نشان می‌دهد</string>
+    <string name="audio_downloading_format">در حال دانلود %1$s</string>
+    <string name="now_playing">در حال پخش</string>
+    <string name="play_from_here">پخش از اینجا</string>
+    <string name="follow_audio_chip">دنبال کن</string>
+    <string name="following_audio_chip">در حال دنبال‌کردن</string>
+    <string name="player_surah_title_format">سورهٔ %1$s</string>
+    <string name="player_ayah_of_format">آیهٔ %1$s / %2$s</string>
+    <string name="player_change_reciter">تغییر</string>
+    <string name="audio_repeat_off">تکرار: خاموش</string>
+    <string name="audio_repeat_ayah">تکرار: آیه</string>
+    <string name="audio_repeat_surah">تکرار: سوره</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">برخی فایل‌های صوتی وجود ندارند. دوباره دانلود شود؟</string>
+    <string name="recitation_audio_attribution_title">صوت تلاوت</string>
+    <string name="recitation_audio_attribution">صوت‌ها را Al Quran Cloud / Islamic Network CDN (cdn.islamic.network) ارائه می‌دهد. حق نشر هر تلاوت متعلق به قاری آن است و برای بازنشر رایگان و غیرتجاری مجاز شده است. این برنامه غیرانتفاعی است. اگر قاری یا دارندهٔ حقوق درخواست حذف کند، آن تلاوت حذف خواهد شد.</string>
+    <string name="fast_scroll_verse">آیهٔ %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">در حال پخش تلاوت</string>
+    <string name="audio_title">صوت تلاوت</string>
+    <string name="ayah_copied">آیه در کلیپ‌بورد کپی شد</string>
+    <string name="shared_via_app">ارسال‌شده با برنامهٔ Quran Sharif</string>
+    <string name="enter_ayah_number">شمارهٔ آیه را وارد کنید</string>
+    <string name="nav_sub_appearance">پوسته</string>
+    <string name="nav_sub_language">زبان برنامه</string>
+    <string name="nav_sub_reading">ترجمه، اندازهٔ متن، صوت، پیمایش</string>
+    <string name="nav_sub_widget">اندازهٔ متن، تازه‌سازی، پیش‌نمایش</string>
+    <string name="nav_sub_data">بازنشانی پیشرفت، نشان‌ها</string>
+    <string name="nav_sub_audio">قاری، دانلودها</string>
+
+    <!-- Language menu, translations and credits -->
     <string name="menu_app_language">زبان برنامه</string>
     <string name="menu_translation_language">زبان ترجمه</string>
     <string name="tr_close">بستن</string>
-    <string name="retry">تلاش دوباره</string>
-    <string name="audio_download">دانلود</string>
-    <string name="audio_downloading">در حال دانلود…</string>
-    <string name="audio_play_button">پخش تلاوت</string>
-    <string name="now_playing">در حال پخش</string>
-    <string name="reciter_picker_title">انتخاب قاری</string>
-    <string name="follow_audio_chip">دنبال کردن</string>
-    <string name="following_audio_chip">در حال دنبال کردن</string>
-    <string name="player_surah_title_format">سوره %1$s</string>
-    <string name="player_ayah_of_format">آیه %1$s / %2$s</string>
-    <string name="language_system">پیش‌فرض سیستم</string>
+    <string name="tr_title">زبان ترجمه</string>
+    <string name="tr_installed_section">روی این گوشی</string>
+    <string name="tr_languages_section">زبان‌های موجود</string>
+    <string name="tr_count_format">%1$d ترجمه</string>
+    <string name="tr_loading">در حال بارگذاری ترجمه‌ها…</string>
+    <string name="tr_load_failed">فهرست بارگذاری نشد. اینترنت خود را بررسی کنید و دوباره تلاش کنید.</string>
+    <string name="tr_retry">تلاش دوباره</string>
+    <string name="tr_download">دانلود</string>
+    <string name="tr_use">استفاده</string>
+    <string name="tr_in_use">در حال استفاده</string>
+    <string name="tr_downloading_format">در حال دانلود… %1$d%%</string>
+    <string name="tr_failed_format">دانلود ناموفق: %1$s</string>
+    <string name="tr_version_format">نسخهٔ %1$s</string>
+    <string name="tr_source_line">منبع: QuranEnc.com</string>
+    <string name="tr_restart_title">برای اعمال، راه‌اندازی مجدد کنید</string>
+    <string name="tr_restart_message">اعمال %1$s نیازمند راه‌اندازی مجدد برنامه است. برنامه بسته می‌شود و با همین ترجمه دوباره باز می‌شود.</string>
+    <string name="tr_restart">راه‌اندازی مجدد</string>
+    <string name="tr_later">بعداً</string>
+    <string name="settings_credits">قدردانی</string>
+    <string name="settings_credits_sub">مترجمان، ناشران و منابع</string>
+    <string name="credits_page_title">قدردانی</string>
+    <string name="credits_section_sources">منابع</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">ترجمه‌هایی که دانلود می‌کنید از QuranEnc.com (دانشنامهٔ قرآن) می‌آیند. هر ترجمه متعلق به مترجم و ناشر خود است.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">متن عربی قرآن و ترجمه‌های بنگالی داخلی (Muhiuddin Khan و Zohurul Hoque) از tanzil.net گرفته شده‌اند، برای استفادهٔ غیرتجاری.</string>
+    <string name="credits_audio_title">صوت تلاوت</string>
+    <string name="credits_audio_body">صوت تلاوت آیه‌به‌آیه را cdn.islamic.network (Islamic Network) ارائه می‌دهد.</string>
+    <string name="credits_section_downloaded">ترجمه‌های دانلودشده</string>
+    <string name="credits_none_downloaded">هنوز ترجمه‌ای دانلود نشده است.</string>
 </resources>

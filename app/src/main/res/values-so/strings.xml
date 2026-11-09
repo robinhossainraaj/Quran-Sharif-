@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="nav_home">Bogga hore</string>
-    <string name="nav_quran">Quraan</string>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Guriga</string>
+    <string name="nav_quran">Quraanka</string>
     <string name="nav_bookmarks">Calaamadaha</string>
     <string name="nav_settings">Dejinta</string>
+
+    <!-- Home -->
     <string name="ayah_of_the_moment">Aayadda Hadda</string>
-    <string name="continue_reading">Sii wad akhriska</string>
-    <string name="quick_links">Gelitaan degdeg ah</string>
+    <string name="continue_reading">Sii wad Akhriska</string>
+    <string name="quick_links">Gelitaan Degdeg ah</string>
     <string name="surah_list_card">Liiska Suuradaha</string>
-    <string name="surah_list_desc">Daawo dhammaan 114 suuradood</string>
-    <string name="juz_list_card">Liiska Juzka</string>
-    <string name="juz_list_desc">Daawo 30 juz</string>
+    <string name="surah_list_desc">Daalacashada dhammaan 114 Suuradood</string>
+    <string name="juz_list_card">Liiska Juz / Para</string>
+    <string name="juz_list_desc">Ku daalacasho 30 Juz</string>
+    <string name="read_surah">Akhri Suurad</string>
     <string name="refresh_ayah">Aayad Cusub</string>
-    <string name="last_read_reference">Suurada %1$s · Aayadda %2$s</string>
+    <string name="last_read_reference">Suurad %1$s · Aayad %2$s</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">Suurad</string>
     <string name="tab_juz">Juz</string>
     <string name="meccan">Makki</string>
     <string name="medinan">Madani</string>
     <string name="ayah_count_format">%1$s aayadood</string>
     <string name="juz_format">Juz %1$s</string>
-    <string name="go_to_ayah">Tag aayadda…</string>
-    <string name="go_to_ayah_dialog_title">Tag Aayadda</string>
+    <string name="juz_starts_at">Waxay ka bilaabmaysaa %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
+    <string name="go_to_ayah">U gudub aayad…</string>
+    <string name="bookmark_surah_start">Calaamadee bilowga suuradda</string>
+    <string name="go_to_ayah_dialog_title">U gudub Aayad</string>
+    <string name="ayah_number_hint">Geli lambarka aayadda (1–%1$d)</string>
     <string name="go_button">Tag</string>
     <string name="cancel">Jooji</string>
-    <string name="share_ayah">Wadaag Aayadda</string>
+    <string name="ayah_out_of_range">Fadlan geli lambar aayad ah oo sax ah</string>
+    <string name="share_ayah">La wadaag Aayadda</string>
     <string name="copy_ayah">Koobiyee Aayadda</string>
     <string name="copied_to_clipboard">Aayadda waa la koobiyeeyay</string>
-    <string name="ayah_copied">Aayadda waa la koobiyeeyay</string>
+    <string name="surah_bookmarked">Bilowga suuradda waa la calaamadeeyay</string>
     <string name="bookmark_added">Aayadda waxaa lagu keydiyay calaamadaha</string>
-    <string name="bookmark_removed">Calaamadda waa laga saaray</string>
+    <string name="bookmark_removed">Calaamadda waa la saaray</string>
     <string name="undo">Ka noqo</string>
+
+    <!-- Search -->
+    <string name="search_hint">Raadi Bangaali, Carabi, ama tusaale 2:255</string>
+    <string name="search_initial_hint">Ku raadi tarjumaadda Bangaali, qoraalka Carabiga (iyada oo aan shaqallo lahayn), ama tixraac sida 2:255 ama ২:২৫৫.</string>
+    <string name="search_no_results">Lama helin aayado ku habboon.</string>
+    <string name="search_go_to_reference">U gudub Suurad %1$s, Aayad %2$s</string>
     <string name="search_title">Raadi</string>
+    <string name="search_no_results_hint">Hubi inaad si sax ah u qortay ereyga.</string>
     <string name="searching">Waa la raadinayaa…</string>
-    <string name="search_no_results">Aayado la mid ah lama helin.</string>
+    <string name="search_results_count">Waxaa la helay %1$d aayadood</string>
+
+    <!-- Bookmarks -->
     <string name="bookmarks_title">Calaamadaha</string>
-    <string name="bookmarks_empty">Weli calaamad lama keydin</string>
+    <string name="bookmarks_empty">Wali calaamad lama keydin</string>
+    <string name="bookmarks_empty_desc">Marka aad wax akhrinayso taabo astaanta calaamadda ee aayad kasta si aad halkan ugu keydiso gelitaan degdeg ah.</string>
+    <string name="delete_all_bookmarks">Tirtir dhammaan calaamadaha</string>
+    <string name="delete_all_confirm_title">Tirtir Dhammaan Calaamadaha?</string>
+    <string name="delete_all_confirm_desc">Tani waxay si joogto ah u saaraysaa dhammaan calaamadaha la keydiyay.</string>
     <string name="delete">Tirtir</string>
+    <string name="all_bookmarks_deleted">Dhammaan calaamadaha waa la tirtiray</string>
+
+    <!-- Settings -->
     <string name="settings_title">Dejinta</string>
     <string name="section_appearance">Muuqaalka</string>
-    <string name="theme_label">Qaabka</string>
+    <string name="theme_label">Mawduuca</string>
     <string name="theme_system">Nidaamka</string>
     <string name="theme_light">Iftiin</string>
-    <string name="theme_dark">Madow</string>
-    <string name="section_reading">Doorashooyinka Akhriska</string>
+    <string name="theme_dark">Mugdi</string>
+    <string name="language_label">Luuqadda (ভাষা)</string>
+    <string name="language_system">Caadiga Nidaamka</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
+    <string name="section_reading">Doorbidyada Akhriska</string>
+    <string name="arabic_font_size">Cabbirka Qoraalka Carabiga</string>
+    <string name="bangla_font_size">Cabbirka Qoraalka Bangaaliga</string>
+    <string name="show_bangla_translation">Muuji tarjumaadda Bangaaliga</string>
+    <string name="use_bangla_digits">Isticmaal tirooyinka Bangaaliga (১, ২, ৩)</string>
+    <string name="keep_screen_on">Shaashadda daaran ka dhig inta la akhrinayo</string>
+    <string name="preview_label">Muuqaal Toos ah</string>
+
     <string name="section_widget">Widget-ka Shaashadda Hore</string>
+    <string name="widget_refresh_on_screen_on">Beddel aayadda widget-ka marka shaashadda la shido</string>
+    <string name="widget_refresh_helper">Waxay isticmaalaysaa ogeysiis yar oo aamusan si Android u sii wado.</string>
+    <string name="battery_optimization_settings">Dejinta hagaajinta batariga</string>
+    <string name="battery_optimization_helper">Qaar ka mid ah taleefannada (Xiaomi, Oppo, Vivo, Huawei, Samsung) waxay joojiyaan adeegyada gadaasha; app-ka ka dhig \'Unrestricted/No restrictions\' haddii widget-ku isbeddelin.</string>
+    <string name="refresh_widget_now">Hadda cusbooneysii widget-ka</string>
+    <string name="widget_refreshed">Widget-ka waxaa lagu cusbooneysiiyay aayad cusub</string>
+    <string name="notification_permission_title">Oggolaanshaha Ogeysiisyada</string>
+    <string name="notification_permission_desc">Android waxay u baahan tahay oggolaanshaha ogeysiiska si adeegga gadaasha ee aamusan u cusbooneysiin karo widget-ka marka shaashadda la shido.</string>
+    <string name="grant_permission">Ogolow</string>
+
     <string name="section_data">Xogta</string>
-    <string name="section_audio">Codka Tilaawada</string>
+    <string name="reset_reading_progress">Dib u deji horumarka akhriska</string>
+    <string name="reset_reading_confirm_title">Dib u Deji Horumarka Akhriska?</string>
+    <string name="reset_reading_confirm_desc">Tani waxay calaamadda sii wadista akhriska dib ugu celinaysaa bilowga.</string>
+    <string name="reset">Dib u deji</string>
+    <string name="progress_reset_done">Horumarka akhriska dib ayaa loo dejiyay</string>
+    <string name="about_app">Ku saabsan Quran Sharif</string>
+
+    <!-- About -->
     <string name="about_title">Ku saabsan</string>
-    <string name="menu_app_language">Luqadda abka</string>
-    <string name="menu_translation_language">Luqadda tarjumaadda</string>
-    <string name="tr_close">Xidh</string>
-    <string name="retry">Isku day mar kale</string>
+    <string name="offline_badge">100% Khadka La\'aan • Internet La\'aan • Asturnaanta Koowaad</string>
+    <string name="offline_description">Qoraalka Quraanka iyo tarjumaadaha waxay si buuxda u shaqeeyaan internet la\'aan. Internetka waxaa loo isticmaalaa kaliya in lagu dhageysto oo lagu soo dejiyo codka tilaawada. Xog shakhsi ah lama ururiyo.</string>
+    <string name="source_authenticity">Qoraalka Quraanka waxaa la muujiyaa sida uu isha u bixiyay, wax isbeddel ah la\'aan.</string>
+    <string name="credits_title">Mahadnaq iyo Ilaha</string>
+    <string name="tanzil_credit">Qoraalka Quraanka: Tanzil Project</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Koobiyee Xiriirka</string>
+    <string name="tanzil_copied">Xiriirka waa la koobiyeeyay</string>
+    <string name="translation_credit">Tarjumaadda Bangaaliga: Muhiuddin Khan (iyada oo loo marayo Tanzil Project)</string>
+    <string name="font_amiri_credit">Far Carabi: Amiri Quran (SIL Open Font License)</string>
+    <string name="font_noto_credit">Far Bangaali: Noto Sans Bengali (SIL Open Font License)</string>
+    <string name="version_format">Nooca %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Waxaa la diyaarinayaa xogta Quraanka… %1$d/114</string>
+    <string name="import_failed">Xogta Quraanka lama diyaarin karin.</string>
+    <string name="import_tagline">Akhri  •  Dhageyso  •  Baro</string>
+    <string name="retry">Dib u day</string>
+    <string name="checking_data">Waxaa la hubinayaa xogta Quraanka…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Aayad Random ah</string>
+    <string name="widget_description">Waxay shaashadda hore ku muujisaa aayad Quraan ah oo random ah oo Carabi iyo Bangaali ah.</string>
+    <string name="widget_open_app_prompt">Fur Quran Sharif si aad u dhammaystirto dejinta</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Adeegga Cusbooneysiinta Widget-ka</string>
+    <string name="notification_channel_desc">Waxay sii wadaa cusbooneysiinta widget-ka marka shaashadda la furo.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Widget-ka Quran Sharif waa shaqaynayaa</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Tarjumaadda Bangaaliga</string>
+    <string name="select_translation_dialog_title">Dooro Tarjumaadda Bangaaliga</string>
+    <string name="translation_sample_ayah">Muuqaal (112:1):</string>
+    <string name="translation_updated">Tarjumaadda waa la cusbooneysiiyay</string>
+    <string name="translation_by_format">Tarjumay %1$s</string>
+    <string name="widget_arabic_size">Cabbirka Qoraalka Carabiga ee Widget-ka</string>
+    <string name="widget_translation_size">Cabbirka Qoraalka Bangaaliga ee Widget-ka</string>
+    <string name="widget_text_size_reset">Dib u deji cabbirka qoraalka widget-ka</string>
+    <string name="widget_preview_title">Muuqaalka Toosan ee Widget-ka</string>
+    <string name="widget_resize_hint">Widget-ka ka weyni shaashadda hore haddii qoraalka weyn aanu soo gelin.</string>
+    <string name="available_translations_title">Tarjumaadaha La Heli Karo</string>
+    <string name="tanzil_non_commercial_notice">Tarjumaadaha laga helo Tanzil.net waxaa loo qaybiyaa isticmaal waxbarasho oo aan ganacsi ahayn.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Codka Tilaawada</string>
+    <string name="audio_reciter_label">Qaari Caadi ah</string>
+    <string name="audio_wifi_only">Ku soo deji Wi-Fi keliya</string>
+    <string name="audio_wifi_only_desc">Ka fogow soo dejin waaweyn oo xogta mobaylka ah</string>
+    <string name="audio_bismillah_prefix">Ku daa Bismillah suuradda ka hor</string>
+    <string name="audio_bismillah_prefix_desc">Ku daa codka Bismillah suuradda ka hor (marka laga reebo Suuradda 1 &amp; 9)</string>
+    <string name="audio_follow">Si toos ah u raac codka</string>
+    <string name="audio_follow_desc">U rog aayadda muuqaal marka codku shaqaynayo</string>
+    <string name="audio_manage_downloads">Maaree Soo Dejinta</string>
+    <string name="audio_manage_downloads_desc">Eeg kaydka oo maaree suuradaha la soo dejiyay</string>
+    <string name="reciter_picker_title">Dooro Qaari</string>
+    <string name="play_sample">Ku daa muunad</string>
+    <string name="stop_sample">Jooji muunadda</string>
+    <string name="audio_sheet_title">Cod · %1$s</string>
+    <string name="audio_sheet_reciter">Qaari: %1$s</string>
+    <string name="audio_choose_reciter">Dooro qaari kale</string>
     <string name="audio_download">Soo deji</string>
     <string name="audio_downloading">Waa la soo dejinayaa…</string>
-    <string name="audio_play_button">Daar tilaawada</string>
-    <string name="now_playing">Hadda waa socotaa</string>
-    <string name="reciter_picker_title">Dooro Qaari</string>
+    <string name="audio_queued">Safka ku jira…</string>
+    <string name="audio_download_details">%1$d aayadood · %2$d kbps</string>
+    <string name="audio_download_completed">La soo dejiyay</string>
+    <string name="audio_play_button">Ku daa tilaawada</string>
+    <string name="audio_delete_surah">Tirtir codka</string>
+    <string name="audio_delete_surah_confirm">Tirtir tilaawada la soo dejiyay ee suuraddan?</string>
+    <string name="audio_delete_all_reciter">Tirtir dhammaan qaarigan</string>
+    <string name="audio_delete_all_reciter_confirm">Tirtir dhammaan suuradaha la soo dejiyay ee %1$s?</string>
+    <string name="audio_storage_used">Kaydka Codka ee La Isticmaalay: %1$s</string>
+    <string name="audio_storage_note">Faylasha waxaa lagu kaydiyaa kaydka gaarka ah ee app-kan waxaana la saaraa haddii aad app-ka tirtirto.</string>
+    <string name="audio_downloads_empty">Wali tilaawo lama soo dejin</string>
+    <string name="audio_downloads_empty_desc">Soo deji tilaawooyinka suuradaha si aad ugu dhageysato internet la\'aan waqti kasta.</string>
+    <string name="audio_error_not_enough_storage">Kaydku ma ku filna (ugu yaraan 150 MB ayaa loo baahan yahay)</string>
+    <string name="audio_error_download_failed">Soo dejintu way fashilantay. Fadlan hubi xiriirka oo mar kale day.</string>
+    <string name="audio_error_recitation_unavailable">Tilaawadan lama heli karo</string>
+    <string name="audio_mobile_data_warning_title">Ku soo deji xogta mobaylka?</string>
+    <string name="audio_mobile_data_warning_desc">Faylasha codka waxay noqon karaan kuwo waaweyn. Ma rabtaa inaad ku soo dejiso xogta mobaylka?</string>
+    <string name="audio_download_now">Hadda Soo deji</string>
+    <string name="audio_download_channel_name">Soo Dejinta Codka</string>
+    <string name="audio_download_channel_desc">Waxay muujisaa horumarka soo dejinta codka tilaawada</string>
+    <string name="audio_downloading_format">Waa la soo dejinayaa %1$s</string>
+    <string name="now_playing">Hadda Waa Socdaa</string>
+    <string name="play_from_here">Halkan ka daa</string>
     <string name="follow_audio_chip">Raac</string>
     <string name="following_audio_chip">Waa la raacayaa</string>
-    <string name="player_surah_title_format">Suurada %1$s</string>
-    <string name="player_ayah_of_format">Aayadda %1$s / %2$s</string>
-    <string name="language_system">Nidaamka caadiga ah</string>
+    <string name="player_surah_title_format">Suurad %1$s</string>
+    <string name="player_ayah_of_format">Aayad %1$s / %2$s</string>
+    <string name="player_change_reciter">Beddel</string>
+    <string name="audio_repeat_off">Ku celi: Damsan</string>
+    <string name="audio_repeat_ayah">Ku celi: Aayad</string>
+    <string name="audio_repeat_surah">Ku celi: Suurad</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Faylasha codka qaar way maqan yihiin. Mar kale soo deji?</string>
+    <string name="recitation_audio_attribution_title">Codka Tilaawada</string>
+    <string name="recitation_audio_attribution">Codka waxaa bixiya Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). Xuquuqda daabacaadda tilaawo kasta waxay iska leedahay qaariga, waxaana loo ogolaaday qaybin bilaash ah oo aan ganacsi ahayn. App-kani waa mid aan faa\'iido doon ahayn. Haddii qaari ama mulkiile xuquuq ay codsadaan in la saaro, tilaawada waa la saarayaa.</string>
+    <string name="fast_scroll_verse">Aayad %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Tilaawada Waa Socotaa</string>
+    <string name="audio_title">Codka Tilaawada</string>
+    <string name="ayah_copied">Aayadda waa la koobiyeeyay</string>
+    <string name="shared_via_app">Waxaa laga wadaagay app-ka Quran Sharif</string>
+    <string name="enter_ayah_number">Geli lambarka aayadda</string>
+    <string name="nav_sub_appearance">Mawduuca</string>
+    <string name="nav_sub_language">Luuqadda app-ka</string>
+    <string name="nav_sub_reading">Tarjumaad, cabbirka qoraalka, cod, rogid</string>
+    <string name="nav_sub_widget">Cabbirka qoraalka, cusbooneysiin, muuqaal</string>
+    <string name="nav_sub_data">Dib u dejinta horumarka, calaamadaha</string>
+    <string name="nav_sub_audio">Qaari, soo dejinta</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">Luuqadda app-ka</string>
+    <string name="menu_translation_language">Luuqadda tarjumaadda</string>
+    <string name="tr_close">Xir</string>
+    <string name="tr_title">Luuqadda tarjumaadda</string>
+    <string name="tr_installed_section">Taleefankan</string>
+    <string name="tr_languages_section">Luuqadaha la heli karo</string>
+    <string name="tr_count_format">%1$d tarjumaadood</string>
+    <string name="tr_loading">Tarjumaadaha waa la soo rarayaa…</string>
+    <string name="tr_load_failed">Liiska lama soo rari karin. Hubi internetkaaga oo mar kale day.</string>
+    <string name="tr_retry">Mar kale day</string>
+    <string name="tr_download">Soo deji</string>
+    <string name="tr_use">Isticmaal</string>
+    <string name="tr_in_use">Waa la isticmaalayaa</string>
+    <string name="tr_downloading_format">Waa la soo dejinayaa… %1$d%%</string>
+    <string name="tr_failed_format">Soo dejintu way fashilantay: %1$s</string>
+    <string name="tr_version_format">Nooca %1$s</string>
+    <string name="tr_source_line">Isha: QuranEnc.com</string>
+    <string name="tr_restart_title">Dib u bilow si loo dabaqo</string>
+    <string name="tr_restart_message">Dabaqidda %1$s waxay u baahan tahay in app-ka dib loo bilaabo. App-ku wuu xirmi doonaa oo mar kale ayuu furmi doonaa isagoo isticmaalaya tarjumaaddan.</string>
+    <string name="tr_restart">Dib u bilow</string>
+    <string name="tr_later">Hadhow</string>
+    <string name="settings_credits">Mahadnaq</string>
+    <string name="settings_credits_sub">Tarjumayaasha, daabacayaasha iyo ilaha</string>
+    <string name="credits_page_title">Mahadnaq</string>
+    <string name="credits_section_sources">Ilaha</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Tarjumaadaha aad soo dejiso waxay ka yimaadaan QuranEnc.com (Quran Encyclopedia). Tarjumaad kasta waxay iska leedahay tarjumaheeda iyo daabacaheeda.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Qoraalka Quraanka Carabiga iyo tarjumaadaha Bangaaliga ee ku jira (Muhiuddin Khan iyo Zohurul Hoque) waxay ka yimaadaan tanzil.net, isticmaal aan ganacsi ahayn awgeed.</string>
+    <string name="credits_audio_title">Codka tilaawada</string>
+    <string name="credits_audio_body">Codka tilaawada aayad ka aayad waxaa bixiya cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Tarjumaadaha la soo dejiyay</string>
+    <string name="credits_none_downloaded">Wali tarjumaad lama soo dejin.</string>
 </resources>

@@ -210,6 +210,7 @@
     <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
     <string name="audio_playing">তিলাওয়াত চলছে</string>
     <string name="audio_title">কুরআন তিলাওয়াত</string>
+    <string name="recitation_audio_attribution_title">তেলাওয়াত অডিও</string>
     <string name="ayah_copied">আয়াত কপি করা হয়েছে</string>
     <string name="shared_via_app">কুরআন শরীফ অ্যাপের মাধ্যমে শেয়ারকৃত</string>
     <string name="enter_ayah_number">আয়াত নম্বর লিখুন</string>

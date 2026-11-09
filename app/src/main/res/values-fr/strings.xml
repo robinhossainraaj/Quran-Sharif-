@@ -1,64 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Quran Sharif</string>
+    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name_bn">কুরআন শরীফ</string>
+
+    <!-- Navigation -->
     <string name="nav_home">Accueil</string>
     <string name="nav_quran">Coran</string>
     <string name="nav_bookmarks">Favoris</string>
     <string name="nav_settings">Paramètres</string>
+
+    <!-- Home -->
     <string name="ayah_of_the_moment">Verset du moment</string>
-    <string name="continue_reading">Reprendre la lecture</string>
+    <string name="continue_reading">Continuer la lecture</string>
     <string name="quick_links">Accès rapide</string>
     <string name="surah_list_card">Liste des sourates</string>
     <string name="surah_list_desc">Parcourir les 114 sourates</string>
     <string name="juz_list_card">Liste des juz</string>
     <string name="juz_list_desc">Parcourir par 30 juz</string>
+    <string name="read_surah">Lire la sourate</string>
     <string name="refresh_ayah">Nouveau verset</string>
     <string name="last_read_reference">Sourate %1$s · Verset %2$s</string>
+
+    <!-- Quran Screen -->
     <string name="tab_surah">Sourate</string>
     <string name="tab_juz">Juz</string>
     <string name="meccan">Mecquoise</string>
     <string name="medinan">Médinoise</string>
     <string name="ayah_count_format">%1$s versets</string>
     <string name="juz_format">Juz %1$s</string>
+    <string name="juz_starts_at">Commence à %1$s %2$s:%3$s</string>
+
+    <!-- Reader -->
     <string name="go_to_ayah">Aller au verset…</string>
+    <string name="bookmark_surah_start">Marquer le début de la sourate</string>
     <string name="go_to_ayah_dialog_title">Aller au verset</string>
+    <string name="ayah_number_hint">Saisir le numéro du verset (1–%1$d)</string>
     <string name="go_button">Aller</string>
     <string name="cancel">Annuler</string>
+    <string name="ayah_out_of_range">Veuillez saisir un numéro de verset valide</string>
     <string name="share_ayah">Partager le verset</string>
     <string name="copy_ayah">Copier le verset</string>
     <string name="copied_to_clipboard">Verset copié dans le presse-papiers</string>
-    <string name="ayah_copied">Verset copié dans le presse-papiers</string>
+    <string name="surah_bookmarked">Début de la sourate ajouté aux favoris</string>
     <string name="bookmark_added">Verset enregistré dans les favoris</string>
     <string name="bookmark_removed">Favori supprimé</string>
     <string name="undo">Annuler</string>
-    <string name="search_title">Rechercher</string>
-    <string name="searching">Recherche…</string>
+
+    <!-- Search -->
+    <string name="search_hint">Rechercher en bengali, arabe ou ex. 2:255</string>
+    <string name="search_initial_hint">Recherchez par traduction bengali, texte arabe (sans signes diacritiques) ou référence comme 2:255 ou ২:২৫৫.</string>
     <string name="search_no_results">Aucun verset correspondant trouvé.</string>
+    <string name="search_go_to_reference">Aller à la sourate %1$s, verset %2$s</string>
+    <string name="search_title">Recherche</string>
+    <string name="search_no_results_hint">Vérifiez que vous avez bien écrit le mot.</string>
+    <string name="searching">Recherche…</string>
+    <string name="search_results_count">%1$d versets trouvés</string>
+
+    <!-- Bookmarks -->
     <string name="bookmarks_title">Favoris</string>
-    <string name="bookmarks_empty">Aucun favori enregistré pour l\'instant</string>
+    <string name="bookmarks_empty">Aucun favori enregistré</string>
+    <string name="bookmarks_empty_desc">Touchez l\'icône de favori sur un verset pendant la lecture pour l\'enregistrer ici et y accéder rapidement.</string>
+    <string name="delete_all_bookmarks">Supprimer tous les favoris</string>
+    <string name="delete_all_confirm_title">Supprimer tous les favoris ?</string>
+    <string name="delete_all_confirm_desc">Tous les favoris enregistrés seront supprimés définitivement.</string>
     <string name="delete">Supprimer</string>
+    <string name="all_bookmarks_deleted">Tous les favoris ont été supprimés</string>
+
+    <!-- Settings -->
     <string name="settings_title">Paramètres</string>
     <string name="section_appearance">Apparence</string>
     <string name="theme_label">Thème</string>
     <string name="theme_system">Système</string>
     <string name="theme_light">Clair</string>
     <string name="theme_dark">Sombre</string>
+    <string name="language_label">Langue (ভাষা)</string>
+    <string name="language_system">Langue du système</string>
+    <string name="language_en">English</string>
+    <string name="language_bn">বাংলা</string>
+
     <string name="section_reading">Préférences de lecture</string>
+    <string name="arabic_font_size">Taille du texte arabe</string>
+    <string name="bangla_font_size">Taille du texte bengali</string>
+    <string name="show_bangla_translation">Afficher la traduction bengali</string>
+    <string name="use_bangla_digits">Utiliser les chiffres bengalis (১, ২, ৩)</string>
+    <string name="keep_screen_on">Garder l\'écran allumé pendant la lecture</string>
+    <string name="preview_label">Aperçu en direct</string>
+
     <string name="section_widget">Widget d\'écran d\'accueil</string>
+    <string name="widget_refresh_on_screen_on">Changer le verset du widget à l\'allumage de l\'écran</string>
+    <string name="widget_refresh_helper">Utilise une petite notification silencieuse pour qu\'Android maintienne cette fonction active.</string>
+    <string name="battery_optimization_settings">Paramètres d\'optimisation de la batterie</string>
+    <string name="battery_optimization_helper">Certaines marques de téléphones (Xiaomi, Oppo, Vivo, Huawei, Samsung) arrêtent les services en arrière-plan ; réglez l\'application sur \'Sans restriction\' si le widget ne change pas.</string>
+    <string name="refresh_widget_now">Actualiser le widget maintenant</string>
+    <string name="widget_refreshed">Widget actualisé avec un nouveau verset</string>
+    <string name="notification_permission_title">Autorisation de notification</string>
+    <string name="notification_permission_desc">Android exige l\'autorisation de notification pour que le service silencieux en arrière-plan puisse actualiser le widget à l\'allumage de l\'écran.</string>
+    <string name="grant_permission">Autoriser</string>
+
     <string name="section_data">Données</string>
-    <string name="section_audio">Audio de récitation</string>
+    <string name="reset_reading_progress">Réinitialiser la progression de lecture</string>
+    <string name="reset_reading_confirm_title">Réinitialiser la progression de lecture ?</string>
+    <string name="reset_reading_confirm_desc">Le marque-page « Continuer la lecture » reviendra au début.</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="progress_reset_done">Progression de lecture réinitialisée</string>
+    <string name="about_app">À propos de Quran Sharif</string>
+
+    <!-- About -->
     <string name="about_title">À propos</string>
-    <string name="menu_app_language">Langue de l\'application</string>
-    <string name="menu_translation_language">Langue de la traduction</string>
-    <string name="tr_close">Fermer</string>
+    <string name="offline_badge">100 % hors ligne • Sans Internet • Confidentialité d\'abord</string>
+    <string name="offline_description">Le texte du Coran et les traductions fonctionnent entièrement hors ligne. Internet n\'est utilisé que pour écouter un aperçu et télécharger l\'audio de récitation. Aucune donnée personnelle n\'est collectée.</string>
+    <string name="source_authenticity">Le texte du Coran est affiché exactement tel que fourni par la source, sans modification.</string>
+    <string name="credits_title">Crédits et sources</string>
+    <string name="tanzil_credit">Texte du Coran : projet Tanzil</string>
+    <string name="tanzil_website">tanzil.net</string>
+    <string name="copy_link">Copier le lien</string>
+    <string name="tanzil_copied">Lien copié dans le presse-papiers</string>
+    <string name="translation_credit">Traduction bengali : Muhiuddin Khan (via le projet Tanzil)</string>
+    <string name="font_amiri_credit">Police arabe : Amiri Quran (licence SIL Open Font)</string>
+    <string name="font_noto_credit">Police bengali : Noto Sans Bengali (licence SIL Open Font)</string>
+    <string name="version_format">Version %1$s</string>
+
+    <!-- Splash & Import -->
+    <string name="import_title">Quran Sharif</string>
+    <string name="import_subtitle">Préparation des données du Coran… %1$d/114</string>
+    <string name="import_failed">Échec de la préparation des données du Coran.</string>
+    <string name="import_tagline">Lire  •  Écouter  •  Apprendre</string>
     <string name="retry">Réessayer</string>
+    <string name="checking_data">Vérification des données du Coran…</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Quran Sharif — Verset aléatoire</string>
+    <string name="widget_description">Affiche sur votre écran d\'accueil un verset du Coran au hasard, en arabe et en bengali.</string>
+    <string name="widget_open_app_prompt">Ouvrez Quran Sharif pour terminer la configuration</string>
+    <string name="widget_brand_label">QURAN SHARIF</string>
+    <string name="notification_channel_name">Service d\'actualisation du widget</string>
+    <string name="notification_channel_desc">Maintient les mises à jour du widget au déverrouillage de l\'écran.</string>
+    <string name="notification_title">Quran Sharif</string>
+    <string name="notification_text">Le widget Quran Sharif est actif</string>
+
+    <!-- v2 Additions: Translations & Widget Sizing -->
+    <string name="translation_label">Traduction bengali</string>
+    <string name="select_translation_dialog_title">Choisir la traduction bengali</string>
+    <string name="translation_sample_ayah">Aperçu (112:1) :</string>
+    <string name="translation_updated">Traduction mise à jour</string>
+    <string name="translation_by_format">Traduit par %1$s</string>
+    <string name="widget_arabic_size">Taille du texte arabe du widget</string>
+    <string name="widget_translation_size">Taille du texte bengali du widget</string>
+    <string name="widget_text_size_reset">Réinitialiser la taille du texte du widget</string>
+    <string name="widget_preview_title">Aperçu en direct du widget</string>
+    <string name="widget_resize_hint">Agrandissez le widget sur votre écran d\'accueil si le texte large ne tient pas.</string>
+    <string name="available_translations_title">Traductions disponibles</string>
+    <string name="tanzil_non_commercial_notice">Les traductions fournies via Tanzil.net sont distribuées à des fins éducatives non commerciales.</string>
+
+    <!-- Audio Recitation & Fast Scroll -->
+    <string name="section_audio">Audio de récitation</string>
+    <string name="audio_reciter_label">Récitateur par défaut</string>
+    <string name="audio_wifi_only">Télécharger uniquement en Wi-Fi</string>
+    <string name="audio_wifi_only_desc">Évite les gros téléchargements en données mobiles</string>
+    <string name="audio_bismillah_prefix">Lire la Bismillah avant la sourate</string>
+    <string name="audio_bismillah_prefix_desc">Lire l\'audio de la Bismillah avant la sourate (sauf sourates 1 et 9)</string>
+    <string name="audio_follow">Suivre l\'audio automatiquement</string>
+    <string name="audio_follow_desc">Fait défiler le verset à l\'écran pendant la lecture audio</string>
+    <string name="audio_manage_downloads">Gérer les téléchargements</string>
+    <string name="audio_manage_downloads_desc">Voir le stockage et gérer les sourates téléchargées</string>
+    <string name="reciter_picker_title">Choisir un récitateur</string>
+    <string name="play_sample">Écouter un extrait</string>
+    <string name="stop_sample">Arrêter l\'extrait</string>
+    <string name="audio_sheet_title">Audio · %1$s</string>
+    <string name="audio_sheet_reciter">Récitateur : %1$s</string>
+    <string name="audio_choose_reciter">Choisir un autre récitateur</string>
     <string name="audio_download">Télécharger</string>
     <string name="audio_downloading">Téléchargement…</string>
-    <string name="audio_play_button">Lire la récitation</string>
+    <string name="audio_queued">En attente…</string>
+    <string name="audio_download_details">%1$d versets · %2$d kbps</string>
+    <string name="audio_download_completed">Téléchargé</string>
+    <string name="audio_play_button">Écouter la récitation</string>
+    <string name="audio_delete_surah">Supprimer l\'audio</string>
+    <string name="audio_delete_surah_confirm">Supprimer la récitation téléchargée de cette sourate ?</string>
+    <string name="audio_delete_all_reciter">Tout supprimer pour ce récitateur</string>
+    <string name="audio_delete_all_reciter_confirm">Supprimer toutes les sourates téléchargées pour %1$s ?</string>
+    <string name="audio_storage_used">Stockage audio utilisé : %1$s</string>
+    <string name="audio_storage_note">Les fichiers sont conservés dans l\'espace de stockage propre à l\'application et sont supprimés si vous la désinstallez.</string>
+    <string name="audio_downloads_empty">Aucune récitation téléchargée</string>
+    <string name="audio_downloads_empty_desc">Téléchargez des récitations de sourates pour les écouter hors ligne à tout moment.</string>
+    <string name="audio_error_not_enough_storage">Espace de stockage insuffisant (150 Mo minimum requis)</string>
+    <string name="audio_error_download_failed">Échec du téléchargement. Vérifiez la connexion et réessayez.</string>
+    <string name="audio_error_recitation_unavailable">Cette récitation n\'est pas disponible</string>
+    <string name="audio_mobile_data_warning_title">Télécharger en données mobiles ?</string>
+    <string name="audio_mobile_data_warning_desc">Les fichiers audio peuvent être volumineux. Voulez-vous télécharger en données mobiles ?</string>
+    <string name="audio_download_now">Télécharger maintenant</string>
+    <string name="audio_download_channel_name">Téléchargements audio</string>
+    <string name="audio_download_channel_desc">Affiche la progression du téléchargement de l\'audio de récitation</string>
+    <string name="audio_downloading_format">Téléchargement de %1$s</string>
     <string name="now_playing">En cours de lecture</string>
-    <string name="reciter_picker_title">Choisir le récitant</string>
+    <string name="play_from_here">Lire à partir d\'ici</string>
     <string name="follow_audio_chip">Suivre</string>
-    <string name="following_audio_chip">Suivi</string>
+    <string name="following_audio_chip">Suivi actif</string>
     <string name="player_surah_title_format">Sourate %1$s</string>
     <string name="player_ayah_of_format">Verset %1$s / %2$s</string>
-    <string name="language_system">Par défaut du système</string>
+    <string name="player_change_reciter">Changer</string>
+    <string name="audio_repeat_off">Répétition : désactivée</string>
+    <string name="audio_repeat_ayah">Répétition : verset</string>
+    <string name="audio_repeat_surah">Répétition : sourate</string>
+    <string name="speed_format">%1$sx</string>
+    <string name="audio_missing_files_snackbar">Certains fichiers audio sont manquants. Télécharger à nouveau ?</string>
+    <string name="recitation_audio_attribution_title">Audio de récitation</string>
+    <string name="recitation_audio_attribution">L\'audio est fourni par Al Quran Cloud / Islamic Network CDN (cdn.islamic.network). Les droits de chaque récitation appartiennent au récitateur, sous licence de redistribution gratuite et non commerciale. Cette application est à but non lucratif. Si un récitateur ou un détenteur de droits demande le retrait, la récitation sera retirée.</string>
+    <string name="fast_scroll_verse">Verset %1$s</string>
+    <string name="audio_download_progress">%1$s / %2$s (%3$s)</string>
+    <string name="audio_playing">Récitation en cours</string>
+    <string name="audio_title">Audio de récitation</string>
+    <string name="ayah_copied">Verset copié dans le presse-papiers</string>
+    <string name="shared_via_app">Partagé via l\'application Quran Sharif</string>
+    <string name="enter_ayah_number">Saisir le numéro du verset</string>
+    <string name="nav_sub_appearance">Thème</string>
+    <string name="nav_sub_language">Langue de l\'application</string>
+    <string name="nav_sub_reading">Traduction, taille du texte, audio, défilement</string>
+    <string name="nav_sub_widget">Taille du texte, actualisation, aperçu</string>
+    <string name="nav_sub_data">Réinitialiser la progression, favoris</string>
+    <string name="nav_sub_audio">Récitateur, téléchargements</string>
+
+    <!-- Language menu, translations and credits -->
+    <string name="menu_app_language">Langue de l\'application</string>
+    <string name="menu_translation_language">Langue de traduction</string>
+    <string name="tr_close">Fermer</string>
+    <string name="tr_title">Langue de traduction</string>
+    <string name="tr_installed_section">Sur ce téléphone</string>
+    <string name="tr_languages_section">Langues disponibles</string>
+    <string name="tr_count_format">%1$d traductions</string>
+    <string name="tr_loading">Chargement des traductions…</string>
+    <string name="tr_load_failed">Impossible de charger la liste. Vérifiez votre connexion Internet et réessayez.</string>
+    <string name="tr_retry">Réessayer</string>
+    <string name="tr_download">Télécharger</string>
+    <string name="tr_use">Utiliser</string>
+    <string name="tr_in_use">Utilisée</string>
+    <string name="tr_downloading_format">Téléchargement… %1$d%%</string>
+    <string name="tr_failed_format">Échec du téléchargement : %1$s</string>
+    <string name="tr_version_format">Version %1$s</string>
+    <string name="tr_source_line">Source : QuranEnc.com</string>
+    <string name="tr_restart_title">Redémarrer pour appliquer</string>
+    <string name="tr_restart_message">Pour appliquer %1$s, l\'application doit redémarrer. Elle va se fermer puis se rouvrir avec cette traduction.</string>
+    <string name="tr_restart">Redémarrer</string>
+    <string name="tr_later">Plus tard</string>
+    <string name="settings_credits">Crédits</string>
+    <string name="settings_credits_sub">Traducteurs, éditeurs et sources</string>
+    <string name="credits_page_title">Crédits</string>
+    <string name="credits_section_sources">Sources</string>
+    <string name="credits_quranenc_title">QuranEnc.com</string>
+    <string name="credits_quranenc_body">Les traductions que vous téléchargez proviennent de QuranEnc.com (Encyclopédie du Coran). Chaque traduction appartient à son traducteur et à son éditeur.</string>
+    <string name="credits_tanzil_title">Tanzil Project</string>
+    <string name="credits_tanzil_body">Le texte arabe du Coran et les traductions bengalies intégrées (Muhiuddin Khan et Zohurul Hoque) proviennent de tanzil.net, pour un usage non commercial.</string>
+    <string name="credits_audio_title">Audio de récitation</string>
+    <string name="credits_audio_body">L\'audio de récitation verset par verset est fourni par cdn.islamic.network (Islamic Network).</string>
+    <string name="credits_section_downloaded">Traductions téléchargées</string>
+    <string name="credits_none_downloaded">Aucune traduction n\'a encore été téléchargée.</string>
 </resources>
