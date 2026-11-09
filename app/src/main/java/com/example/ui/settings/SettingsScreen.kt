@@ -46,6 +46,9 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import com.example.ui.components.AppHeaderPicture
+import com.example.ui.components.rememberHeaderScrollBehavior
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -157,10 +160,13 @@ fun SettingsScreen(
         it.id == state.userSettings.translationId
     } ?: state.availableTranslations.firstOrNull()
 
+    val headerBehavior = rememberHeaderScrollBehavior()
+    LaunchedEffect(page) { headerBehavior.state.heightOffset = 0f }
     Scaffold(
+        modifier = Modifier.nestedScroll(headerBehavior.nestedScrollConnection),
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
-            AppTopBar(
+            if (page == null) AppHeaderPicture(headerBehavior) else AppTopBar(
                 title = {
                     AppTitle(
                         stringResource(

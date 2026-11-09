@@ -28,6 +28,9 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import com.example.ui.components.AppHeaderPicture
+import com.example.ui.components.rememberHeaderScrollBehavior
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -80,25 +83,11 @@ fun QuranScreen(
         }
     }
 
+    val headerBehavior = rememberHeaderScrollBehavior()
     Scaffold(
+        modifier = Modifier.nestedScroll(headerBehavior.nestedScrollConnection),
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
-        topBar = {
-            AppTopBar(
-                title = { AppTitle(stringResource(R.string.nav_quran)) },
-                actions = {
-                    IconButton(
-                        onClick = onNavigateToSearch,
-                        modifier = Modifier.testTag("quran_search_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Search,
-                            contentDescription = stringResource(R.string.search_hint),
-                            tint = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
-                }
-            )
-        },
+        topBar = { AppHeaderPicture(headerBehavior) },
         containerColor = MaterialTheme.colorScheme.background
     ) { paddingValues ->
         Column(

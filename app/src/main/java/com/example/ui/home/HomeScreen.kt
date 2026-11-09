@@ -55,7 +55,9 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
 import com.example.ui.components.AppTitle
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import com.example.ui.components.AppHeaderPicture
+import com.example.ui.components.rememberHeaderScrollBehavior
 import com.example.ui.components.AppTopBar
 import com.example.ui.theme.extraColors
 import com.example.ui.theme.getArabicTextStyle
@@ -75,8 +77,11 @@ fun HomeScreen(
     val context = LocalContext.current
     val scrollState = rememberScrollState()
 
+    val headerBehavior = rememberHeaderScrollBehavior()
     Scaffold(
+        modifier = Modifier.nestedScroll(headerBehavior.nestedScrollConnection),
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
+        topBar = { AppHeaderPicture(headerBehavior) },
         containerColor = MaterialTheme.colorScheme.background
     ) { paddingValues ->
         Column(
@@ -85,8 +90,6 @@ fun HomeScreen(
                 .padding(paddingValues)
                 .verticalScroll(scrollState)
         ) {
-            // Picture header: scrolls away with the page (not stuck at the top)
-            AppHeaderPicture()
             Column(
                 modifier = Modifier
                     .fillMaxWidth()

@@ -21,6 +21,9 @@ import androidx.compose.material.icons.filled.DeleteSweep
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import com.example.ui.components.AppHeaderPicture
+import com.example.ui.components.rememberHeaderScrollBehavior
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -71,11 +74,16 @@ fun BookmarksScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     var showDeleteAllDialog by remember { mutableStateOf(false) }
 
+    val headerBehavior = rememberHeaderScrollBehavior()
     Scaffold(
+        modifier = Modifier.nestedScroll(headerBehavior.nestedScrollConnection),
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
         topBar = {
-            AppTopBar(
+            androidx.compose.foundation.layout.Column {
+            AppHeaderPicture(headerBehavior)
+            if (state.bookmarks.isNotEmpty()) AppTopBar(
                 title = { AppTitle(stringResource(R.string.bookmarks_title)) },
+                applyStatusBarInset = false,
                 actions = {
                     if (state.bookmarks.isNotEmpty()) {
                         IconButton(
@@ -91,6 +99,7 @@ fun BookmarksScreen(
                     }
                 }
             )
+            }
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },
         containerColor = MaterialTheme.colorScheme.background

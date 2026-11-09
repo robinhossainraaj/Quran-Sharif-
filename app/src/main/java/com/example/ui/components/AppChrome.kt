@@ -2,6 +2,11 @@ package com.example.ui.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.TopAppBarScrollBehavior
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.layout.layout
+import kotlin.math.roundToInt
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Translate
@@ -85,14 +90,15 @@ fun AppTopBar(
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     navigationIcon: @Composable () -> Unit = {},
-    actions: @Composable RowScope.() -> Unit = {}
+    actions: @Composable RowScope.() -> Unit = {},
+    applyStatusBarInset: Boolean = true
 ) {
     val extra = MaterialTheme.extraColors
     Column(
         modifier = modifier
             .fillMaxWidth()
             .background(extra.headerBg)
-            .windowInsetsPadding(WindowInsets.statusBars)
+            .then(if (applyStatusBarInset) Modifier.windowInsetsPadding(WindowInsets.statusBars) else Modifier)
     ) {
         Row(
             modifier = Modifier
@@ -113,15 +119,39 @@ fun AppTopBar(
     }
 }
 
-/** The header picture with the language pill and the search circle. Used at the top of Home only. */
+/** Hides the picture header when the person scrolls down and shows it again when they scroll up. */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppHeaderPicture() {
+fun rememberHeaderScrollBehavior(): TopAppBarScrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+
+/**
+ * The header picture with the language pill and the search circle.
+ * With a scrollBehavior it slides away on scroll down (not stuck at the top).
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun AppHeaderPicture(scrollBehavior: TopAppBarScrollBehavior? = null) {
     val actions = LocalHeaderActions.current
     val languageDesc = stringResource(R.string.language_label)
     val searchDesc = stringResource(R.string.search_title)
     var menuOpen by remember { mutableStateOf(false) }
+    val collapse = if (scrollBehavior != null) {
+        Modifier
+            .layout { measurable, constraints ->
+                val placeable = measurable.measure(constraints)
+                val barState = scrollBehavior.state
+                barState.heightOffsetLimit = -placeable.height.toFloat()
+                val offset = barState.heightOffset.roundToInt()
+                layout(placeable.width, (placeable.height + offset).coerceAtLeast(0)) {
+                    placeable.place(0, offset)
+                }
+            }
+            .clipToBounds()
+    } else {
+        Modifier
+    }
     Box(
-        modifier = Modifier
+        modifier = collapse
             .fillMaxWidth()
             .background(Color(0xFF0C481F))
             .windowInsetsPadding(WindowInsets.statusBars)
