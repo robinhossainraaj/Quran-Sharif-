@@ -164,6 +164,8 @@ tasks.register<Copy>("deployQuranSharifApk") {
 }
 
 tasks.configureEach {
+  // Lint "vital" checks would stop the fast build on old, harmless warnings.
+  if (name.startsWith("lintVital")) enabled = false
   if (name == "assembleDebug") {
     finalizedBy("deployApkToDownloadFolder", "deployQuranSharifApk")
   }

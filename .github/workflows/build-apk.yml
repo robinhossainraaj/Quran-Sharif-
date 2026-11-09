@@ -39,22 +39,23 @@ jobs:
       - name: Build the APK
         shell: bash
         run: |
-          set -o pipefail
-          # Fast optimized "fast" build first; if it fails, fall back to the plain debug build.
-          if gradle assembleFast --stacktrace 2>&1 | tee build.log; then
+          # Fast optimized build first; if it fails, fall back to the plain debug build.
+          if gradle assembleFast --stacktrace > build.log 2>&1; then
             cp app/build/outputs/apk/fast/app-fast.apk QuranSharif.apk
           else
-            echo "::warning::Fast (optimized) build failed, using debug build instead"
-            grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Type mismatch|R8|Missing class" build.log | head -20 | while IFS= read -r line; do
-              echo "::warning::${line:0:900}"
+            grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Missing class" build.log | head -20 | while IFS= read -r line; do
+              echo "::warning::Fast build failed: ${line:0:800}"
             done
-            if ! gradle assembleDebug --stacktrace 2>&1 | tee build.log; then
+            if gradle assembleDebug --stacktrace > build.log 2>&1; then
+              cp app/build/outputs/apk/debug/app-debug.apk QuranSharif.apk
+            else
               grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Type mismatch" build.log | head -40 | while IFS= read -r line; do
                 echo "::error::${line:0:900}"
               done
               exit 1
             fi
-            fi
+          fi
+          ls -la QuranSharif.apk
 
       - name: Upload the APK
         uses: actions/upload-artifact@v4
