@@ -31,13 +31,10 @@ jobs:
         with:
           gradle-version: 9.3.1
 
-      # The project expects a debug.keystore file, but GitHub doesn't store it, so create one.
-      - name: Create debug signing key
-        run: |
-          keytool -genkeypair -v -keystore debug.keystore \
-            -storepass android -alias androiddebugkey -keypass android \
-            -keyalg RSA -keysize 2048 -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US"
+      # The permanent signing key (debug.keystore) is stored in the repo, so every build is
+      # signed with the SAME key and the new APK installs over the old app.
+      - name: Check signing key
+        run: keytool -list -keystore debug.keystore -storepass android
 
       - name: Build the APK
         shell: bash
