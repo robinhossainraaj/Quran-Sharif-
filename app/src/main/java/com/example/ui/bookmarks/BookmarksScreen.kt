@@ -76,7 +76,6 @@ fun BookmarksScreen(
         topBar = {
             AppTopBar(
                 title = { AppTitle(stringResource(R.string.bookmarks_title)) },
-                showStrip = state.bookmarks.isNotEmpty(),
                 actions = {
                     if (state.bookmarks.isNotEmpty()) {
                         IconButton(

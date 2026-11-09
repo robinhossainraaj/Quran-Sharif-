@@ -77,45 +77,45 @@ class HeaderActions(
 val LocalHeaderActions = staticCompositionLocalOf { HeaderActions() }
 
 /**
- * Top bar = the exact header picture (language pill on the left, search circle on the right).
- * Under it, an optional thin strip with the back arrow, the screen name and the screen buttons.
+ * Simple top bar used on every screen except Home: back arrow, screen name and the screen's buttons.
+ * (The picture header is only on Home. See AppHeaderPicture.)
  */
 @Composable
 fun AppTopBar(
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     navigationIcon: @Composable () -> Unit = {},
-    actions: @Composable RowScope.() -> Unit = {},
-    showStrip: Boolean = true
+    actions: @Composable RowScope.() -> Unit = {}
 ) {
     val extra = MaterialTheme.extraColors
-    val header = extra.headerBg
-    Column(modifier = modifier.fillMaxWidth()) {
-        HeaderPicture()
-        if (showStrip) {
-            Row(
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .background(extra.headerBg)
+            .windowInsetsPadding(WindowInsets.statusBars)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = 56.dp)
+                .padding(horizontal = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            navigationIcon()
+            Box(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .background(header)
-                    .heightIn(min = 44.dp)
-                    .padding(horizontal = 4.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                navigationIcon()
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(horizontal = 8.dp)
-                ) { title() }
-                actions()
-            }
-            HorizontalDivider(color = extra.headerLine.copy(alpha = 0.55f), thickness = 0.8.dp)
+                    .weight(1f)
+                    .padding(horizontal = 8.dp)
+            ) { title() }
+            actions()
         }
+        HorizontalDivider(color = extra.headerLine.copy(alpha = 0.55f), thickness = 0.8.dp)
     }
 }
 
+/** The header picture with the language pill and the search circle. Used at the top of Home only. */
 @Composable
-private fun HeaderPicture() {
+fun AppHeaderPicture() {
     val actions = LocalHeaderActions.current
     val languageDesc = stringResource(R.string.language_label)
     val searchDesc = stringResource(R.string.search_title)

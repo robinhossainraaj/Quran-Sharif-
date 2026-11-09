@@ -55,6 +55,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.R
 import com.example.ui.components.AppTitle
+import com.example.ui.components.AppHeaderPicture
 import com.example.ui.components.AppTopBar
 import com.example.ui.theme.extraColors
 import com.example.ui.theme.getArabicTextStyle
@@ -76,12 +77,6 @@ fun HomeScreen(
 
     Scaffold(
         contentWindowInsets = androidx.compose.foundation.layout.WindowInsets(0, 0, 0, 0),
-        topBar = {
-            AppTopBar(
-                title = { AppTitle(stringResource(R.string.app_name)) },
-                showStrip = false
-            )
-        },
         containerColor = MaterialTheme.colorScheme.background
     ) { paddingValues ->
         Column(
@@ -89,9 +84,15 @@ fun HomeScreen(
                 .fillMaxSize()
                 .padding(paddingValues)
                 .verticalScroll(scrollState)
-                .padding(start = 16.dp, end = 16.dp, top = 4.dp, bottom = 16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            // Picture header: scrolls away with the page (not stuck at the top)
+            AppHeaderPicture()
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -496,6 +497,7 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
             }
+        }
         }
     }
 }
