@@ -40,7 +40,16 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US"
 
       - name: Build the APK
-        run: gradle assembleDebug --stacktrace
+        shell: bash
+        run: |
+          set -o pipefail
+          if ! gradle assembleDebug --stacktrace 2>&1 | tee build.log; then
+            # Show the real compile errors as annotations (easy to read without downloading logs)
+            grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Type mismatch" build.log | head -40 | while IFS= read -r line; do
+              echo "::error::${line:0:900}"
+            done
+            exit 1
+          fi
 
       - name: Upload the APK
         uses: actions/upload-artifact@v4
