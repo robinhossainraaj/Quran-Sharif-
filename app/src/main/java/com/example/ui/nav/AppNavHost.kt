@@ -1,5 +1,6 @@
 package com.example.ui.nav
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -181,6 +182,7 @@ fun AppNavHost(
             }
         }
     ) { innerPadding ->
+        Box(Modifier.fillMaxSize()) {
         NavHost(
             navController = navController,
             startDestination = Routes.HOME,
@@ -360,6 +362,8 @@ fun AppNavHost(
                     onNavigateBack = { navController.popBackStack() }
                 )
             }
+        }
+        NavLoadingOverlay(currentRoute)
         }
     }
     }

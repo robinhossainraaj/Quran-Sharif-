@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">「続きから読む」のブックマークが最初に戻ります。</string>
     <string name="reset">リセット</string>
     <string name="progress_reset_done">読書の進捗をリセットしました</string>
-    <string name="about_app">Quran Sharif について</string>
+    <string name="about_app">Al Quran について</string>
 
     <!-- About -->
     <string name="about_title">アプリ情報</string>
@@ -122,7 +122,7 @@
     <string name="version_format">バージョン %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">クルアーンのデータを準備中… %1$d/114</string>
     <string name="import_failed">クルアーンのデータの準備に失敗しました。</string>
     <string name="import_tagline">読む  •  聴く  •  学ぶ</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">クルアーンのデータを確認中…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — ランダムなアーヤ</string>
+    <string name="widget_name">Al Quran — ランダムなアーヤ</string>
     <string name="widget_description">ホーム画面に、アラビア語とベンガル語でクルアーンのアーヤをランダムに表示します。</string>
-    <string name="widget_open_app_prompt">Quran Sharif を開いて設定を完了してください</string>
+    <string name="widget_open_app_prompt">Al Quran を開いて設定を完了してください</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">ウィジェット更新サービス</string>
     <string name="notification_channel_desc">画面ロック解除時のウィジェット更新を維持します。</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Quran Sharif ウィジェットは有効です</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Al Quran ウィジェットは有効です</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">ベンガル語訳</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">朗誦を再生中</string>
     <string name="audio_title">朗誦音声</string>
     <string name="ayah_copied">アーヤをクリップボードにコピーしました</string>
-    <string name="shared_via_app">Quran Sharif アプリから共有</string>
+    <string name="shared_via_app">Al Quran アプリから共有</string>
     <string name="enter_ayah_number">アーヤ番号を入力</string>
     <string name="nav_sub_appearance">テーマ</string>
     <string name="nav_sub_language">アプリの言語</string>

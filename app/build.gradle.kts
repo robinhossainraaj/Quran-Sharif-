@@ -13,7 +13,7 @@ android {
   compileSdk { version = release(36) { minorApiLevel = 1 } }
 
   defaultConfig {
-    applicationId = "com.aistudio.quransharif.kxmpzq"
+    applicationId = "com.alquran.rorax"
     minSdk = 26
     targetSdk = 35
     versionCode = 2
@@ -48,6 +48,15 @@ android {
       // Do not remove or modify this signingConfig assignment. It is necessary for Android apps in
       // AI Studio.
       signingConfig = signingConfigs.getByName("release")
+    }
+    // "tester": optimized like a real release (R8 shrink, no debug overhead) but signed with the
+    // permanent debug key, so it installs and updates from GitHub Releases. Much faster than debug.
+    create("tester") {
+      initWith(getByName("release"))
+      signingConfig = signingConfigs.getByName("debugConfig")
+      isMinifyEnabled = true
+      isShrinkResources = true
+      matchingFallbacks += listOf("release")
     }
     debug {
       // Do not remove or modify this signingConfig assignment. It is necessary for Android apps in
@@ -106,6 +115,7 @@ dependencies {
   implementation(libs.androidx.media3.exoplayer)
   implementation(libs.androidx.media3.session)
   implementation(libs.androidx.work.runtime.ktx)
+  implementation(libs.lottie.compose)
   implementation(libs.kotlinx.coroutines.android)
   implementation(libs.kotlinx.coroutines.core)
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">Dein „Weiterlesen“-Lesezeichen wird auf den Anfang zurückgesetzt.</string>
     <string name="reset">Zurücksetzen</string>
     <string name="progress_reset_done">Lesefortschritt zurückgesetzt</string>
-    <string name="about_app">Über Quran Sharif</string>
+    <string name="about_app">Über Al Quran</string>
 
     <!-- About -->
     <string name="about_title">Über</string>
@@ -122,7 +122,7 @@
     <string name="version_format">Version %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">Koran-Daten werden vorbereitet… %1$d/114</string>
     <string name="import_failed">Koran-Daten konnten nicht vorbereitet werden.</string>
     <string name="import_tagline">Lesen  •  Hören  •  Lernen</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">Koran-Daten werden geprüft…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — Zufälliger Vers</string>
+    <string name="widget_name">Al Quran — Zufälliger Vers</string>
     <string name="widget_description">Zeigt einen zufälligen Koranvers mit Arabisch und Bengalisch auf dem Startbildschirm.</string>
-    <string name="widget_open_app_prompt">Öffne Quran Sharif, um die Einrichtung abzuschließen</string>
+    <string name="widget_open_app_prompt">Öffne Al Quran, um die Einrichtung abzuschließen</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">Widget-Aktualisierungsdienst</string>
     <string name="notification_channel_desc">Hält Widget-Updates beim Entsperren aktuell.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Quran Sharif-Widget ist aktiv</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Al Quran-Widget ist aktiv</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">Bengalische Übersetzung</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">Rezitation läuft</string>
     <string name="audio_title">Rezitations-Audio</string>
     <string name="ayah_copied">Vers in die Zwischenablage kopiert</string>
-    <string name="shared_via_app">Geteilt über die Quran Sharif App</string>
+    <string name="shared_via_app">Geteilt über die Al Quran App</string>
     <string name="enter_ayah_number">Versnummer eingeben</string>
     <string name="nav_sub_appearance">Design</string>
     <string name="nav_sub_language">App-Sprache</string>

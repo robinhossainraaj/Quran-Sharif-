@@ -110,9 +110,16 @@ class SearchViewModel(
     }
 
     private fun performSearch(rawQuery: String) {
+        // The trimmed text is used for searching only. The text the user typed (spaces included)
+        // is never overwritten here, otherwise a space typed at the end would be deleted.
         val trimmed = rawQuery.trim()
         if (trimmed.length < 2) {
-            _searchData.value = SearchData(query = trimmed)
+            _searchData.value = _searchData.value.copy(
+                directRef = null,
+                results = emptyList(),
+                isSearching = false,
+                hasSearched = false
+            )
             return
         }
 
@@ -128,8 +135,7 @@ class SearchViewModel(
                 val ayahNo = refMatch.groupValues[2].toInt()
                 val surah = quranRepository.getSurah(surahId)
                 if (surah != null && ayahNo in 1..surah.ayahCount) {
-                    _searchData.value = SearchData(
-                        query = trimmed,
+                    _searchData.value = _searchData.value.copy(
                         directRef = DirectReferenceResult(
                             surahId = surahId,
                             ayahNo = ayahNo,
@@ -154,8 +160,7 @@ class SearchViewModel(
                 SearchResultItem(ayah = ayah, surah = surah)
             }
 
-            _searchData.value = SearchData(
-                query = trimmed,
+            _searchData.value = _searchData.value.copy(
                 directRef = null,
                 results = items,
                 isSearching = false,

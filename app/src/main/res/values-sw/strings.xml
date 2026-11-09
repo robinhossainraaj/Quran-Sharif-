@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">Hii itarudisha alamisho ya kuendelea kusoma mwanzoni.</string>
     <string name="reset">Weka upya</string>
     <string name="progress_reset_done">Maendeleo ya kusoma yamewekwa upya</string>
-    <string name="about_app">Kuhusu Quran Sharif</string>
+    <string name="about_app">Kuhusu Al Quran</string>
 
     <!-- About -->
     <string name="about_title">Kuhusu</string>
@@ -122,7 +122,7 @@
     <string name="version_format">Toleo %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">Inaandaa data ya Kurani… %1$d/114</string>
     <string name="import_failed">Imeshindwa kuandaa data ya Kurani.</string>
     <string name="import_tagline">Soma  •  Sikiliza  •  Jifunze</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">Inakagua data ya Kurani…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — Aya Nasibu</string>
+    <string name="widget_name">Al Quran — Aya Nasibu</string>
     <string name="widget_description">Huonyesha aya ya Kurani nasibu kwa Kiarabu na Kibangla kwenye skrini yako ya mwanzo.</string>
-    <string name="widget_open_app_prompt">Fungua Quran Sharif kukamilisha usanidi</string>
+    <string name="widget_open_app_prompt">Fungua Al Quran kukamilisha usanidi</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">Huduma ya Kusasisha Wijeti</string>
     <string name="notification_channel_desc">Hudumisha masasisho ya wijeti skrini inapofunguliwa.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Wijeti ya Quran Sharif inafanya kazi</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Wijeti ya Al Quran inafanya kazi</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">Tafsiri ya Kibangla</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">Qiraa Inachezwa</string>
     <string name="audio_title">Sauti ya Qiraa</string>
     <string name="ayah_copied">Aya imenakiliwa</string>
-    <string name="shared_via_app">Imeshirikiwa kupitia programu ya Quran Sharif</string>
+    <string name="shared_via_app">Imeshirikiwa kupitia programu ya Al Quran</string>
     <string name="enter_ayah_number">Weka namba ya aya</string>
     <string name="nav_sub_appearance">Mandhari</string>
     <string name="nav_sub_language">Lugha ya programu</string>

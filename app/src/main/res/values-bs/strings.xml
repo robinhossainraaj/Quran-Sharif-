@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">Zabilješka za nastavak čitanja vratit će se na početak.</string>
     <string name="reset">Poništi</string>
     <string name="progress_reset_done">Napredak čitanja je poništen</string>
-    <string name="about_app">O aplikaciji Quran Sharif</string>
+    <string name="about_app">O aplikaciji Al Quran</string>
 
     <!-- About -->
     <string name="about_title">O aplikaciji</string>
@@ -122,7 +122,7 @@
     <string name="version_format">Verzija %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">Priprema podataka Kurana… %1$d/114</string>
     <string name="import_failed">Priprema podataka Kurana nije uspjela.</string>
     <string name="import_tagline">Čitaj  •  Slušaj  •  Uči</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">Provjera podataka Kurana…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — Nasumični ajet</string>
+    <string name="widget_name">Al Quran — Nasumični ajet</string>
     <string name="widget_description">Prikazuje nasumični ajet Kurana na arapskom i bengalskom na vašem početnom ekranu.</string>
-    <string name="widget_open_app_prompt">Otvorite Quran Sharif da završite postavljanje</string>
+    <string name="widget_open_app_prompt">Otvorite Al Quran da završite postavljanje</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">Usluga osvježavanja widgeta</string>
     <string name="notification_channel_desc">Održava ažuriranje widgeta pri otključavanju ekrana.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Widget Quran Sharif je aktivan</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Widget Al Quran je aktivan</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">Bengalski prijevod</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">Svira recitacija</string>
     <string name="audio_title">Audio recitacija</string>
     <string name="ayah_copied">Ajet je kopiran u međuspremnik</string>
-    <string name="shared_via_app">Podijeljeno putem aplikacije Quran Sharif</string>
+    <string name="shared_via_app">Podijeljeno putem aplikacije Al Quran</string>
     <string name="enter_ayah_number">Unesite broj ajeta</string>
     <string name="nav_sub_appearance">Tema</string>
     <string name="nav_sub_language">Jezik aplikacije</string>

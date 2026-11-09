@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">اس سے آپ کا «پڑھنا جاری رکھیں» کا بُک مارک شروع پر واپس چلا جائے گا۔</string>
     <string name="reset">ری سیٹ</string>
     <string name="progress_reset_done">مطالعے کی پیش رفت ری سیٹ ہو گئی</string>
-    <string name="about_app">Quran Sharif کے بارے میں</string>
+    <string name="about_app">Al Quran کے بارے میں</string>
 
     <!-- About -->
     <string name="about_title">تعارف</string>
@@ -122,7 +122,7 @@
     <string name="version_format">ورژن %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">قرآن کا ڈیٹا تیار ہو رہا ہے… %1$d/114</string>
     <string name="import_failed">قرآن کا ڈیٹا تیار نہیں ہو سکا۔</string>
     <string name="import_tagline">پڑھیں  •  سنیں  •  سیکھیں</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">قرآن کا ڈیٹا جانچا جا رہا ہے…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — بے ترتیب آیت</string>
+    <string name="widget_name">Al Quran — بے ترتیب آیت</string>
     <string name="widget_description">آپ کی ہوم اسکرین پر عربی اور بنگلہ کے ساتھ قرآن کی ایک بے ترتیب آیت دکھاتا ہے۔</string>
-    <string name="widget_open_app_prompt">سیٹ اپ مکمل کرنے کے لیے Quran Sharif کھولیں</string>
+    <string name="widget_open_app_prompt">سیٹ اپ مکمل کرنے کے لیے Al Quran کھولیں</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">ویجیٹ ریفریش سروس</string>
     <string name="notification_channel_desc">اسکرین کھلنے پر ویجیٹ کو اپ ڈیٹ رکھتی ہے۔</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Quran Sharif ویجیٹ فعال ہے</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Al Quran ویجیٹ فعال ہے</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">بنگلہ ترجمہ</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">تلاوت چل رہی ہے</string>
     <string name="audio_title">تلاوت کی آڈیو</string>
     <string name="ayah_copied">آیت کلپ بورڈ میں کاپی ہو گئی</string>
-    <string name="shared_via_app">Quran Sharif ایپ کے ذریعے شیئر کیا گیا</string>
+    <string name="shared_via_app">Al Quran ایپ کے ذریعے شیئر کیا گیا</string>
     <string name="enter_ayah_number">آیت نمبر درج کریں</string>
     <string name="nav_sub_appearance">تھیم</string>
     <string name="nav_sub_language">ایپ کی زبان</string>

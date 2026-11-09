@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">سيؤدي هذا إلى إعادة علامة متابعة القراءة إلى البداية.</string>
     <string name="reset">إعادة ضبط</string>
     <string name="progress_reset_done">تمت إعادة ضبط تقدم القراءة</string>
-    <string name="about_app">عن Quran Sharif</string>
+    <string name="about_app">عن Al Quran</string>
 
     <!-- About -->
     <string name="about_title">حول</string>
@@ -122,7 +122,7 @@
     <string name="version_format">الإصدار %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">جارٍ تجهيز بيانات القرآن… %1$d/114</string>
     <string name="import_failed">تعذر تجهيز بيانات القرآن.</string>
     <string name="import_tagline">اقرأ  •  استمع  •  تعلّم</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">جارٍ فحص بيانات القرآن…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — آية عشوائية</string>
+    <string name="widget_name">Al Quran — آية عشوائية</string>
     <string name="widget_description">تعرض آية عشوائية من القرآن بالعربية والبنغالية على شاشتك الرئيسية.</string>
-    <string name="widget_open_app_prompt">افتح Quran Sharif لإكمال الإعداد</string>
+    <string name="widget_open_app_prompt">افتح Al Quran لإكمال الإعداد</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">خدمة تحديث الأداة</string>
     <string name="notification_channel_desc">تحافظ على تحديثات الأداة عند فتح قفل الشاشة.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">أداة Quran Sharif نشطة</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">أداة Al Quran نشطة</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">الترجمة البنغالية</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">جارٍ تشغيل التلاوة</string>
     <string name="audio_title">التلاوة الصوتية</string>
     <string name="ayah_copied">تم نسخ الآية</string>
-    <string name="shared_via_app">تمت المشاركة عبر تطبيق Quran Sharif</string>
+    <string name="shared_via_app">تمت المشاركة عبر تطبيق Al Quran</string>
     <string name="enter_ayah_number">أدخل رقم الآية</string>
     <string name="nav_sub_appearance">السمة</string>
     <string name="nav_sub_language">لغة التطبيق</string>

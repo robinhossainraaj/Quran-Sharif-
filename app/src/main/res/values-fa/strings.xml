@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">نشان «ادامهٔ مطالعه» شما به ابتدا برمی‌گردد.</string>
     <string name="reset">بازنشانی</string>
     <string name="progress_reset_done">پیشرفت مطالعه بازنشانی شد</string>
-    <string name="about_app">دربارهٔ Quran Sharif</string>
+    <string name="about_app">دربارهٔ Al Quran</string>
 
     <!-- About -->
     <string name="about_title">دربارهٔ برنامه</string>
@@ -122,7 +122,7 @@
     <string name="version_format">نسخهٔ %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">در حال آماده‌سازی داده‌های قرآن… %1$d/114</string>
     <string name="import_failed">آماده‌سازی داده‌های قرآن ناموفق بود.</string>
     <string name="import_tagline">بخوان  •  بشنو  •  بیاموز</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">در حال بررسی داده‌های قرآن…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — آیهٔ تصادفی</string>
+    <string name="widget_name">Al Quran — آیهٔ تصادفی</string>
     <string name="widget_description">یک آیهٔ تصادفی قرآن را به عربی و بنگالی روی صفحهٔ اصلی نشان می‌دهد.</string>
-    <string name="widget_open_app_prompt">برای تکمیل راه‌اندازی Quran Sharif را باز کنید</string>
+    <string name="widget_open_app_prompt">برای تکمیل راه‌اندازی Al Quran را باز کنید</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">سرویس تازه‌سازی ویجت</string>
     <string name="notification_channel_desc">به‌روزرسانی ویجت را هنگام باز شدن قفل صفحه حفظ می‌کند.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">ویجت Quran Sharif فعال است</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">ویجت Al Quran فعال است</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">ترجمهٔ بنگالی</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">در حال پخش تلاوت</string>
     <string name="audio_title">صوت تلاوت</string>
     <string name="ayah_copied">آیه در کلیپ‌بورد کپی شد</string>
-    <string name="shared_via_app">ارسال‌شده با برنامهٔ Quran Sharif</string>
+    <string name="shared_via_app">ارسال‌شده با برنامهٔ Al Quran</string>
     <string name="enter_ayah_number">شمارهٔ آیه را وارد کنید</string>
     <string name="nav_sub_appearance">پوسته</string>
     <string name="nav_sub_language">زبان برنامه</string>

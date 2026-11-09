@@ -21,7 +21,7 @@ object ShareUtils {
             "$surahId:$ayahNo"
         }
         val transSuffix = if (!translatorName.isNullOrBlank()) " ($translatorName)" else ""
-        return "$arabicDisplay\n\n$bangla\n\n— $surahBanglaName $ref$transSuffix\nQuran Sharif"
+        return "$arabicDisplay\n\n$bangla\n\n— $surahBanglaName $ref$transSuffix\nAl Quran"
     }
 
     fun copyToClipboard(context: Context, label: String, text: String) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
-    <string name="app_name_bn">কুরআন শরীফ</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
+    <string name="app_name_bn">আল কুরআন</string>
 
     <!-- Navigation -->
     <string name="nav_home">Home</string>
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">This will reset your continue reading bookmark to the start.</string>
     <string name="reset">Reset</string>
     <string name="progress_reset_done">Reading progress reset</string>
-    <string name="about_app">About Quran Sharif</string>
+    <string name="about_app">About Al Quran</string>
 
     <!-- About -->
     <string name="about_title">About</string>
@@ -122,7 +122,7 @@
     <string name="version_format">Version %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">Preparing Quran data… %1$d/114</string>
     <string name="import_failed">Failed to prepare Quran data.</string>
     <string name="import_tagline">Read  •  Listen  •  Learn</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">Checking Quran data…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — Random Ayah</string>
+    <string name="widget_name">Al Quran — Random Ayah</string>
     <string name="widget_description">Displays a random Quran ayah with Arabic and Bangla on your home screen.</string>
-    <string name="widget_open_app_prompt">Open Quran Sharif to finish setup</string>
+    <string name="widget_open_app_prompt">Open Al Quran to finish setup</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">Widget Refresh Service</string>
     <string name="notification_channel_desc">Maintains widget updates on screen unlock.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Quran Sharif widget is active</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Al Quran widget is active</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">Bangla Translation</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">Playing Recitation</string>
     <string name="audio_title">Recitation Audio</string>
     <string name="ayah_copied">Ayah copied to clipboard</string>
-    <string name="shared_via_app">Shared via Quran Sharif app</string>
+    <string name="shared_via_app">Shared via Al Quran app</string>
     <string name="enter_ayah_number">Enter Ayah number</string>
     <string name="nav_sub_appearance">Theme</string>
     <string name="nav_sub_language">App language</string>

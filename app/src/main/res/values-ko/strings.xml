@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">이어 읽기 북마크가 처음으로 초기화됩니다.</string>
     <string name="reset">초기화</string>
     <string name="progress_reset_done">읽기 진행 상황을 초기화했습니다</string>
-    <string name="about_app">Quran Sharif 정보</string>
+    <string name="about_app">Al Quran 정보</string>
 
     <!-- About -->
     <string name="about_title">정보</string>
@@ -122,7 +122,7 @@
     <string name="version_format">버전 %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">꾸란 데이터 준비 중… %1$d/114</string>
     <string name="import_failed">꾸란 데이터를 준비하지 못했습니다.</string>
     <string name="import_tagline">읽고  •  듣고  •  배우기</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">꾸란 데이터 확인 중…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — 랜덤 아야</string>
+    <string name="widget_name">Al Quran — 랜덤 아야</string>
     <string name="widget_description">홈 화면에 아랍어와 벵골어로 된 꾸란 아야를 무작위로 표시합니다.</string>
-    <string name="widget_open_app_prompt">Quran Sharif를 열어 설정을 완료하세요</string>
+    <string name="widget_open_app_prompt">Al Quran를 열어 설정을 완료하세요</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">위젯 새로고침 서비스</string>
     <string name="notification_channel_desc">화면 잠금 해제 시 위젯 업데이트를 유지합니다.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Quran Sharif 위젯이 활성화되어 있습니다</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Al Quran 위젯이 활성화되어 있습니다</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">벵골어 번역</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">낭송 재생 중</string>
     <string name="audio_title">낭송 오디오</string>
     <string name="ayah_copied">아야를 클립보드에 복사했습니다</string>
-    <string name="shared_via_app">Quran Sharif 앱에서 공유됨</string>
+    <string name="shared_via_app">Al Quran 앱에서 공유됨</string>
     <string name="enter_ayah_number">아야 번호 입력</string>
     <string name="nav_sub_appearance">테마</string>
     <string name="nav_sub_language">앱 언어</string>

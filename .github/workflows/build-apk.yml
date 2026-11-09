@@ -40,19 +40,27 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          if ! gradle assembleDebug --stacktrace 2>&1 | tee build.log; then
-            # Show the real compile errors as annotations (easy to read without downloading logs)
-            grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Type mismatch" build.log | head -40 | while IFS= read -r line; do
-              echo "::error::${line:0:900}"
+          # Fast optimized "tester" build first; if it fails, fall back to the plain debug build.
+          if gradle assembleTester --stacktrace 2>&1 | tee build.log; then
+            cp app/build/outputs/apk/tester/app-tester.apk QuranSharif.apk
+          else
+            echo "::warning::Tester (optimized) build failed, using debug build instead"
+            grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Type mismatch|R8|Missing class" build.log | head -20 | while IFS= read -r line; do
+              echo "::warning::${line:0:900}"
             done
-            exit 1
-          fi
+            if ! gradle assembleDebug --stacktrace 2>&1 | tee build.log; then
+              grep -E "^e: |error:|What went wrong|Execution failed|Unresolved|Type mismatch" build.log | head -40 | while IFS= read -r line; do
+                echo "::error::${line:0:900}"
+              done
+              exit 1
+            fi
+            fi
 
       - name: Upload the APK
         uses: actions/upload-artifact@v4
         with:
           name: QuranSharif-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: QuranSharif.apk
           if-no-files-found: error
 
       # Publish the APK on the repo's Releases page so it can be downloaded and installed
@@ -61,9 +69,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cp app/build/outputs/apk/debug/app-debug.apk QuranSharif.apk
           gh release delete latest --yes --cleanup-tag || true
           gh release create latest QuranSharif.apk \
-            --title "Quran Sharif - latest build" \
-            --notes "Debug APK built from the latest code. Download QuranSharif.apk and install it." \
+            --title "Al Quran - latest build" \
+            --notes "APK built from the latest code. Download QuranSharif.apk and install it." \
             --target "${{ github.sha }}"

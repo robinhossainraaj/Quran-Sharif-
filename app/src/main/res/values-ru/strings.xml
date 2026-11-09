@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">Закладка «Продолжить чтение» вернётся к началу.</string>
     <string name="reset">Сбросить</string>
     <string name="progress_reset_done">Прогресс чтения сброшен</string>
-    <string name="about_app">О приложении Quran Sharif</string>
+    <string name="about_app">О приложении Al Quran</string>
 
     <!-- About -->
     <string name="about_title">О приложении</string>
@@ -122,7 +122,7 @@
     <string name="version_format">Версия %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">Подготовка данных Корана… %1$d/114</string>
     <string name="import_failed">Не удалось подготовить данные Корана.</string>
     <string name="import_tagline">Читай  •  Слушай  •  Изучай</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">Проверка данных Корана…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — Случайный аят</string>
+    <string name="widget_name">Al Quran — Случайный аят</string>
     <string name="widget_description">Показывает на главном экране случайный аят Корана на арабском и бенгальском.</string>
-    <string name="widget_open_app_prompt">Откройте Quran Sharif, чтобы завершить настройку</string>
+    <string name="widget_open_app_prompt">Откройте Al Quran, чтобы завершить настройку</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">Служба обновления виджета</string>
     <string name="notification_channel_desc">Поддерживает обновление виджета при разблокировке экрана.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Виджет Quran Sharif активен</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Виджет Al Quran активен</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">Бенгальский перевод</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">Воспроизведение чтения</string>
     <string name="audio_title">Аудио чтения</string>
     <string name="ayah_copied">Аят скопирован в буфер обмена</string>
-    <string name="shared_via_app">Отправлено через приложение Quran Sharif</string>
+    <string name="shared_via_app">Отправлено через приложение Al Quran</string>
     <string name="enter_ayah_number">Введите номер аята</string>
     <string name="nav_sub_appearance">Тема</string>
     <string name="nav_sub_language">Язык приложения</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">这将把「继续阅读」书签重置到开头。</string>
     <string name="reset">重置</string>
     <string name="progress_reset_done">阅读进度已重置</string>
-    <string name="about_app">关于 Quran Sharif</string>
+    <string name="about_app">关于 Al Quran</string>
 
     <!-- About -->
     <string name="about_title">关于</string>
@@ -122,7 +122,7 @@
     <string name="version_format">版本 %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">正在准备古兰经数据… %1$d/114</string>
     <string name="import_failed">准备古兰经数据失败。</string>
     <string name="import_tagline">阅读  •  聆听  •  学习</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">正在检查古兰经数据…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — 随机经文</string>
+    <string name="widget_name">Al Quran — 随机经文</string>
     <string name="widget_description">在主屏幕上显示一节随机的古兰经经文，附阿拉伯语和孟加拉语。</string>
-    <string name="widget_open_app_prompt">打开 Quran Sharif 完成设置</string>
+    <string name="widget_open_app_prompt">打开 Al Quran 完成设置</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">小组件刷新服务</string>
     <string name="notification_channel_desc">在解锁屏幕时保持小组件更新。</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Quran Sharif 小组件已启用</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Al Quran 小组件已启用</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">孟加拉语译文</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">正在播放诵读</string>
     <string name="audio_title">诵读音频</string>
     <string name="ayah_copied">经文已复制到剪贴板</string>
-    <string name="shared_via_app">来自 Quran Sharif 应用的分享</string>
+    <string name="shared_via_app">来自 Al Quran 应用的分享</string>
     <string name="enter_ayah_number">输入节号</string>
     <string name="nav_sub_appearance">主题</string>
     <string name="nav_sub_language">应用语言</string>

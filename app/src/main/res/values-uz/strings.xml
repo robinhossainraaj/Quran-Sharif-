@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quran Sharif</string>
-    <string name="app_name_full">Quran Sharif</string>
+    <string name="app_name">Al Quran</string>
+    <string name="app_name_full">Al Quran</string>
     <string name="app_name_bn">কুরআন শরীফ</string>
 
     <!-- Navigation -->
@@ -104,7 +104,7 @@
     <string name="reset_reading_confirm_desc">Oʻqishni davom ettirish xatcho‘pi boshiga qaytariladi.</string>
     <string name="reset">Tiklash</string>
     <string name="progress_reset_done">Oʻqish jarayoni tiklandi</string>
-    <string name="about_app">Quran Sharif haqida</string>
+    <string name="about_app">Al Quran haqida</string>
 
     <!-- About -->
     <string name="about_title">Ilova haqida</string>
@@ -122,7 +122,7 @@
     <string name="version_format">Versiya %1$s</string>
 
     <!-- Splash & Import -->
-    <string name="import_title">Quran Sharif</string>
+    <string name="import_title">Al Quran</string>
     <string name="import_subtitle">Qurʻon ma’lumotlari tayyorlanmoqda… %1$d/114</string>
     <string name="import_failed">Qurʻon ma’lumotlarini tayyorlab boʻlmadi.</string>
     <string name="import_tagline">Oʻqing  •  Tinglang  •  Oʻrganing</string>
@@ -130,14 +130,14 @@
     <string name="checking_data">Qurʻon ma’lumotlari tekshirilmoqda…</string>
 
     <!-- Widget -->
-    <string name="widget_name">Quran Sharif — Tasodifiy oyat</string>
+    <string name="widget_name">Al Quran — Tasodifiy oyat</string>
     <string name="widget_description">Bosh ekranda arabcha va bengalcha tasodifiy Qurʻon oyatini koʻrsatadi.</string>
-    <string name="widget_open_app_prompt">Sozlashni tugatish uchun Quran Sharif ilovasini oching</string>
+    <string name="widget_open_app_prompt">Sozlashni tugatish uchun Al Quran ilovasini oching</string>
     <string name="widget_brand_label">QURAN SHARIF</string>
     <string name="notification_channel_name">Vidjetni yangilash xizmati</string>
     <string name="notification_channel_desc">Ekran qulfi ochilganda vidjet yangilanishini ta’minlaydi.</string>
-    <string name="notification_title">Quran Sharif</string>
-    <string name="notification_text">Quran Sharif vidjeti faol</string>
+    <string name="notification_title">Al Quran</string>
+    <string name="notification_text">Al Quran vidjeti faol</string>
 
     <!-- v2 Additions: Translations & Widget Sizing -->
     <string name="translation_label">Bengalcha tarjima</string>
@@ -212,7 +212,7 @@
     <string name="audio_playing">Tilovat ijro etilmoqda</string>
     <string name="audio_title">Tilovat audiosi</string>
     <string name="ayah_copied">Oyat buferga nusxalandi</string>
-    <string name="shared_via_app">Quran Sharif ilovasi orqali ulashildi</string>
+    <string name="shared_via_app">Al Quran ilovasi orqali ulashildi</string>
     <string name="enter_ayah_number">Oyat raqamini kiriting</string>
     <string name="nav_sub_appearance">Mavzu</string>
     <string name="nav_sub_language">Ilova tili</string>

@@ -41,7 +41,9 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
@@ -55,6 +57,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -87,6 +90,10 @@ fun SearchScreen(
     LaunchedEffect(Unit) {
         focusRequester.requestFocus()
     }
+
+    // The text box keeps its own text (and cursor). If it were driven only by the ViewModel
+    // state, a delayed update could overwrite what the user is typing and drop spaces/letters.
+    var fieldValue by remember { mutableStateOf(TextFieldValue(state.query)) }
 
     Scaffold(
         topBar = {
@@ -121,8 +128,11 @@ fun SearchScreen(
             ) {
                 // Search field
                 TextField(
-                    value = state.query,
-                    onValueChange = { viewModel.onQueryChange(it) },
+                    value = fieldValue,
+                    onValueChange = {
+                        fieldValue = it
+                        viewModel.onQueryChange(it.text)
+                    },
                     placeholder = {
                         Text(
                             text = stringResource(R.string.search_hint),
@@ -140,9 +150,12 @@ fun SearchScreen(
                         )
                     },
                     trailingIcon = {
-                        if (state.query.isNotEmpty()) {
+                        if (fieldValue.text.isNotEmpty()) {
                             IconButton(
-                                onClick = { viewModel.clearQuery() },
+                                onClick = {
+                                    fieldValue = TextFieldValue("")
+                                    viewModel.clearQuery()
+                                },
                                 modifier = Modifier.testTag("search_clear_button")
                             ) {
                                 Icon(
@@ -230,7 +243,7 @@ fun SearchScreen(
                     ) {
                         CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
                     }
-                } else if (!state.hasSearched && state.query.length < 2) {
+                } else if (!state.hasSearched && state.query.trim().length < 2) {
                     // Initial search hint
                     Box(
                         modifier = Modifier

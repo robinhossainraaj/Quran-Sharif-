@@ -25,3 +25,10 @@
 -keep class * extends androidx.glance.appwidget.GlanceAppWidget
 -keep class * extends androidx.glance.appwidget.action.ActionCallback
 -keep class com.example.widget.** { *; }
+
+# Keep line numbers for crash reports; keep app entry points and WorkManager workers
+-keepattributes SourceFile,LineNumberTable,*Annotation*
+-keep class com.example.QuranApp { *; }
+-keep class * extends androidx.work.ListenableWorker { *; }
+-keep class com.airbnb.lottie.** { *; }
+-dontwarn com.airbnb.lottie.**
