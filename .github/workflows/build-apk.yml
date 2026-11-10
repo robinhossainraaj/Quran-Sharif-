@@ -36,6 +36,24 @@ jobs:
       - name: Check signing key
         run: keytool -list -keystore debug.keystore -storepass android
 
+      # If you added the private signing key as GitHub secrets, use it. Otherwise the build
+      # falls back to the debug key.
+      - name: Prepare private signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ] && [ -n "$STORE_PASSWORD" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+            echo "KEYSTORE_PATH=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
+            echo "STORE_PASSWORD=$STORE_PASSWORD" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=$KEY_PASSWORD" >> "$GITHUB_ENV"
+            echo "Using the private signing key"
+          else
+            echo "No private key secrets found - using the debug key"
+          fi
+
       - name: Build the APK
         shell: bash
         run: |

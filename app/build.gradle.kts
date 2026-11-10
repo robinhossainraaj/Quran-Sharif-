@@ -53,7 +53,13 @@ android {
     // permanent debug key, so it installs and updates from GitHub Releases. Much faster than debug.
     create("fast") {
       initWith(getByName("release"))
-      signingConfig = signingConfigs.getByName("debugConfig")
+      // Uses the private upload key when the build has it (GitHub secrets); otherwise the
+      // permanent debug key so the build never breaks.
+      signingConfig = if (System.getenv("STORE_PASSWORD").isNullOrEmpty()) {
+        signingConfigs.getByName("debugConfig")
+      } else {
+        signingConfigs.getByName("release")
+      }
       isMinifyEnabled = true
       isShrinkResources = true
       matchingFallbacks += listOf("release")
